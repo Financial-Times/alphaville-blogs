@@ -1,0 +1,21 @@
+.primary-container {
+	margin: 15px auto;
+}
+
+.clearfix:after {
+	content: " "; /* Older browser do not support empty content */
+	visibility: hidden;
+	display: block;
+	height: 0;
+	clear: both;
+}
+
+a {
+	color: #2e6e9e;
+	-webkit-font-smoothing: antialiased;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
