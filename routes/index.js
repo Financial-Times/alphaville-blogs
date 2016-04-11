@@ -5,6 +5,14 @@ var router = express.Router();
 router.get('/', (req, res) => {
 	res.render('index', { title: 'Alphaville Index Page' });
 });
+router.get('/__access_metadata', (req, res) => {
+	res.json([
+		{
+			path_regex: ".*",
+			classification: "unconditional"
+		}
+	]);
+});
 router.get('/__gtg', (req, res) => {
 	res.sendStatus(200);
 });
