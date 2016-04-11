@@ -19,7 +19,7 @@
 	],
 	"dependencies": {
 		"o-grid": "^4.0.0",
-		"o-footer": "^4.0.0",
+        "o-footer": "^4.0.0",
 		"o-colors": "^3.3.0",
 		"o-fonts": "^2.0.0",
 		"o-ft-icons": "^3.3.0",
