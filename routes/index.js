@@ -32,7 +32,7 @@ router.get('/__access_metadata', (req, res) => {
 	res.json([
 		{
 			path_regex: ".*",
-			classification: "conditional_registered"
+			resolution_method: "remote_headers"
 		}
 	]);
 });
