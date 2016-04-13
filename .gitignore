@@ -36,3 +36,5 @@ npm-debug.log
 bower_components
 
 public/build
+
+env.sh

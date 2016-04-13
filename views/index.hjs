@@ -12,10 +12,37 @@
 		{{#headerConfig}}
 			{{> header}}
 		{{/headerConfig}}
-		<div class="container primary-container" style="width: 973px">
-			<h1>{{ title }}</h1>
-			<p>Welcome to {{ title }}</p>
+    <div class="container primary-container" style="width: 973px">
+      <div class="o-grid-container">
+        <div class="o-grid-row">
+          <div data-o-grid-colspan="8">
+          {{#searchResults}}
+            <div id="post-{{_id}}" class="post">
+              <div class="post-header">
+                <h2 class="post-title"><a href="/content/{{_id}}">{{_source.title}}</a></h2>
+                <div class="post-meta">
+                  <strong><a href="#">{{_source.byline}}</a></strong>
+                  <div class="o-author-alerts o-author-alerts--theme" data-o-component="o-author-alerts" data-o-author-alerts-article-id="{{_id}}"></div>
+                  <span class="meta-divider"> | </span>
+                  <time data-o-component="o-date" class="o-date" datetime="{{_source.publishedDate}}">{{_source.publishedDate}} </time>
+                  <span class="meta-divider"> | </span>
+                </div>
+              </div>
+              <div class="post-content">
+                {{{_source.openingHTML}}}
+              </div>
 
-		</div>
+            </div>
+          {{/searchResults}}
+          </div>
+          <div data-o-grid-colspan="4">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <script src="{{assetsBasePath}}/build/main.js"></script>
 	</body>
 </html>

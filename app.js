@@ -1,5 +1,7 @@
 "use strict";
 
+const port = process.env.PORT || 5000;
+
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -47,7 +49,6 @@ app.use(function(req, res, next) {
 	err.status = 404;
 	next(err);
 });
-
 // error handlers
 
 // development error handler
@@ -72,5 +73,6 @@ app.use(function(err, req, res, next) {
 	});
 });
 
+app.listen(port, () => console.log('Up and running on port', port));
 
 module.exports = app;
