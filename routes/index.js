@@ -6,11 +6,13 @@ var router = express.Router();
 // const oDate = require('o-date');
 
 const elasticSearchUrl = process.env.ELASTIC_SEARCH_URL;
-const signedFetch = require('signed-aws-es-fetch');
 const index = 'v3_api_v2';
+const signedFetch = require('signed-aws-es-fetch');
 
 const headerConfig = require('../bower_components/alphaville-header/template_config.json');
 const envVars = require('../env');
+
+const searchArticles = require('../lib/searchArticles');
 
 var limit = 10;
 
@@ -22,6 +24,20 @@ headerConfig.navItems.map(function (obj) {
 	return obj
 });
 
+
+function isMarketLive(response) {
+  // console.log('response: ', response);
+  response.hits.hits.map(function (obj) {
+  	if (obj._source.title.indexOf('Markets Live:')>-1) {
+  		obj.webUrl = '/marketlive/' + obj._id;
+  		obj.isMarketLive = true;
+  	} else {
+  		obj.webUrl = '/content/' + obj._id;
+  		obj.isMarketLive = false;
+  	}
+  });
+  return response;
+}
 
 /* GET home page. */
 router.get('/', (req, res) => {
@@ -53,7 +69,7 @@ console.log('*** es: ', `https://${elasticSearchUrl}/${index}/_search`);
 				},
 				size: limit || 30
 			})
-		}).then(response => response.json()).then(function(response){
+		}).then(response => response.json()).then(isMarketLive).then(function(response){
 
 			// console.log('response: ', response);
 			// res.jsonp		(response)
@@ -81,6 +97,7 @@ console.log('*** es: ', `https://${elasticSearchUrl}/${index}/_search`);
 
 
 });
+
 router.get('/__access_metadata', (req, res) => {
 	res.json({
 			access_metadata: [
@@ -95,6 +112,7 @@ router.get('/__access_metadata', (req, res) => {
 			]
 	});
 });
+
 router.get('/__gtg', (req, res) => {
 	res.sendStatus(200);
 });
