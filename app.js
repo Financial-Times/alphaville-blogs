@@ -73,6 +73,4 @@ app.use(function(err, req, res, next) {
 	});
 });
 
-app.listen(port, () => console.log('Up and running on port', port));
-
 module.exports = app;
