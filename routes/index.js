@@ -29,12 +29,14 @@ router.get('/', (req, res) => {
 	});
 });
 router.get('/__access_metadata', (req, res) => {
-	res.json([
-		{
-			path_regex: ".*",
-            classification: "conditional_registered"
-		}
-	]);
+	res.json({
+			access_metadata: [
+				{
+					path_regex: ".*",
+					classification: "conditional_registered"
+				}
+			]
+	});
 });
 router.get('/__gtg', (req, res) => {
 	res.sendStatus(200);
