@@ -12,10 +12,7 @@ const signedFetch = require('signed-aws-es-fetch');
 const headerConfig = require('../bower_components/alphaville-header/template_config.json');
 const envVars = require('../env');
 
-const searchArticles = require('../lib/searchArticles');
-
-var limit = 10;
-
+var limit = 30;
 
 headerConfig.navItems.map(function (obj) {
 	if (obj.name.indexOf('The Blog')>-1) {
@@ -26,7 +23,6 @@ headerConfig.navItems.map(function (obj) {
 
 
 function isMarketLive(response) {
-  // console.log('response: ', response);
   response.hits.hits.map(function (obj) {
   	if (obj._source.title.indexOf('Markets Live:')>-1) {
   		obj.webUrl = '/marketlive/' + obj._id;
@@ -41,8 +37,6 @@ function isMarketLive(response) {
 
 /* GET home page. */
 router.get('/', (req, res) => {
-
-console.log('*** es: ', `https://${elasticSearchUrl}/${index}/_search`);
 
 	signedFetch(`https://${elasticSearchUrl}/${index}/_search`, {
 			'method':'POST',
@@ -71,9 +65,7 @@ console.log('*** es: ', `https://${elasticSearchUrl}/${index}/_search`);
 			})
 		}).then(response => response.json()).then(isMarketLive).then(function(response){
 
-			// console.log('response: ', response);
 			// res.jsonp		(response)
-
 
 			res.render('index', {
 				title: 'FT Alphaville | FT Alphaville &#8211; Market Commentary &#8211; FT.com',
