@@ -82,12 +82,18 @@ console.log('*** es: ', `https://${elasticSearchUrl}/${index}/_search`);
 
 });
 router.get('/__access_metadata', (req, res) => {
-	res.json([
-		{
-			path_regex: ".*",
-			classification: "unconditional"
-		}
-	]);
+	res.json({
+			access_metadata: [
+				{
+					path_regex: "/longroom",
+					classification: "conditional_registered"
+				},
+				{
+					path_regex: ".*",
+					classification: "unconditional"
+				}
+			]
+	});
 });
 router.get('/__gtg', (req, res) => {
 	res.sendStatus(200);
