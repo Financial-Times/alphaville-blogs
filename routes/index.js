@@ -25,7 +25,7 @@ headerConfig.navItems.map(function (obj) {
 function isMarketLive(response) {
   response.hits.hits.map(function (obj) {
   	if (obj._source.title.indexOf('Markets Live:')>-1) {
-  		obj.webUrl = '/marketlive/' + obj._id;
+  		obj.webUrl = '/marketslive/' + obj._id;
   		obj.isMarketLive = true;
   	} else {
   		obj.webUrl = '/content/' + obj._id;

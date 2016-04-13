@@ -31,7 +31,7 @@
               <div class="post-content">
                 {{#isMarketLive}}
                   <div class="market-live-message">This Markets Live session is closed. <a href="{{webUrl}}">Read more</a></div>
-                  {{{_source.bodyHTML}}}
+                  <p>Live markets commentary from FT.com</p>
                 {{/isMarketLive}}
 
                 {{^isMarketLive}}
