@@ -32,8 +32,12 @@ router.get('/__access_metadata', (req, res) => {
 	res.json({
 			access_metadata: [
 				{
-					path_regex: ".*",
+					path_regex: "/longroom",
 					classification: "conditional_registered"
+				},
+				{
+					path_regex: ".*",
+					classification: "unconditional"
 				}
 			]
 	});
