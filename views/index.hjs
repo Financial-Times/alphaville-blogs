@@ -8,10 +8,10 @@
 
 		<link rel="stylesheet" href="{{assetsBasePath}}/build/main.css" />
 
-		<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+		<script src="//cdn.polyfill.io/v2/polyfill.min.js"></script>
 
-    <link href="https://build.origami.ft.com/v2/bundles/css?modules=o-comments@^2.5.0,o-comment-count@^0.1.1" rel="stylesheet" />
-    <script src="https://build.origami.ft.com/v2/bundles/js?modules=o-comments@^2.5.0,o-comment-count@^0.1.1&amp;minify=none"></script>
+    <link href="//build.origami.ft.com/v2/bundles/css?modules=o-comments@^2.5.0,o-comment-count@^0.1.1" rel="stylesheet" />
+    <script src="//build.origami.ft.com/v2/bundles/js?modules=o-comments@^2.5.0,o-comment-count@^0.1.1&amp;minify=none"></script>
 	</head>
 
 	<body class="enhanced">
@@ -63,10 +63,10 @@
     <script data-o-comment-api-config type="application/json">
       {
         "suds": {
-          "baseUrl": "http://test.session-user-data.webservices.ft.com"
+          "baseUrl": "//test.session-user-data.webservices.ft.com"
         },
         "ccs": {
-          "baseUrl": "http://test.comment-creation.webservices.ft.com"
+          "baseUrl": "//test.comment-creation.webservices.ft.com"
         },
         "cacheConfig": {
           "authBaseName": "comments-test-auth-",
