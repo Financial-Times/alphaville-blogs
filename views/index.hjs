@@ -10,51 +10,49 @@
 
 		<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
 
-    <link href="https://build.origami.ft.com/v2/bundles/css?modules=o-comments@^2.5.0,o-comment-count@^0.1.1" rel="stylesheet" />
-    <script src="https://build.origami.ft.com/v2/bundles/js?modules=o-comments@^2.5.0,o-comment-count@^0.1.1&amp;minify=none"></script>
 	</head>
 
 	<body class="enhanced">
 		{{#headerConfig}}
 			{{> header}}
 		{{/headerConfig}}
-    <div class="container primary-container" style="width: 973px">
-      <div class="o-grid-container">
-        <div class="o-grid-row">
-          <div data-o-grid-colspan="8">
-          {{#searchResults}}
-            <div id="post-{{_id}}" class="post">
-              <div class="post-header">
-                <h2 class="post-title"><a href="{{webUrl}}">{{_source.title}}</a></h2>
-                <div class="post-meta">
-                  <strong class="byline"><a href="#">{{_source.byline}}</a></strong>
-                  <div class="o-author-alerts o-author-alerts--theme" data-o-component="o-author-alerts" data-o-author-alerts-article-id="{{_id}}"></div>
-                  <span class="meta-divider"> | </span>
-                  <time data-o-component="o-date" class="o-date" datetime="{{_source.publishedDate}}">{{_source.publishedDate}} </time>
-                  <span class="meta-divider"> | </span>
-                  {{#_source.comments.enabled}}
-                  <div class="comment-counter" data-o-component="o-comment-count" data-o-comment-count-config-article-id="{{_id}}">Comments</div>
-                  <span class="meta-divider"> | </span>
-                  {{/_source.comments.enabled}}
-                </div>
-              </div>
-              <div class="post-content">
-                {{#isMarketLive}}
-                  <div class="market-live-message">This Markets Live session is closed. <a href="{{webUrl}}">Read more</a></div>
-                  <p>Live markets commentary from FT.com</p>
-                {{/isMarketLive}}
+    <div class="o-grid-container">
+      <div class="o-grid-row">
+        <div class="main" data-o-grid-colspan="8">
+        {{#searchResults}}
+          <div id="post-{{_id}}" class="post">
 
-                {{^isMarketLive}}
-                  {{{_source.openingHTML}}}
-                {{/isMarketLive}}
+            <div class="post-header">
+              <h2 class="post-title"><a href="{{webUrl}}">{{_source.title}}</a></h2>
+              <div class="post-meta">
+                <strong class="byline"><a href="#">{{_source.byline}}</a></strong>
+                <div class="o-author-alerts o-author-alerts--theme" data-o-component="o-author-alerts" data-o-author-alerts-article-id="{{_id}}"></div>
+                <span class="meta-divider"> | </span>
+                <time data-o-component="o-date" class="o-date" datetime="{{_source.publishedDate}}">{{_source.publishedDate}} </time>
+                <span class="meta-divider"> | </span>
+                {{#_source.comments.enabled}}
+                <div class="comment-counter" data-o-component="o-comment-count" data-o-comment-count-config-article-id="{{_id}}">Comments</div>
+                <span class="meta-divider"> | </span>
+                {{/_source.comments.enabled}}
               </div>
-
             </div>
-          {{/searchResults}}
-          </div>
-          <div data-o-grid-colspan="4">
+
+            <div class="post-content">
+              {{#isMarketLive}}
+                <div class="market-live-message">This Markets Live session is closed. <a href="{{webUrl}}">Read more</a></div>
+                <p>Live markets commentary from FT.com</p>
+              {{/isMarketLive}}
+
+              {{^isMarketLive}}
+                {{{_source.openingHTML}}}
+              {{/isMarketLive}}
+            </div>
 
           </div>
+        {{/searchResults}}
+        </div>
+        <div class="rail" data-o-grid-colspan="4">
+          {{>twitterWidget}}
         </div>
       </div>
     </div>

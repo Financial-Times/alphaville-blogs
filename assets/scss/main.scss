@@ -16,11 +16,10 @@ $o-ft-icons-is-silent: false;
 @import 'o-footer/main';
 @import 'o-colors/main';
 @import 'o-author-alerts/main';
-
+@import 'o-comments/main';
 
 // Store the default FT sans-serif font stack in a variable
 $sans-serif: oFontsGetFontFamilyWithFallbacks(BentonSans);
-
 
 .core .o--if-js,
 .enhanced .o--if-no-js {

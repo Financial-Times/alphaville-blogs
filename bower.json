@@ -26,7 +26,9 @@
     "o-autoinit": "^1.2.0",
     "alphaville-header": "git+https://github.com/Financial-Times/alphaville-header.git#^0.1.4",
     "o-author-alerts": "^2.0.0",
-    "o-date": "^2.3.1"
+    "o-date": "^2.3.1",
+    "o-comments" : "^2.5.0",
+    "o-comment-count" : "^0.1.1"
   },
   "resolutions": {
     "o-grid": "^4.0.6",

@@ -80,7 +80,8 @@ router.get('/', (req, res) => {
 
 				headerConfig: headerConfig,
 				partials: {
-					header: '../bower_components/alphaville-header/main.hjs'
+					header: '../bower_components/alphaville-header/main.hjs',
+					twitterWidget: '../views/partials/twitterWidget.hjs'
 				}
 			});
 
