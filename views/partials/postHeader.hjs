@@ -1,0 +1,18 @@
+<div class="post-header">
+	<h2 class="post-title">
+	{{#indexPage}}<a href="{{webUrl}}">{{/indexPage}}
+	{{title}}
+	{{#indexPage}}</a>{{/indexPage}}
+	</h2>
+	<div class="post-meta">
+		<strong class="byline"><a href="#">{{byline}}</a></strong>
+		<div class="o-author-alerts o-author-alerts--theme" data-o-component="o-author-alerts" data-o-author-alerts-article-id="{{id}}"></div>
+		<span class="meta-divider"> | </span>
+		<time data-o-component="o-date" class="o-date" datetime="{{publishedDate}}">{{publishedDate}} </time>
+		<span class="meta-divider"> | </span>
+		{{#comments.enabled}}
+		<div class="comment-counter" data-o-component="o-comment-count" data-o-comment-count-config-article-id="{{id}}">Comments</div>
+		<span class="meta-divider"> | </span>
+		{{/comments.enabled}}
+	</div>
+</div>

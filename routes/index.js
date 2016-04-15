@@ -25,12 +25,13 @@ headerConfig.navItems.map(function (obj) {
 function isMarketLive(response) {
   response.hits.hits.map(function (obj) {
   	if (obj._source.title.indexOf('Markets Live:')>-1) {
-  		obj.webUrl = '/marketslive/' + obj._id;
+  		obj._source.webUrl = '/marketslive/' + obj._id;
   		obj.isMarketLive = true;
   	} else {
-  		obj.webUrl = '/content/' + obj._id;
+  		obj._source.webUrl = '/content/' + obj._id;
   		obj.isMarketLive = false;
   	}
+		obj._source.indexPage = true;
   });
   return response;
 }
@@ -81,7 +82,9 @@ router.get('/', (req, res) => {
 				headerConfig: headerConfig,
 				partials: {
 					header: '../bower_components/alphaville-header/main.hjs',
-					twitterWidget: '../views/partials/twitterWidget.hjs'
+					twitterWidget: '../views/partials/twitterWidget.hjs',
+					postHeader: '../views/partials/postHeader.hjs',
+					footer: '../views/partials/footer.hjs'
 				}
 			});
 

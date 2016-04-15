@@ -3,8 +3,8 @@
 
 	<head>
 		<title>{{ title }}</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 		<link rel="stylesheet" href="{{assetsBasePath}}/build/main.css" />
 
@@ -16,68 +16,57 @@
 		{{#headerConfig}}
 			{{> header}}
 		{{/headerConfig}}
-    <div class="o-grid-container">
-      <div class="o-grid-row">
-        <div class="main" data-o-grid-colspan="8">
-        {{#article}}
-          <div id="post-{{id}}" class="post">
-            <div class="post-header">
-              <h2 class="post-title">{{title}}</h2>
-              <div class="post-meta">
-                <strong class="byline"><a href="#">{{byline}}</a></strong>
-                <div class="o-author-alerts o-author-alerts--theme" data-o-component="o-author-alerts" data-o-author-alerts-article-id="{{_id}}"></div>
-                <span class="meta-divider"> | </span>
-                <time data-o-component="o-date" class="o-date" datetime="{{publishedDate}}">{{publishedDate}} </time>
-                <span class="meta-divider"> | </span>
-                {{#comments.enabled}}
-                <div class="comment-counter" data-o-component="o-comment-count" data-o-comment-count-config-article-id="{{id}}">Comments</div>
-                <span class="meta-divider"> | </span>
-                {{/comments.enabled}}
-              </div>
-            </div>
-            <div class="post-content">
-                {{{bodyHTML}}}
-            </div>
-            {{#comments.enabled}}
-            <div data-o-component="o-comments" data-o-comments-config-title="FT Alphaville2 Blogs Test" data-o-comments-config-url="http://ftalphaville2.ft.com/content/{{id}}" data-o-comments-config-articleId="{{id}}"></div>
-            {{/comments.enabled}}
-          </div>
-        {{/article}}
-        </div>
-        <div class="rail" data-o-grid-colspan="4">
-          {{>twitterWidget}}
-        </div>
-      </div>
-    </div>
+		<div class="o-grid-container">
+			<div class="o-grid-row">
+				<div class="main" data-o-grid-colspan="8">
+				{{#article}}
+					<div id="post-{{id}}" class="post">
+						{{> postHeader}}
+
+						<div class="post-content">
+							{{{bodyHTML}}}
+						</div>
+
+						{{#comments.enabled}}
+						<div data-o-component="o-comments" data-o-comments-config-title="FT Alphaville2 Blogs Test" data-o-comments-config-url="http://ftalphaville2.ft.com/content/{{id}}" data-o-comments-config-articleId="{{id}}"></div>
+						{{/comments.enabled}}
+					</div>
+				{{/article}}
+				</div>
+				<div class="rail" data-o-grid-colspan="4">
+					{{>twitterWidget}}
+				</div>
+			</div>
+		</div>
 
 
-  {{#isTest}}
-    <script data-o-comments-config type="application/json">
-      {
-        "livefyre": {
-          "network": "ft-1.fyre.co",
-          "domain": "ft-1.auth.fyre.co"
-        },
-        "showEnvironment" : true
-      }
-    </script>
+	{{#isTest}}
+		<script data-o-comments-config type="application/json">
+			{
+				"livefyre": {
+					"network": "ft-1.fyre.co",
+					"domain": "ft-1.auth.fyre.co"
+				},
+				"showEnvironment" : true
+			}
+		</script>
 
-    <script data-o-comment-api-config type="application/json">
-      {
-        "suds": {
-          "baseUrl": "http://test.session-user-data.webservices.ft.com"
-        },
-        "ccs": {
-          "baseUrl": "http://test.comment-creation.webservices.ft.com"
-        },
-        "cacheConfig": {
-          "authBaseName": "comments-test-auth-",
-          "initBaseName": "comments-test-init-"
-        }
-      }
-    </script>
-  {{/isTest}}
+		<script data-o-comment-api-config type="application/json">
+			{
+				"suds": {
+					"baseUrl": "http://test.session-user-data.webservices.ft.com"
+				},
+				"ccs": {
+					"baseUrl": "http://test.comment-creation.webservices.ft.com"
+				},
+				"cacheConfig": {
+					"authBaseName": "comments-test-auth-",
+					"initBaseName": "comments-test-init-"
+				}
+			}
+		</script>
+	{{/isTest}}
 
-  <script src="{{assetsBasePath}}/build/main.js"></script>
+	<script src="{{assetsBasePath}}/build/main.js"></script>
 	</body>
 </html>

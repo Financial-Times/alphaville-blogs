@@ -28,7 +28,8 @@
     "o-author-alerts": "^2.0.0",
     "o-date": "^2.3.1",
     "o-comments" : "^2.5.0",
-    "o-comment-count" : "^0.1.1"
+    "o-comment-count" : "^0.1.1",
+    "o-footer": "^4.1.2"
   },
   "resolutions": {
     "o-grid": "^4.0.6",

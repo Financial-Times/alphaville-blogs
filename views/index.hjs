@@ -3,8 +3,8 @@
 
 	<head>
 		<title>{{ title }}</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 		<link rel="stylesheet" href="{{assetsBasePath}}/build/main.css" />
 
@@ -16,64 +16,55 @@
 		{{#headerConfig}}
 			{{> header}}
 		{{/headerConfig}}
-    <div class="o-grid-container">
-      <div class="o-grid-row">
-        <div class="main" data-o-grid-colspan="8">
-        {{#searchResults}}
-          <div id="post-{{_id}}" class="post">
+		<div class="o-grid-container">
+			<div class="o-grid-row">
+				<div class="main" data-o-grid-colspan="8">
+				{{#searchResults}}
+					<div id="post-{{_id}}" class="post">
 
-            <div class="post-header">
-              <h2 class="post-title"><a href="{{webUrl}}">{{_source.title}}</a></h2>
-              <div class="post-meta">
-                <strong class="byline"><a href="#">{{_source.byline}}</a></strong>
-                <div class="o-author-alerts o-author-alerts--theme" data-o-component="o-author-alerts" data-o-author-alerts-article-id="{{_id}}"></div>
-                <span class="meta-divider"> | </span>
-                <time data-o-component="o-date" class="o-date" datetime="{{_source.publishedDate}}">{{_source.publishedDate}} </time>
-                <span class="meta-divider"> | </span>
-                {{#_source.comments.enabled}}
-                <div class="comment-counter" data-o-component="o-comment-count" data-o-comment-count-config-article-id="{{_id}}">Comments</div>
-                <span class="meta-divider"> | </span>
-                {{/_source.comments.enabled}}
-              </div>
-            </div>
+						{{#_source}}
+							{{> postHeader}}
+						{{/_source}}
 
-            <div class="post-content">
-              {{#isMarketLive}}
-                <div class="market-live-message">This Markets Live session is closed. <a href="{{webUrl}}">Read more</a></div>
-                <p>Live markets commentary from FT.com</p>
-              {{/isMarketLive}}
+						<div class="post-content">
+							{{#isMarketLive}}
+								<div class="market-live-message">This Markets Live session is closed. <a href="{{_source.webUrl}}">Read more</a></div>
+								<p>Live markets commentary from FT.com</p>
+							{{/isMarketLive}}
 
-              {{^isMarketLive}}
-                {{{_source.openingHTML}}}
-              {{/isMarketLive}}
-            </div>
+							{{^isMarketLive}}
+								{{{_source.openingHTML}}}
+							{{/isMarketLive}}
+						</div>
 
-          </div>
-        {{/searchResults}}
-        </div>
-        <div class="rail" data-o-grid-colspan="4">
-          {{>twitterWidget}}
-        </div>
-      </div>
-    </div>
+					</div>
+				{{/searchResults}}
+				</div>
+				<div class="rail" data-o-grid-colspan="4">
+					{{>twitterWidget}}
+				</div>
+			</div>
+		</div>
 
-  {{#isTest}}
-    <script data-o-comment-api-config type="application/json">
-      {
-        "suds": {
-          "baseUrl": "http://test.session-user-data.webservices.ft.com"
-        },
-        "ccs": {
-          "baseUrl": "http://test.comment-creation.webservices.ft.com"
-        },
-        "cacheConfig": {
-          "authBaseName": "comments-test-auth-",
-          "initBaseName": "comments-test-init-"
-        }
-      }
-    </script>
-  {{/isTest}}
+	{{> footer}}
 
-  <script src="{{assetsBasePath}}/build/main.js"></script>
+	{{#isTest}}
+		<script data-o-comment-api-config type="application/json">
+			{
+				"suds": {
+					"baseUrl": "http://test.session-user-data.webservices.ft.com"
+				},
+				"ccs": {
+					"baseUrl": "http://test.comment-creation.webservices.ft.com"
+				},
+				"cacheConfig": {
+					"authBaseName": "comments-test-auth-",
+					"initBaseName": "comments-test-init-"
+				}
+			}
+		</script>
+	{{/isTest}}
+
+	<script src="{{assetsBasePath}}/build/main.js"></script>
 	</body>
 </html>

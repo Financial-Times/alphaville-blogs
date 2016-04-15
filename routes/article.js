@@ -42,8 +42,10 @@ router.get('/:uuid', (req, res) => {
 
 			headerConfig: headerConfig,
 			partials: {
-				header: '../bower_components/alphaville-header/main.hjs',
-				twitterWidget: '../views/partials/twitterWidget.hjs'
+					header: '../bower_components/alphaville-header/main.hjs',
+					twitterWidget: '../views/partials/twitterWidget.hjs',
+					postHeader: '../views/partials/postHeader.hjs',
+					footer: '../views/partials/footer.hjs'
 			}
 		});
 
