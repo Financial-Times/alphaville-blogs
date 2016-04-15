@@ -2,12 +2,8 @@
 
 var express = require('express');
 var router = express.Router();
-
-// const oDate = require('o-date');
-
-const elasticSearchUrl = process.env.ELASTIC_SEARCH_URL;
-const index = 'v3_api_v2';
-const signedFetch = require('signed-aws-es-fetch');
+var elasticSearch = require('../lib/elasticSearchApi');
+var renderPage = require('../lib/renderPage');
 
 const headerConfig = require('../bower_components/alphaville-header/template_config.json');
 const envVars = require('../env');
@@ -39,59 +35,44 @@ function isMarketLive(response) {
 /* GET home page. */
 router.get('/', (req, res) => {
 
-	signedFetch(`https://${elasticSearchUrl}/${index}/_search`, {
-			'method':'POST',
-			'body' : JSON.stringify({
-				filter: {
-					and: {
-						filters: [{
-							term: {
-								"metadata.primary": {
-									value: "brand"
-								},
-								"metadata.idV1": {
-									value: "ZDkyYTVhMzYtYjAyOS00OWI1LWI5ZTgtM2QyYTIzYjk4Y2Jj-QnJhbmRz"
-									}
-								}
+	elasticSearch.searchArticles({
+		'method':'POST',
+		'body' : JSON.stringify({
+		'filter': {
+			and: {
+				filters: [{
+					term: {
+						"metadata.primary": {
+							value: "brand"
+						},
+						"metadata.idV1": {
+							value: "ZDkyYTVhMzYtYjAyOS00OWI1LWI5ZTgtM2QyYTIzYjk4Y2Jj-QnJhbmRz"
 							}
-						]
+						}
 					}
-				},
-				sort : {
-					publishedDate:{
-						order : 'desc'
-					}
-				},
-				size: limit || 30
-			})
-		}).then(response => response.json()).then(isMarketLive).then(function(response){
+				]
+			}
+		},
+		'sort' : {
+			publishedDate:{
+				order : 'desc'
+			}
+		},
+		'size': limit || 30 })
 
-			// res.jsonp		(response)
+	}).then(isMarketLive).then(function(response){
 
-			res.render('index', {
-				title: 'FT Alphaville | FT Alphaville &#8211; Market Commentary &#8211; FT.com',
-
-				assetsBasePath: '/assets/index',
-				basePath: '/index',
-
-				isTest: envVars.env === 'test' ? true : false,
-				isProd: envVars.env === 'prod' ? true : false,
-
-				searchResults : response.hits.hits,
-
-				headerConfig: headerConfig,
-				partials: {
-					header: '../bower_components/alphaville-header/main.hjs',
-					twitterWidget: '../views/partials/twitterWidget.hjs',
-					postHeader: '../views/partials/postHeader.hjs',
-					footer: '../views/partials/footer.hjs'
-				}
-			});
-
+		renderPage(res, 'index', 'index',{
+			title: 'FT Alphaville | FT Alphaville &#8211; Market Commentary &#8211; FT.com',
+			searchResults : response.hits.hits,
+			headerConfig: headerConfig,
+			partials: {
+				twitterWidget: '../views/partials/twitterWidget.hjs',
+				postHeader: '../views/partials/postHeader.hjs'
+			}
 		});
 
-
-
+	})
 });
 
 router.get('/__access_metadata', (req, res) => {

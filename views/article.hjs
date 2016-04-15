@@ -21,7 +21,8 @@
 				<div class="main" data-o-grid-colspan="8">
 				{{#article}}
 					<div id="post-{{id}}" class="post">
-						{{> postHeader}}
+
+            {{> postHeader}}
 
 						<div class="post-content">
 							{{{bodyHTML}}}
@@ -39,6 +40,7 @@
 			</div>
 		</div>
 
+  {{> footer}}
 
 	{{#isTest}}
 		<script data-o-comments-config type="application/json">

@@ -36,7 +36,6 @@ app.get('/assets/index/bower/*.(woff|svg|ttf|eot|gif|png|jpg)', (req, res) => {
 	res.sendFile(path.join(__dirname, '/bower_components', newPath));
 });
 
-// app.use(express.static(path.join(__dirname, 'public')));
 app.use('/assets/index', express.static(path.join(__dirname, 'public')));
 
 
