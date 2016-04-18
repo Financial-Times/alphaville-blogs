@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<title>{{ title }}</title>
 		<meta charset="utf-8" />
@@ -11,7 +10,6 @@
 		<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
 
 	</head>
-
 	<body class="enhanced">
 		{{#headerConfig}}
 			{{> header}}

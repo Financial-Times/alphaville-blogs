@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<title>{{ title }}</title>
 		<meta charset="utf-8" />
@@ -11,11 +10,11 @@
 		<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
 
 	</head>
-
 	<body class="enhanced">
 		{{#headerConfig}}
 			{{> header}}
 		{{/headerConfig}}
+
 		<div class="o-grid-container">
 			<div class="o-grid-row">
 				<div class="main" data-o-grid-colspan="8">
@@ -39,6 +38,7 @@
 				</div>
 			</div>
 		</div>
+
 
   {{> footer}}
 

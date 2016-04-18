@@ -22,6 +22,7 @@
     "origami-build-tools": "^5.0.1",
     "run-sequence": "^1.0.2",
     "serve-favicon": "~2.3.0",
-    "signed-aws-es-fetch": "^1.1.0"
+    "alphaville-es-interface": "Financial-Times/alphaville-es-interface",
+    "alphaville-header-config": "Financial-Times/alphaville-header-config"
   }
 }
