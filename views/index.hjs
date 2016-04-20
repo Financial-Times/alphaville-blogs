@@ -50,7 +50,7 @@
 		<script data-o-comment-api-config type="application/json">
 			{
 				"suds": {
-					"baseUrl": "//test.session-user-data.webservices.ft.com"
+					"baseUrl": "//session-user-data-test-webservices.ft.com"
 				},
 				"ccs": {
 					"baseUrl": "//test.comment-creation.webservices.ft.com"
