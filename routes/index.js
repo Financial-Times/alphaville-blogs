@@ -23,7 +23,7 @@ function isMarketLive(response) {
 
 /* GET home page. */
 router.get('/', (req, res) => {
-
+	console.log('elasticsearch: ');
 	elasticSearch.searchArticles({
 		'method':'POST',
 		'body' : JSON.stringify({
@@ -50,7 +50,7 @@ router.get('/', (req, res) => {
 		'size': 30 })
 
 	}).then(isMarketLive).then(function(response){
-
+		console.log('renderPage: ', 'index');
 		renderPage(res, 'index', 'index',{
 			title: 'FT Alphaville | FT Alphaville &#8211; Market Commentary &#8211; FT.com',
 			searchResults : response.hits.hits,

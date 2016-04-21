@@ -13,11 +13,9 @@ $o-ft-icons-is-silent: false;
 @import 'o-grid/main';
 @import 'o-fonts/main';
 @import 'o-ft-icons/main';
-@import 'o-footer/main';
 @import 'o-colors/main';
 @import 'o-author-alerts/main';
 @import 'o-comments/main';
-@import 'o-footer/main';
 
 // Store the default FT sans-serif font stack in a variable
 $sans-serif: oFontsGetFontFamilyWithFallbacks(BentonSans);
@@ -47,4 +45,5 @@ body {
 @import './page';
 
 @import 'alphaville-header/main';
+@import 'alphaville-footer/main';
 

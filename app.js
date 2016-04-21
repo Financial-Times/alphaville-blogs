@@ -1,7 +1,5 @@
 "use strict";
 
-const port = process.env.PORT || 5000;
-
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -9,8 +7,10 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var routes = require('./routes/index');
-var article = require('./routes/article');
+var routes = {
+	index : require('./routes/index'),
+	article : require('./routes/article')
+};
 
 var app = express();
 
@@ -39,8 +39,8 @@ app.get('/assets/index/bower/*.(woff|svg|ttf|eot|gif|png|jpg)', (req, res) => {
 app.use('/assets/index', express.static(path.join(__dirname, 'public')));
 
 
-app.use('/', routes);
-app.use('/content', article);
+app.use('/', routes.index);
+app.use('/content', routes.article);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
