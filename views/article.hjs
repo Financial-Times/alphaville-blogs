@@ -40,8 +40,6 @@
 		</div>
 
 
-  {{> footer}}
-
 	{{#isTest}}
 		<script data-o-comments-config type="application/json">
 			{
@@ -70,5 +68,8 @@
 	{{/isTest}}
 
 	<script src="{{assetsBasePath}}/build/main.js"></script>
+
+  {{> footer}}
+
 	</body>
 </html>

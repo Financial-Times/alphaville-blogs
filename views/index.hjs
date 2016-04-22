@@ -44,8 +44,6 @@
 			</div>
 		</div>
 
-	{{> footer}}
-
 	{{#isTest}}
 		<script data-o-comment-api-config type="application/json">
 			{
@@ -64,5 +62,7 @@
 	{{/isTest}}
 
 	<script src="{{assetsBasePath}}/build/main.js"></script>
+  {{> footer}}
+
 	</body>
 </html>
