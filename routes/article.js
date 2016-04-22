@@ -5,7 +5,7 @@ var router = express.Router();
 var elasticSearch = require('alphaville-es-interface');
 var headerConfig = require('alphaville-header-config');
 
-var renderPage = require('../lib/renderPage');
+var renderPage = require('alphaville-page-render');
 
 
 /* GET article page. */

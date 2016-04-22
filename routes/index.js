@@ -4,8 +4,7 @@ var express = require('express');
 var router = express.Router();
 var elasticSearch = require('alphaville-es-interface');
 var headerConfig = require('alphaville-header-config');
-
-var renderPage = require('../lib/renderPage');
+var renderPage = require('alphaville-page-render');
 
 function isMarketLive(response) {
   response.hits.hits.map(function (obj) {
@@ -23,7 +22,7 @@ function isMarketLive(response) {
 
 /* GET home page. */
 router.get('/', (req, res) => {
-	console.log('elasticsearch: ');
+
 	elasticSearch.searchArticles({
 		'method':'POST',
 		'body' : JSON.stringify({
@@ -50,7 +49,7 @@ router.get('/', (req, res) => {
 		'size': 30 })
 
 	}).then(isMarketLive).then(function(response){
-		console.log('renderPage: ', 'index');
+
 		renderPage(res, 'index', 'index',{
 			title: 'FT Alphaville | FT Alphaville &#8211; Market Commentary &#8211; FT.com',
 			searchResults : response.hits.hits,
