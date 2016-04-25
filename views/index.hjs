@@ -44,25 +44,10 @@
 			</div>
 		</div>
 
-	{{#isTest}}
-		<script data-o-comment-api-config type="application/json">
-			{
-				"suds": {
-					"baseUrl": "//session-user-data-test-webservices.ft.com"
-				},
-				"ccs": {
-					"baseUrl": "//test.comment-creation.webservices.ft.com"
-				},
-				"cacheConfig": {
-					"authBaseName": "comments-test-auth-",
-					"initBaseName": "comments-test-init-"
-				}
-			}
-		</script>
-	{{/isTest}}
+		{{> commentsConfig}}
 
-	<script src="{{assetsBasePath}}/build/main.js"></script>
-  {{> footer}}
-
+		<script src="{{assetsBasePath}}/build/main.js"></script>
+		
+		{{> footer}}
 	</body>
 </html>

@@ -37,9 +37,11 @@ router.get('/:uuid', (req, res) => {
 			title: response._source.title + ' | FT Alphaville',
 			article : response._source,
 			headerConfig: headerConfig.setSelected('The Blog'),
+			oComments: true,
 			partials: {
 				twitterWidget: '../views/partials/twitterWidget.hjs',
-				postHeader: '../views/partials/postHeader.hjs'
+				postHeader: '../views/partials/postHeader.hjs',
+				commentsConfig: '../node_modules/alphaville-comments-config/main.hjs'
 			}
 		});
 

@@ -56,7 +56,8 @@ router.get('/', (req, res) => {
 			headerConfig: headerConfig.setSelected('The Blog'),
 			partials: {
 				twitterWidget: '../views/partials/twitterWidget.hjs',
-				postHeader: '../views/partials/postHeader.hjs'
+				postHeader: '../views/partials/postHeader.hjs',
+				commentsConfig: '../node_modules/alphaville-comments-config/main.hjs'
 			}
 		});
 
