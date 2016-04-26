@@ -24,7 +24,7 @@
     "serve-favicon": "~2.3.0",
     "alphaville-es-interface": "Financial-Times/alphaville-es-interface",
     "alphaville-header-config": "Financial-Times/alphaville-header-config",
-    "alphaville-page-render": "Financial-Times/alphaville-page-render",
+    "alphaville-page-render": "Financial-Times/alphaville-page-render#0.1.0",
     "alphaville-auth-middleware": "Financial-Times/alphaville-auth-middleware",
     "alphaville-comments-config": "Financial-Times/alphaville-comments-config"
   }
