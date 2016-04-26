@@ -20,7 +20,7 @@
 				{{#article}}
 					<div id="post-{{id}}" class="post">
 
-            {{> postHeader}}
+						{{> postHeader}}
 
 						<div class="post-content">
 							{{{bodyHTML}}}
