@@ -25,13 +25,18 @@
 		{{> header}}
 	{{/headerConfig}}
 
-	<div class="o-grid-container">
-		<div class="o-grid-row">
-			<div class="main" data-o-grid-colspan="12">
-				{{> body}}
-			</div>
-		</div>
-	</div>
+<div class="o-grid-container">
+    <div class="o-grid-row">
+        <div class="main" data-o-grid-colspan="8">
+            {{#barrierModel}}
+                {{> barrier}}
+            {{/barrierModel}}
+        </div>
+        <div class="rail" data-o-grid-colspan="4">
+            {{>twitterWidget}}
+        </div>
+    </div>
+</div>
 
 	{{> footer}}
 

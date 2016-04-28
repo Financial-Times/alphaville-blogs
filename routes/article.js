@@ -5,34 +5,32 @@ var router = express.Router();
 var elasticSearch = require('alphaville-es-interface');
 var headerConfig = require('alphaville-header-config');
 var auth = require('alphaville-auth-middleware');
-var env = process.env['ENVIRONMENT'] || 'test';
 
 var renderPage = require('alphaville-page-render');
 
 var authConfig = {
-	checkHeader: process.env['AUTH_HEADER'],
-	barrierView: 'barrier',
-	viewModel: {
-		headerConfig: headerConfig.setSelected('The Blog'),
-		assetsBasePath: '/assets/index',
-		basePath: '/index',
-		isTest: env === 'test' ? true : false,
-		isProd: env === 'prod' ? true : false,
-		partials: {
-			header: '../bower_components/alphaville-header/main.hjs',
-			footer: '../bower_components/alphaville-footer/main.hjs',
-			body: '../bower_components/alphaville-barrier/main.hjs'
-		}
-	}
+	checkHeader: process.env['AUTH_HEADER']
 };
 
-router.use('/', auth(authConfig));
+router.use('/', auth(authConfig), (req, res, next) => {
+	if (req.hasOwnProperty('isAuthenticated') && req.isAuthenticated === false ) {
+		return renderPage(res, 'barrier', 'index', {
+			title: 'FT Alphaville',
+			barrierModel: req.barrierModel,
+			headerConfig: headerConfig.setSelected('The Blog'),
+			partials: {
+				twitterWidget: '../views/partials/twitterWidget.hjs',
+				barrier: '../bower_components/alphaville-barrier/main.hjs'
+			}
+		});
+	}
+	return next();
+});
 
 /* GET article page. */
 router.get('/:uuid', (req, res) => {
 
 	elasticSearch.getArticle(req.params.uuid).then(function(response){
-
 		renderPage(res, 'article', 'index',{
 			title: response._source.title + ' | FT Alphaville',
 			article : response._source,
