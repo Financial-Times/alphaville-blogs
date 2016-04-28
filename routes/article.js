@@ -1,14 +1,14 @@
 "use strict";
 
-var express = require('express');
-var router = express.Router();
-var elasticSearch = require('alphaville-es-interface');
-var headerConfig = require('alphaville-header-config');
-var auth = require('alphaville-auth-middleware');
+const express = require('express');
+const router = new express.Router();
+const elasticSearch = require('alphaville-es-interface');
+const headerConfig = require('alphaville-header-config');
+const auth = require('alphaville-auth-middleware');
 
-var renderPage = require('alphaville-page-render');
+const renderPage = require('alphaville-page-render');
 
-var authConfig = {
+const authConfig = {
 	checkHeader: process.env['AUTH_HEADER']
 };
 

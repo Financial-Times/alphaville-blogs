@@ -3,7 +3,8 @@
 }
 
 .clearfix:after {
-	content: " "; /* Older browser do not support empty content */
+	content: " ";
+	/* Older browser do not support empty content */
 	visibility: hidden;
 	display: block;
 	height: 0;
@@ -14,60 +15,64 @@ a {
 	color: #2e6e9e;
 	-webkit-font-smoothing: antialiased;
 	text-decoration: none;
-
 	&:hover {
 		text-decoration: underline;
 	}
 }
 
-.main{
-
-  .post {
-    margin-right:20px;
-    a {
-      &:hover {
-        text-decoration: none;
-        color: black;
-      }
-    }
-    border-bottom: solid 1px #E9DECF;
-    .post-header  {
-      h2.post-title {
-        margin-bottom: 5px;
-        a {
-          color: black;
-        }
-      }
-      .post-meta  {
-        .byline {
-          margin-right: 5px;
-        }
-      }
-      .o-author-alerts  {
-        margin-right: 5px;
-      }
-      .comment-counter  {
-        display: inline;
-      }
-    }
-    .post-content {
-      .market-live-message {
-        border: 0;
-        border-left: 3px solid #9E2F50;
-        background-color: #F6E9D8;
-        padding: 10px 15px;
-        margin:15px 0 20px 0;
-      }
-    }
-  }
+.main {
+	.post {
+		margin-right: 20px;
+		a {
+			&:hover {
+				text-decoration: none;
+				color: black;
+			}
+		}
+		border-bottom: solid 1px #E9DECF;
+		.post-header {
+			h2.post-title {
+				margin-bottom: 5px;
+				a {
+					color: black;
+				}
+			}
+			.post-meta {
+				.byline {
+					margin-right: 5px;
+				}
+			}
+			.o-author-alerts {
+				margin-right: 5px;
+			}
+			.comment-counter {
+				display: inline;
+			}
+		}
+		.post-content {
+			.market-live-message {
+				border: 0;
+				border-left: 3px solid #9E2F50;
+				background-color: #F6E9D8;
+				padding: 10px 15px;
+				margin: 15px 0 20px 0;
+			}
+		}
+	}
 }
 
 .rail {
-  background-color:#f6e9d8;
-
+	background-color: #f6e9d8;
 }
 
-.twiterTimelinePromo { margin:0 0 32px 0 ; }
-.twiterTimelineContent { margin:0 10px ; }
-.twiterTimelineContent p { margin:10px 0 ; }
+.twiterTimelinePromo {
+	margin: 0 0 32px 0;
+}
 
+.twiterTimelineContent {
+	margin: 0 10px;
+}
+
+.twiterTimelineContent p {
+	margin: 10px 0;
+}
