@@ -25,7 +25,7 @@
 		"alphaville-es-interface": "Financial-Times/alphaville-es-interface",
 		"alphaville-header-config": "Financial-Times/alphaville-header-config",
 		"alphaville-page-render": "Financial-Times/alphaville-page-render#0.2.5",
-		"alphaville-auth-middleware": "Financial-Times/alphaville-auth-middleware#0.1.0",
+		"alphaville-auth-middleware": "Financial-Times/alphaville-auth-middleware#0.1.1",
 		"alphaville-comments-config": "Financial-Times/alphaville-comments-config#0.1.0",
 		"alphaville-coding-standards": "Financial-Times/alphaville-coding-standards#0.1.2"
 	}
