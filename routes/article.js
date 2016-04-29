@@ -9,7 +9,8 @@ const auth = require('alphaville-auth-middleware');
 const renderPage = require('alphaville-page-render');
 
 const authConfig = {
-	checkHeader: process.env['AUTH_HEADER']
+	checkHeader: process.env['AUTH_HEADER'],
+	checkHeaderValue: process.env['AUTH_HEADER_VALUE']
 };
 
 router.use('/', auth(authConfig), (req, res, next) => {
