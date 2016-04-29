@@ -59,7 +59,7 @@ gulp.task('build', function (callback) {
 });
 
 gulp.task('default', function (callback) {
-	runSequence('bower_update', 'bower_install', 'build', callback);
+	runSequence('bower-update', 'bower-install', 'build', callback);
 });
 
 gulp.task('watch', function() {
