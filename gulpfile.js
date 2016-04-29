@@ -23,8 +23,8 @@ gulp.task('clean-build', function (callback) {
 
 gulp.task('obt-verify', function() {
 	return obt.verify(gulp, {
-		scssLintPath: path.join(__dirname, './node_modules/alphaville-coding-standards/.eslintrc'),
-		esLintPath: path.join(__dirname, './node_modules/alphaville-coding-standards/scss-lint.yml'),
+		scssLintPath: path.join(__dirname, './node_modules/alphaville-coding-standards/scss-lint.yml'),
+		esLintPath: path.join(__dirname, './node_modules/alphaville-coding-standards/.eslintrc'),
 		editorconfigPath: path.join(__dirname, './node_modules/alphaville-coding-standards/.editorconfig')
 	});
 });
