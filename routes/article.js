@@ -2,11 +2,15 @@
 
 const express = require('express');
 const router = new express.Router();
+const fs = require('fs');
+const path = require('path');
 const elasticSearch = require('alphaville-es-interface');
-const headerConfig = require('alphaville-header-config');
 const auth = require('alphaville-auth-middleware');
 
-const renderPage = require('alphaville-page-render');
+const externalPartials = {
+	barrier: fs.readFileSync(path.join(__dirname, '../bower_components/alphaville-barrier/main.handlebars'), 'utf-8'),
+	commentsConfig: fs.readFileSync(path.join(__dirname, '../node_modules/alphaville-comments-config/main.handlebars'), 'utf-8')
+};
 
 const authConfig = {
 	checkHeader: process.env['AUTH_HEADER'],
@@ -15,13 +19,11 @@ const authConfig = {
 
 router.use('/', auth(authConfig), (req, res, next) => {
 	if (req.hasOwnProperty('isAuthenticated') && req.isAuthenticated === false ) {
-		return renderPage(res, 'barrier', 'index', {
+		return res.render('barrier', {
 			title: 'FT Alphaville',
 			barrierModel: req.barrierModel,
-			headerConfig: headerConfig.setSelected('The Blog'),
 			partials: {
-				twitterWidget: '../views/partials/twitterWidget.hjs',
-				barrier: '../bower_components/alphaville-barrier/main.hjs'
+				barrier: externalPartials.barrier
 			}
 		});
 	}
@@ -32,15 +34,13 @@ router.use('/', auth(authConfig), (req, res, next) => {
 router.get('/:uuid', (req, res) => {
 
 	elasticSearch.getArticle(req.params.uuid).then(function(response){
-		renderPage(res, 'article', 'index',{
+		res.render('article', {
 			title: response._source.title + ' | FT Alphaville',
 			article : response._source,
-			headerConfig: headerConfig.setSelected('The Blog'),
+
 			oComments: true,
 			partials: {
-				twitterWidget: '../views/partials/twitterWidget.hjs',
-				postHeader: '../views/partials/postHeader.hjs',
-				commentsConfig: '../node_modules/alphaville-comments-config/main.hjs'
+				commentsConfig: externalPartials.commentsConfig
 			}
 		});
 

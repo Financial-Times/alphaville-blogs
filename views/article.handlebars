@@ -1,0 +1,38 @@
+{{#contentFor "head"}}
+	<link rel="stylesheet" href="{{assetsBasePath}}/build/main.css" />
+
+	<script>
+		(function () {
+			ctmLoadScript({
+				src: "{{assetsBasePath}}/build/main.js",
+				async: true
+			});
+		}());
+	</script>
+{{/contentFor}}
+
+<div class="o-grid-container">
+	<div class="o-grid-row">
+		<div class="main" data-o-grid-colspan="8">
+		{{#article}}
+			<div id="post-{{id}}" class="post">
+
+				{{> postHeader}}
+
+				<div class="post-content">
+					{{{bodyHTML}}}
+				</div>
+
+				{{#comments.enabled}}
+				<div data-o-component="o-comments" data-o-comments-config-title="FT Alphaville2 Blogs Test" data-o-comments-config-url="http://ftalphaville2.ft.com/content/{{id}}" data-o-comments-config-articleId="{{id}}"></div>
+				{{/comments.enabled}}
+			</div>
+		{{/article}}
+		</div>
+		<div class="rail" data-o-grid-colspan="4">
+			{{> twitterWidget}}
+		</div>
+	</div>
+</div>
+
+{{> commentsConfig}}

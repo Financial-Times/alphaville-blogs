@@ -2,9 +2,13 @@
 
 const express = require('express');
 const router = new express.Router();
+const fs = require('fs');
+const path = require('path');
 const elasticSearch = require('alphaville-es-interface');
-const headerConfig = require('alphaville-header-config');
-const renderPage = require('alphaville-page-render');
+
+const externalPartials = {
+	commentsConfig: fs.readFileSync(path.join(__dirname, '../node_modules/alphaville-comments-config/main.handlebars'), 'utf-8')
+};
 
 function isMarketLive(response) {
 	response.hits.hits.map(function(obj) {
@@ -50,14 +54,11 @@ router.get('/', (req, res) => {
 
 	}).then(isMarketLive).then(function(response) {
 
-		renderPage(res, 'index', 'index', {
+		res.render('index', {
 			title: 'FT Alphaville | FT Alphaville &#8211; Market Commentary &#8211; FT.com',
 			searchResults: response.hits.hits,
-			headerConfig: headerConfig.setSelected('The Blog'),
 			partials: {
-				twitterWidget: '../views/partials/twitterWidget.hjs',
-				postHeader: '../views/partials/postHeader.hjs',
-				commentsConfig: '../node_modules/alphaville-comments-config/main.hjs'
+				commentsConfig: externalPartials.commentsConfig
 			}
 		});
 

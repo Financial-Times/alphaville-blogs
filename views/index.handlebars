@@ -1,0 +1,45 @@
+{{#contentFor "head"}}
+	<link rel="stylesheet" href="{{assetsBasePath}}/build/main.css" />
+
+<script>
+		(function () {
+			ctmLoadScript({
+				src: "{{assetsBasePath}}/build/main.js",
+				async: true
+			});
+		}());
+	</script>
+{{/contentFor}}
+
+
+<div class="o-grid-container">
+	<div class="o-grid-row">
+		<div class="main" data-o-grid-colspan="8">
+		{{#searchResults}}
+			<div id="post-{{_id}}" class="post">
+
+				{{#_source}}
+					{{> postHeader}}
+				{{/_source}}
+
+				<div class="post-content">
+					{{#isMarketLive}}
+						<div class="market-live-message">This Markets Live session is closed. <a href="{{_source.webUrl}}">Read more</a></div>
+						<p>Live markets commentary from FT.com</p>
+					{{/isMarketLive}}
+
+					{{^isMarketLive}}
+						{{{_source.openingHTML}}}
+					{{/isMarketLive}}
+				</div>
+
+			</div>
+		{{/searchResults}}
+		</div>
+		<div class="rail" data-o-grid-colspan="4">
+			{{> twitterWidget}}
+		</div>
+	</div>
+</div>
+
+{{> commentsConfig}}
