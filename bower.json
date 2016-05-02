@@ -1,11 +1,11 @@
 {
-  "name": "alphaville-index",
+  "name": "alphaville-blogs",
   "description": "",
   "main": "",
   "authors": [
     "Dragos Digulescu <dragos.digulescu@ft.com>"
   ],
-  "homepage": "https://github.com/Financial-Times/alphaville-index",
+  "homepage": "https://github.com/Financial-Times/alphaville-blogs",
   "moduleType": [
     "globals"
   ],
