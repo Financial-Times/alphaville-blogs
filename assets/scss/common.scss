@@ -1,1 +1,5 @@
-$o-assets-global-path: '/assets/index/bower/';
+@import '../../build_config/scss/assetsDomain';
+@import '../../build_config/scss/fingerprint';
+
+$o-assets-global-path: $assets-domain + '/assets/index/bower/' + $fingerprint + '/';
+@import 'o-assets/main';

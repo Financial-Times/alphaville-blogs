@@ -28,12 +28,17 @@
     "alphaville-barrier": "git+https://github.com/Financial-Times/alphaville-barrier.git#^0.1.0",
     "o-author-alerts": "^2.0.0",
     "o-date": "^2.3.1",
-    "o-comments" : "^2.5.0",
-    "o-comment-count" : "^0.1.1"
+    "o-comments": "^2.5.0",
+    "o-comment-count": "^0.1.1"
   },
   "resolutions": {
-    "o-grid": "^4.0.6",
+    "o-ft-icons": "^3.3.0",
+    "o-assets": "^3.0.0",
     "o-fonts": "^2.0.0",
-    "o-forms": "^2.0.0"
+    "o-buttons": "^3.0.0",
+    "o-forms": "^2.0.0",
+    "o-date": "^2.3.1",
+    "o-grid": "^4.0.6",
+    "o-hoverable": ">=0.1.1 <4"
   }
 }
