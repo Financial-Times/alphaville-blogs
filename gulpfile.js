@@ -11,9 +11,25 @@ alphavilleBuildTools(gulp, {
 			id: 'main',
 			standalone: 'mainBundle',
 			js: './assets/js/main.js',
-			sass: './assets/scss/main.scss',
+			sass: './assets/scss/index-page.scss',
 			buildJs: 'main.js',
-			buildCss: 'main.css'
-		}
+			buildCss: 'index.css'
+		},
+		{
+			id: 'article',
+			standalone: 'articleBundle',
+			js: './assets/js/article.js',
+			sass: './assets/scss/article-page.scss',
+			buildJs: 'article.js',
+			buildCss: 'article.css'
+		// },
+		// {
+		// 	id: 'barrier',
+		// 	standalone: 'barrierBundle',
+		// 	js: './assets/js/main.js',
+		// 	sass: './assets/scss/main.scss',
+		// 	buildJs: 'main.js',
+		// 	buildCss: 'main.css'
+		},
 	]
 });

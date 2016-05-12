@@ -17,6 +17,9 @@ router.use('/', auth());
 router.get('/:uuid', (req, res) => {
 
 	elasticSearch.getArticle(req.params.uuid).then(function(response){
+
+		// res.jsonp(response._source);
+
 		res.render('article', {
 			title: response._source.title + ' | FT Alphaville',
 			article : response._source,

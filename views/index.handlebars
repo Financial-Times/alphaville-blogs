@@ -1,6 +1,5 @@
 {{#contentFor "head"}}
-	<link rel="stylesheet" href="{{assetsBasePath}}/build/main.css" />
-
+<link rel="stylesheet" href="{{assetsBasePath}}/build/index.css" />
 <script>
 		(function () {
 			ctmLoadScript({
@@ -14,31 +13,28 @@
 
 <div class="o-grid-container">
 	<div class="o-grid-row">
-		<div class="main" data-o-grid-colspan="8">
+
 		{{#searchResults}}
-			<div id="post-{{_id}}" class="post">
 
-				{{#_source}}
-					{{> postHeader}}
-				{{/_source}}
 
-				<div class="post-content">
-					{{#isMarketLive}}
-						<div class="market-live-message">This Markets Live session is closed. <a href="{{_source.webUrl}}">Read more</a></div>
-						<p>Live markets commentary from FT.com</p>
-					{{/isMarketLive}}
+    <div class="main{{#isMarketLive}} marketLive{{/isMarketLive}}" data-o-grid-colspan="12 S6 M4 XL2">
 
-					{{^isMarketLive}}
-						{{{_source.openingHTML}}}
-					{{/isMarketLive}}
-				</div>
+      <div class="o-card o-card-- o-card--image-" data-o-component="o-card">
 
-			</div>
+        <div class="o-card__content">
+          <div class="o-card__meta">
+            <a href="#" class="o-card__tag">{{_source.byline}}</a>
+          </div>
+
+          <h2 class="o-card__heading"><a href="{{_source.webUrl}}">{{_source.title}}</a></h2>
+          <time data-o-component="o-date" class="o-date o-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
+        </div>
+
+      </div>
+
+    </div>
+
 		{{/searchResults}}
-		</div>
-		<div class="rail" data-o-grid-colspan="4">
-			{{> twitterWidget}}
-		</div>
 	</div>
 </div>
 

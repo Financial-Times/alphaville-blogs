@@ -54,6 +54,8 @@ router.get('/', (req, res) => {
 
 	}).then(isMarketLive).then(function(response) {
 
+		// res.jsonp(response.hits.hits);
+
 		res.render('index', {
 			title: 'FT Alphaville | FT Alphaville &#8211; Market Commentary &#8211; FT.com',
 			searchResults: response.hits.hits,

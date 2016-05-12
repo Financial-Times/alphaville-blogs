@@ -1,0 +1,19 @@
+@import './common';
+
+a {
+	color: #2e6e9e;
+	-webkit-font-smoothing: antialiased;
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.main {
+
+
+  &.marketlive {
+    border: 1px dotted black;
+  }
+}
+
