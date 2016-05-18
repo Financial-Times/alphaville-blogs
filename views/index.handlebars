@@ -16,8 +16,7 @@
 
 		{{#searchResults}}
 
-
-    <div class="main{{#isMarketLive}} marketLive{{/isMarketLive}}" data-o-grid-colspan="12 S6 M4 XL2">
+    <div class="main{{#isMarketLive}} marketLive{{/isMarketLive}}" data-o-grid-colspan="12 S6 M4 XL3">
 
       <div class="o-card o-card-- o-card--image-" data-o-component="o-card">
 
@@ -27,7 +26,15 @@
           </div>
 
           <h2 class="o-card__heading"><a href="{{_source.webUrl}}">{{_source.title}}</a></h2>
+
+          <div class="post-openingHTML">{{{_source.openingHTML}}}</div>
+
           <time data-o-component="o-date" class="o-date o-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
+          {{#comments.enabled}}
+          <span class="meta-divider"> | </span>
+          <div class="comment-counter" data-o-component="o-comment-count" data-o-comment-count-config-article-id="{{id}}">Comments</div>
+          {{/comments.enabled}}
+
         </div>
 
       </div>
