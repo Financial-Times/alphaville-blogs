@@ -31,7 +31,8 @@
     "o-comments": "^3.0.0",
     "o-comment-count": "^0.1.1",
     "o-card": "^2.1.1",
-    "n-content-body": "^2.0.5"
+    "n-content-body": "^2.0.5",
+    "o-share": "^2.1.4"
   },
   "resolutions": {
     "o-fonts": "^2.0.0",

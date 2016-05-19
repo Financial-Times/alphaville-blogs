@@ -1,6 +1,7 @@
 @import './common';
 
 @import 'n-content-body/main';
+@import 'components/share/main';
 
 .o-footer {
   margin-top: 0;
@@ -108,7 +109,7 @@
 }
 
 .article__main {
-  padding-top: 15px;
+  padding-top: 0;
 }
 .article__media {
   margin-bottom: 20px;

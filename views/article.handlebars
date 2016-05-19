@@ -47,43 +47,7 @@
 		<div class="article__main o-grid-row">
 			<div data-o-grid-colspan="12 L8 XL7 XLoffset1">
 
-				<div>
-				<!--
-					<div class="article__share article__share--top" data-trackable="share-top">
-						<div data-o-component="o-share" class="o-share" data-o-share--js="">
-							<ul>
-								<li class="o-share__action o-share__action--twitter">
-									<a target="_blank" href="https://twitter.com/intent/tweet?url=https://next.ft.com/content/ce9e7eb0-cfe5-3442-a38d-97ca7351e200&amp;text=India%20will%20lead%20the%20way%20in%20luxury%20travel&amp;via=FT" data-trackable="twitter"><i>Twitter</i></a>
-								</li>
-								<li class="o-share__action o-share__action--facebook">
-									<a target="_blank" href="http://www.facebook.com/sharer.php?u=https://next.ft.com/content/ce9e7eb0-cfe5-3442-a38d-97ca7351e200&amp;t=India%20will%20lead%20the%20way%20in%20luxury%20travel" data-trackable="facebook"><i>Facebook</i></a>
-								</li>
-								<li class="o-share__action o-share__action--linkedin">
-									<a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://next.ft.com/content/ce9e7eb0-cfe5-3442-a38d-97ca7351e200&amp;title=India%20will%20lead%20the%20way%20in%20luxury%20travel&amp;source=Financial+Times" data-trackable="linkedin"><i>LinkedIn</i></a>
-								</li>
-								<li class="o-share__action o-share__action--whatsapp">
-									<a target="_blank" href="whatsapp://send?text=India%20will%20lead%20the%20way%20in%20luxury%20travel%20-%20https://next.ft.com/content/ce9e7eb0-cfe5-3442-a38d-97ca7351e200" data-trackable="whatsapp"><i>Whatsapp</i></a>
-								</li>
-								<li class="article__share-action--email o-share__action o-share__action--email">
-									<button data-n-article-email-clickable="" data-n-article-email-container="top" data-n-article-email-free-article="false" data-trackable="email"><i>Email</i></button>
-								</li>
-							</ul>
-						</div>
-						<div class="article__save">
-							<a class="article__share__print" href="javascript:window.print()" data-trackable="print">
-								<span class="n-util-visually-hidden">Print this page</span>
-							</a>
-							<form class="n-myft-ui n-myft-ui--save" method="POST" data-content-id="ce9e7eb0-cfe5-3442-a38d-97ca7351e200" data-myft-ui="saved" action="/__myft/api/core/saved/content/ce9e7eb0-cfe5-3442-a38d-97ca7351e200?method=put">
-								<button type="submit" class="n-myft-ui__button" data-trackable="save-for-later" data-alternate-label="Saved to myFT" data-alternate-text="Saved" data-content-id="ce9e7eb0-cfe5-3442-a38d-97ca7351e200" aria-label="Save to myFT" title="Save to myFT">Save</button>
-							</form>
-						</div>
-						<div class="comment-counter" data-o-component="o-comment-count" data-o-comment-count-config-article-id="{{article.id}}">Comments</div>
-						<a data-o-comment-count-js="" href="#comments" data-trackable="view-comments" class="article__share__comments">1</a>
-					</div>
-					<div data-n-article-email-top-container=""></div>
-					<div class="article__share-bottom-gutter--top"></div>
-				-->
-				</div>
+        {{> shareComponent position='top'}}
 
 				<div class="article__time-byline">
 					<time class="article__timestamp o-date" data-o-component="o-date" datetime="{{article.publishedDate}}" data-o-date-js="" title="{{article.publishedDate}}" aria-label="{{article.publishedDate}}">{{article.publishedDate}}</time>
@@ -94,9 +58,12 @@
 				{{{article.bodyHTML}}}
 				</div>
 
-				{{#comments.enabled}}
-				<div data-o-component="o-comments" data-o-comments-config-title="FT Alphaville2 Blogs Test" data-o-comments-config-url="http://ftalphaville2.ft.com/content/{{id}}" data-o-comments-config-articleId="{{id}}"></div>
-				{{/comments.enabled}}
+        {{> shareComponent position='bottom'}}
+        <div data-n-article-email-bottom-container=""></div>
+
+				{{#article.comments.enabled}}
+				<div data-o-component="o-comments" data-o-comments-config-title="FT Alphaville2 Blogs Test" data-o-comments-config-url="https://ftalphaville2.ft.com/content/{{article.id}}" data-o-comments-config-articleId="{{article.id}}"></div>
+				{{/article.comments.enabled}}
 
 			</div>
 			<div class="article__aside o-grid-remove-gutters--XL" data-o-grid-colspan="0 L4 XL3 XLoffset1">
@@ -105,166 +72,6 @@
 		</div>
 	</div>
 </div>
-
-<!--
-
-<div class="article__wrapper ">
-	<div class="o-grid-container">
-		<div class="article__main o-grid-row">
-			<div data-o-grid-colspan="12 L8 XL7 XLoffset1">
-				<div>
-					<div class="article__share article__share--top" data-trackable="share-top">
-						<div data-o-component="o-share" class="o-share" data-o-share--js="">
-							<ul>
-								<li class="o-share__action o-share__action--twitter">
-									<a target="_blank" href="https://twitter.com/intent/tweet?url=https://next.ft.com/content/ce9e7eb0-cfe5-3442-a38d-97ca7351e200&amp;text=India%20will%20lead%20the%20way%20in%20luxury%20travel&amp;via=FT" data-trackable="twitter"><i>Twitter</i></a>
-								</li>
-								<li class="o-share__action o-share__action--facebook">
-									<a target="_blank" href="http://www.facebook.com/sharer.php?u=https://next.ft.com/content/ce9e7eb0-cfe5-3442-a38d-97ca7351e200&amp;t=India%20will%20lead%20the%20way%20in%20luxury%20travel" data-trackable="facebook"><i>Facebook</i></a>
-								</li>
-								<li class="o-share__action o-share__action--linkedin">
-									<a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://next.ft.com/content/ce9e7eb0-cfe5-3442-a38d-97ca7351e200&amp;title=India%20will%20lead%20the%20way%20in%20luxury%20travel&amp;source=Financial+Times" data-trackable="linkedin"><i>LinkedIn</i></a>
-								</li>
-								<li class="o-share__action o-share__action--whatsapp">
-									<a target="_blank" href="whatsapp://send?text=India%20will%20lead%20the%20way%20in%20luxury%20travel%20-%20https://next.ft.com/content/ce9e7eb0-cfe5-3442-a38d-97ca7351e200" data-trackable="whatsapp"><i>Whatsapp</i></a>
-								</li>
-								<li class="article__share-action--email o-share__action o-share__action--email">
-									<button data-n-article-email-clickable="" data-n-article-email-container="top" data-n-article-email-free-article="false" data-trackable="email"><i>Email</i></button>
-								</li>
-							</ul>
-						</div>
-						<div class="article__save">
-							<a class="article__share__print" href="javascript:window.print()" data-trackable="print">
-								<span class="n-util-visually-hidden">Print this page</span>
-							</a>
-							<form class="n-myft-ui n-myft-ui--save" method="POST" data-content-id="ce9e7eb0-cfe5-3442-a38d-97ca7351e200" data-myft-ui="saved" action="/__myft/api/core/saved/content/ce9e7eb0-cfe5-3442-a38d-97ca7351e200?method=put">
-								<button type="submit" class="n-myft-ui__button" data-trackable="save-for-later" data-alternate-label="Saved to myFT" data-alternate-text="Saved" data-content-id="ce9e7eb0-cfe5-3442-a38d-97ca7351e200" aria-label="Save to myFT" title="Save to myFT">Save</button>
-							</form>
-						</div>
-						<a data-o-comment-count-js="" href="#comments" data-trackable="view-comments" class="article__share__comments">1</a>
-					</div>
-					<div data-n-article-email-top-container=""></div>
-					<div class="article__share-bottom-gutter--top"></div>
-				</div>
-
-				<div class="article__time-byline">
-					<time class="article__timestamp o-date" data-o-component="o-date" datetime="2016-05-18T11:45:53Z" data-o-date-js="" title="May 18, 2016 12:45 pm" aria-label="4 hours ago">4 hours ago</time>
-					<p class="article__byline">by: Robert Sinclair-Barnes, Amadeus</p>
-				</div>
-				<div class="article__body n-content-body">
-							<figure class="n-content-image n-content-image--inline" style="width: 245px; max-width: 100%;"><div class="n-content-image__placeholder" style="padding-top:133.06122448979593%"><img alt="" src="https://next-geebee.ft.com/image/v1/images/raw/http%3A%2F%2Fblogs.ft.com%2Fbeyond-brics%2Ffiles%2F2016%2F05%2FRobert-Sinclair-Barnes-272x362.jpg?source=next&amp;fit=scale-down&amp;width=245"></div></figure><p>The travel industry has seen impressive growth in recent years as business travel recovers post-recession and rapidly growing middle classes from emerging markets have sparked an aviation boom. But despite the growth of low-cost mass-market travel, higher-yield premium and luxury trips are outpacing the market as a whole.</p><p>Our latest report, ‘<a href="http://www.amadeus.com/documents/future-traveller-tribes-2030/luxury-travel/shaping-the-future-of-luxury-travel-report.pdf" data-trackable="link" target="_blank">Shaping the Future of Luxury Travel</a>’, which is underpinned by data modeling from Tourism Economics, found that luxury travel had a global growth rate of 4.5 per cent between 2011 and 2015, 0.3 percentage points higher than the overall industry. Over the next decade, luxury travel’s growth rate is forecast to accelerate to 6.2 per cent, compared with a (still healthy) 4.8 per cent for the overall market.</p><p><strong>Bric economies are the engine of future luxury travel growth</strong></p><div class="o-ads in-article-advert o-ads--center o-ads--label-left" data-o-ads-name="mpu" data-o-ads-center="true" data-o-ads-label="true" data-o-ads-lazy-load="true" data-o-ads-targeting="pos=mid;" data-o-ads-formats-default="MediumRectangle,Responsive" data-o-ads-formats-small="MediumRectangle,Responsive" data-o-ads-formats-medium="MediumRectangle,Responsive" data-o-ads-formats-large="Responsive" data-o-ads-formats-extra="Responsive" aria-hidden="true"><div class="o-ads__outer"><div class="o-ads__inner" id="mpu-gpt"><div id="google_ads_iframe_5887/ft.com/unclassified_1__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_5887/ft.com/unclassified_1" title="3rd party ad content" name="google_ads_iframe_5887/ft.com/unclassified_1" width="2" height="2" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px; vertical-align: bottom;"></iframe></div><iframe id="google_ads_iframe_5887/ft.com/unclassified_1__hidden__" title="" name="google_ads_iframe_5887/ft.com/unclassified_1__hidden__" width="0" height="0" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px; vertical-align: bottom; visibility: hidden; display: none;"></iframe></div></div></div><p>Today, luxury travel remains a largely western indulgence, with North Americans and Europeans accounting for 64 per cent of the world’s outbound luxury trips but just 18 per cent of the world’s population. This is not surprising, given that history demonstrates consumers increase spend on travel once they reach a certain level of material wealth and the development of travel in a given market roughly tracks in line with its GDP development. However, in the next 10 years we can expect to see this picture change dramatically.</p><p>North America’s luxury travel market will in fact see the lowest growth of any region of the world between 2015 and 2025 at just 3 per cent, with Asia and the Middle East both experiencing compound annual growth rates (CAGRs) well in excess of 6 per cent.</p><p><strong>India: in search of luxury</strong></p><p>Over the next decade Indian luxury travel will outpace that of its Bric peers significantly, with a CAGR of 12.8 per cent, the highest of the 25 economies explored in our report. Indian luxury travel is expected to develop with a significant focus on long-haul outbound trips, with very little regional luxury travel. This is in direct opposition to markets such as China, where interregional luxury travel is a major driver.</p><p>In India’s case, a focus on long-haul trips could be the result of a very well-established and active diaspora throughout Europe, North America and the Middle East. When an Indian traveller’s hunt for a truly luxury travel experience is considered, the country’s unique geography may also help explain this difference. India is surrounded by neighbouring nations with economies that are emerging, but notably more slowly than its own, and as a result luxury travel infrastructure may not yet be as developed within the region.</p><p><strong>Bric divergence</strong></p><p>Conversely, Brazil’s luxury travel market is set to grow at a relatively modest 4.2 per cent over the same period, compared with 12.2 per cent for China and 9 per cent for Russia, on a compound annual basis. This can perhaps be best explained by Brazil’s lack of an established middle class and wobbles in its overall economic outlook. Brazil’s GDP contracted by 3.8 per cent in 2015, its unemployment rate reached 10 per cent and household debt grew to 45 per cent of GDP, according to the IMF.</p><p>It is the emergence of an experience-hungry middle-class that has been proven time and again to drive premium outbound travel. And of course, Brazil has an extremely well developed domestic luxury travel sector that has long been favoured by wealthy North American travellers. It could be that Brazil’s elites have compelling options on their doorstep already.</p><p><strong>Greater collaboration is needed to deliver on the luxury promise</strong></p><p>For travel providers, such as airlines and hotels, and travel sellers, such as agents and concierge services, the question for the next few years is surely: how can we best foster and benefit from growth in the luxury segment? For certain airlines, premium passengers can account for as much as 75 per cent of a flight’s profitability on certain routes, so serving this segment effectively can mean the difference between turning a profit or a loss.</p><p>Appealing to luxury travellers from emerging markets and beyond requires the delivery of a luxury experience from the moment a traveller sets foot in the taxi, until they arrive back at their front door – and every stage of the journey in between. Such experiences will require every provider in the travel ecosystem to more effectively collect, share and harness the opportunities presented by greater availability of traveller data to deliver on the luxury traveller’s requirement for a unique and highly personalised experience.</p><p>We are starting to see this take shape in pockets of the world today. For example, Saudi Arabia’s flag carrying airline, Saudia, will very soon offer a truly end-to-end experience that allows business travellers to step off the plane without the need for a visa and to begin a meeting just 30 minutes later. Travellers can stay for up to two days with meetings conducted in luxury, five-star surroundings at the terminal. Travellers can then depart again without the usual hassle or constraints of international travel. For a time-poor business traveller, this really is luxury.</p><p><em>Robert Sinclair-Barnes is Strategic Marketing Director, Amadeus.</em></p>
-				</div>
-						<div class="o-email-only-signup o-grid-container o-email-only-signup__visually-hidden" data-o-component="o-email-only-signup" data-trackable="light-signup" aria-hidden="true">
-							<div class="o-grid-row o-email-only-signup__inner">
-								<div data-o-grid-colspan="hide S5" class="o-email-only-signup__promo">
-									<img src="https://image.webservices.ft.com/v1/images/raw/https%3A%2F%2Fnext-geebee.ft.com%2Fassets%2Fproduct%2Ftop-three-newsletter-2.png?source=o-email-only-signup" class="o-email-only-signup__promo-image" alt="Sample newsletter email">
-								</div>
-								<div data-o-grid-colspan="12 S7">
-									<button class="o-email-only-signup__close" data-o-email-only-signup-close=""><span class="o-email-only-signup__visually-hidden">Close</span></button>
-									<h3 class="o-email-only-signup__heading">Sample the FT, with the top stories sent <span class="light-signup__highlight">free</span> to your inbox every morning</h3>
-									<p class="o-email-only-signup__text">For 1 week, you’ll get an email with free access to the 3 most read FT stories.</p>
-									<div class="o-email-only-signup__secondary" data-o-email-only-signup-completion-message="">
-										<form class="o-email-only-signup__form" data-o-email-only-signup-form="">
-											<label for="email" class="o-email-only-signup__visually-hidden">Email address:</label>
-											<input data-o-grid-colspan="7" type="text" id="email" name="email" class="o-email-only-signup__email o-forms-text" data-trackable="email">
-											<button data-o-grid-colspan="4" type="submit" class="o-email-only-signup__submit" data-trackable="submit">Sign up</button>
-											<p class="o-forms-errortext o-email-only-signup__email-error-msg o-email-only-signup__visually-hidden" data-o-email-only-signup-email-error="">Invalid email</p>
-											<p class="o-email-only-signup__no-spam">By clicking Sign up you confirm that you have read and agree to the <a target="_blank" href="http://help.ft.com/tools-services/ft-com-terms-and-conditions">terms and conditions</a>, <a target="_blank" href="http://help.ft.com/tools-services/how-the-ft-manages-cookies-on-its-websites">cookie policy</a> and <a target="_blank" href="http://help.ft.com/tools-services/financial-times-privacy-policy">privacy policy</a>.<br><strong>Unsubscribe at any time.</strong></p>
-										</form>
-									</div>
-								</div>
-							</div>
-						</div>
-					<footer class="n-content-copyright"><small><a href="http://www.ft.com/servicestools/help/copyright" data-trackable="link-copyright">Copyright</a>
-					The Financial Times Limited 2016. All rights reserved. You may share using our article tools. Please don't cut articles from FT.com and redistribute by email or post to the web.</small></footer>
-					<div>
-						<div class="article__share article__share--bottom" data-trackable="share-bottom">
-								<div data-o-component="o-share" class="o-share">
-									<ul>
-										<li class="o-share__action o-share__action--twitter">
-											<a target="_blank" href="https://twitter.com/intent/tweet?url=https://next.ft.com/content/ce9e7eb0-cfe5-3442-a38d-97ca7351e200&amp;text=India%20will%20lead%20the%20way%20in%20luxury%20travel&amp;via=FT" data-trackable="twitter"><i>Twitter</i></a>
-										</li>
-										<li class="o-share__action o-share__action--facebook">
-											<a target="_blank" href="http://www.facebook.com/sharer.php?u=https://next.ft.com/content/ce9e7eb0-cfe5-3442-a38d-97ca7351e200&amp;t=India%20will%20lead%20the%20way%20in%20luxury%20travel" data-trackable="facebook"><i>Facebook</i></a>
-										</li>
-										<li class="o-share__action o-share__action--linkedin">
-											<a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://next.ft.com/content/ce9e7eb0-cfe5-3442-a38d-97ca7351e200&amp;title=India%20will%20lead%20the%20way%20in%20luxury%20travel&amp;source=Financial+Times" data-trackable="linkedin"><i>LinkedIn</i></a>
-										</li>
-										<li class="o-share__action o-share__action--whatsapp">
-											<a target="_blank" href="whatsapp://send?text=India%20will%20lead%20the%20way%20in%20luxury%20travel%20-%20https://next.ft.com/content/ce9e7eb0-cfe5-3442-a38d-97ca7351e200" data-trackable="whatsapp"><i>Whatsapp</i></a>
-										</li>
-											<li class="article__share-action--email o-share__action o-share__action--email">
-												<button data-n-article-email-clickable="" data-n-article-email-container="bottom" data-n-article-email-free-article="false" data-trackable="email"><i>Email</i></button>
-											</li>
-									</ul>
-								</div>
-							<div class="article__save">
-									<a class="article__share__print" href="javascript:window.print()" data-trackable="print">
-										<span class="n-util-visually-hidden">Print this page</span>
-									</a>
-									<form class="n-myft-ui n-myft-ui--save" method="POST" data-content-id="ce9e7eb0-cfe5-3442-a38d-97ca7351e200" data-myft-ui="saved" action="/__myft/api/core/saved/content/ce9e7eb0-cfe5-3442-a38d-97ca7351e200?method=put">
-									<button type="submit" class="n-myft-ui__button" data-trackable="save-for-later" data-alternate-label="Saved to myFT" data-alternate-text="Saved" data-content-id="ce9e7eb0-cfe5-3442-a38d-97ca7351e200" aria-label="Save to myFT" title="Save to myFT">Save</button>
-									</form>
-							</div>
-						<a data-o-comment-count-js="" href="#comments" data-trackable="view-comments" class="article__share__comments">1</a></div>
-							<div data-n-article-email-bottom-container=""></div>
-						<div class="article__share-bottom-gutter--bottom"></div>
-					</div>
-				</div>
-				<div class="article__aside o-grid-remove-gutters--XL" data-o-grid-colspan="0 L4 XL3 XLoffset1">
-
-						<div class="sidebar-advert o-ads" data-o-ads-name="halfpage-desktop" data-o-ads-targeting="pos=mid;" data-o-ads-formats-default="false" data-o-ads-formats-small="false" data-o-ads-formats-medium="false" data-o-ads-formats-large="HalfPage,MediumRectangle" data-o-ads-formats-extra="HalfPage,MediumRectangle" data-o-ads-lazy-load="true" data-o-ads-collapse-empty="true" aria-hidden="true">
-						<div class="o-ads__outer"><div class="o-ads__inner" id="halfpage-desktop-gpt"><div id="google_ads_iframe_5887/ft.com/unclassified_2__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_5887/ft.com/unclassified_2" title="3rd party ad content" name="google_ads_iframe_5887/ft.com/unclassified_2" width="300" height="600" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px; vertical-align: bottom;"></iframe></div><iframe id="google_ads_iframe_5887/ft.com/unclassified_2__hidden__" title="" name="google_ads_iframe_5887/ft.com/unclassified_2__hidden__" width="0" height="0" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px; vertical-align: bottom; visibility: hidden; display: none;"></iframe></div></div></div>
-
-
-
-							<div class="suggested-reads__container" role="group" aria-labelledby="suggested-reads__title">
-								<h3 id="suggested-reads__title" class="suggested-reads__title">
-									More on this topic
-								</h3>
-									<p class="suggested-reads__subheading">
-										Suggestions below based on
-											<a class="suggested-reads__topic" data-trackable="suggested-topic" href="/stream/sectionsId/MTA2-U2VjdGlvbnM=">Emerging Markets</a>
-									</p>
-								<div class="suggested-reads__list">
-										<article class="suggested-reads__list-item">
-											<h4 class="suggested-reads__list-item__headline">
-												<a href="/content/a71056d2-3b7a-3ca1-a00f-4942580a7d18" data-trackable="suggested-article">Closing the gender health gap</a>
-											</h4>
-											<p class="suggested-reads__list-item__subheading"></p>
-										</article>
-										<article class="suggested-reads__list-item">
-											<h4 class="suggested-reads__list-item__headline">
-												<a href="/content/7d2f9646-1cc2-11e6-a7bc-ee846770ec15" data-trackable="suggested-article">China’s global energy financing raises climate fears</a>
-											</h4>
-											<p class="suggested-reads__list-item__subheading">Concentration of lending to coal power plants stokes pollution concerns</p>
-										</article>
-										<article class="suggested-reads__list-item">
-											<h4 class="suggested-reads__list-item__headline">
-												<a href="/content/551bb080-1c3c-11e6-a7bc-ee846770ec15" data-trackable="suggested-article">North Korea makes public its paranoia over China</a>
-											</h4>
-											<p class="suggested-reads__list-item__subheading">Pyongyang’s hatred for Beijing is palpable — and the feeling is mutual</p>
-										</article>
-										<article class="suggested-reads__list-item">
-											<h4 class="suggested-reads__list-item__headline">
-												<a href="/content/2ece8c28-1ccc-11e6-a7bc-ee846770ec15" data-trackable="suggested-article">SABMiller profits suffers as emerging markets weigh on results</a>
-											</h4>
-											<p class="suggested-reads__list-item__subheading">Chief confident despite ‘distraction’ of mega-merger with AB InBev</p>
-										</article>
-										<article class="suggested-reads__list-item">
-											<h4 class="suggested-reads__list-item__headline">
-												<a href="/content/f9a558de-1c4d-11e6-a7bc-ee846770ec15" data-trackable="suggested-article">South Africa minister denies ‘espionage’ charges</a>
-											</h4>
-											<p class="suggested-reads__list-item__subheading">Rand falls by 2% as political uncertainty weighs on Zuma’s government</p>
-										</article>
-								</div>
-							</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
--->
 
 
 {{> commentsConfig}}

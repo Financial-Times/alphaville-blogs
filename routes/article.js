@@ -31,6 +31,7 @@ router.get('/:uuid', (req, res) => {
 			res.set('Cache-Control', 'public, max-age=300');
 		}
 
+
 		res.render('article', {
 			title: response._source.title + ' | FT Alphaville',
 			article : response._source,
@@ -38,7 +39,8 @@ router.get('/:uuid', (req, res) => {
 			brand :  getMetadata('brand')[0].prefLabel,
 			oComments: true,
 			partials: {
-				commentsConfig: externalPartials.commentsConfig
+				commentsConfig: externalPartials.commentsConfig,
+				shareComponent : fs.readFileSync(path.join(__dirname, '../views/partials/shareComponent.handlebars'), 'utf-8')
 			}
 		});
 
