@@ -1,5 +1,197 @@
 @import './common';
 
+@import 'n-content-body/main';
+
+//ARTICLE HEADER
+.article__header {
+  position: relative;
+  background: getColor('pink');
+}
+
+.article__header--wrapper {
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.article__header-inner {
+  padding-top: 12px;
+
+  @include oGridRespondTo(L) {
+    display: flex;
+  }
+}
+
+.article__header-secondary {
+  margin-top: $spacing-unit / 2;
+}
+
+.article__header-time-byline {
+  @include oGridRespondTo(M) {
+    margin-right: 10px;
+    display: inline-block;
+  }
+}
+
+.article__header-actions {
+  @include oGridRespondTo(M) {
+    max-width: 25%;
+    display: inline-block;
+  }
+}
+
+//ARTICLE META ELEMENTS
+.article__title {
+  @include oTypographySerifDisplay(l, $load-progressively: true);
+  margin: 0;
+  @include oGridRespondTo(L) {
+    @include oTypographySerifDisplaySize(xl, $with-progressive-size: true);
+  }
+}
+.article__stand-first {
+  @include oTypographySansData(l, $load-progressively: true);
+  @include oTypographyFallbackFontSize(sansData, 20px);
+  line-height: 24px;
+
+  margin: 0 0 $spacing-unit / 4;
+  @include oGridRespondTo(L) {
+    @include oTypographySansDataSize(xl, $with-progressive-size: true);
+    @include oTypographyFallbackFontSize(sansData, 26px);
+    line-height: 27px;
+  }
+}
+
+.article__wrapper {
+  background-color: getColor('pink');
+}
+
+.article__meta {
+  margin: 20px 0 0;
+}
+.article__time-byline {
+  margin: 15px 0;
+}
+.article__byline {
+  @include oTypographySans(s);
+  display: inline-block;
+  margin: 0;
+}
+.article__timestamp {
+  @include oTypographySans(xs);
+  color: oColorsGetColorFor(timestamp, text);
+  text-transform: uppercase;
+  @media print {
+    text-indent: -9999px;
+    display: block;
+    &:after {
+      content: attr(title);
+      position: absolute;
+      left: 20px;
+      text-indent: 0;
+    }
+  }
+}
+.article__primary-theme {
+  margin: 0 0 5px;
+}
+
+.article__actions {
+  margin-top: 10px;
+  text-align: left;
+  @include oGridRespondTo(M) {
+    margin-top: 0;
+    text-align: right;
+  }
+}
+
+.article__main {
+  padding-top: 15px;
+}
+.article__media {
+  margin-bottom: 20px;
+
+  audio,
+  video {
+    width: 100%;
+  }
+}
+
+.article__gallery {
+  line-height: initial;
+}
+// Use next's icons
+.o-gallery__control {
+  line-height: 0;
+}
+.o-gallery__control:before {
+  position: relative;
+  top: 50%;
+  margin-top: -30px;
+}
+.o-gallery__control--prev:before {
+  @include nextIcon(arrow-left, #ffffff, 60);
+  left: -5px;
+  content: '';
+}
+.o-gallery__control--prev:hover:before {
+  @include nextIcon(arrow-left, #b0b0b0, 60);
+}
+.o-gallery__control--next:before {
+  @include nextIcon(arrow-right, #ffffff, 60);
+  left: -3px;
+  content: '';
+}
+.o-gallery__control--next:hover:before {
+  @include nextIcon(arrow-right, #b0b0b0, 60);
+}
+
+.article__aside {
+  @include oGridRespondTo($from: L, $until: XL) {
+    width: 310px;
+  }
+  @include oGridRespondTo($from: XL) {
+    padding-left: 0;
+  }
+}
+
+.article__warning {
+  background-color: oColorsGetPaletteColor('warm-2');
+  padding: 14px;
+  display: block;
+  margin: 0.3em 0 0.8em;
+  > p {
+    @include oTypographySans(m);
+    margin: 0;
+  }
+  &__link {
+    @include oTypographySansBold(m);
+  }
+}
+
+.article__interactive {
+  border: 0;
+}
+
+.o-ads {
+  @include oGridRespondTo($from: S, $until: L) {
+    clear: left;
+  }
+}
+
+.article__myft-logo {
+  @include nextIcon(myft-bolder, getColorFor(title, text), 26);
+  width: 40px;
+}
+
+.tag-to-follow {
+  @include oGridRespondTo(L) {
+    display: none;
+  }
+}
+
+@import 'genre-styles';
+
+
+/*
 a {
   color: #2e6e9e;
   -webkit-font-smoothing: antialiased;
@@ -65,3 +257,4 @@ a {
 .twiterTimelineContent p {
   margin: 10px 0;
 }
+*/

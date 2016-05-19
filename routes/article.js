@@ -13,17 +13,26 @@ const externalPartials = {
 
 router.use('/', auth());
 
+
 /* GET article page. */
 router.get('/:uuid', (req, res) => {
 
 	elasticSearch.getArticle(req.params.uuid).then(function(response){
 
+		function getMetadata(taxonomy) {
+			return response._source.metadata.filter(function (item) {
+				return (item.taxonomy === taxonomy)
+			});
+		}
+
 		// res.jsonp(response._source);
+		console.log('getMetadata(\'sections\'): ', getMetadata('sections')[0].prefLabel);
 
 		res.render('article', {
 			title: response._source.title + ' | FT Alphaville',
 			article : response._source,
-
+			primaryTheme : getMetadata('sections')[0].prefLabel,
+			brand :  getMetadata('brand')[0].prefLabel,
 			oComments: true,
 			partials: {
 				commentsConfig: externalPartials.commentsConfig
