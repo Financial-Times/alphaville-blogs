@@ -55,6 +55,9 @@ router.get('/', (req, res) => {
 	}).then(isMarketLive).then(function(response) {
 
 		// res.jsonp(response.hits.hits);
+		if (process.env.ENVIRONMENT === 'prod') {
+			res.set('Cache-Control', 'public, max-age=30');
+		}
 
 		res.render('index', {
 			title: 'FT Alphaville | FT Alphaville &#8211; Market Commentary &#8211; FT.com',

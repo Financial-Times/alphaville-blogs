@@ -26,7 +26,10 @@ router.get('/:uuid', (req, res) => {
 		}
 
 		// res.jsonp(response._source);
-		console.log('getMetadata(\'sections\'): ', getMetadata('sections')[0].prefLabel);
+
+		if (process.env.ENVIRONMENT === 'prod') {
+			res.set('Cache-Control', 'public, max-age=300');
+		}
 
 		res.render('article', {
 			title: response._source.title + ' | FT Alphaville',
