@@ -10,19 +10,27 @@ const externalPartials = {
 	commentsConfig: fs.readFileSync(path.join(__dirname, '../node_modules/alphaville-comments-config/main.handlebars'), 'utf-8')
 };
 
-function isMarketLive(response) {
-	response.hits.hits.map(function(obj) {
+function getMetadata(metadata, options) {
+	return metadata.filter(function (item) {
+		return (item.prefLabel === options.prefLabel);
+	});
+}
+
+
+function categorization(response) {
+	response.hits.hits.forEach(function(obj) {
 		if (obj._source.title.indexOf('Markets Live:') > -1) {
-			obj._source.webUrl = '/marketslive/' + obj._id;
+			obj._webUrl = '/marketslive/' + obj._id;
 			obj.isMarketLive = true;
 		} else {
-			obj._source.webUrl = '/content/' + obj._id;
+			obj._webUrl = '/content/' + obj._id;
 			obj.isMarketLive = false;
 		}
-		obj._source.indexPage = true;
+		obj.isPodcast = (getMetadata(obj._source.metadata, {prefLabel:'Podcasts'}).length > 0)
 	});
 	return response;
 }
+
 
 /* GET home page. */
 router.get('/', (req, res) => {
@@ -52,9 +60,10 @@ router.get('/', (req, res) => {
 			'size': 30
 		})
 
-	}).then(isMarketLive).then(function(response) {
+	}).then(categorization).then(function(response) {
 
 		// res.jsonp(response.hits.hits);
+
 		if (process.env.ENVIRONMENT === 'prod') {
 			res.set('Cache-Control', 'public, max-age=30');
 		}

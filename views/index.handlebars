@@ -22,18 +22,17 @@
 
         <div class="o-card__content">
           <div class="o-card__meta">
-            <a href="#" class="o-card__tag">{{_source.byline}}</a>
+            <time data-o-component="o-date" class="o-date o-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time> by: <a href="#" class="o-card__tag">{{_source.byline}}</a>
           </div>
 
-          <h2 class="o-card__heading"><a href="{{_source.webUrl}}">{{_source.title}}</a></h2>
+          <h2 class="o-card__heading"><a href="{{_webUrl}}">{{_source.title}}</a></h2>
 
           <div class="post-openingHTML">{{{_source.openingHTML}}}</div>
 
-          <time data-o-component="o-date" class="o-date o-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
-          {{#comments.enabled}}
-          <span class="meta-divider"> | </span>
-          <div class="comment-counter" data-o-component="o-comment-count" data-o-comment-count-config-article-id="{{id}}">Comments</div>
-          {{/comments.enabled}}
+
+          {{#_source.comments.enabled}}
+          <div class="comment-counter" data-o-component="o-comment-count" data-o-comment-count-config-article-id="{{_source.id}}"></div>
+          {{/_source.comments.enabled}}
 
         </div>
 

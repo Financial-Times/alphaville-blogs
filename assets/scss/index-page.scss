@@ -1,7 +1,43 @@
 @import './common';
 
+$o-card-is-silent: false;
+
 @import 'o-card/main';
 
+.main {
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+	.o-card {
+		min-height: 250px;
+		.o-card__content {
+
+			.o-card__timestamp, .o-card__tag {
+				display: inline-block;
+				padding: 0px;
+			}
+
+
+			.post-openingHTML {
+				position: relative;
+				overflow: hidden;
+				height:100px;
+
+			}
+
+			.comment-counter {
+				position: absolute;
+				bottom: 5px;
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+
+		}
+
+	}
+
+}
+/*
 a {
 	color: #2e6e9e;
 	-webkit-font-smoothing: antialiased;
@@ -17,7 +53,7 @@ a {
 	width: 10px;
 	overflow: hidden;
 	padding: 16px 12px 0 12px;
-  margin-bottom: 28px;
+	margin-bottom: 28px;
 
 	.o-card	{
 		margin-top: 0px;
@@ -92,3 +128,4 @@ a {
 	}
 }
 
+*/
