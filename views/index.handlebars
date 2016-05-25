@@ -21,18 +21,41 @@
       <div class="o-card o-card-- o-card--image-" data-o-component="o-card">
 
         <div class="o-card__content">
-          <div class="o-card__meta">
-            <time data-o-component="o-date" class="o-date o-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time> by: <a href="#" class="o-card__tag">{{_source.byline}}</a>
+
+          {{#_source.primaryTheme}}
+          <div class="o-card__meta card-primaryTheme">
+            <a href="#" class="o-card__tag">{{this}}</a>
           </div>
+          {{/_source.primaryTheme}}
 
           <h2 class="o-card__heading"><a href="{{_webUrl}}">{{_source.title}}</a></h2>
 
+          <!-- div class="o-card__meta">
+             by: <a href="#" class="o-card__tag">{{_source.byline}}</a>
+          </div -->
+
+          {{#isMarketLive}}
+          {{!-- isMarketLive --}}
+          <div class="post-openingHTML">
+            <div class="description">This Markets Live session is closed. <a href="{{_webUrl}}">Read more</a></div>
+            <p>Live markets commentary from FT.com</p>
+          </div>
+          {{/isMarketLive}}
+
+          {{^isMarketLive}}
+          {{!-- isSomethingElse --}}
           <div class="post-openingHTML">{{{_source.openingHTML}}}</div>
+          {{/isMarketLive}}
 
 
-          {{#_source.comments.enabled}}
-          <div class="comment-counter" data-o-component="o-comment-count" data-o-comment-count-config-article-id="{{_source.id}}"></div>
-          {{/_source.comments.enabled}}
+
+          <div class="card-footer clearfix">
+            <time data-o-component="o-date" class="o-date o-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
+
+            {{#_source.comments.enabled}}
+            <a href="#comments" class="article__share__comments" data-o-component="o-comment-count" data-o-comment-count-config-article-id="{{_source.id}}" data-o-comment-count-config-template="{count}"></a>
+            {{/_source.comments.enabled}}
+          </div>
 
         </div>
 
