@@ -6,9 +6,18 @@ $o-card-is-silent: false;
 @import 'n-content-body/main';
 @import 'components/share/main';
 
+
 .main {
 	margin-top: 10px;
 	margin-bottom: 10px;
+
+  a {
+    border-bottom: 1px dotted transparent!important;
+    &:hover {
+      border-bottom: 1px dotted #27757b!important;
+    }
+  }
+
 
 	.o-card {
 
@@ -21,6 +30,7 @@ $o-card-is-silent: false;
         display: none
       }
       .o-card__meta{
+
         &.card-primaryTheme {
           border-bottom: 1px solid #cec6b9;
           margin-bottom: 10px;
@@ -28,6 +38,7 @@ $o-card-is-silent: false;
           .o-card__tag {
             font-size: 22px;
             text-transform: uppercase;
+            line-height: 24px;
           }
         }
       }
@@ -35,6 +46,7 @@ $o-card-is-silent: false;
       h2.o-card__heading {
         line-height: 26px;
         font-size: 22px;
+        margin-bottom: 0px;
       }
 
 
@@ -72,6 +84,7 @@ $o-card-is-silent: false;
   &.marketLive {
     .o-card__content {
       .post-openingHTML {
+        margin-top:10px;
         .description {
           background-color:#F6E9D8;
           border-left: 3px solid #9E2F50;

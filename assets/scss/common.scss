@@ -50,3 +50,10 @@ body {
   clear: both;
 }
 
+a {
+  border-bottom: none!important;
+  &:hover {
+    border-bottom: none!important;
+  }
+}
+
