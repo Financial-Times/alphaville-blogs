@@ -7,7 +7,9 @@ const path = require('path');
 const elasticSearch = require('alphaville-es-interface');
 
 const externalPartials = {
-	commentsConfig: fs.readFileSync(path.join(__dirname, '../node_modules/alphaville-comments-config/main.handlebars'), 'utf-8')
+	commentsConfig: fs.readFileSync(path.join(__dirname, '../node_modules/alphaville-comments-config/main.handlebars'), 'utf-8'),
+	card_hero : fs.readFileSync(path.join(__dirname, '../views/partials/card-hero.handlebars'), 'utf-8'),
+	card_podcast : fs.readFileSync(path.join(__dirname, '../views/partials/card-podcast.handlebars'), 'utf-8')
 };
 
 function getMetadata(metadata, options) {
@@ -25,20 +27,24 @@ function categorization(response) {
 			obj.isMarketLive = true;
 			obj._source.primaryTheme = 'Market Live';
 			obj._source.title = obj._source.title.replace(/Markets Live: /, '');
+			obj._source.cardType = 'marketLive';
 
 		} else {
 			obj._webUrl = '/content/' + obj._id;
 			obj.isMarketLive = false;
 			obj._source.primaryTheme = false;
+			obj._source.cardType = '';
+
 			if (getMetadata(obj._source.metadata, {prefLabel:'First FT'}).length > 0) {
 				obj._source.primaryTheme = 'BRIEFING: First FT';
+				obj._source.cardType = 'firstFt';
 			}
-			// obj._source.openingHTML = obj._source.openingHTML.substring(0, 119);
 
 		}
 		obj.isPodcast = (getMetadata(obj._source.metadata, {prefLabel:'Podcasts'}).length > 0);
 		if (obj.isPodcast) {
 			obj._source.primaryTheme = 'Podcast: Alphachat';
+			obj._source.cardType = 'podcast';
 		}
 
 		if(obj._source.title.length > 120){
@@ -52,9 +58,9 @@ function categorization(response) {
 }
 
 function testCat(response) {
-	response.hits.hits.forEach(function (obj) {
-	  console.log('primaryTheme: ', obj._source.primaryTheme);
-	});
+	// response.hits.hits.forEach(function (obj) {
+	//   console.log('primaryTheme: ', obj._source.primaryTheme);
+	// });
   return response;
 }
 
@@ -93,22 +99,27 @@ router.get('/', (req, res) => {
 					order: 'desc'
 				}
 			},
-			'size': 30
+			'size': 100
 		})
 
 	}).then(categorization).then(testCat).then(function(response) {
 
-		// res.jsonp(response.hits.hits);
+		// res.jsonp(response);
 
 		if (process.env.ENVIRONMENT === 'prod') {
 			res.set('Cache-Control', 'public, max-age=30');
 		}
 
+		var hero = response.hits.hits.shift();
+
 		res.render('index', {
 			title: 'FT Alphaville | FT Alphaville &#8211; Market Commentary &#8211; FT.com',
 			searchResults: response.hits.hits,
+			hero : hero,
 			partials: {
-				commentsConfig: externalPartials.commentsConfig
+				commentsConfig: externalPartials.commentsConfig,
+				card_hero: externalPartials.card_hero,
+				card_podcast: externalPartials.card_podcast
 			}
 		});
 

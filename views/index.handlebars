@@ -10,17 +10,26 @@
 	</script>
 {{/contentFor}}
 
-
 <div class="o-grid-container">
 	<div class="o-grid-row">
+  {{#hero}}
+    {{> card_hero}}
+  {{/hero}}
 
 		{{#searchResults}}
 
-    <div class="main{{#isMarketLive}} marketLive{{/isMarketLive}}" data-o-grid-colspan="12 S6 M4 XL3">
+    <div class="main {{_source.cardType}}" data-o-grid-colspan="12 S6 M4 XL3">
 
       <div class="o-card o-card-- o-card--image-" data-o-component="o-card">
 
         <div class="o-card__content">
+          {{#isPodcast}}
+
+            {{> card_podcast}}
+
+          {{/isPodcast}}
+
+          {{^isPodcast}}
 
           {{#_source.primaryTheme}}
           <div class="o-card__meta card-primaryTheme">
@@ -56,6 +65,8 @@
             <a href="#comments" class="article__share__comments" data-o-component="o-comment-count" data-o-comment-count-config-article-id="{{_source.id}}" data-o-comment-count-config-template="{count}"></a>
             {{/_source.comments.enabled}}
           </div>
+
+          {{/isPodcast}}
 
         </div>
 

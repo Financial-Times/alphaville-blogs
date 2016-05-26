@@ -44,8 +44,8 @@ $o-card-is-silent: false;
       }
 
       h2.o-card__heading {
-        line-height: 26px;
-        font-size: 22px;
+        line-height: 20px;
+        font-size: 18px;
         margin-bottom: 0px;
       }
 
@@ -89,7 +89,7 @@ $o-card-is-silent: false;
           background-color:#F6E9D8;
           border-left: 3px solid #9E2F50;
           padding: 10px 15px;
-          margin-bottom: 20px;
+          margin-bottom: 10px;
         }
         p {
           margin-bottom:10px;
@@ -98,7 +98,21 @@ $o-card-is-silent: false;
     }
   }
 
+  &.podcast {
+    .o-card {
+      height:380px;
+      .o-card__content {
+        h2.o-card__heading {
+          margin-bottom: 10px;
+        }
+        img {
+          display: inline-block;
+        }
+      }
+    }
+  }
 }
+
 /*
 a {
 	color: #2e6e9e;
