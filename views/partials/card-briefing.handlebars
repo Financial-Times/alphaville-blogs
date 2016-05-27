@@ -4,4 +4,10 @@
 
 <h2 class="o-card__heading"><a href="{{_webUrl}}">{{{_source.title}}}</a></h2>
 
-<img src="{{_source.mainImage.url}}" alt="{{_source.mainImage.title}}" title="{{_source.mainImage.title}}" width="100%">
+<div class="post-openingHTML">
+  <ul>
+  {{#_source.summaries}}
+    <li>{{this}}</li>
+  {{/_source.summaries}}
+  </ul>
+</div>

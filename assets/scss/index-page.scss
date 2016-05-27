@@ -6,7 +6,6 @@ $o-card-is-silent: false;
 @import 'n-content-body/main';
 @import 'components/share/main';
 
-
 .main {
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -17,6 +16,7 @@ $o-card-is-silent: false;
       border-bottom: 1px dotted #27757b!important;
     }
   }
+
 
 
 	.o-card {
@@ -81,7 +81,7 @@ $o-card-is-silent: false;
 		}
 
 	}
-  &.marketLive {
+  &.marketlive {
     .o-card__content {
       .post-openingHTML {
         margin-top:10px;
@@ -111,6 +111,56 @@ $o-card-is-silent: false;
       }
     }
   }
+
+
+  &.hero {
+
+    .o-card {
+      position: relative;
+      overflow: hidden;
+      height:250px;
+
+      .o-card__content {
+        img {
+          display: inline;
+          float: right;
+          margin-left: 40px;
+        }
+        .o-card__meta{
+
+          &.card-primaryTheme {
+            border-bottom: none;
+            margin-bottom: 0px;
+
+            .o-card__tag {
+              font-size: 14px;
+              text-transform: uppercase;
+              line-height: 16px;
+            }
+          }
+        }
+
+        h2.o-card__heading {
+          line-height: 22px;
+          font-size: 28px;
+          margin-bottom: 10px;
+        }
+
+        .post-openingHTML {
+          position: absolute;
+          overflow: hidden;
+          height: 95px;
+          width: 50%;
+        }
+
+        .card-footer {
+          width:50%;
+        }
+
+      }
+    }
+  }
+
 }
 
 /*
