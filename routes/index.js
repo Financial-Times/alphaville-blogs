@@ -18,6 +18,10 @@ function getMetadata(metadata, options) {
 	});
 }
 
+function ellipsis(str, l){
+	var len = l-1;
+	return (str.length > len)? str.substring(0, len) + '&hellip;' : str;
+}
 
 function categorization(response) {
 	response.hits.hits.forEach(function(obj) {
@@ -45,24 +49,17 @@ function categorization(response) {
 		if (obj.isPodcast) {
 			obj._source.primaryTheme = 'Podcast: Alphachat';
 			obj._source.cardType = 'podcast';
+			obj._source.title = ellipsis(obj._source.title, 60);
 		}
 
 		if(obj._source.title.length > 120){
-			obj._source.title = obj._source.title.substring(0, 118) + '&hellip;';
+			obj._source.title = ellipsis(obj._source.title, 120);
 		}
-
-
 
 	});
 	return response;
 }
 
-function testCat(response) {
-	// response.hits.hits.forEach(function (obj) {
-	//   console.log('primaryTheme: ', obj._source.primaryTheme);
-	// });
-  return response;
-}
 
 
 /* GET home page. */
@@ -99,10 +96,10 @@ router.get('/', (req, res) => {
 					order: 'desc'
 				}
 			},
-			'size': 100
+			'size': 50
 		})
 
-	}).then(categorization).then(testCat).then(function(response) {
+	}).then(categorization).then(function(response) {
 
 		// res.jsonp(response);
 
