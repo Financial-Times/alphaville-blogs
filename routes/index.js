@@ -12,13 +12,47 @@ const externalPartials = {
 	card_briefing : fs.readFileSync(path.join(__dirname, '../views/partials/card-briefing.handlebars'), 'utf-8'),
 	card_hero : fs.readFileSync(path.join(__dirname, '../views/partials/card-hero.handlebars'), 'utf-8'),
 	card_marketlive : fs.readFileSync(path.join(__dirname, '../views/partials/card-marketlive.handlebars'), 'utf-8'),
-	card_podcast : fs.readFileSync(path.join(__dirname, '../views/partials/card-podcast.handlebars'), 'utf-8')
+	card_podcast : fs.readFileSync(path.join(__dirname, '../views/partials/card-podcast.handlebars'), 'utf-8'),
+	card_authorLead : fs.readFileSync(path.join(__dirname, '../views/partials/card-authorLead.handlebars'), 'utf-8'),
+	card_authorLeadWithImage : fs.readFileSync(path.join(__dirname, '../views/partials/card-authorLeadWithImage.handlebars'), 'utf-8'),
+	card_topicLead : fs.readFileSync(path.join(__dirname, '../views/partials/card-topicLead.handlebars'), 'utf-8')
 };
 
-function getMetadata(metadata, options) {
-	return metadata.filter(function (item) {
-		return (item.prefLabel === options.prefLabel);
+function getHeadshot(authorName) {
+	var headshots = [
+		{
+			name : 'David Keohane',
+			url : 'http://ftalphaville.ft.com/files/2012/08/115_davidKeohane.png'
+		},
+		{
+			name : 'Cardiff Garcia',
+			url : 'http://ftalphaville.ft.com/files/2012/09/115_cardiffGarcia.png'
+		},
+		{
+			name : 'Izabella Kaminska',
+			url : 'http://ftalphaville.ft.com/files/2012/10/115_izabellaKaminska.png'
+		}
+	];
+	var authorHeadshot = headshots.filter(function (item) {
+		return (item.name === authorName);
 	});
+	return (authorHeadshot.length > 0) ? authorHeadshot[0] : false;
+}
+
+
+
+function filterBy(source, options) {
+  return source.filter(function (item) {
+  	var optionKeys = Object.keys(options);
+		var trueCount = 0;
+  	for (var i = 0; i < optionKeys.length; i++) {
+  		var key = optionKeys[i];
+  		if (item[key] === options[key]){
+  			trueCount++;
+  		}
+  	}
+  	return (trueCount === optionKeys.length);
+  });
 }
 
 function ellipsisTrim(str, l){
@@ -27,14 +61,23 @@ function ellipsisTrim(str, l){
 }
 
 var isHeroSelected = false;
+var isAuthorLeadSelected = false;
+var isAuthorLeadWithImageSelected = false;
+var isTopicLeadSelected = false;
+
+
 function categorization(response) {
 	response.hits.hits.forEach(function(obj) {
+
+		function filterMetadataBy(options) {
+		  return filterBy(obj._source.metadata, options);
+		}
 
 		obj._source.standout = {
 			hero : false,
 			authorLead : false,
 			topicLead : false,
-			authorLeadImage : false,
+			authorLeadWithImage : false,
 			image : false
 		}
 
@@ -51,25 +94,70 @@ function categorization(response) {
 			obj._source.primaryTheme = false;
 			obj._source.cardType = 'blogs';
 
-			if (getMetadata(obj._source.metadata, {prefLabel:'First FT'}).length > 0) {
+			if (filterMetadataBy({prefLabel:'First FT'}).length > 0) {
 				obj.isBriefing = true;
 				obj._source.primaryTheme = 'BRIEFING: First FT';
 				obj._source.cardType = 'firstFt';
 				obj._source.title = ellipsisTrim(obj._source.title, 240);
 				obj._source.summaries = ['Apple executive eyes media business', 'At Goldman, you’re more than a number', 'Universal basic income: money for nothing']
 
-			} else if (getMetadata(obj._source.metadata, {prefLabel:'Podcasts'}).length > 0) {
+			} else if (filterMetadataBy({prefLabel:'Podcasts'}).length > 0) {
 				obj.isPodcast = true;
 				obj._source.primaryTheme = 'Podcast: Alphachat';
 				obj._source.cardType = 'podcast';
 				obj._source.title = ellipsisTrim(obj._source.title, 60);
 
 			} else {
-				obj.isBlog = true;
-				if (!isHeroSelected && obj._source.title.indexOf('Alphachat:') === -1 && obj._source.title.indexOf('Further reading') === -1) {
+				// console.log('title: ', obj._source.title);
+				// console.log('authors: ', filterMetadataBy({taxonomy:'authors'}));
+
+				var authors = filterMetadataBy({taxonomy:'authors'});
+				var author = (authors.length > 0) ? authors[0] : false;
+				var authorHeadshot = (author) ? getHeadshot(author.prefLabel) : false;
+
+				console.log('*** authorHeadshot: ', authorHeadshot, (!isAuthorLeadSelected && (authors.length > 0) && authorHeadshot !== false ));
+
+				if (!isHeroSelected && obj._source.title.indexOf('Alphachat:') === -1 && obj._source.title.indexOf('Further reading') === -1 && obj._source.title.indexOf('Thought for the weekend') === -1) {
 					obj._source.standout.hero = true;
+					obj._source.cardType = 'hero';
+
 					obj._source.primaryTheme = 'Markets';
+
 					isHeroSelected = true;
+
+				} else if (!isAuthorLeadSelected && (authors.length > 0) && authorHeadshot && obj._source.title.indexOf('Alphachat:') === -1 && obj._source.title.indexOf('Further reading') === -1 && obj._source.title.indexOf('Thought for the weekend') === -1){
+					obj.isAuthorLead = true;
+					obj._source.standout.authorLead = true;
+					obj._source.cardType = 'authorLead';
+
+					var author = authors[0];
+					obj._source.primaryTheme = author.prefLabel;
+					obj._source.headshot = authorHeadshot.url;
+
+					isAuthorLeadSelected = true;
+
+				} else if (!isAuthorLeadWithImageSelected && authors.length > 0 && obj._source.title.indexOf('Alphachat:') === -1 && obj._source.title.indexOf('Further reading') === -1 && obj._source.title.indexOf('Thought for the weekend') === -1){
+					obj.isAuthorLeadWithImage = true;
+					obj._source.standout.authorLeadWithImage = true;
+					obj._source.cardType = 'authorLeadWithImage';
+
+					var author = authors[0];
+					obj._source.primaryTheme = author.prefLabel;
+
+					isAuthorLeadWithImageSelected = true;
+
+				} else if (!isTopicLeadSelected && obj._source.title.indexOf('Alphachat:') === -1 && obj._source.title.indexOf('Further reading') === -1 && obj._source.title.indexOf('Thought for the weekend') === -1){
+					obj.isTopicLead = true
+					obj._source.standout.topicLead = true;
+					obj._source.cardType = 'topicLead';
+					obj._source.primaryTheme = "Topic: Markets";
+
+
+					isTopicLeadSelected = true;
+
+				} else {
+					obj.isBlog = true;
+
 				}
 
 			}
@@ -119,7 +207,7 @@ router.get('/', (req, res) => {
 					order: 'desc'
 				}
 			},
-			'size': 50
+			'size': 30
 		})
 
 	}).then(categorization).then(function(response) {
@@ -145,7 +233,10 @@ router.get('/', (req, res) => {
 				card_briefing : externalPartials.card_briefing,
 				card_hero: externalPartials.card_hero,
 				card_marketlive : externalPartials.card_marketlive,
-				card_podcast: externalPartials.card_podcast
+				card_podcast: externalPartials.card_podcast,
+				card_authorLead: externalPartials.card_authorLead,
+				card_authorLeadWithImage: externalPartials.card_authorLeadWithImage,
+				card_topicLead: externalPartials.card_topicLead
 			}
 		});
 

@@ -1,13 +1,25 @@
-<div class="o-card__meta card-primaryTheme">
-  <a href="#" class="o-card__tag">{{_source.primaryTheme}}</a>
-</div>
+<div class="main {{_source.cardType}}" data-o-grid-colspan="12 S6 M4 XL3">
 
-<h2 class="o-card__heading"><a href="{{_webUrl}}">{{{_source.title}}}</a></h2>
+  <div class="o-card o-card-- o-card--image-" data-o-component="o-card">
 
-<div class="post-openingHTML">
-  <ul>
-  {{#_source.summaries}}
-    <li>{{this}}</li>
-  {{/_source.summaries}}
-  </ul>
+    <div class="o-card__content">
+
+      <div class="o-card__meta card-primaryTheme">
+        <a href="#" class="o-card__tag">{{_source.primaryTheme}}</a>
+      </div>
+
+      <h2 class="o-card__heading"><a href="{{_webUrl}}">{{{_source.title}}}</a></h2>
+
+      <div class="post-openingHTML">
+        <ul>
+        {{#_source.summaries}}
+          <li>{{this}}</li>
+        {{/_source.summaries}}
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+
 </div>

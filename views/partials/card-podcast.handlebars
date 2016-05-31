@@ -1,7 +1,20 @@
-<div class="o-card__meta card-primaryTheme">
-  <a href="#" class="o-card__tag">{{_source.primaryTheme}}</a>
+<div class="main {{_source.cardType}}" data-o-grid-colspan="12 S6 M4 XL3">
+
+  <div class="o-card o-card-- o-card--image-" data-o-component="o-card">
+
+    <div class="o-card__content">
+
+      <div class="o-card__meta card-primaryTheme">
+        <a href="#" class="o-card__tag">{{_source.primaryTheme}}</a>
+      </div>
+
+      <h2 class="o-card__heading"><a href="{{_webUrl}}">{{{_source.title}}}</a></h2>
+
+      <img src="{{_source.mainImage.url}}" alt="{{_source.mainImage.title}}" title="{{_source.mainImage.title}}" width="100%">
+
+    </div>
+
+  </div>
+
 </div>
 
-<h2 class="o-card__heading"><a href="{{_webUrl}}">{{{_source.title}}}</a></h2>
-
-<img src="{{_source.mainImage.url}}" alt="{{_source.mainImage.title}}" title="{{_source.mainImage.title}}" width="100%">

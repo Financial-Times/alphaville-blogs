@@ -18,33 +18,33 @@
 
 		{{#searchResults}}
 
-    <div class="main {{_source.cardType}}" data-o-grid-colspan="12 S6 M4 XL3">
+      {{#isBlog}}
+        {{> card_blog}}
+      {{/isBlog}}
 
-      <div class="o-card o-card-- o-card--image-" data-o-component="o-card">
+      {{#isBriefing}}
+        {{> card_briefing}}
+      {{/isBriefing}}
 
-        <div class="o-card__content">
+      {{#isMarketLive}}
+        {{> card_marketlive}}
+      {{/isMarketLive}}
 
-          {{#isBlog}}
-            {{> card_blog}}
-          {{/isBlog}}
+      {{#isPodcast}}
+        {{> card_podcast}}
+      {{/isPodcast}}
 
-          {{#isBriefing}}
-            {{> card_briefing}}
-          {{/isBriefing}}
+      {{#isAuthorLead}}
+        {{> card_authorLead}}
+      {{/isAuthorLead}}
 
-          {{#isMarketLive}}
-            {{> card_marketlive}}
-          {{/isMarketLive}}
+      {{#isAuthorLeadWithImage}}
+        {{> card_authorLeadWithImage}}
+      {{/isAuthorLeadWithImage}}
 
-          {{#isPodcast}}
-            {{> card_podcast}}
-          {{/isPodcast}}
-
-        </div>
-
-      </div>
-
-    </div>
+      {{#isTopicLead}}
+        {{> card_topicLead}}
+      {{/isTopicLead}}
 
 		{{/searchResults}}
 	</div>
