@@ -44,8 +44,8 @@ $o-card-is-silent: false;
       }
 
       h2.o-card__heading {
-        line-height: 20px;
-        font-size: 18px;
+        line-height: 28px;
+        font-size: 28px;
         margin-bottom: 0px;
       }
 
@@ -141,8 +141,8 @@ $o-card-is-silent: false;
         }
 
         h2.o-card__heading {
-          line-height: 22px;
-          font-size: 28px;
+          line-height: 38px;
+          font-size: 40px;
           margin-bottom: 10px;
         }
 
@@ -171,13 +171,19 @@ $o-card-is-silent: false;
           &.card-primaryTheme {
             a.o-card__tag {
               color: white;
+              &:hover {
+                color: white;
+                border-bottom:1px dotted white!important;
+              }
+
             }
           }
         }
         h2.o-card__heading {
           color: white;
-          &:hover {
+          a:hover {
             color: white;
+            border-bottom:1px dotted white!important;
           }
         }
         .post-openingHTML {
