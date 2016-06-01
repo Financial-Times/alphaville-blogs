@@ -60,13 +60,14 @@ function ellipsisTrim(str, l){
 	return (str.length > len)? str.substring(0, len) + '&hellip;' : str;
 }
 
-var isHeroSelected = false;
-var isAuthorLeadSelected = false;
-var isAuthorLeadWithImageSelected = false;
-var isTopicLeadSelected = false;
 
 
 function categorization(response) {
+	var isHeroSelected = false;
+	var isAuthorLeadSelected = false;
+	var isAuthorLeadWithImageSelected = false;
+	var isTopicLeadSelected = false;
+
 	response.hits.hits.forEach(function(obj) {
 
 		function filterMetadataBy(options) {
@@ -115,7 +116,7 @@ function categorization(response) {
 				var author = (authors.length > 0) ? authors[0] : false;
 				var authorHeadshot = (author) ? getHeadshot(author.prefLabel) : false;
 
-				console.log('*** authorHeadshot: ', authorHeadshot, (!isAuthorLeadSelected && (authors.length > 0) && authorHeadshot !== false ));
+				// console.log('*** authorHeadshot: ', authorHeadshot, (!isAuthorLeadSelected && (authors.length > 0) && authorHeadshot !== false ));
 
 				if (!isHeroSelected && obj._source.title.indexOf('Alphachat:') === -1 && obj._source.title.indexOf('Further reading') === -1 && obj._source.title.indexOf('Thought for the weekend') === -1) {
 					obj._source.standout.hero = true;
