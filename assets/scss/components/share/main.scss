@@ -32,7 +32,7 @@
     float: right;
     margin-right: 16px;
     &:before {
-      @include nextIcon(comment, getColorFor('link', 'text'), 17);
+      @include oIconsGetIcon('comment', getColorFor('link', 'text'), 17);
       content: '';
       position: relative;
       top: 5px;
@@ -49,7 +49,7 @@
       display: block;
     }
     &:before {
-      @include nextIcon(printer, getColor('cold-1'), 24);
+      @include oIconsGetIcon('printer', getColor('cold-1'), 24);
       content: '';
       display: block; // prevent inline-block spacing issue
     }

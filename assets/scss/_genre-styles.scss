@@ -42,7 +42,7 @@ $brand-color: getColor('warm-1');
   margin-top: 8px;
   @media screen {
     &:before {
-      @include nextIcon(pullquote, getColor('claret'), 26);
+      @include oIconsGetIcon('pullquote', getColor('claret'), 26);
       position: absolute;
       top: 3px;
       left: 0;
