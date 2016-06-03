@@ -104,8 +104,6 @@ function processImage(source) {
 
 function createSummaries(source, charLimit) {
 
-	// console.log('createSummaries: ');
-
 	var $ = cheerio.load(source.openingHTML);
 
 	$('figure').remove();
@@ -131,11 +129,7 @@ function createSummaries(source, charLimit) {
 		}
 	});
 
-	// console.log('summaries: ', summaries);
-
 	source.summaries = [summaries];
-
-
 }
 
 function categorization(response) {
@@ -196,9 +190,7 @@ function categorization(response) {
 				obj._source.cardType = 'podcast';
 				obj._source.title = ellipsisTrim(obj._source.title, 60);
 				obj._source.mainImage.url = getImageServiceUrl(obj._source.mainImage.url);
-
 				obj._source.summaries = [ellipsisTrim(obj._source.summaries[0], 200)];
-
 
 			} else {
 
@@ -206,8 +198,8 @@ function categorization(response) {
 				var author = (authors.length > 0) ? authors[0] : false;
 				var authorHeadshot = (author) ? getHeadshot(author.prefLabel) : false;
 
-				// if (!isHeroSelected && obj._source.title.indexOf('Alphachat:') === -1 && obj._source.title.indexOf('Further reading') === -1 && obj._source.title.indexOf('Thought for the weekend') === -1) {
-				if (obj._id === '0d044a67-1dea-3e0b-ae0f-7823c0268746'){
+				if (!isHeroSelected && obj._source.title.indexOf('Alphachat:') === -1 && obj._source.title.indexOf('Further reading') === -1 && obj._source.title.indexOf('Thought for the weekend') === -1) {
+				// if (obj._id === '0d044a67-1dea-3e0b-ae0f-7823c0268746'){
 					obj._source.standout.hero = true;
 					obj._source.primaryTheme = 'Markets';
 
