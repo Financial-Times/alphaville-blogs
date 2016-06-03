@@ -5,7 +5,6 @@ const router = new express.Router();
 const fs = require('fs');
 const path = require('path');
 const elasticSearch = require('alphaville-es-interface');
-const cheerio = require('cheerio')
 
 const externalPartials = {
 	commentsConfig: fs.readFileSync(path.join(__dirname, '../node_modules/alphaville-comments-config/main.handlebars'), 'utf-8'),
@@ -61,82 +60,7 @@ function ellipsisTrim(str, l){
 	return (str.length > len)? str.substring(0, len) + '&hellip;' : str;
 }
 
-function getImageServiceUrl(url) {
-	return 'https://image.webservices.ft.com/v1/images/raw/' + encodeURI(url) + '?source=Alphaville';
-}
 
-function processImage(source) {
-
-	// console.log('*** processImage ', typeof source.bodyHTML);
-
-	try{
-		var $ = cheerio.load(source.bodyHTML);
-
-		$('img').each(function (index) {
-			var src = getImageServiceUrl($(this).attr('src'));
-
-			$(this).attr('src', src);
-
-			if (index === 0 && !source.mainImage) {
-				source.mainImage = {
-					url : src
-				}
-			}
-
-			// console.log('index: ', index);
-		});
-
-		source.bodyHTML = $.html();
-
-	} catch(e){
-		throw new Error(e);
-	}
-
-// mainImage: {
-// title: "Logo for FT Alphachat podcast",
-// description: "",
-// url: "http://az592690.vo.msecnd.net/media/v1/1ce6e12f-4352-49d1-ab21-25c725c64041/alphaville-1400x1400-ig3p2cfn.png",
-// width: 1400,
-// height: 1400
-// },
-
-}
-
-function createSummaries(source, charLimit) {
-
-	// console.log('createSummaries: ');
-
-	var $ = cheerio.load(source.openingHTML);
-
-	$('figure').remove();
-
-	var summaries = '';
-	var charCount = 0;
-	charLimit = (charLimit)? charLimit : 120;
-
-	$('p').each(function () {
-
-		var text = $(this).text();
-
-		// console.log('text: ', text);
-
-		if (charCount < charLimit){
-			charCount += text.length;
-
-			if (charCount > charLimit){
-
-				text = ellipsisTrim(text, (text.length - (charCount - charLimit)));
-			}
-			summaries += '<p>' + text + '</p>';
-		}
-	});
-
-	// console.log('summaries: ', summaries);
-
-	source.summaries = [summaries];
-
-
-}
 
 function categorization(response) {
 	var isHeroSelected = false;
@@ -149,9 +73,6 @@ function categorization(response) {
 		function filterMetadataBy(options) {
 		  return filterBy(obj._source.metadata, options);
 		}
-
-		delete obj._source.bodyXML;
-		delete obj._source.openingXML;
 
 		obj._source.standout = {
 			hero : false,
@@ -174,51 +95,34 @@ function categorization(response) {
 			obj._source.primaryTheme = false;
 			obj._source.cardType = 'blogs';
 
-			// console.log('obj._source.title: ', obj._source.title);
-			if(!obj._source.mainImage && obj._source.bodyHTML){
-				processImage(obj._source);
-			}
-
-			if (obj._source.openingHTML) {
-				createSummaries(obj._source);
-			}
-
 			if (filterMetadataBy({prefLabel:'First FT'}).length > 0) {
 				obj.isBriefing = true;
 				obj._source.primaryTheme = 'BRIEFING: First FT';
 				obj._source.cardType = 'firstFt';
 				obj._source.title = ellipsisTrim(obj._source.title, 240);
-				// obj._source.summaries = ['Apple executive eyes media business', 'At Goldman, you’re more than a number', 'Universal basic income: money for nothing']
+				obj._source.summaries = ['Apple executive eyes media business', 'At Goldman, you’re more than a number', 'Universal basic income: money for nothing']
 
 			} else if (filterMetadataBy({prefLabel:'Podcasts'}).length > 0) {
 				obj.isPodcast = true;
 				obj._source.primaryTheme = 'Podcast: Alphachat';
 				obj._source.cardType = 'podcast';
 				obj._source.title = ellipsisTrim(obj._source.title, 60);
-				obj._source.mainImage.url = getImageServiceUrl(obj._source.mainImage.url);
-
-				obj._source.summaries = [ellipsisTrim(obj._source.summaries[0], 200)];
-
 
 			} else {
+				// console.log('title: ', obj._source.title);
+				// console.log('authors: ', filterMetadataBy({taxonomy:'authors'}));
 
 				var authors = filterMetadataBy({taxonomy:'authors'});
 				var author = (authors.length > 0) ? authors[0] : false;
 				var authorHeadshot = (author) ? getHeadshot(author.prefLabel) : false;
 
-				// if (!isHeroSelected && obj._source.title.indexOf('Alphachat:') === -1 && obj._source.title.indexOf('Further reading') === -1 && obj._source.title.indexOf('Thought for the weekend') === -1) {
-				if (obj._id === '0d044a67-1dea-3e0b-ae0f-7823c0268746'){
+				// console.log('*** authorHeadshot: ', authorHeadshot, (!isAuthorLeadSelected && (authors.length > 0) && authorHeadshot !== false ));
+
+				if (!isHeroSelected && obj._source.title.indexOf('Alphachat:') === -1 && obj._source.title.indexOf('Further reading') === -1 && obj._source.title.indexOf('Thought for the weekend') === -1) {
 					obj._source.standout.hero = true;
+					obj._source.cardType = 'hero';
+
 					obj._source.primaryTheme = 'Markets';
-
-					if (!obj._source.mainImage) {
-						obj._source.cardType = 'hero';
-					} else {
-						obj._source.cardType = 'heroWithImage';
-					}
-
-					createSummaries(obj._source, 200);
-
 
 					isHeroSelected = true;
 
@@ -270,8 +174,8 @@ function categorization(response) {
 
 
 
-/* GET home page. */
-router.get('/', (req, res) => {
+/* GET search result page. */
+router.get('/:tag', (req, res) => {
 
 	elasticSearch.searchArticles({
 		'method': 'POST',
@@ -315,25 +219,11 @@ router.get('/', (req, res) => {
 			res.set('Cache-Control', 'public, max-age=30');
 		}
 
-		var heroIndex = response.hits.hits.findIndex(function (item) {
-			return item._source.standout.hero;
-		});
-		var hero = response.hits.hits.splice(heroIndex, 1);
-
-		res.render('index', {
+		res.render('search', {
 			title: 'FT Alphaville | FT Alphaville &#8211; Market Commentary &#8211; FT.com',
 			searchResults: response.hits.hits,
-			hero : hero,
 			partials: {
-				commentsConfig: externalPartials.commentsConfig,
-				card_blog : externalPartials.card_blog,
-				card_briefing : externalPartials.card_briefing,
-				card_hero: externalPartials.card_hero,
-				card_marketlive : externalPartials.card_marketlive,
-				card_podcast: externalPartials.card_podcast,
-				card_authorLead: externalPartials.card_authorLead,
-				card_authorLeadWithImage: externalPartials.card_authorLeadWithImage,
-				card_topicLead: externalPartials.card_topicLead
+				commentsConfig: externalPartials.commentsConfig
 			}
 		});
 

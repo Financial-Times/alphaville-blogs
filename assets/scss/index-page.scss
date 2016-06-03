@@ -71,16 +71,13 @@ $o-card-is-silent: false;
 
 			.post-openingHTML {
 
-				position: relative;
-				overflow: hidden;
-				height:95px;
-
 			}
 
 
 		}
 
 	}
+
   &.marketlive {
     .o-card__content {
       .post-openingHTML {
@@ -100,34 +97,35 @@ $o-card-is-silent: false;
 
   &.podcast {
     .o-card {
-      height:380px;
+      height:255px;
       .o-card__content {
         h2.o-card__heading {
           margin-bottom: 10px;
         }
         img {
-          display: inline-block;
+          display: inline;
+          float: left;
+          margin-right: 10px;
         }
       }
     }
   }
 
-
-  &.hero {
+  &.hero, &.heroWithImage {
 
     .o-card {
-      position: relative;
-      overflow: hidden;
-      height:255px;
 
       .o-card__content {
-        img {
-          display: inline;
-          float: right;
-          margin-left: 40px;
-        }
-        .o-card__meta{
 
+        .o-grid-container {
+          padding-left:10px;
+          padding-right:0px;
+          div[data-o-grid-colspan] {
+            padding-left:10px;
+          }
+        }
+
+        .o-card__meta{
           &.card-primaryTheme {
             border-bottom: none;
             margin-bottom: 0px;
@@ -147,20 +145,32 @@ $o-card-is-silent: false;
         }
 
         .post-openingHTML {
-          position: absolute;
-          overflow: hidden;
-          height: 95px;
-          width: 50%;
         }
 
-        .card-footer {
-          width:50%;
+      }
+    }
+
+  }
+
+  &.heroWithImage {
+    .o-card {
+      .o-card__content {
+        img.heroImage {
+          display: inline;
+        }
+      }
+    }
+  }
+
+  &.authorLead {
+    .o-card {
+      .o-card__content {
+        .post-openingHTML {
         }
 
       }
     }
   }
-
   &.authorLeadWithImage {
 
     .o-card {

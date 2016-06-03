@@ -12,6 +12,7 @@
 		"alphaville-es-interface": "Financial-Times/alphaville-es-interface",
 		"alphaville-auth-middleware": "Financial-Times/alphaville-auth-middleware#0.2.0",
 		"alphaville-comments-config": "Financial-Times/alphaville-comments-config#0.2.0",
+		"cheerio" : "^0.20.0",
 
 		"bower": "^1.7.7",
 		"debug": "~2.2.0",
