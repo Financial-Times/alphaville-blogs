@@ -61,46 +61,6 @@ function ellipsisTrim(str, l){
 	return (str.length > len)? str.substring(0, len) + '&hellip;' : str;
 }
 
-function getImageServiceUrl(url) {
-	return 'https://image.webservices.ft.com/v1/images/raw/' + encodeURI(url) + '?source=Alphaville';
-}
-
-function processImage(source) {
-
-	// console.log('*** processImage ', typeof source.bodyHTML);
-
-	try{
-		var $ = cheerio.load(source.bodyHTML);
-
-		$('img').each(function (index) {
-			var src = getImageServiceUrl($(this).attr('src'));
-
-			$(this).attr('src', src);
-
-			if (index === 0 && !source.mainImage) {
-				source.mainImage = {
-					url : src
-				}
-			}
-
-			// console.log('index: ', index);
-		});
-
-		source.bodyHTML = $.html();
-
-	} catch(e){
-		throw new Error(e);
-	}
-
-// mainImage: {
-// title: "Logo for FT Alphachat podcast",
-// description: "",
-// url: "http://az592690.vo.msecnd.net/media/v1/1ce6e12f-4352-49d1-ab21-25c725c64041/alphaville-1400x1400-ig3p2cfn.png",
-// width: 1400,
-// height: 1400
-// },
-
-}
 
 function createSummaries(source, charLimit) {
 
@@ -133,6 +93,7 @@ function createSummaries(source, charLimit) {
 }
 
 function categorization(response) {
+
 	var isHeroSelected = false;
 	var isAuthorLeadSelected = false;
 	var isAuthorLeadWithImageSelected = false;
@@ -159,7 +120,7 @@ function categorization(response) {
 			obj.isMarketLive = true;
 			obj._webUrl = '/marketslive/' + obj._id;
 			obj.isMarketLive = true;
-			obj._source.primaryTheme = 'Market Live';
+			obj._source.primaryTheme = 'Markets Live';
 			obj._source.title = obj._source.title.replace(/Markets Live: /, '');
 			obj._source.cardType = 'marketlive';
 
@@ -167,11 +128,6 @@ function categorization(response) {
 			obj._webUrl = '/content/' + obj._id;
 			obj._source.primaryTheme = false;
 			obj._source.cardType = 'blogs';
-
-			// console.log('obj._source.title: ', obj._source.title);
-			if(!obj._source.mainImage && obj._source.bodyHTML){
-				processImage(obj._source);
-			}
 
 			if (obj._source.openingHTML) {
 				createSummaries(obj._source);
@@ -189,7 +145,7 @@ function categorization(response) {
 				obj._source.primaryTheme = 'Podcast: Alphachat';
 				obj._source.cardType = 'podcast';
 				obj._source.title = ellipsisTrim(obj._source.title, 60);
-				obj._source.mainImage.url = getImageServiceUrl(obj._source.mainImage.url);
+				// obj._source.mainImage.url = getImageServiceUrl(obj._source.mainImage.url);
 				obj._source.summaries = [ellipsisTrim(obj._source.summaries[0], 200)];
 
 			} else {
@@ -198,8 +154,8 @@ function categorization(response) {
 				var author = (authors.length > 0) ? authors[0] : false;
 				var authorHeadshot = (author) ? getHeadshot(author.prefLabel) : false;
 
-				if (!isHeroSelected && obj._source.title.indexOf('Alphachat:') === -1 && obj._source.title.indexOf('Further reading') === -1 && obj._source.title.indexOf('Thought for the weekend') === -1) {
-				// if (obj._id === '0d044a67-1dea-3e0b-ae0f-7823c0268746'){
+				// if (!isHeroSelected && obj._source.title.indexOf('Alphachat:') === -1 && obj._source.title.indexOf('Further reading') === -1 && obj._source.title.indexOf('Thought for the weekend') === -1) {
+				if (obj._id === '23247ac0-0b0b-3c7b-9f4d-03b0e0b48a09'){
 					obj._source.standout.hero = true;
 					obj._source.primaryTheme = 'Markets';
 

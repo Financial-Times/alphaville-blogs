@@ -31,7 +31,6 @@ router.get('/:uuid', (req, res) => {
 			res.set('Cache-Control', 'public, max-age=300');
 		}
 
-
 		res.render('article', {
 			title: response._source.title + ' | FT Alphaville',
 			article : response._source,
