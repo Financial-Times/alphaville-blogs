@@ -35,9 +35,7 @@
                 </div>
 
                 <div data-o-grid-colspan="6">
-                  {{#_source.comments.enabled}}
-                  <a href="#comments" class="article__share__comments" data-o-component="o-comment-count" data-o-comment-count-config-article-id="{{_source.id}}" data-o-comment-count-config-template="{count}"></a>
-                  {{/_source.comments.enabled}}
+                  {{>comment_counter}}
                 </div>
               </div>
             </div>

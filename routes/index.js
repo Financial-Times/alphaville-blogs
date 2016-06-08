@@ -16,7 +16,8 @@ const externalPartials = {
 	card_podcast : fs.readFileSync(path.join(__dirname, '../views/partials/card-podcast.handlebars'), 'utf-8'),
 	card_authorLead : fs.readFileSync(path.join(__dirname, '../views/partials/card-authorLead.handlebars'), 'utf-8'),
 	card_authorLeadWithImage : fs.readFileSync(path.join(__dirname, '../views/partials/card-authorLeadWithImage.handlebars'), 'utf-8'),
-	card_topicLead : fs.readFileSync(path.join(__dirname, '../views/partials/card-topicLead.handlebars'), 'utf-8')
+	card_topicLead : fs.readFileSync(path.join(__dirname, '../views/partials/card-topicLead.handlebars'), 'utf-8'),
+	comment_counter :  fs.readFileSync(path.join(__dirname, '../views/partials/comment-counter.handlebars'), 'utf-8')
 };
 
 function getHeadshot(authorName) {
@@ -94,12 +95,15 @@ function createSummaries(source, charLimit) {
 
 function categorization(response) {
 
+	console.log('categorization: ');
+
 	var isHeroSelected = false;
 	var isAuthorLeadSelected = false;
 	var isAuthorLeadWithImageSelected = false;
 	var isTopicLeadSelected = false;
 
 	response.hits.hits.forEach(function(obj) {
+
 
 		function filterMetadataBy(options) {
 		  return filterBy(obj._source.metadata, options);
@@ -148,14 +152,22 @@ function categorization(response) {
 				// obj._source.mainImage.url = getImageServiceUrl(obj._source.mainImage.url);
 				obj._source.summaries = [ellipsisTrim(obj._source.summaries[0], 200)];
 
+			} else if (obj._source.title.indexOf('FT Opening Quote') > -1) {
+					obj._source.primaryTheme = 'FT Opening Quote';
+					obj.isBlog = true;
+
+			} else if (obj._source.title.indexOf('Further reading') > -1) {
+					obj._source.primaryTheme = 'Further reading';
+					obj.isBlog = true;
+
 			} else {
 
 				var authors = filterMetadataBy({taxonomy:'authors'});
 				var author = (authors.length > 0) ? authors[0] : false;
 				var authorHeadshot = (author) ? getHeadshot(author.prefLabel) : false;
 
-				// if (!isHeroSelected && obj._source.title.indexOf('Alphachat:') === -1 && obj._source.title.indexOf('Further reading') === -1 && obj._source.title.indexOf('Thought for the weekend') === -1) {
-				if (obj._id === '23247ac0-0b0b-3c7b-9f4d-03b0e0b48a09'){
+				if (obj._source.mainImage && !isHeroSelected && obj._source.title.indexOf('Alphachat:') === -1 && obj._source.title.indexOf('Thought for the weekend') === -1) {
+				// if (obj._id === '23247ac0-0b0b-3c7b-9f4d-03b0e0b48a09'){
 					obj._source.standout.hero = true;
 					obj._source.primaryTheme = 'Markets';
 
@@ -170,7 +182,7 @@ function categorization(response) {
 
 					isHeroSelected = true;
 
-				} else if (!isAuthorLeadSelected && (authors.length > 0) && authorHeadshot && obj._source.title.indexOf('Alphachat:') === -1 && obj._source.title.indexOf('Further reading') === -1 && obj._source.title.indexOf('Thought for the weekend') === -1){
+				} else if (!isAuthorLeadSelected && (authors.length > 0) && authorHeadshot && obj._source.title.indexOf('Alphachat:') === -1 && obj._source.title.indexOf('Thought for the weekend') === -1){
 					obj.isAuthorLead = true;
 					obj._source.standout.authorLead = true;
 					obj._source.cardType = 'authorLead';
@@ -181,7 +193,7 @@ function categorization(response) {
 
 					isAuthorLeadSelected = true;
 
-				} else if (!isAuthorLeadWithImageSelected && authors.length > 0 && obj._source.title.indexOf('Alphachat:') === -1 && obj._source.title.indexOf('Further reading') === -1 && obj._source.title.indexOf('Thought for the weekend') === -1){
+				} else if (!isAuthorLeadWithImageSelected && authors.length > 0 && obj._source.title.indexOf('Alphachat:') === -1 && obj._source.title.indexOf('Thought for the weekend') === -1){
 					obj.isAuthorLeadWithImage = true;
 					obj._source.standout.authorLeadWithImage = true;
 					obj._source.cardType = 'authorLeadWithImage';
@@ -191,7 +203,7 @@ function categorization(response) {
 
 					isAuthorLeadWithImageSelected = true;
 
-				} else if (!isTopicLeadSelected && obj._source.title.indexOf('Alphachat:') === -1 && obj._source.title.indexOf('Further reading') === -1 && obj._source.title.indexOf('Thought for the weekend') === -1){
+				} else if (!isTopicLeadSelected && obj._source.title.indexOf('Alphachat:') === -1 && obj._source.title.indexOf('Thought for the weekend') === -1){
 					obj.isTopicLead = true
 					obj._source.standout.topicLead = true;
 					obj._source.cardType = 'topicLead';
@@ -201,6 +213,8 @@ function categorization(response) {
 					isTopicLeadSelected = true;
 
 				} else {
+
+					obj._source.primaryTheme = filterMetadataBy({primary:'section', taxonomy:'sections'})[0].prefLabel;
 					obj.isBlog = true;
 
 				}
@@ -281,7 +295,8 @@ router.get('/', (req, res) => {
 				card_podcast: externalPartials.card_podcast,
 				card_authorLead: externalPartials.card_authorLead,
 				card_authorLeadWithImage: externalPartials.card_authorLeadWithImage,
-				card_topicLead: externalPartials.card_topicLead
+				card_topicLead: externalPartials.card_topicLead,
+				comment_counter : externalPartials.comment_counter
 			}
 		});
 

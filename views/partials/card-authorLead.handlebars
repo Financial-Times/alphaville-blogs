@@ -17,9 +17,10 @@
       <div class="card-footer clearfix">
         <time data-o-component="o-date" class="o-date o-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
 
-        {{#_source.comments.enabled}}
-        <a href="#comments" class="article__share__comments" data-o-component="o-comment-count" data-o-comment-count-config-article-id="{{_source.id}}" data-o-comment-count-config-template="{count}"></a>
-        {{/_source.comments.enabled}}
+
+        {{>comment_counter}}
+
+
       </div>
 
 
