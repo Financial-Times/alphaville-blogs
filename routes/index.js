@@ -193,7 +193,7 @@ function categorization(response) {
 
 					isAuthorLeadSelected = true;
 
-				} else if (!isAuthorLeadWithImageSelected && authors.length > 0 && obj._source.title.indexOf('Alphachat:') === -1 && obj._source.title.indexOf('Thought for the weekend') === -1){
+				} else if (obj._source.mainImage && !isAuthorLeadWithImageSelected && authors.length > 0 && obj._source.title.indexOf('Alphachat:') === -1 && obj._source.title.indexOf('Thought for the weekend') === -1){
 					obj.isAuthorLeadWithImage = true;
 					obj._source.standout.authorLeadWithImage = true;
 					obj._source.cardType = 'authorLeadWithImage';
