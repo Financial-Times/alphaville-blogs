@@ -7,7 +7,7 @@
 		"start": "node ./bin/www"
 	},
 	"dependencies": {
-		"alphaville-express": "Financial-Times/alphaville-express#0.3.0",
+		"alphaville-express": "Financial-Times/alphaville-express#0.3.1",
 		"alphaville-build-tools": "Financial-Times/alphaville-build-tools#0.1.2",
 		"alphaville-es-interface": "Financial-Times/alphaville-es-interface#0.0.1",
 		"alphaville-auth-middleware": "Financial-Times/alphaville-auth-middleware#0.2.0",
