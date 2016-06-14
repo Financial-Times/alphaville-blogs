@@ -6,6 +6,7 @@
 		"postinstall": "gulp",
 		"start": "node ./bin/www"
 	},
+    "cacheDirectories": [],
 	"dependencies": {
 		"alphaville-express": "Financial-Times/alphaville-express#0.3.2",
 		"alphaville-build-tools": "Financial-Times/alphaville-build-tools#0.1.4",
