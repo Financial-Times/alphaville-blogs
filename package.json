@@ -8,7 +8,7 @@
 	},
 	"dependencies": {
 		"alphaville-express": "Financial-Times/alphaville-express#0.3.2",
-		"alphaville-build-tools": "Financial-Times/alphaville-build-tools#0.1.2",
+		"alphaville-build-tools": "Financial-Times/alphaville-build-tools#0.1.4",
 		"alphaville-es-interface": "Financial-Times/alphaville-es-interface#0.0.1",
 		"alphaville-auth-middleware": "Financial-Times/alphaville-auth-middleware#0.2.0",
 		"alphaville-comments-config": "Financial-Times/alphaville-comments-config#0.2.0",
