@@ -315,6 +315,9 @@ router.get('/__access_metadata', (req, res) => {
 			path_regex: "/longroom",
 			classification: "conditional_registered"
 		}, {
+			path_regex: "/longroom/content/.*",
+			classification: "conditional_alphaville_longroom"
+		}, {
 			path_regex: ".*",
 			classification: "unconditional"
 		}]
