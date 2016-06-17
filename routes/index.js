@@ -20,6 +20,20 @@ const externalPartials = {
 	comment_counter :  fs.readFileSync(path.join(__dirname, '../views/partials/comment-counter.handlebars'), 'utf-8')
 };
 
+
+/*
+Bryce Elder
+Kadhim Shubber
+Izabella Kaminska
+David Keohane
+Cardiff Garcia
+Matt Klein
+Joseph Cotterill
+Dan McCrum
+Paul Murphy
+*/
+
+
 function getHeadshot(authorName) {
 	var headshots = [
 		{

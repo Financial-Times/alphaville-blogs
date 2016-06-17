@@ -199,7 +199,12 @@ $o-card-is-silent: false;
         .post-openingHTML {
           color: white;
         }
-
+        .card-footer  {
+          color: white;
+          .o-date, a, a:hover {
+            color: white;
+          }
+        }
       }
     }
   }

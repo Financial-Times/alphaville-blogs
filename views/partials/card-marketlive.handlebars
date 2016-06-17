@@ -15,6 +15,11 @@
         <p>Live markets commentary from FT.com</p>
       </div>
 
+      <div class="card-footer clearfix">
+        <time data-o-component="o-date" class="o-date o-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
+        {{>comment_counter}}
+      </div>
+
     </div>
 
   </div>
