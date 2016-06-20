@@ -18,7 +18,6 @@ router.use('/', auth());
 router.get('/:uuid', (req, res) => {
 
 	elasticSearch.getArticle(req.params.uuid).then(function(response){
-
 		function getMetadata(taxonomy) {
 			return response._source.metadata.filter(function (item) {
 				return (item.taxonomy === taxonomy)
@@ -43,6 +42,10 @@ router.get('/:uuid', (req, res) => {
 			}
 		});
 
+	}).catch((err) => {
+		console.log(err, err.stack);
+
+		res.sendStatus(503);
 	});
 
 });
