@@ -20,6 +20,20 @@ const externalPartials = {
 	comment_counter :  fs.readFileSync(path.join(__dirname, '../views/partials/comment-counter.handlebars'), 'utf-8')
 };
 
+
+/*
+Bryce Elder
+Kadhim Shubber
+Izabella Kaminska
+David Keohane
+Cardiff Garcia
+Matt Klein
+Joseph Cotterill
+Dan McCrum
+Paul Murphy
+*/
+
+
 function getHeadshot(authorName) {
 	var headshots = [
 		{
@@ -63,36 +77,6 @@ function ellipsisTrim(str, l){
 }
 
 
-function createSummaries(source, charLimit) {
-
-	var $ = cheerio.load(source.openingHTML);
-
-	$('figure').remove();
-
-	var summaries = '';
-	var charCount = 0;
-	charLimit = (charLimit)? charLimit : 120;
-
-	$('p').each(function () {
-
-		var text = $(this).text();
-
-		// console.log('text: ', text);
-
-		if (charCount < charLimit){
-			charCount += text.length;
-
-			if (charCount > charLimit){
-
-				text = ellipsisTrim(text, (text.length - (charCount - charLimit)));
-			}
-			summaries += '<p>' + text + '</p>';
-		}
-	});
-
-	source.summaries = [summaries];
-}
-
 function categorization(response) {
 
 	console.log('categorization: ');
@@ -132,10 +116,6 @@ function categorization(response) {
 			obj._webUrl = '/content/' + obj._id;
 			obj._source.primaryTheme = false;
 			obj._source.cardType = 'blogs';
-
-			if (obj._source.openingHTML) {
-				createSummaries(obj._source);
-			}
 
 			if (filterMetadataBy({prefLabel:'First FT'}).length > 0) {
 				obj.isBriefing = true;
@@ -177,7 +157,6 @@ function categorization(response) {
 						obj._source.cardType = 'heroWithImage';
 					}
 
-					createSummaries(obj._source, 200);
 
 
 					isHeroSelected = true;

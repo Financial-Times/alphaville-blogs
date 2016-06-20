@@ -13,7 +13,7 @@ alphavilleBuildTools(gulp, {
 			js: './assets/js/main.js',
 			sass: './assets/scss/index-page.scss',
 			buildJs: 'main.js',
-			buildCss: 'index.css'
+			buildCss: 'main.css'
 		},
 		{
 			id: 'article',
