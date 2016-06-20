@@ -15,12 +15,16 @@ router.use('/', auth());
 
 
 /* GET article page. */
-router.get('/:uuid', (req, res) => {
+router.get('/:uuid', (req, res, next) => {
+	elasticSearch.getArticle(req.params.uuid).then(function (response) {
+		if (response.found === false) {
+			next();
+			return;
+		}
 
-	elasticSearch.getArticle(req.params.uuid).then(function(response){
 		function getMetadata(taxonomy) {
 			return response._source.metadata.filter(function (item) {
-				return (item.taxonomy === taxonomy)
+				return (item.taxonomy === taxonomy);
 			});
 		}
 
@@ -42,11 +46,7 @@ router.get('/:uuid', (req, res) => {
 			}
 		});
 
-	}).catch((err) => {
-		console.log(err, err.stack);
-
-		res.sendStatus(503);
-	});
+	}).catch(next);
 
 });
 
