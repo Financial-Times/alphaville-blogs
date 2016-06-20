@@ -104,9 +104,9 @@ function categorization(response) {
 			image : false
 		}
 
-		if (obj._source.title.indexOf('Markets Live:') > -1) {
+		if (obj._source.webUrl.indexOf('marketslive') > -1) {
 			obj.isMarketLive = true;
-			obj._webUrl = '/marketslive/' + obj._id;
+			obj._webUrl = '/content/' + obj._id;
 			obj.isMarketLive = true;
 			obj._source.primaryTheme = 'Markets Live';
 			obj._source.title = obj._source.title.replace(/Markets Live: /, '');
