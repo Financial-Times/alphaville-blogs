@@ -34,18 +34,31 @@ router.get('/:uuid', (req, res, next) => {
 			res.set('Cache-Control', 'public, max-age=300');
 		}
 
-		res.render('article', {
-			title: response._source.title + ' | FT Alphaville',
-			article : response._source,
-			primaryTheme : getMetadata('sections')[0].prefLabel,
-			brand :  getMetadata('brand')[0].prefLabel,
-			oComments: true,
-			partials: {
-				commentsConfig: externalPartials.commentsConfig,
-				shareComponent : fs.readFileSync(path.join(__dirname, '../views/partials/shareComponent.handlebars'), 'utf-8')
-			}
-		});
-
+		if (response.isMarketsLive === true) {
+			res.render('ml-transcript', {
+				title: response._source.title + ' | FT Alphaville',
+				article : response._source,
+				primaryTheme : getMetadata('sections')[0].prefLabel,
+				brand :  getMetadata('brand')[0].prefLabel,
+				oComments: true,
+				partials: {
+					commentsConfig: externalPartials.commentsConfig,
+					shareComponent : fs.readFileSync(path.join(__dirname, '../views/partials/shareComponent.handlebars'), 'utf-8')
+				}
+			});
+		} else {
+			res.render('article', {
+				title: response._source.title + ' | FT Alphaville',
+				article : response._source,
+				primaryTheme : getMetadata('sections')[0].prefLabel,
+				brand :  getMetadata('brand')[0].prefLabel,
+				oComments: true,
+				partials: {
+					commentsConfig: externalPartials.commentsConfig,
+					shareComponent : fs.readFileSync(path.join(__dirname, '../views/partials/shareComponent.handlebars'), 'utf-8')
+				}
+			});
+		}
 	}).catch(next);
 
 });

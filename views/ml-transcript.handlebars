@@ -13,7 +13,6 @@
 <div class="article__header">
 	<div class="o-grid-container">
 		<div class="article__header-inner o-grid-row">
-
 			<div data-o-grid-colspan="12 L8 XL7 XLoffset1">
 				<header class="article__header--wrapper ">
 					<div class="article__header-primary">
@@ -27,26 +26,28 @@
 
 <div class="article__wrapper ">
 	<div class="o-grid-container">
-		<div class="article__main o-grid-row">
-			<div data-o-grid-colspan="12 L8 XL7 XLoffset1">
+		<div class="o-grid-row">
+			<div data-o-grid-colspan="12 L12 XL11 XLoffset1">
 				{{> shareComponent position='top'}}
 
 				<div class="article__time-byline">
-					<time class="article__timestamp o-date" data-o-component="o-date" datetime="{{article.publishedDate}}" data-o-date-js="" title="{{article.publishedDate}}" aria-label="{{article.publishedDate}}">{{article.publishedDate}}</time>
+					<time class="article__timestamp o-date" data-o-component="o-date" datetime="{{article.publishedDate}}" title="{{article.publishedDate}}" aria-label="{{article.publishedDate}}">{{article.publishedDate}}</time>
 					<p class="article__byline">by: {{article.byline}}</p>
 				</div>
+			</div>
+		</div>
 
+		<div class="o-grid-row">
+			<div class="ml-tabs-container" data-o-grid-colspan="12 Mhide">
+				<ul data-o-component="o-tabs" class="o-tabs ml-tabs" role="tablist" data-o-tabs-disablefocus="true">
+					<li role="tab"><a href="#ml-main-content">MarketsLive</a></li>
+					<li role="tab"><a href="#ml-user-comments">Comments</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="o-grid-row article__main">
+			<div data-o-grid-colspan="12 M8 XL7 XLoffset1" id="ml-main-content" class="o-tabs__tabpanel ml-tab-content">
 				<div class="article__body n-content-body">
-	        		{{#article.attachments}}
-					<audio controls>
-						<source src="{{url}}" type="{{mediaType}}">
-							<p>
-								Your browser does not support playing this file but you can still <a href="{{url}}">download the MP3 file</a> to play locally.
-							</p>
-					</audio>
-					{{/article.attachments}}
-
-
 					{{{article.bodyHTML}}}
 
 					<footer class="n-content-copyright">
@@ -55,18 +56,16 @@
 						</small>
 					</footer>
 				</div>
-
+			</div>
+			<div data-o-grid-colspan="12 M4 XL3 XLoffset1" id="ml-user-comments" class="o-tabs__tabpanel ml-tab-content">
+				<div data-o-component="o-comments" data-o-comments-config-title="FT Alphaville2 Blogs Test" data-o-comments-config-url="https://ftalphaville2.ft.com/content/{{article.id}}" data-o-comments-config-articleId="{{article.id}}" data-o-comments-config-layout="side"></div>
+			</div>
+		</div>
+		
+		<div class="o-grid-row">
+			<div data-o-grid-colspan="12 L12 XL11 XLoffset1">
 				{{> shareComponent position='bottom'}}
 				<div data-n-article-email-bottom-container=""></div>
-
-				{{#article.comments.enabled}}
-				<div data-o-component="o-comments" data-o-comments-config-title="FT Alphaville2 Blogs Test" data-o-comments-config-url="https://ftalphaville2.ft.com/content/{{article.id}}" data-o-comments-config-articleId="{{article.id}}"></div>
-				{{/article.comments.enabled}}
-
-				</div>
-				<div class="article__aside o-grid-remove-gutters--XL" data-o-grid-colspan="0 L4 XL3 XLoffset1">
-					{{> twitterWidget}}
-				</div>
 			</div>
 		</div>
 	</div>
