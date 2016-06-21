@@ -80,7 +80,7 @@ function categorization(response) {
 			topicLead : false,
 			authorLeadWithImage : false,
 			image : false
-		}
+		};
 
 		if (obj._source.title.indexOf('Markets Live:') > -1) {
 			obj.isMarketLive = true;
@@ -175,11 +175,18 @@ function categorization(response) {
 
 
 /* GET search result page. */
-router.get('/:tag', (req, res) => {
+router.get('/', (req, res) => {
+
+	let searchString = req.query.q;
 
 	elasticSearch.searchArticles({
 		'method': 'POST',
 		'body': JSON.stringify({
+			query: {
+				match: {
+					titles: searchString
+				}
+			},
 			'filter': {
 				or: {
 					filters: [{
@@ -211,20 +218,16 @@ router.get('/:tag', (req, res) => {
 			'size': 30
 		})
 
-	}).then(categorization).then(function(response) {
-
-		// res.jsonp(response);
+	}).then(function(response) {
 
 		if (process.env.ENVIRONMENT === 'prod') {
 			res.set('Cache-Control', 'public, max-age=30');
 		}
 
 		res.render('search', {
-			title: 'FT Alphaville | FT Alphaville &#8211; Market Commentary &#8211; FT.com',
-			searchResults: response.hits.hits,
-			partials: {
-				commentsConfig: externalPartials.commentsConfig
-			}
+			title: `FT Alphaville | Search: ${searchString}`,
+			searchTerm: searchString,
+			searchResults: response.hits.hits
 		});
 
 	});
