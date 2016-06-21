@@ -1,50 +1,50 @@
 {{#contentFor "head"}}
 <link rel="stylesheet" href="{{assetsBasePath}}/build/main.css" />
 <script>
-		(function () {
-			ctmLoadScript({
-				src: "{{assetsBasePath}}/build/main.js",
-				async: true
-			});
-		}());
-	</script>
+	(function () {
+		ctmLoadScript({
+			src: "{{assetsBasePath}}/build/main.js",
+			async: true
+		});
+	}());
+</script>
 {{/contentFor}}
 
 <div class="o-grid-container">
 	<div class="o-grid-row">
-  {{#hero}}
-    {{> card_hero}}
-  {{/hero}}
+		{{#hero}}
+			{{> card_hero}}
+		{{/hero}}
 
 		{{#searchResults}}
 
-      {{#isBlog}}
-        {{> card_blog}}
-      {{/isBlog}}
+			{{#isBlog}}
+				{{> card_blog}}
+			{{/isBlog}}
 
-      {{#isBriefing}}
-        {{> card_briefing}}
-      {{/isBriefing}}
+			{{#isBriefing}}
+				{{> card_briefing}}
+			{{/isBriefing}}
 
-      {{#isMarketLive}}
-        {{> card_marketlive}}
-      {{/isMarketLive}}
+			{{#isMarketLive}}
+				{{> card_marketlive}}
+			{{/isMarketLive}}
 
-      {{#isPodcast}}
-        {{> card_podcast}}
-      {{/isPodcast}}
+			{{#isPodcast}}
+				{{> card_podcast}}
+			{{/isPodcast}}
 
-      {{#isAuthorLead}}
-        {{> card_authorLead}}
-      {{/isAuthorLead}}
+			{{#isAuthorLead}}
+				{{> card_authorLead}}
+			{{/isAuthorLead}}
 
-      {{#isAuthorLeadWithImage}}
-        {{> card_authorLeadWithImage}}
-      {{/isAuthorLeadWithImage}}
+			{{#isAuthorLeadWithImage}}
+				{{> card_authorLeadWithImage}}
+			{{/isAuthorLeadWithImage}}
 
-      {{#isTopicLead}}
-        {{> card_topicLead}}
-      {{/isTopicLead}}
+			{{#isTopicLead}}
+				{{> card_topicLead}}
+			{{/isTopicLead}}
 
 		{{/searchResults}}
 	</div>

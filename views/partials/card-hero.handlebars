@@ -1,58 +1,58 @@
 <div class="main {{_source.cardType}}" data-o-grid-colspan="12 S12 M8 XL8">
 
-  <div class="o-card o-card-- o-card--image-" data-o-component="o-card">
+	<div class="o-card o-card-- o-card--image-" data-o-component="o-card">
 
-    <div class="o-card__content">
+		<div class="o-card__content">
 
-      <div class="o-card__meta card-primaryTheme">
-        <a href="#" class="o-card__tag">{{_source.primaryTheme}}</a>
-      </div>
+			<div class="o-card__meta card-primaryTheme">
+				<a href="#" class="o-card__tag">{{_source.primaryTheme}}</a>
+			</div>
 
-      <h2 class="o-card__heading"><a href="{{_webUrl}}">{{_source.title}}</a></h2>
+			<h2 class="o-card__heading"><a href="{{_webUrl}}">{{_source.title}}</a></h2>
 
-      <div class="o-grid-container">
-        <div class="o-grid-row">
+			<div class="o-grid-container">
+				<div class="o-grid-row">
 
-          {{#_source.mainImage}}
-          <div data-o-grid-colspan="8">
-          {{/_source.mainImage}}
-          {{^_source.mainImage}}
-          <div data-o-grid-colspan="12">
-          {{/_source.mainImage}}
-            <div class="o-card__meta byline">
-               by: <a href="#" class="o-card__tag">{{_source.byline}}</a>
-            </div>
+					{{#_source.mainImage}}
+					<div data-o-grid-colspan="8">
+					{{/_source.mainImage}}
+					{{^_source.mainImage}}
+					<div data-o-grid-colspan="12">
+					{{/_source.mainImage}}
+						<div class="o-card__meta byline">
+							 by: <a href="#" class="o-card__tag">{{_source.byline}}</a>
+						</div>
 
-            <div class="post-openingHTML">
-              {{{_source.summaries}}}
-            </div>
+						<div class="post-openingHTML">
+							{{{_source.summaries}}}
+						</div>
 
-            <div class="o-grid-container">
-              <div class="o-grid-row">
+						<div class="o-grid-container">
+							<div class="o-grid-row">
 
-                <div data-o-grid-colspan="6">
-                  <time data-o-component="o-date" class="o-date o-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
-                </div>
+								<div data-o-grid-colspan="6">
+									<time data-o-component="o-date" class="o-date o-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
+								</div>
 
-                <div data-o-grid-colspan="6">
-                  {{>comment_counter}}
-                </div>
-              </div>
-            </div>
+								<div data-o-grid-colspan="6">
+									{{>comment_counter}}
+								</div>
+							</div>
+						</div>
 
-          </div>
+					</div>
 
-          {{#_source.mainImage}}
-          <div data-o-grid-colspan="4">
-            <img class="heroImage" src="{{url}}" width="100%">
-          </div>
-          {{/_source.mainImage}}
-        </div>
-      </div>
+					{{#_source.mainImage}}
+					<div data-o-grid-colspan="4">
+						<img class="heroImage" src="{{url}}" width="100%">
+					</div>
+					{{/_source.mainImage}}
+				</div>
+			</div>
 
 
-    </div>
+		</div>
 
-  </div>
+	</div>
 
 </div>
