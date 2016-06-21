@@ -1,0 +1,47 @@
+{{#contentFor "head"}}
+    <link rel="stylesheet" href="{{assetsBasePath}}/build/article.css" />
+    <script>
+        (function () {
+            ctmLoadScript({
+                src: "{{assetsBasePath}}/build/article.js",
+                async: true
+            });
+        }());
+    </script>
+{{/contentFor}}
+
+<div class="o-grid-container">
+    <div class="o-grid-row">
+        <div class="main" data-o-grid-colspan="8">
+            <div class="search-results">
+                <h1 class="search-term">Search results for: {{searchTerm}}</h1>
+                {{#if searchResults}}
+                    {{#each searchResults}}
+                        <div class="o-card__container">
+                            <div class="o-card o-card--landscape o-card--image-" data-o-component="o-card">
+
+                                <div class="o-card__content">
+                                    <div class="o-card__meta">
+                                        <a href="#" class="o-card__tag">{{_source.byline}}</a>
+                                    </div>
+
+                                    <h2 class="o-card__heading"><a href="/content/{{_source.id}}">{{_source.title}}</a></h2>
+
+                                    <p class="o-card__standfirst">{{_source.summaries.[0]}}</p>
+
+                                    <time data-o-component="o-date" class="o-date o-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
+                                </div>
+
+                            </div>
+                        </div>
+                    {{/each}}
+                {{else}}
+                    <p>No results found.</p>
+                {{/if}}
+            </div>
+        </div>
+        <div data-o-grid-colspan="4">
+            {{> twitterWidget}}
+        </div>
+    </div>
+</div>
