@@ -2,16 +2,12 @@
 
 @import 'n-content-body/main';
 @import 'components/share/main';
-@import 'webchat/main';
 
 $o-tabs-is-silent: false;
 @import 'o-tabs/main';
 @import 'ml-tabs';
 
-
-.fyre-comment-stream {
-  max-height: none !important;
-}
+@import 'marketslive-transcript';
 
 
 .o-footer {
