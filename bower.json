@@ -28,6 +28,7 @@
 		"alphaville-footer": "Financial-Times/alphaville-footer#^0.4.0",
 		"alphaville-barrier": "Financial-Times/alphaville-barrier#^0.1.0",
 		"alphaville-marketslive-session-listener": "Financial-Times/alphaville-marketslive-session-listener#^0.1.0",
+		"alphaville-marketslive-session-notification": "Financial-Times/alphaville-marketslive-session-notification#^0.1.0",
 		"o-author-alerts": "^3.0.0",
 		"o-date": "^2.3.1",
 		"o-comments": "^3.0.0",
