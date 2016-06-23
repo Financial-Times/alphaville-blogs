@@ -15,6 +15,4 @@ document.addEventListener('o.DOMContentLoaded', function () {
 	}
 });
 
-require('o-tabs');
-
 require('o-autoinit');
