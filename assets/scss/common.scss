@@ -51,11 +51,4 @@ body {
   clear: both;
 }
 
-a {
-  border-bottom: none!important;
-  &:hover {
-    border-bottom: none!important;
-  }
-}
-
 @import 'alphaville-marketslive-session-notification/main';
