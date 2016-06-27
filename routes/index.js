@@ -207,7 +207,7 @@ function categorization(response) {
 
 
 /* GET home page. */
-router.get('/', (req, res) => {
+router.get('/', (req, res, next) => {
 
 	elasticSearch.searchArticles({
 		'method': 'POST',
@@ -274,7 +274,7 @@ router.get('/', (req, res) => {
 			}
 		});
 
-	});
+	}).catch(next);
 });
 
 router.get('/__access_metadata', (req, res) => {
