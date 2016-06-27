@@ -2,23 +2,7 @@
 
 const express = require('express');
 const router = new express.Router();
-const fs = require('fs');
-const path = require('path');
 const elasticSearch = require('alphaville-es-interface');
-
-const externalPartials = {
-	commentsConfig: fs.readFileSync(path.join(__dirname, '../node_modules/alphaville-comments-config/main.handlebars'), 'utf-8'),
-	card_blog: fs.readFileSync(path.join(__dirname, '../views/partials/card-blog.handlebars'), 'utf-8'),
-	card_briefing: fs.readFileSync(path.join(__dirname, '../views/partials/card-briefing.handlebars'), 'utf-8'),
-	card_hero: fs.readFileSync(path.join(__dirname, '../views/partials/card-hero.handlebars'), 'utf-8'),
-	card_marketlive: fs.readFileSync(path.join(__dirname, '../views/partials/card-marketlive.handlebars'), 'utf-8'),
-	card_podcast: fs.readFileSync(path.join(__dirname, '../views/partials/card-podcast.handlebars'), 'utf-8'),
-	card_authorLead: fs.readFileSync(path.join(__dirname, '../views/partials/card-authorLead.handlebars'), 'utf-8'),
-	card_authorLeadWithImage: fs.readFileSync(path.join(__dirname, '../views/partials/card-authorLeadWithImage.handlebars'), 'utf-8'),
-	card_topicLead: fs.readFileSync(path.join(__dirname, '../views/partials/card-topicLead.handlebars'), 'utf-8'),
-	comment_counter: fs.readFileSync(path.join(__dirname, '../views/partials/comment-counter.handlebars'), 'utf-8')
-};
-
 
 /*
 Bryce Elder
@@ -204,10 +188,8 @@ function categorization(response) {
 	return response;
 }
 
-
-
 /* GET home page. */
-router.get('/', (req, res) => {
+router.get('/', (req, res, next) => {
 
 	elasticSearch.searchArticles({
 		'method': 'POST',
@@ -245,8 +227,6 @@ router.get('/', (req, res) => {
 
 	}).then(categorization).then(function(response) {
 
-		// res.jsonp(response);
-
 		if (process.env.ENVIRONMENT === 'prod') {
 			res.set('Cache-Control', 'public, max-age=30');
 		}
@@ -259,22 +239,10 @@ router.get('/', (req, res) => {
 		res.render('index', {
 			title: 'FT Alphaville | FT Alphaville &#8211; Market Commentary &#8211; FT.com',
 			searchResults: response.hits.hits,
-			hero: hero,
-			partials: {
-				commentsConfig: externalPartials.commentsConfig,
-				card_blog: externalPartials.card_blog,
-				card_briefing: externalPartials.card_briefing,
-				card_hero: externalPartials.card_hero,
-				card_marketlive: externalPartials.card_marketlive,
-				card_podcast: externalPartials.card_podcast,
-				card_authorLead: externalPartials.card_authorLead,
-				card_authorLeadWithImage: externalPartials.card_authorLeadWithImage,
-				card_topicLead: externalPartials.card_topicLead,
-				comment_counter: externalPartials.comment_counter
-			}
+			hero: hero
 		});
 
-	});
+	}).catch(next);
 });
 
 router.get('/__access_metadata', (req, res) => {
