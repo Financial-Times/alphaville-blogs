@@ -13,41 +13,41 @@
 <div class="o-grid-container">
 	<div class="o-grid-row">
 		{{#hero}}
-			{{> card_hero}}
+			{{> card-hero}}
 		{{/hero}}
 
 		{{#searchResults}}
 
 			{{#isBlog}}
-				{{> card_blog}}
+				{{> card-blog}}
 			{{/isBlog}}
 
 			{{#isBriefing}}
-				{{> card_briefing}}
+				{{> card-briefing}}
 			{{/isBriefing}}
 
 			{{#isMarketLive}}
-				{{> card_marketlive}}
+				{{> card-marketlive}}
 			{{/isMarketLive}}
 
 			{{#isPodcast}}
-				{{> card_podcast}}
+				{{> card-podcast}}
 			{{/isPodcast}}
 
 			{{#isAuthorLead}}
-				{{> card_authorLead}}
+				{{> card-authorLead}}
 			{{/isAuthorLead}}
 
 			{{#isAuthorLeadWithImage}}
-				{{> card_authorLeadWithImage}}
+				{{> card-authorLeadWithImage}}
 			{{/isAuthorLeadWithImage}}
 
 			{{#isTopicLead}}
-				{{> card_topicLead}}
+				{{> card-topicLead}}
 			{{/isTopicLead}}
 
 		{{/searchResults}}
 	</div>
 </div>
 
-{{> commentsConfig}}
+{{> alphaville-comments-config/main }}

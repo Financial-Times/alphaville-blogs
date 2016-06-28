@@ -2,14 +2,8 @@
 
 const express = require('express');
 const router = new express.Router();
-const fs = require('fs');
-const path = require('path');
 const elasticSearch = require('alphaville-es-interface');
 const auth = require('alphaville-auth-middleware');
-
-const externalPartials = {
-	commentsConfig: fs.readFileSync(path.join(__dirname, '../node_modules/alphaville-comments-config/main.handlebars'), 'utf-8')
-};
 
 router.use('/', auth());
 
@@ -56,11 +50,7 @@ router.get('/:uuid', (req, res, next) => {
 				article : response._source,
 				primaryTheme : getMetadata('sections')[0].prefLabel,
 				brand :  getMetadata('brand')[0].prefLabel,
-				oComments: true,
-				partials: {
-					commentsConfig: externalPartials.commentsConfig,
-					shareComponent : fs.readFileSync(path.join(__dirname, '../views/partials/shareComponent.handlebars'), 'utf-8')
-				}
+				oComments: true
 			});
 		}
 	}).catch(next);

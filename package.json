@@ -12,7 +12,6 @@
 		"alphaville-build-tools": "Financial-Times/alphaville-build-tools#0.1.6",
 		"alphaville-es-interface": "Financial-Times/alphaville-es-interface#0.3.2",
 		"alphaville-auth-middleware": "Financial-Times/alphaville-auth-middleware#0.2.0",
-		"alphaville-comments-config": "Financial-Times/alphaville-comments-config#0.2.0",
 		"cheerio" : "^0.20.0",
 		"alphaville-header-config": "Financial-Times/alphaville-header-config#0.3.0",
 
