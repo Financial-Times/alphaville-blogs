@@ -1,8 +1,10 @@
 "use strict";
 
 const express = require('express');
-const router = new express.Router();
+const router = express.Router();
 const elasticSearch = require('alphaville-es-interface');
+
+let articleList = null;
 
 /*
 Bryce Elder
@@ -188,10 +190,8 @@ function categorization(response) {
 	return response;
 }
 
-/* GET home page. */
-router.get('/', (req, res, next) => {
-
-	elasticSearch.searchArticles({
+let getArticles = () => {
+	return elasticSearch.searchArticles({
 		'method': 'POST',
 		'body': JSON.stringify({
 			'filter': {
@@ -225,24 +225,69 @@ router.get('/', (req, res, next) => {
 			'size': 30
 		})
 
-	}).then(categorization).then(function(response) {
+	});
+};
 
-		if (process.env.ENVIRONMENT === 'prod') {
-			res.set('Cache-Control', 'public, max-age=30');
-		}
+/* GET home page. */
+router.get('/', (req, res, next) => {
 
-		const heroIndex = response.hits.hits.findIndex(function(item) {
-			return item._source.standout.hero;
-		});
-		const hero = response.hits.hits.splice(heroIndex, 1);
+	getArticles()
+		.then(articles => {
+			articleList = articles;
+			return categorization(articles);
+		}).then(function(response) {
 
-		res.render('index', {
-			title: 'FT Alphaville | FT Alphaville &#8211; Market Commentary &#8211; FT.com',
-			searchResults: response.hits.hits,
-			hero: hero
-		});
+			if (process.env.ENVIRONMENT === 'prod') {
+				res.set('Cache-Control', 'public, max-age=30');
+			}
 
-	}).catch(next);
+			const heroIndex = response.hits.hits.findIndex(function(item) {
+				return item._source.standout.hero;
+			});
+			const hero = response.hits.hits.splice(heroIndex, 1);
+
+			res.render('index', {
+				headerConfig: {
+					toggleArticleView: {
+						show: true,
+						url: '/home',
+						type: 'list'
+					}
+				},
+				title: 'FT Alphaville | FT Alphaville &#8211; Market Commentary &#8211; FT.com',
+				searchResults: response.hits.hits,
+				hero: hero
+			});
+
+		}).catch(next);
+});
+
+router.get('/home', (req, res, next) => {
+		(function() {
+			if (articleList) {
+				return Promise.resolve(articleList);
+			}
+			return getArticles();
+		}())
+		.then(function(response) {
+
+			if (process.env.ENVIRONMENT === 'prod') {
+				res.set('Cache-Control', 'public, max-age=30');
+			}
+
+			res.render('index-list', {
+				headerConfig: {
+					toggleArticleView: {
+						show: true,
+						type: 'grid',
+						url: '/'
+					}
+				},
+				title: 'FT Alphaville | FT Alphaville &#8211; Market Commentary &#8211; FT.com',
+				searchResults: response.hits.hits
+			});
+
+		}).catch(next);
 });
 
 router.get('/__access_metadata', (req, res) => {
