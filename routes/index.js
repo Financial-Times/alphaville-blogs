@@ -59,9 +59,6 @@ function ellipsisTrim(str, l) {
 
 
 function categorization(response) {
-
-	console.log('categorization: ');
-
 	let isHeroSelected = false;
 	let isAuthorLeadSelected = false;
 	let isAuthorLeadWithImageSelected = false;
