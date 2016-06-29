@@ -29,7 +29,7 @@ router.get('/:uuid', (req, res, next) => {
 		}
 
 		if (response.isMarketsLive === true) {
-			if (response.isLive) {
+			if (response.isLive === true) {
 				res.redirect('/marketslive/' + req.params.uuid);
 			} else {
 				res.render('ml-transcript', {
