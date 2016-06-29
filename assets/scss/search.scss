@@ -1,21 +1,11 @@
 @import './common';
 $o-card-is-silent: false;
 @import 'o-card/main';
-
+@import './components/article-list';
 .search-term {
   line-height: 40px;
   padding-left: 10px;
   font-size: 36px;
   font-family: serif;
   font-weight: 400;
-}
-
-.search-results {
-  .o-card__container {
-    margin: 5px 0;
-    .o-card {
-      background: none;
-      border-bottom: 1px solid #f6e9d8;
-    }
-  }
 }
