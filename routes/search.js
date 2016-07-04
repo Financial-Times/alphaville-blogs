@@ -12,8 +12,9 @@ router.get('/', (req, res, next) => {
 		'method': 'POST',
 		'body': JSON.stringify({
 			query: {
-				match: {
-					titles: searchString
+				multi_match : {
+					query: searchString,
+					fields: ["titles", "byline"]
 				}
 			},
 			'filter': {
