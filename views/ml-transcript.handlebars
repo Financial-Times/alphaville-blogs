@@ -28,7 +28,7 @@
 	<div class="o-grid-container">
 		<div class="o-grid-row">
 			<div data-o-grid-colspan="12 L12 XL11 XLoffset1">
-				{{> shareComponent position='top'}}
+				{{> shareComponent position='top' hideCommentCount=true}}
 
 				<div class="article__time-byline">
 					<time class="article__timestamp o-date" data-o-component="o-date" datetime="{{article.publishedDate}}" title="{{article.publishedDate}}" aria-label="{{article.publishedDate}}">{{article.publishedDate}}</time>
@@ -56,7 +56,7 @@
 
 		<div class="o-grid-row">
 			<div data-o-grid-colspan="12 L12 XL11 XLoffset1">
-				{{> shareComponent position='bottom'}}
+				{{> shareComponent position='bottom' hideCommentCount=true}}
 				<div data-n-article-email-bottom-container=""></div>
 			</div>
 		</div>
