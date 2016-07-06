@@ -82,14 +82,11 @@ function categorization(response) {
 			image: false
 		};
 
-		if (obj._source.webUrl.indexOf('marketslive') > -1) {
-			obj.isMarketLive = true;
+		if (obj.isMarketsLive === true) {
 			obj._webUrl = '/content/' + obj._id;
-			obj.isMarketLive = true;
 			obj._source.primaryTheme = 'Markets Live';
 			obj._source.title = obj._source.title.replace(/Markets Live: /, '');
 			obj._source.cardType = 'marketlive';
-
 		} else {
 			obj._webUrl = '/content/' + obj._id;
 			obj._source.primaryTheme = false;
