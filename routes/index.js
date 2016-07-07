@@ -86,7 +86,7 @@ function categorization(response) {
 			obj._webUrl = '/content/' + obj._id;
 			obj._source.primaryTheme = 'Markets Live';
 			obj._source.title = obj._source.title.replace(/Markets Live: /, '');
-			obj._source.cardType = 'marketlive';
+			obj._source.cardType = 'marketslive';
 		} else {
 			obj._webUrl = '/content/' + obj._id;
 			obj._source.primaryTheme = false;
@@ -184,7 +184,7 @@ function categorization(response) {
 	return response;
 }
 
-let getArticles = () => {
+const getArticles = () => {
 	return elasticSearch.searchArticles({
 		'method': 'POST',
 		'body': JSON.stringify({
@@ -227,7 +227,6 @@ router.get('/', (req, res, next) => {
 
 	getArticles()
 		.then(articles => {
-			articleList = articles;
 			return categorization(articles);
 		}).then(function(response) {
 
@@ -257,17 +256,20 @@ router.get('/', (req, res, next) => {
 });
 
 router.get('/home', (req, res, next) => {
-		(function() {
-			if (articleList) {
-				return Promise.resolve(articleList);
-			}
-			return getArticles();
-		}())
-		.then(function(response) {
+	getArticles()
+		.then(articles => {
+			return categorization(articles);
+		}).then(function(response) {
 
 			if (process.env.ENVIRONMENT === 'prod') {
 				res.set('Cache-Control', 'public, max-age=30');
 			}
+
+			const heroIndex = response.hits.hits.findIndex(function(item) {
+				return item._source.standout.hero;
+			});
+			const hero = response.hits.hits.splice(heroIndex, 1);
+			response.hits.hits = hero.concat(response.hits.hits);
 
 			res.render('index-list', {
 				headerConfig: {
