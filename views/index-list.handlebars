@@ -1,25 +1,24 @@
 {{#contentFor "head"}}
-    <link rel="stylesheet" href="{{assetsBasePath}}/build/main.css" />
-    <script>
-        (function () {
-            ctmLoadScript({
-                src: "{{assetsBasePath}}/build/main.js",
-                async: true
-            });
-        }());
-    </script>
+	<link rel="stylesheet" href="{{assetsBasePath}}/build/main.css" />
+	<script>
+		(function () {
+			ctmLoadScript({
+				src: "{{assetsBasePath}}/build/main.js",
+				async: true
+			});
+		}());
+	</script>
 {{/contentFor}}
 
 <div class="o-grid-container">
-    <div class="o-grid-row">
-        <div class="main" data-o-grid-colspan="8">
-            <div class="article-list">
-                {{#searchResults}}
-                        {{> article-list }}
-                {{/searchResults}}
-            </div>
-        <div data-o-grid-colspan="4">
-        </div>
-        </div>
-    </div>
+	<div class="o-grid-row">
+		<div class="main" data-o-grid-colspan="12">
+			<div class="article-list">
+				{{#searchResults}}
+					{{> article-list }}
+					{{> adBetweenCards}}
+				{{/searchResults}}
+			</div>
+		</div>
+	</div>
 </div>
