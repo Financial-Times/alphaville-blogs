@@ -6,8 +6,12 @@
 
 			<div class="o-card__meta card-primaryTheme">
 				<a href="/marketslive" class="o-card__tag {{#isLive}}marketslive-live-title{{/isLive}}">
-					{{_source.primaryTheme}}
-					{{#isLive}}<span class="marketslive-live-lozenge-icon"></span>{{/isLive}}
+					Markets
+					{{^isLive}}Live{{/isLive}}
+					{{#isLive}}
+						<strong>Live</strong>
+						<span class="marketslive-live-lozenge-icon"></span>
+					{{/isLive}}
 				</a>
 			</div>
 
