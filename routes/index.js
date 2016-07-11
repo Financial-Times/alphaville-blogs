@@ -64,7 +64,7 @@ function categorization(response) {
 	let isAuthorLeadWithImageSelected = false;
 	let isTopicLeadSelected = false;
 
-	response.hits.hits.forEach(function(obj) {
+	response.hits.hits.forEach(function(obj, index) {
 
 
 		function filterMetadataBy(options) {
@@ -81,6 +81,14 @@ function categorization(response) {
 			authorLeadWithImage: false,
 			image: false
 		};
+
+		if (index === 12) {
+			obj.adAfter_small = true;
+		}
+
+		if (index === 13) {
+			obj.adAfter_large = true;
+		}
 
 		if (obj.isMarketsLive === true) {
 			obj._webUrl = '/content/' + obj._id;
