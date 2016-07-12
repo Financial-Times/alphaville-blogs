@@ -250,9 +250,8 @@ router.get('/', (req, res, next) => {
 			res.render('index', {
 				headerConfig: {
 					toggleArticleView: {
-						show: true,
 						url: '/home',
-						type: 'list'
+						grid: true
 					}
 				},
 				title: 'FT Alphaville | FT Alphaville &#8211; Market Commentary &#8211; FT.com',
@@ -282,8 +281,7 @@ router.get('/home', (req, res, next) => {
 			res.render('index-list', {
 				headerConfig: {
 					toggleArticleView: {
-						show: true,
-						type: 'grid',
+						list: true,
 						url: '/'
 					}
 				},
