@@ -1,9 +1,6 @@
 <div class="alphaville-card-container {{_source.cardType}}" data-o-grid-colspan="12 S6 M4 XL4">
-
 	<div class="alphaville-card alphaville-card--fill-space o-card o-card-- o-card--image-" data-o-component="o-card">
-
 		<div class="o-card__content">
-
 			<div class="o-card__meta card-primaryTheme">
 				<a href="/marketslive" class="o-card__tag {{#isLive}}marketslive-live-title{{/isLive}}">
 					Markets
@@ -22,13 +19,8 @@
 				<p>Live markets commentary from FT.com</p>
 			</div>
 
-			<div class="card-footer clearfix">
-				<time data-o-component="o-date" class="o-date o-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
-				{{>comment-counter}}
-			</div>
-
+			{{>comment-counter}}
+			<time data-o-component="o-date" class="o-date o-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
 		</div>
-
 	</div>
-
 </div>
