@@ -102,7 +102,7 @@ function categorization(response) {
 
 			if (filterMetadataBy({ prefLabel: 'First FT' }).length > 0) {
 				obj.isBriefing = true;
-				obj._source.primaryTheme = 'BRIEFING: First FT';
+				obj._source.primaryTheme = 'Briefing: First FT';
 				obj._source.cardType = 'firstFt';
 				obj._source.title = ellipsisTrim(obj._source.title, 240);
 				// obj._source.summaries = ['Apple executive eyes media business', 'At Goldman, you’re more than a number', 'Universal basic income: money for nothing']
