@@ -63,6 +63,7 @@ function categorization(response) {
 	let isAuthorLeadSelected = false;
 	let isAuthorLeadWithImageSelected = false;
 	let isTopicLeadSelected = false;
+	let isStoryWithImageSelected = false;
 
 	response.hits.hits.forEach(function(obj, index) {
 
@@ -174,13 +175,18 @@ function categorization(response) {
 
 					isTopicLeadSelected = true;
 
-				} else {
+				} else if (!isStoryWithImageSelected && obj._source.mainImage && obj._source.mainImage.url && obj._source.title.indexOf('Alphachat:') === -1 && obj._source.title.indexOf('Thought for the weekend') === -1) {
+					isStoryWithImageSelected = true;
 
+					obj.isStoryImage = true;
+					obj._source.standout.storyImage = true;
+					obj._source.cardType = 'storyImage';
+					obj._source.primaryTheme = filterMetadataBy({ primary: 'section', taxonomy: 'sections' })[0].prefLabel;
+
+				} else {
 					obj._source.primaryTheme = filterMetadataBy({ primary: 'section', taxonomy: 'sections' })[0].prefLabel;
 					obj.isBlog = true;
-
 				}
-
 			}
 
 			if (obj._source.title.length > 120) {

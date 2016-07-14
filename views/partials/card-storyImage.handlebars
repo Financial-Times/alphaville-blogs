@@ -1,0 +1,21 @@
+<div class="alphaville-card-container {{_source.cardType}}" data-o-grid-colspan="12 S6 M4 XL4">
+	<div class="alphaville-card alphaville-card--fill-space o-card o-card--portrait o-card--image-top" data-o-component="o-card">
+		<div class="o-card__image o-card__image--top">
+			<img src="{{_source.mainImage.url}}" alt="{{_source.title}}" />
+		</div>
+		<div class="o-card__content">
+			{{#_source.primaryTheme}}
+			<div class="o-card__meta card-primaryTheme">
+				<a href="/search?q={{this}}" class="o-card__tag">{{this}}</a>
+			</div>
+			{{/_source.primaryTheme}}
+
+			<h2 class="o-card__heading"><a href="{{_webUrl}}">{{_source.title}}</a></h2>
+
+			<div class="o-card__standfirst">{{{_source.summaries}}}</div>
+
+			{{>comment-counter}}
+			<time data-o-component="o-date" class="o-date o-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
+		</div>
+	</div>
+</div>
