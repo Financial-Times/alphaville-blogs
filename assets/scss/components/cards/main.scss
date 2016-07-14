@@ -1,9 +1,85 @@
-.alphaville-card {
-
-}
+@import 'o-card/main';
 
 .alphaville-card--fill-space {
 	height: 100%;
 	padding-bottom: 10px;
 	background-color: oColorsGetPaletteColor('warm-5');
+}
+
+.alphaville-card__heading {
+	@include oCardHeading;
+}
+
+.alphaville-card__tag {
+	@include oCardTag;
+}
+
+.alphaville-card__standfirst {
+	@include oCardStandfirst;
+}
+
+.alphaville-card__timestamp {
+	@include oCardTimestamp;
+}
+
+.alphaville-card__content {
+	position: relative;
+}
+
+.alphaville-card--hero {
+	@include oCard;
+	background-color: #fbe4df;
+	position: relative;
+	padding: 20px;
+
+	&:before {
+		content: 'AV';
+		position: absolute;
+		right: -10%;
+		top: 35%;
+		@include oTypographySansBold('xl');
+		font-weight: bold;
+		font-size: 470px;
+		color: #f8dcd5;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		background-image: repeating-linear-gradient(
+			45deg,
+			transparent,
+			transparent 4px,
+			oColorsGetPaletteColor('grey-tint1') 4px,
+			oColorsGetPaletteColor('grey-tint1') 5px);
+		background-size: 9px 7px;
+		height: 100%;
+		width: 9px;
+	}
+
+	.alphaville-card__image {
+		width: 100%;
+	}
+
+	.alphaville-card__heading {
+		@include oTypographySansBold('xl');
+		font-weight: bold;
+		color: #cf191d;
+	}
+
+	.alphaville-card__byline a {
+		font-size: 20px;
+		line-height: 22px;
+		color: oColorsGetPaletteColor('grey-tint5');
+	}
+
+	.alphaville-card__standfirst {
+		color: oColorsGetPaletteColor('cold-1');
+	}
+}
+
+.alphaville-card {
+	overflow: hidden;
 }
