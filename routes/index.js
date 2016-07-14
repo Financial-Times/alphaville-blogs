@@ -173,7 +173,7 @@ function categorization(response) {
 
 					isTopicLeadSelected = true;
 
-				} else if (!isStoryWithImageSelected && obj._source.mainImage && obj._source.mainImage.url && obj._source.title.indexOf('Alphachat:') === -1 && obj._source.title.indexOf('Thought for the weekend') === -1) {
+				} else if (obj._source.mainImage && obj._source.mainImage.url && obj._source.title.indexOf('Alphachat:') === -1 && obj._source.title.indexOf('Thought for the weekend') === -1) {
 					isStoryWithImageSelected = true;
 
 					obj.isStoryImage = true;
@@ -228,7 +228,7 @@ const getArticles = () => {
 					order: 'desc'
 				}
 			},
-			'size': 100
+			'size': 95
 		})
 
 	});

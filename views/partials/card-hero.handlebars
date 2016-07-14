@@ -5,7 +5,7 @@
 				<a href="/search?q={{_source.primaryTheme}}" class="alphaville-card__tag">{{_source.primaryTheme}}</a>
 			</div>
 
-			<h2 class="alphaville-card__heading"><a href="{{_webUrl}}">{{_source.title}}</a></h2>
+			<h2 class="alphaville-card__heading alphaville-card__heading-truncate"><a href="{{_webUrl}}">{{_source.title}}</a></h2>
 
 			<div class="o-grid-row">
 				{{#_source.mainImage}}
@@ -21,7 +21,7 @@
 						 <a href="#" class="alphaville-card__tag">{{_source.byline}}</a>
 					</div>
 
-					<div class="alphaville-card__standfirst">{{{_source.summaries}}}</div>
+					<div class="alphaville-card__standfirst alphaville-card__standfirst-truncate">{{{_source.summaries}}}</div>
 
 					{{>comment-counter}}
 					<time data-o-component="o-date" class="o-date alphaville-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
