@@ -1,9 +1,6 @@
-<div class="main {{_source.cardType}}" data-o-grid-colspan="12 S6 M4 XL4">
-
-	<div class="o-card o-card-- o-card--image-" data-o-component="o-card">
-
+<div class="alphaville-card-container {{_source.cardType}}" data-o-grid-colspan="12 S6 M4 XL3">
+	<div class="alphaville-card alphaville-card--fill-space o-card o-card-- o-card--image-" data-o-component="o-card">
 		<div class="o-card__content">
-
 			{{#_source.primaryTheme}}
 			<div class="o-card__meta card-primaryTheme">
 				<a href="/search?q={{this}}" class="o-card__tag">{{this}}</a>
@@ -12,16 +9,10 @@
 
 			<h2 class="o-card__heading"><a href="{{_webUrl}}">{{_source.title}}</a></h2>
 
-			<div class="post-openingHTML">{{{_source.summaries}}}</div>
+			<div class="o-card__standfirst">{{{_source.summaries}}}</div>
 
-			<div class="card-footer clearfix">
-				<time data-o-component="o-date" class="o-date o-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
-
-				{{>comment-counter}}
-			</div>
-
+			{{>comment-counter}}
+			<time data-o-component="o-date" class="o-date o-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
 		</div>
-
 	</div>
-
 </div>

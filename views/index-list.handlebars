@@ -12,13 +12,16 @@
 
 <div class="o-grid-container">
 	<div class="o-grid-row">
-		<div class="main" data-o-grid-colspan="12">
+		<div class="main" data-o-grid-colspan="12 L8">
 			<div class="article-list">
 				{{#searchResults}}
 					{{> article-list }}
 					{{> adBetweenCards}}
 				{{/searchResults}}
 			</div>
+		</div>
+		<div class="main" data-o-grid-colspan="hide L4">
+			{{> twitterWidget}}
 		</div>
 	</div>
 </div>
