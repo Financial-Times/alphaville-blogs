@@ -1,10 +1,8 @@
 "use strict";
 
 const express = require('express');
-const router = express.Router();
+const router = new express.Router();
 const elasticSearch = require('alphaville-es-interface');
-
-let articleList = null;
 
 /*
 Bryce Elder
@@ -230,7 +228,7 @@ const getArticles = () => {
 					order: 'desc'
 				}
 			},
-			'size': 30
+			'size': 100
 		})
 
 	});
