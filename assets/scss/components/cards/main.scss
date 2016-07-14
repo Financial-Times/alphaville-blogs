@@ -1,4 +1,5 @@
 @import 'o-card/main';
+@import 'o-grid/main';
 
 .alphaville-card--fill-space {
 	height: 100%;
@@ -28,19 +29,28 @@
 
 .alphaville-card--hero {
 	@include oCard;
-	background-color: #fbe4df;
+	background-color: #fce2d7;
 	position: relative;
 	padding: 20px;
 
 	&:before {
+		@include oTypographySansBold('xl');
 		content: 'AV';
 		position: absolute;
-		right: -10%;
+		right: -30%;
 		top: 35%;
-		@include oTypographySansBold('xl');
 		font-weight: bold;
 		font-size: 470px;
-		color: #f8dcd5;
+		color: #f7dcd6;
+
+		@include oGridRespondTo(S) {
+			right: -10%;
+		}
+
+		@include oGridRespondTo(XL) {
+			font-size: 550px;
+			top: 25%;
+		}
 	}
 
 	&:after {
@@ -52,8 +62,8 @@
 			45deg,
 			transparent,
 			transparent 4px,
-			oColorsGetPaletteColor('grey-tint1') 4px,
-			oColorsGetPaletteColor('grey-tint1') 5px);
+			#d8c2b8 4px,
+			#d8c2b8 5px);
 		background-size: 9px 7px;
 		height: 100%;
 		width: 9px;
@@ -66,7 +76,7 @@
 	.alphaville-card__heading {
 		@include oTypographySansBold('xl');
 		font-weight: bold;
-		color: #cf191d;
+		color: #a02d4f;
 	}
 
 	.alphaville-card__byline a {
@@ -78,6 +88,14 @@
 	.alphaville-card__standfirst {
 		color: oColorsGetPaletteColor('cold-1');
 	}
+
+	.alphaville-card__tag {
+		margin: 0 0 8px;
+	}
+
+	.alphaville-card__timestamp {
+		padding: 16px 0 10px;
+	}
 }
 
 .alphaville-card--podcast {
@@ -85,7 +103,8 @@
 		text-align: center;
 
 		img {
-			max-width: 50%;
+			width: auto;
+			height: 140px;
 			display: inline-block;
 		}
 	}
@@ -93,4 +112,8 @@
 
 .alphaville-card {
 	overflow: hidden;
+
+	p {
+		margin: 0;
+	}
 }
