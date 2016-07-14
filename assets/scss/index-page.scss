@@ -8,12 +8,20 @@ $o-card-is-silent: false;
 @import 'n-content-body/main';
 @import 'components/share/main';
 
+@import 'o-grid/main';
+
 .alphaville-card-container {
 	margin-top: 10px;
 	margin-bottom: 10px;
 
 	a {
 		border-bottom: 0;
+	}
+
+	@include oGridRespondTo(XL) {
+		&:last-child {
+			display: none;
+		}
 	}
 }
 @import './components/article-list';
