@@ -15,7 +15,12 @@
 			{{/isMarketsLive}}
 			{{^isMarketsLive}}
 			<div class="o-card__meta">
-				<a href="/search?q={{_source.byline}}" class="o-card__tag">{{_source.byline}}</a>
+				{{#isPodcast}}
+					<a href="/search?q={{_source.primaryTheme}}" class="o-card__tag">{{_source.primaryTheme}}</a>
+				{{/isPodcast}}
+				{{^isPodcast}}
+					<a href="/search?q={{_source.byline}}" class="o-card__tag">{{_source.byline}}</a>
+				{{/isPodcast}}
 			</div>
 			{{/isMarketsLive}}
 

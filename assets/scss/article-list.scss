@@ -1,4 +1,4 @@
-.alphaville-home-list {
+.alphaville-article-list {
 	.alphaville-card {
 		background: none;
 	}
@@ -6,6 +6,10 @@
 	.alphaville-card-container {
 		border-bottom: 1px solid #f6e9d8;
 		margin: 5px 0;
+
+		a {
+			border-bottom: 0;
+		}
 
 		&:last-child {
 			border-bottom: 0;

@@ -111,7 +111,6 @@
 
 .alphaville-card {
 	overflow: hidden;
-	height: 300px;
 
 	p {
 		margin: 0;
@@ -120,6 +119,10 @@
 	.alphaville-card__heading-truncate {
 		max-height: 60px;
 		overflow: hidden;
+	}
+
+	.alphaville-card__heading-truncate--xl {
+		max-height: 80px;
 	}
 
 	.alphaville-card__standfirst-truncate {

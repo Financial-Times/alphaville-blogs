@@ -228,7 +228,7 @@ const getArticles = () => {
 					order: 'desc'
 				}
 			},
-			'size': 95
+			'size': 35
 		})
 
 	});
