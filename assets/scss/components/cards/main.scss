@@ -1,6 +1,11 @@
 @import 'o-card/main';
 @import 'o-grid/main';
 
+$alphaville-card__color--bg-lead: #fce2d7;
+$alphaville-card__color--av-text-bg: #f6d6ce;
+$alphaville-card__color--heading-lead: #a02d4f;
+$alphaville-card__color--strip: #d8c2b8;
+
 .alphaville-card--fill-space {
 	height: 100%;
 	padding-bottom: 10px;
@@ -30,6 +35,7 @@
 .alphaville-card__image {
 	text-align: center;
 	height: 50%;
+	position: relative;
 
 	img {
 		max-width: 100%;
@@ -38,9 +44,17 @@
 	}
 }
 
+.alphaville-card__byline {
+	@include oTypographySerif('m');
+
+	a {
+		color: oColorsGetPaletteColor('grey-tint5');
+	}
+}
+
 .alphaville-card--hero {
 	@include oCard;
-	background-color: #fce2d7;
+	background-color: $alphaville-card__color--bg-lead;
 	position: relative;
 	padding: 20px;
 
@@ -48,20 +62,12 @@
 		@include oTypographySansBold('xl');
 		content: 'AV';
 		position: absolute;
-		right: -30%;
+		right: -10%;
 		top: 35%;
 		font-weight: bold;
-		font-size: 470px;
-		color: #f7dcd6;
-
-		@include oGridRespondTo(S) {
-			right: -10%;
-		}
-
-		@include oGridRespondTo(XL) {
-			font-size: 620px;
-			top: 25%;
-		}
+		font-size: 620px;
+		color: $alphaville-card__color--av-text-bg;
+		letter-spacing: -40px;
 	}
 
 	&:after {
@@ -73,27 +79,37 @@
 			45deg,
 			transparent,
 			transparent 4px,
-			#d8c2b8 4px,
-			#d8c2b8 5px);
+			$alphaville-card__color--strip 4px,
+			$alphaville-card__color--strip 5px);
 		background-size: 9px 7px;
 		height: 100%;
 		width: 9px;
 	}
 
+	.alphaville-card__content {
+		max-height: 100%;
+		overflow: hidden;
+	}
+
 	.alphaville-card__image {
 		width: 100%;
+		height: auto;
 	}
 
 	.alphaville-card__heading {
-		@include oTypographySansBold('xl');
+		@include oTypographySansBold('l');
 		font-weight: bold;
-		color: #a02d4f;
-	}
+		color: $alphaville-card__color--heading-lead;
 
-	.alphaville-card__byline a {
-		font-size: 20px;
-		line-height: 22px;
-		color: oColorsGetPaletteColor('grey-tint5');
+		@include oGridRespondTo(M) {
+			@include oTypographySansBold('xl');
+		}
+
+		&.alphaville-card__heading-truncate {
+			@include oGridRespondTo(M) {
+				max-height: 80px;
+			}
+		}
 	}
 
 	.alphaville-card__standfirst {
@@ -109,6 +125,54 @@
 	}
 }
 
+.alphaville-card--author-lead {
+	@include oCard;
+	background-color: $alphaville-card__color--bg-lead;
+	position: relative;
+	padding: 20px;
+
+	&:before {
+		@include oTypographySansBold('xl');
+		content: 'AV';
+		position: absolute;
+		right: -23%;
+		top: 40%;
+		font-weight: bold;
+		font-size: 520px;
+		color: $alphaville-card__color--av-text-bg;
+		letter-spacing: -64px;
+	}
+
+	.alphaville-card__image {
+		height: 124px;
+
+		img {
+			border-radius: 50%;
+			background: oColorsGetPaletteColor('white');
+		}
+	}
+
+	.alphaville-card__heading {
+		@include oTypographySansBold('l');
+		font-size: 32px;
+		line-height: 30px;
+		font-weight: bold;
+		color: $alphaville-card__color--heading-lead;
+	}
+
+	.alphaville-card__standfirst {
+		color: oColorsGetPaletteColor('cold-1');
+	}
+
+	.alphaville-card__tag {
+		margin: 0 0 8px;
+	}
+
+	.alphaville-card__timestamp {
+		padding: 8px 0 0;
+	}
+}
+
 .alphaville-card {
 	overflow: hidden;
 
@@ -119,10 +183,6 @@
 	.alphaville-card__heading-truncate {
 		max-height: 60px;
 		overflow: hidden;
-	}
-
-	.alphaville-card__heading-truncate--xl {
-		max-height: 80px;
 	}
 
 	.alphaville-card__standfirst-truncate {

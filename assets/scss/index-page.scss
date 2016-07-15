@@ -12,6 +12,7 @@ $o-card-is-silent: false;
 
 .alphaville-article-grid {
 	.alphaville-card-container {
+		height: 300px;
 		margin-top: 10px;
 		margin-bottom: 10px;
 
@@ -24,10 +25,6 @@ $o-card-is-silent: false;
 				display: none;
 			}
 		}
-	}
-
-	.alphaville-card {
-		height: 300px;
 	}
 }
 
