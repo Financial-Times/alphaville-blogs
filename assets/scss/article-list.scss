@@ -1,3 +1,5 @@
+@import 'alphaville-marketslive-session-notification/main';
+
 .alphaville-article-list {
 	.alphaville-card {
 		background: none;
@@ -13,6 +15,18 @@
 
 		&:last-child {
 			border-bottom: 0;
+		}
+	}
+
+	.alphaville-card--marketslive {
+		.alphaville-card__live-title {
+			@include marketslive-live-title();
+			text-transform: uppercase;
+		}
+
+		.alphaville-card__live-notification-icon {
+			@include marketslive-lozenge-icon(13);
+			margin-bottom: -2px;
 		}
 	}
 }

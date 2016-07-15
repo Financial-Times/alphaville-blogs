@@ -15,7 +15,20 @@
 		<div class="main" data-o-grid-colspan="12 L8">
 			<div class="article-list">
 				{{#searchResults}}
-					{{> article-list }}
+					{{#isPodcast}}
+						{{> list-cards/card-podcast}}
+					{{/isPodcast}}
+
+					{{#isMarketsLive}}
+						{{> list-cards/card-marketslive}}
+					{{/isMarketsLive}}
+
+					{{^isPodcast}}
+						{{^isMarketsLive}}
+							{{> list-cards/card-generic}}
+						{{/isMarketsLive}}
+					{{/isPodcast}}
+
 					{{> adBetweenCards}}
 				{{/searchResults}}
 			</div>
