@@ -148,6 +148,19 @@ $alphaville-card__color--strip: #d8c2b8;
 	.alphaville-card__image {
 		height: 124px;
 
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 58px;
+			height: 46px;
+			background: url($in-app-assets-global-path + 'images/quotes.svg');
+			background-size: 58px 46px;
+			opacity: 0.5;
+		}
+
 		img {
 			border-radius: 50%;
 			background: oColorsGetPaletteColor('white');
