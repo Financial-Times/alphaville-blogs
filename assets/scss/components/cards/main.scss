@@ -44,12 +44,9 @@ $alphaville-card__color--strip: #d8c2b8;
 	}
 }
 
-.alphaville-card__byline {
+.alphaville-card__byline a {
 	@include oTypographySerif('m');
-
-	a {
-		color: oColorsGetPaletteColor('grey-tint5');
-	}
+	color: oColorsGetPaletteColor('grey-tint5');
 }
 
 .alphaville-card--hero {
@@ -169,10 +166,13 @@ $alphaville-card__color--strip: #d8c2b8;
 
 	.alphaville-card__heading {
 		@include oTypographySansBold('l');
-		font-size: 32px;
-		line-height: 30px;
 		font-weight: bold;
 		color: $alphaville-card__color--heading-lead;
+
+		@include oGridRespondTo(M) {
+			font-size: 32px;
+			line-height: 30px;
+		}
 	}
 
 	.alphaville-card__standfirst {
