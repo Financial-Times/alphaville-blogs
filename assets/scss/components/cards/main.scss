@@ -135,12 +135,14 @@ $alphaville-card__color--strip: #d8c2b8;
 		@include oTypographySansBold('xl');
 		content: 'AV';
 		position: absolute;
-		right: -23%;
+		right: -90%;
 		top: 40%;
 		font-weight: bold;
 		font-size: 520px;
 		color: $alphaville-card__color--av-text-bg;
 		letter-spacing: -64px;
+		width: 250%;
+		text-align: center;
 	}
 
 	.alphaville-card__image {
