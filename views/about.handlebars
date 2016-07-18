@@ -1,46 +1,63 @@
 {{#contentFor "head"}}
-	<link rel="stylesheet" href="{{assetsBasePath}}/build/article.css" />
-	<script>
-		(function () {
-			ctmLoadScript({
-				src: "{{assetsBasePath}}/build/article.js",
-				async: true
-			});
-		}());
-	</script>
+    <link rel="stylesheet" href="{{assetsBasePath}}/build/article.css" />
+    <script>
+        (function () {
+            ctmLoadScript({
+                src: "{{assetsBasePath}}/build/article.js",
+                async: true
+            });
+        }());
+    </script>
 {{/contentFor}}
 
-<div class="o-grid-container">
-	<div class="o-grid-row">
+<div class="article__header">
+    <div class="o-grid-container">
+        <div class="article__header-inner o-grid-row">
 
-		<div class="main" data-o-grid-colspan="8">
-			<div class="post-content">
-				<p>FT Alphaville is a free daily news and commentary service giving finance professionals the information they need, when they need it. In a world where market professionals are inundated with information there is a pressing need to edit and filter, and hopefully sow a few ideas along the way. That’s where the FT Alphaville team comes in.</p>
-				<p>FT Alphaville has four core components:</p>
-				<p>*<strong> Rolling news and commentary</strong> through the UK, European and US trading day posted at <a title="FT Alphaville" href="http://ftalphaville.ft.com/" target="_self">www.ftalphaville.com</a>. Readers get quick alerts on important breaking news, guidance on where to go for quality comment and analysis, and timely notification of crucial FT.com content.</p>
-				<p>* <strong>Three</strong> <strong>morning briefing notes</strong> published right at the beginning of the working day in Europe (6am London time), the US (6am New York time) and Asia (6am Hong Kong time). Designed primarily for our readers on the move, this email service provides a quick and accessible digest of key financial news and analysis from FT Alphaville itself, as well as the FT and other publications.</p>
-				<p>If you are already a registered or subscribed FT.com reader, follow <a title="Sign up to FT Alphaville's newsletter for free!" href="http://nbe.ft.com/nbe/profile.cfm" target="_blank">this link</a> to sign yourself up.</p>
-				<p>If you’ve never logged in, register for <span style="text-decoration: underline;">free</span> by following <a title="Register for free" href="https://registration.ft.com/signup/register" target="_blank">this link</a>. Then adjust your email alert preferences by clicking on <a title="Sign up to FT Alphaville's newsletter for free!" href="http://nbe.ft.com/nbe/profile.cfm" target="_blank">this link</a>.</p>
-				<p>* <strong>Markets Live</strong>, a <a title="Markets Live - FT Alphaville" href="http://ftalphaville.ft.com/marketslive/" target="_blank">real-time markets commentary service</a> co-hosted by FT Alphaville Editor Paul Murphy and FT Markets Reporter, Bryce Elder. Markets Live offers near-instant views on which assets are moving, and why. This service begins daily at 11am, London time. Cardiff Garcia and Joseph Cotterill, FT Alphaville’s New York correspondents, also run a weekly US Markets Live every Wednesday at 10am New York time / 3pm London time.</p>
-				<p>* <strong>The Long Room</strong> — Launched in November 2008, the Long Room is an <a title="The Long Room - FT Alphaville" href="http://discussions.ft.com/longroom" target="_blank">exclusive comment and analysis arena</a>, where finance professionals are invited to share their research and offer thoughts on the work of others.</p>
-				<p>Readers who wish to post comments, either alongside blog posts or as part of the Markets Live discussion, must also be registered. Access to the Long Room is <a title="Link to application form for the Long Room" href="http://ftalphaville.ft.com/account?joinlr=1" target="_blank">by application only</a>.</p>
-				<p>The FT Alphaville editorial team is headed by <strong>Paul Murphy</strong>, a financial journalist who has spent more than a decade commenting on financial sector developments and breaking large takeover news.</p>
-				<p>Other features of FT Alphaville include:</p>
-				<p>* RSS service, compatible with all major RSS readers.</p>
-				<p>* Dedicated search function for Alphaville, along with the full FT.com search and quotes service.</p>
-				<p>* Twitter streams – the FT Alphaville team’s musings, as well as ad hoc announcements, are available at <a title="ftalpha - Twitter" href="http://twitter.com/ftalpha" target="_blank">@ftalpha</a>. Post headlines and links are at <a title="FTAlphaville - Twitter" href="http://twitter.com/ftalphaville" target="_blank">@FTAlphaville</a>.</p>
-				<p>We are constantly working to upgrade the functionality of Alphaville. If you have suggestions on how we might improve the service please share them with us at <a title="Email AV" href="alphaville@ft.com" target="_blank">alphaville@ft.com</a></p>
-				<p>We welcome feedback, and positively encourage news tips and story ideas. To reach any member of the team and learn more about us, click on “Meet the Team” above. To reach us by phone, click on “<a title="Contact the Team" href="http://staging.beta.ftalphaville.ft.com/contact-us/" target="_blank">Contact the Team</a>“.</p>
-			</div>
-		</div>
+            <div data-o-grid-colspan="12 L8 XL7 XLoffset1">
+                <header class="article__header--wrapper ">
+                    <div class="article__header-primary">
+                        <h1 class="article__title">{{article.title}}</h1>
+                    </div>
+                </header>
+            </div>
+        </div>
+    </div>
+</div>
 
-		<div class="rail" data-o-grid-colspan="4">
-			{{> twitterWidget}}
-		</div>
+<div class="article__wrapper ">
+    <div class="o-grid-container">
+        <div class="article__main o-grid-row">
+            <div data-o-grid-colspan="12 L8 XL7 XLoffset1">
+                {{> shareComponent position='top'}}
 
-	</div>
+                <div class="article__body n-content-body">
+
+                    {{{article.body}}}
+
+                    <div class="alphaville-in-article-ad">
+                        {{> alphaville-ads/templates/mpu_mobile}}
+                    </div>
+
+                    <footer class="n-content-copyright">
+                        <small>
+                            <a href="http://www.ft.com/servicestools/help/copyright" data-trackable="link-copyright">Copyright</a> The Financial Times Limited 2016. All rights reserved. You may share using our article tools. Please don't cut articles from FT.com and redistribute by email or post to the web.
+                        </small>
+                    </footer>
+                </div>
+
+                {{> shareComponent position='bottom'}}
+                <div data-n-article-email-bottom-container=""></div>
+
+            </div>
+            <div class="article__aside o-grid-remove-gutters--XL" data-o-grid-colspan="0 L4 XL3 XLoffset1">
+                {{> alphaville-ads/templates/dmpu_desktop}}
+                {{> twitterWidget}}
+            </div>
+        </div>
+    </div>
+</div>
 </div>
 
 
-
-
+{{> alphaville-comments-config/main }}
