@@ -10,18 +10,22 @@ $o-card-is-silent: false;
 
 @import 'o-grid/main';
 
-.alphaville-card-container {
-	margin-top: 10px;
-	margin-bottom: 10px;
+.alphaville-article-grid {
+	.alphaville-card-container {
+		height: 300px;
+		margin-top: 10px;
+		margin-bottom: 10px;
 
-	a {
-		border-bottom: 0;
-	}
+		a {
+			border-bottom: 0;
+		}
 
-	@include oGridRespondTo(XL) {
-		&:last-child {
-			display: none;
+		@include oGridRespondTo(XL) {
+			&:last-child {
+				display: none;
+			}
 		}
 	}
 }
-@import './components/article-list';
+
+@import './article-list';
