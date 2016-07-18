@@ -30,6 +30,14 @@ alphavilleBuildTools(gulp, {
 			sass: './assets/scss/search.scss',
 			buildJs: 'search.js',
 			buildCss: 'search.css'
+		},
+		{
+			id: 'meetTheTeam',
+			standalone: 'meetTheTeam',
+			js: './assets/js/meetTheTeam.js',
+			sass: './assets/scss/meet-the-team.scss',
+			buildJs: 'meetTheTeam.js',
+			buildCss: 'meet-the-team.css'
 		}
 	]
 });

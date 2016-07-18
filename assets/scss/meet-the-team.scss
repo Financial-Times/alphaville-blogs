@@ -1,0 +1,99 @@
+$o-tabs-is-silent: false;
+$o-card-is-silent: false;
+
+@import './common';
+@import 'o-tabs/main';
+@import 'o-card/main';
+@import './components/article-list';
+
+$team-member-thumb-bg: #959387;
+$team-member-name-color: #555;
+$team-member-item-bg: #F6E9D8 url("http://ftalphaville.ft.com/wp-content/plugins/assanka_team_members/img/team-member-menu-item.png") 97% 50% no-repeat;
+$team-member-item-bg--active: #5A8EB3 url("http://ftalphaville.ft.com/wp-content/plugins/assanka_team_members/img/team-member-menu-item-active.png") 97% 50% no-repeat;
+$team-member-font: Arial, Helvetica, sans-serif;
+$team-member-border-top: 1px dotted #959387;
+
+.team-title {
+  margin-left: 40px;
+  font-size: 36px;
+  font-family: serif;
+  font-weight: 400;
+}
+
+.team {
+  list-style-type: none;
+}
+
+.team__member__item {
+  display: block;
+  overflow: auto;
+  border-top: $team-member-border-top;
+  background: $team-member-item-bg;
+  padding: 10px;
+  clear: both;
+}
+
+.team__member {
+  text-decoration: none;
+  display: block;
+  overflow: auto;
+}
+
+.team__member__item--active {
+  background: $team-member-item-bg--active;
+  .team__member__name {
+    color: white;
+    text-shadow: 1px 1px 1px #333;
+  }
+}
+
+.team__member__name {
+  font-size: 18px;
+  text-shadow: 1px 1px 1px white;
+  color: $team-member-name-color;
+  font-family: $team-member-font;
+  margin-left: 78px;
+}
+
+.team__member__thumb {
+  width: 60px;
+  float: left;
+  height: 60px;
+  border-radius: 5px;
+  background-color: $team-member-thumb-bg;
+  background-size: 100% 0;
+  overflow: hidden;
+  background-position: 50% 50%;
+}
+
+.member-info {
+  clear: both;
+  overflow: auto;
+}
+
+.member-info__name {
+  float: left;
+  font-size: 26px;
+  font-family: serif;
+  font-weight: 400;
+}
+
+.member-info__pic {
+  width: 115px;
+  height: 115px;
+  border-radius: 5px;
+  margin-top: 10px;
+  float: right;
+}
+
+#latestPosts {
+  & > .alphaville-card-container {
+    margin-bottom: 1px;
+  }
+}
+
+
+
+
+
+
