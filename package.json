@@ -1,25 +1,26 @@
 {
-	"name": "alphaville-blogs",
-	"version": "0.0.0",
-	"private": true,
-	"scripts": {
-		"postinstall": "gulp",
-		"start": "node ./bin/www"
-	},
-    "cacheDirectories": [],
-	"dependencies": {
-		"alphaville-express": "Financial-Times/alphaville-express#0.4.0",
-		"alphaville-build-tools": "Financial-Times/alphaville-build-tools#0.1.6",
-		"alphaville-es-interface": "Financial-Times/alphaville-es-interface#0.3.8",
-		"alphaville-auth-middleware": "Financial-Times/alphaville-auth-middleware#0.2.0",
-		"cheerio" : "^0.20.0",
-		"alphaville-header-config": "Financial-Times/alphaville-header-config#0.4.0",
-
-		"bower": "^1.7.7",
-		"debug": "~2.2.0",
-		"gulp": "^3.9.1"
-	},
-	"engines": {
-		"node": "^5"
-	}
+  "name": "alphaville-blogs",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "postinstall": "gulp",
+    "start": "node ./bin/www"
+  },
+  "cacheDirectories": [],
+  "dependencies": {
+    "alphaville-auth-middleware": "Financial-Times/alphaville-auth-middleware#0.2.0",
+    "alphaville-build-tools": "Financial-Times/alphaville-build-tools#0.1.6",
+    "alphaville-es-interface": "Financial-Times/alphaville-es-interface#0.3.8",
+    "alphaville-express": "Financial-Times/alphaville-express#0.4.0",
+    "alphaville-header-config": "Financial-Times/alphaville-header-config#0.4.0",
+    "bluebird": "^3.4.1",
+    "bower": "^1.7.7",
+    "cheerio": "^0.20.0",
+    "debug": "~2.2.0",
+    "gulp": "^3.9.1",
+    "memory-cache": "^0.1.6"
+  },
+  "engines": {
+    "node": "^5"
+  }
 }
