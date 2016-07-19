@@ -1,0 +1,17 @@
+@import "partials/colors";
+@import "partials/mixins";
+@import "partials/big-number";
+@import "partials/blockquotes";
+@import "partials/body";
+@import "partials/copyright";
+@import "partials/images";
+@import "partials/pullquotes";
+@import "partials/related-box";
+@import "partials/tags";
+@import "partials/video";
+
+.article__body {
+	a {
+		@include articleLinksBody();
+	}
+}

@@ -3,12 +3,9 @@
 $o-card-is-silent: false;
 
 @import 'o-card/main';
-@import 'components/cards/main';
-
-@import 'n-content-body/main';
-@import 'components/share/main';
-
 @import 'o-grid/main';
+@import 'components/cards/main';
+@import 'components/share/main';
 
 .alphaville-article-grid {
 	.alphaville-card-container {

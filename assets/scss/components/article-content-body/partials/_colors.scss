@@ -1,0 +1,49 @@
+// Article theme colors
+@include oColorsSetUseCase(article-standard, border, 'cold-2');
+@include oColorsSetUseCase(article-standard, text, 'cold-2');
+@include oColorsSetUseCase(article-standard, background, 'cold-2');
+@include oColorsSetUseCase(article-analysis, border, 'cold-2');
+@include oColorsSetUseCase(article-analysis, text, 'cold-2');
+@include oColorsSetUseCase(article-analysis, background, 'cold-2');
+@include oColorsSetUseCase(article-comment, border, 'blue-1');
+@include oColorsSetUseCase(article-comment, text, 'blue-1');
+@include oColorsSetUseCase(article-comment, background, 'blue-1');
+@include oColorsSetUseCase(article-lifestyle, border, 'purple-1');
+@include oColorsSetUseCase(article-lifestyle, text, 'purple-1');
+@include oColorsSetUseCase(article-lifestyle, background, 'purple-1');
+
+// Lists
+@include oColorsSetUseCase(article-lists, background, 'transparent');
+@include oColorsSetUseCase(article-lists, border, 'black');
+@include oColorsSetUseCase(article-lists-hover, border, 'black');
+@include oColorsSetUseCase(article-lists-hover, background, 'warm-3');
+@include oColorsSetUseCase(article-lists-inversed, background, 'cold-2');
+@include oColorsSetUseCase(article-lists-inversed, border, 'white');
+@include oColorsSetUseCase(article-lists-inversed-hover, border, 'white');
+@include oColorsSetUseCase(article-lists-inversed-hover, background, 'white');
+@include oColorsSetUseCase(article-lists-top-level, background, 'cold-2');
+@include oColorsSetUseCase(article-lists-top-level, text, 'white');
+@include oColorsSetUseCase(article-lists-top-level, border, 'white');
+@include oColorsSetUseCase(article-lists-top-level-hover, border, 'white');
+@include oColorsSetUseCase(article-lists-top-level-hover, background, 'white');
+
+@include oColorsSetUseCase(article-lists-links, background, 'transparent');
+@include oColorsSetUseCase(article-lists-links, border, 'black');
+@include oColorsSetUseCase(article-lists-links-hover, border, 'black');
+@include oColorsSetUseCase(article-lists-links-hover, background, 'warm-3');
+@include oColorsSetUseCase(article-lists-links-inversed, background, 'cold-2');
+@include oColorsSetUseCase(article-lists-links-inversed, border, 'white');
+@include oColorsSetUseCase(article-lists-links-inversed-hover, border, 'white');
+@include oColorsSetUseCase(article-lists-links-inversed-hover, background, 'white');
+
+// Topics
+@include oColorsSetUseCase(topic, text, 'claret');
+@include oColorsSetUseCase(topic-inversed, text, 'claret-inverse');
+@include oColorsSetUseCase(topic-block, background, 'claret');
+@include oColorsSetUseCase(topic-block, text, 'white');
+
+@include oColorsSetUseCase(link, text, 'teal-1');
+@include oColorsSetUseCase(link-hover, text, 'cold-1');
+
+@include oColorsSetUseCase(link-inversed, text, 'teal-2');
+@include oColorsSetUseCase(link-inversed-hover, text, 'warm-2');

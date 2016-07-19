@@ -1,0 +1,110 @@
+//ARTICLE BODY ELEMENTS
+.n-content-body {
+
+	// STANDARD TYPOGRAPHY AND ELEMENTS
+	font: 18px/1.4 Georgia, serif;
+	margin-bottom: 40px;
+
+	&--serif {
+		@include oTypographySerif(m);
+	}
+
+	> p {
+		margin: 0.3em 0 0.8em;
+	}
+
+	> first-child {
+		margin-top: 0;
+	}
+
+	a {
+		@media print {
+			&:after {
+				text-decoration: none;
+				word-break: break-all;
+				word-wrap: break-word;
+			}
+			&[href^='/']:after {
+				content: ' (http://next.ft.com' attr(href) ')';
+			}
+			&:not([href^='/']):after {
+				content: ' (' attr(href) ')';
+			}
+		}
+	}
+
+	strong {
+		font-weight: 600;
+	}
+
+	@media print {
+		&:after {
+			content: 'Print a single copy of this article for personal use. Contact us if you wish to print more to distribute to others. © The Financial Times Ltd.';
+			display: block;
+			border-top: 1px solid #000000;
+			padding-top: 5px;
+			clear: both;
+		}
+	}
+
+	// BLOCKQUOTES
+	blockquote {
+		color: oColorsGetPaletteColor('cold-1');
+		position: relative;
+
+		p {
+			@include oTypographySerifDisplay(m);
+		}
+	}
+
+	// DATA TABLES
+	.data-table {
+		margin-top: 20px;
+		border-spacing: 0;
+
+		caption,
+		thead {
+			text-align: left;
+		}
+		caption {
+			font-weight: 500;
+			text-transform: uppercase;
+		}
+		thead,
+		tbody {
+			&:before {
+				content: "";
+				display: block;
+				height: 10px;
+			}
+		}
+		tbody tr:nth-child(odd) {
+			background-color: oColorsGetPaletteColor('pink-tint2');
+		}
+		th,
+		td {
+			vertical-align: top;
+		}
+		th {
+			font-weight: 500;
+		}
+		td {
+			padding: 5px 10px;
+		}
+	}
+
+	// SUBHEADS
+
+	.subhead {
+		@include oTypographySansBold(l);
+		margin-top: 50px;
+		margin-bottom: 20px;
+	}
+	.subhead--crosshead {
+		border-bottom: 1px solid black;
+	}
+	.subhead--standard {
+		@include oTypographySansBold(m);
+	}
+
+}

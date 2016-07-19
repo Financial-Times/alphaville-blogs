@@ -1,0 +1,197 @@
+@import 'colors';
+
+@mixin articleContentBox() {
+
+	box-sizing: border-box;
+	position: relative;
+	clear: left;
+	margin: 24px 0 16px;
+	padding: 16px 0;
+	width: 100%;
+
+	.o-expander__toggle {
+		@include oTypographySans(m);
+		margin-top: 12px;
+		i {
+			@include oIconsGetIcon('arrow-down', oColorsGetPaletteColor('teal-1'), 12);
+			@include oIconsBaseStyles();
+			display: inline-block;
+			padding: 0 12px;
+			box-sizing: border-box;
+			&:hover {
+				@include oIconsGetIcon('arrow-down', oColorsGetPaletteColor('cold-2'), 12);
+			}
+		}
+		&:hover {
+			color: oColorsGetPaletteColor('cold-2');
+			text-decoration: none;
+		}
+		&[aria-expanded="true"] i {
+			@include oIconsGetIcon('arrow-up', oColorsGetPaletteColor('teal-1'), 12);
+			&:hover {
+				@include oIconsGetIcon('arrow-up', oColorsGetPaletteColor('cold-2'), 12);
+			}
+		}
+	}
+}
+
+@mixin articleContentBoxInline() {
+	float: left;
+	@include oGridRespondTo(S) {
+		max-width: 300px;
+		margin-right: 24px;
+	}
+}
+
+@mixin articleContentBoxTitle() {
+	margin: -40px 0 8px 10px;
+}
+
+@mixin articleContentBoxTitleText() {
+	@include oTypographySerifDisplay(m);
+	color: oColorsGetPaletteColor('cold-1');
+	display: inline-block;
+	padding: 10px;
+	padding-bottom: 0;
+	margin: 0;
+	font-weight: 900;
+	background-color: inherit;
+	a {
+		color: oColorsGetPaletteColor('cold-1');
+		border-bottom: 0;
+		text-decoration: none;
+	}
+}
+
+
+@mixin articleLists() {
+	display: inline-block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+@mixin articleListsCols() {
+	overflow: auto;
+	width: 100%;
+
+	& > li {
+		float: left;
+		margin-left: 2%;
+		width: 49%;
+
+		&:nth-child(odd) {
+			margin-left: 0;
+		}
+	}
+}
+
+
+@mixin articleLinksBody($inversed: false) {
+	@if ($inversed) {
+		@include oColorsFor(link-inversed, text);
+	} @else {
+		@include oColorsFor(link, text);
+	}
+	border-bottom: 1px dotted oColorsGetColorFor(link, text);
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		@if ($inversed) {
+			color: lighten(oColorsGetColorFor(link-inversed, text), 5%);
+		} @else {
+			color: oColorsGetColorFor(link-hover, text);
+		}
+		border-bottom-color: transparent;
+	}
+}
+
+
+@mixin articleLinksHeadline($article-type: article-standard) {
+	@include oColorsFor($article-type, text);
+	border-bottom-color: transparent;
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		@include oColorsFor($article-type, border);
+		border-bottom-style: dotted;
+		border-bottom-width: 1px;
+	}
+}
+
+@mixin articleLinksTopic($inversed: false) {
+	@if ($inversed) {
+		@include oColorsFor(topic-inversed, text);
+	} @else {
+		@include oColorsFor(topic, text);
+	}
+	@include oTypographySansBold(s);
+	border-bottom-color: transparent;
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		@if ($inversed) {
+			border-bottom-color: lighten(oColorsGetColorFor(topic-inversed, text), 5%);
+			color: lighten(oColorsGetColorFor(topic-inversed, text), 5%);
+		} @else {
+			border-bottom-color: darken(oColorsGetColorFor(topic, text), 20%);
+			color: darken(oColorsGetColorFor(topic, text), 20%);
+		}
+		border-bottom-style: dotted;
+		border-bottom-width: 1px;
+	}
+}
+
+
+
+@mixin articleListsItem($use-case: article-lists) {
+	@include oColorsFor($use-case, background);
+	border: 1px solid rgba(oColorsGetColorFor($use-case, border), 0.25);
+	border-width: 0 0 1px;
+	min-width: 200px;
+	vertical-align: top;
+
+	> a {
+		@include articleListsItemLink($use-case);
+	}
+}
+
+@mixin articleListsItemLink($use-case: article-lists) {
+	@if($use-case == article-lists-inversed) {
+		@include articleLinksTopic($inversed: true);
+	} @else if ($use-case == article-lists-links-inversed) {
+		@include articleLinksBody($inversed: true);
+		@include oTypographySansBold(s);
+		text-transform: uppercase;
+	} @else if ($use-case == article-lists-links) {
+		@include articleLinksBody();
+		@include oTypographySansBold(s);
+		text-transform: uppercase;
+	} @else {
+		@include articleLinksTopic();
+	}
+	display: block;
+	padding: 2px 15px 2px $spacing-unit/2;
+	position: relative;
+	text-decoration: none;
+	border-bottom-width: 0;
+	&:after {
+		@include oIconsGetIcon('arrow-right', oColorsGetColorFor($use-case, border), 10);
+		content: '';
+		opacity: 0.25;
+		position: absolute;
+		right: 0;
+		top: 8px;
+	}
+	&:hover,
+	&:focus {
+		background: rgba(oColorsGetColorFor(#{$use-case}-hover, background), 0.1);
+		border-bottom-width: 0;
+		&:after {
+			@include oIconsGetIcon('arrow-right', oColorsGetColorFor(#{$use-case}-hover, border), 10);
+		}
+	}
+}
