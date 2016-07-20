@@ -1,0 +1,27 @@
+<div class="alphaville-card-container" data-o-grid-colspan="12 S6 M4 XL3">
+	<div class="alphaville-card alphaville-card--fill-space alphaville-card--marketslive-live" data-o-component="o-card">
+		<div class="alphaville-card__content">
+			<div class="alphaville-card__theme">
+				<a href="/marketslive">
+					Markets<br/>
+					<strong>Live</strong>
+					<span class="marketslive-live-lozenge-icon"></span>
+				</a>
+			</div>
+
+			<h2 class="alphaville-card__heading--invert alphaville-card__heading-truncate"><a href="{{_webUrl}}">{{{_source.title}}}</a></h2>
+
+			{{#_source.authors}}
+			<div class="alphaville-card__byline">
+				<a href="/search?q={{this}}" class="alphaville-card__tag">{{this}}</a>
+			</div>
+			{{/_source.authors}}
+
+			<div class="alphaville-card__heading alphaville-card__heading-truncate--3lines">
+				<div class="description">{{{_source.summaries}}}</div>
+			</div>
+		</div>
+
+		<div class="alphaville-card--marketslive-live--lozenge"></div>
+	</div>
+</div>

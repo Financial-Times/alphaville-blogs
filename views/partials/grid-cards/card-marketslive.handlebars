@@ -2,21 +2,15 @@
 	<div class="alphaville-card alphaville-card--fill-space o-card o-card-- o-card--image-" data-o-component="o-card">
 		<div class="o-card__content">
 			<div class="o-card__meta card-primaryTheme">
-				<a href="/marketslive" class="o-card__tag {{#isLive}}marketslive-live-title{{/isLive}}">
-					Markets
-					{{^isLive}}Live{{/isLive}}
-					{{#isLive}}
-						<strong>Live</strong>
-						<span class="marketslive-live-lozenge-icon"></span>
-					{{/isLive}}
+				<a href="/marketslive" class="o-card__tag">
+					Markets Live
 				</a>
 			</div>
 
 			<h2 class="o-card__heading alphaville-card__heading-truncate"><a href="{{_webUrl}}">{{{_source.title}}}</a></h2>
 
 			<div class="o-card__standfirst alphaville-card__standfirst-truncate">
-				<div class="description">This Markets Live session is closed. <a href="{{_webUrl}}">Read more</a></div>
-				<p>Live markets commentary from FT.com</p>
+				<div class="description">{{_source.summaries}}</div>
 			</div>
 
 			<time data-o-component="o-date" class="o-date o-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>

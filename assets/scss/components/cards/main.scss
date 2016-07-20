@@ -1,5 +1,6 @@
 @import 'o-card/main';
 @import 'o-grid/main';
+@import 'alphaville-marketslive-session-notification/main';
 
 $alphaville-card__color--bg-lead: #fce2d7;
 $alphaville-card__color--av-text-bg: #f6d6ce;
@@ -14,6 +15,11 @@ $alphaville-card__color--strip: #d8c2b8;
 
 .alphaville-card__heading {
 	@include oCardHeading;
+}
+
+.alphaville-card__heading--invert {
+	@include oCardHeading;
+	color: oColorsGetPaletteColor('cold-2');
 }
 
 .alphaville-card__tag {
@@ -132,9 +138,8 @@ $alphaville-card__color--strip: #d8c2b8;
 		@include oTypographySansBold('xl');
 		content: 'AV';
 		position: absolute;
-		right: -90%;
+		right: -80%;
 		top: 40%;
-		font-weight: bold;
 		font-size: 520px;
 		color: $alphaville-card__color--av-text-bg;
 		letter-spacing: -64px;
@@ -188,6 +193,66 @@ $alphaville-card__color--strip: #d8c2b8;
 	}
 }
 
+
+.alphaville-card--marketslive-live {
+	@include oCard;
+	background-color: $alphaville-card__color--bg-lead;
+	position: relative;
+	padding: 20px;
+
+	.alphaville-card--marketslive-live--lozenge {
+		@include marketslive-lozenge-icon(120);
+
+		position: absolute;
+		top: -55px;
+		right: -60px;
+	}
+
+	&:before {
+		@include oTypographySansBold('xl');
+		content: 'ML';
+		position: absolute;
+		right: -64%;
+		top: 40%;
+		font-size: 520px;
+		color: $alphaville-card__color--av-text-bg;
+		letter-spacing: -40px;
+		width: 250%;
+		text-align: center;
+	}
+
+	.alphaville-card__heading,
+	.alphaville-card__heading--invert {
+		@include oTypographySansBold('l');
+		font-weight: bold;
+		margin-bottom: 0;
+
+		@include oGridRespondTo(M) {
+			font-size: 32px;
+			line-height: 30px;
+		}
+	}
+
+	.alphaville-card__heading {
+		color: $alphaville-card__color--heading-lead;
+	}
+
+	.alphaville-card__theme {
+		@include oTypographySans('l');
+		font-size: 32px;
+		line-height: 24px;
+
+		a {
+			@include marketslive-live-title();
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+
+		margin-bottom: 40px;
+	}
+}
+
+
 .alphaville-card {
 	overflow: hidden;
 
@@ -197,6 +262,11 @@ $alphaville-card__color--strip: #d8c2b8;
 
 	.alphaville-card__heading-truncate {
 		max-height: 60px;
+		overflow: hidden;
+	}
+
+	.alphaville-card__heading-truncate--3lines {
+		max-height: 90px;
 		overflow: hidden;
 	}
 
