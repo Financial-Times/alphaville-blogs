@@ -1,13 +1,16 @@
 @import 'alphaville-marketslive-session-notification/main';
+@import 'o-colors/main';
 
 .alphaville-article-list {
 	.alphaville-card {
 		background: none;
+		padding-left: 0;
+		padding-right: 0;
 	}
 
 	.alphaville-card-container {
-		border-bottom: 1px solid #f6e9d8;
-		margin: 5px 0;
+		border-bottom: 1px solid oColorsGetPaletteColor('pink-tint3');
+		padding: 6px 0;
 
 		a {
 			border-bottom: 0;
@@ -28,5 +31,14 @@
 			@include marketslive-lozenge-icon(13);
 			margin-bottom: -2px;
 		}
+	}
+
+	.o-card__heading,
+	.o-card__tag {
+		margin-bottom: 8px;
+	}
+
+	.o-card__timestamp {
+		padding-top: 8px;
 	}
 }
