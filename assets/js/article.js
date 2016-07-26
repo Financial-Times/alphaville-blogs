@@ -16,22 +16,20 @@ document.addEventListener('o.DOMContentLoaded', function () {
 		embeddedMedia.convert(closedContentContainer);
 	}
 
-
 	const inArticleAd = document.querySelector('.alphaville-in-article-ad');
-	const articleBody = document.querySelector('.article__body');
+	const isMlTranscript = !!document.querySelector('.webchat-closed-content');
 
-	const pNumber = articleBody.querySelectorAll('p');
-	if (pNumber.length > 0) {
-		if (pNumber.length > 2) {
-			const thirdP = articleBody.querySelector('p:nth-of-type(3)');
-			if (thirdP) {
-				thirdP.parentNode.insertBefore(inArticleAd, thirdP.nextSibling);
-			}
+	const linesNumber = (isMlTranscript) ?
+		document.querySelectorAll('.webchat-closed-content > div') :
+		document.querySelectorAll('.article__body > p');
+
+	if (linesNumber.length > 0) {
+		if (linesNumber.length > 2) {
+			const thirdLine = linesNumber[2];
+			thirdLine.parentNode.insertBefore(inArticleAd, thirdLine.nextSibling);
 		} else {
-			const lastP = articleBody.querySelector('p:last-child');
-			if (lastP) {
-				lastP.parentNode.insertBefore(inArticleAd, lastP.nextSibling);
-			}
+			const lastLine = linesNumber[linesNumber.length - 1];
+			lastLine.parentNode.insertBefore(inArticleAd, lastLine.nextSibling);
 		}
 	}
 
