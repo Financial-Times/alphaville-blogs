@@ -37,7 +37,7 @@
 		border-bottom-width: 0;
 		float: right;
 		margin-right: 16px;
-		
+
 		&:before {
 			@include oIconsGetIcon('comment', oColorsGetPaletteColor('cold-1'), 17);
 			content: '';
@@ -68,6 +68,7 @@
 
 	&--bottom {
 		clear: left;
+		margin-bottom: 15px;
 	}
 
 	.o-share {
