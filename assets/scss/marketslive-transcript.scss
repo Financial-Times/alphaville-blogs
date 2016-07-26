@@ -1,4 +1,37 @@
 @import 'webchat/main';
+@import 'o-colors/main';
+@import 'o-typography/main';
+
+.article__author-headshots {
+	list-style: none;
+	margin-bottom: 16px;
+	background: #ffead7;
+	padding: 0;
+
+	li {
+		display: inline-block;
+		padding: 4px;
+
+		img {
+			width: 30px;
+			border-radius: 100%;
+			background-color: oColorsGetPaletteColor('white');
+		}
+
+		a {
+			@include oTypographySerif('m');
+			line-height: 30px;
+			color: oColorsGetPaletteColor('claret');
+			text-decoration: none;
+			vertical-align: bottom;
+
+			&:hover {
+				color: oColorsGetPaletteColor('cold-2');
+				text-decoration: none;
+			}
+		}
+	}
+}
 
 .user-comment {
 	text-align: right;

@@ -1,18 +1,24 @@
 <div class="alphaville-card-container {{_source.cardType}}" data-o-grid-colspan="12 S6 M4 XL3">
-	<div class="alphaville-card alphaville-card--fill-space o-card o-card-- o-card--image-" data-o-component="o-card" style="background:linear-gradient(rgba(114, 0, 0, 0.85),rgba(255, 0, 0, 0.45)), url({{_source.mainImage.url}});">
-		<div class="o-card__content">
+	<div class="alphaville-card alphaville-card--author-lead alphaville-card--author-lead--image alphaville-card--fill-space">
+		<div class="alphaville-card__background-image">
+			<img src="{{_source.mainImage.url}}&tint" />
+		</div>
+		<div class="alphaville-card__image">
+			<img src="{{_source.headshot}}" />
+		</div>
+		<div class="alphaville-card__content">
 			{{#_source.primaryTheme}}
-			<div class="o-card__meta card-primaryTheme">
-				<a href="/search?q={{this}}" class="o-card__tag">{{this}}</a>
+			<div class="alphaville-card__byline">
+				<a href="/search?q={{this}}" class="alphaville-card__tag">{{this}}</a>
 			</div>
 			{{/_source.primaryTheme}}
 
-			<h2 class="o-card__heading alphaville-card__heading-truncate"><a href="{{_webUrl}}">{{_source.title}}</a></h2>
-
-			<p class="o-card__standfirst alphaville-card__standfirst-truncate">{{{_source.summaries}}}</p>
+			<h2 class="alphaville-card__heading alphaville-card__heading-truncate">
+				<a href="{{_webUrl}}">{{_source.title}}</a>
+			</h2>
 
 			{{>comment-counter}}
-			<time data-o-component="o-date" class="o-date o-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
+			<time data-o-component="o-date" class="o-date alphaville-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
 		</div>
 	</div>
 </div>
