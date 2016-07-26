@@ -14,6 +14,8 @@
 	<div class="o-grid-container">
 		<div class="article__header-inner o-grid-row">
 			<div data-o-grid-colspan="12 L8 XL7 XLoffset1">
+
+
 				<header class="article__header--wrapper ">
 					<div class="article__header-primary">
 						<div class="article__primary-theme" data-trackable="primary-theme">
@@ -24,6 +26,9 @@
 							<p class="article__stand-first">{{article.openingHTML}}</p>
 						</div>
 					</div>
+
+                    {{> shareComponent position='top'}}
+
 					<div class="article__time-byline">
 						<time class="article__timestamp o-date" data-o-component="o-date" datetime="{{article.publishedDate}}" title="{{article.publishedDate}}" aria-label="{{article.publishedDate}}">{{article.publishedDate}}</time>
 					</div>
@@ -35,6 +40,7 @@
 						{{/article.authors}}
 					</ul>
 				</header>
+
 
 				<div class="article__body n-content-body">
 					{{{article.bodyHTML}}}
