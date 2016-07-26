@@ -16,29 +16,26 @@
 			<div data-o-grid-colspan="12 L8 XL7 XLoffset1">
 				<header class="article__header--wrapper ">
 					<div class="article__header-primary">
+						<div class="article__primary-theme" data-trackable="primary-theme">
+							<a href="/search?q={{article.primaryTheme}}" class="n-content-tag n-content-tag--medium" data-trackable="section-link" aria-label="posted in category {{article.primaryTheme}}">{{article.primaryTheme}}</a>
+						</div>
 						<h1 class="article__title">{{article.title}}</h1>
+						<div class="article__header-secondary">
+							<p class="article__stand-first">{{article.openingHTML}}</p>
+						</div>
 					</div>
+					<div class="article__time-byline">
+						<time class="article__timestamp o-date" data-o-component="o-date" datetime="{{article.publishedDate}}" title="{{article.publishedDate}}" aria-label="{{article.publishedDate}}">{{article.publishedDate}}</time>
+					</div>
+					<ul class="article__author-headshots">
+						{{#article.authors}}
+							<li>
+								<a href="/search?q={{name}}">{{#headshotUrl}}<img src="{{.}}" />{{/headshotUrl}} {{name}}</a>
+							</li>
+						{{/article.authors}}
+					</ul>
 				</header>
-			</div>
-		</div>
-	</div>
-</div>
 
-<div class="article__wrapper ">
-	<div class="o-grid-container">
-		<div class="o-grid-row">
-			<div data-o-grid-colspan="12 L12 XL11 XLoffset1">
-				{{> shareComponent position='top' hideCommentCount=true}}
-
-				<div class="article__time-byline">
-					<time class="article__timestamp o-date" data-o-component="o-date" datetime="{{article.publishedDate}}" title="{{article.publishedDate}}" aria-label="{{article.publishedDate}}">{{article.publishedDate}}</time>
-					<p class="article__byline">by: {{article.byline}}</p>
-				</div>
-			</div>
-		</div>
-
-		<div class="o-grid-row article__main">
-			<div data-o-grid-colspan="12 L8 XL7 XLoffset1">
 				<div class="article__body n-content-body">
 					{{{article.bodyHTML}}}
 
@@ -49,15 +46,9 @@
 					</footer>
 				</div>
 			</div>
+
 			<div data-o-grid-colspan="hide L4 XL3 XLoffset1">
 				{{> alphaville-ads/templates/dmpu_desktop}}
-			</div>
-		</div>
-
-		<div class="o-grid-row">
-			<div data-o-grid-colspan="12 L12 XL11 XLoffset1">
-				{{> shareComponent position='bottom' hideCommentCount=true}}
-				<div data-n-article-email-bottom-container=""></div>
 			</div>
 		</div>
 	</div>
