@@ -1,4 +1,3 @@
-@import 'webchat/main';
 @import 'o-colors/main';
 @import 'o-typography/main';
 
@@ -33,18 +32,419 @@
 	}
 }
 
+
 .user-comment {
+	@include oTypographySans(s);
+	font-size: 15px;
+	color: oColorsGetPaletteColor('grey-tint4');
 	text-align: right;
-	font-size: 13px;
+	padding: 8px 0;
+	border-top: 1px solid oColorsGetPaletteColor('pink-tint3');
+	border-bottom: 1px solid oColorsGetPaletteColor('pink-tint3');
+
+	@include oGridRespondTo(M) {
+		margin-left: 50px;
+	}
 
 	.user-comment-pseudonym {
-		display: inline-block;
-		font-size: 14px;
-		color: gray;
+		@include oTypographySerifItalic(s);
 		font-weight: bold;
+		color: oColorsGetPaletteColor('grey-tint5');
+		display: inline-block;
 	}
 
-	.user-comment-timestamp {
-		display: inline-block;
+	& + .user-comment {
+		border-top: 0;
 	}
+
+	.msg + & {
+		margin-top: -2px;
+	}
+}
+
+
+.webchat-content,
+.webchat-closed-content {
+	position: relative;
+	border: 0;
+
+	@include oGridRespondTo(M) {
+		margin-left: 10px;
+	}
+}
+
+
+.msg {
+	position: relative;
+	font-family: Georgia, sans-serif;
+	font-size: 16px;
+	line-height: 20px;
+	transition: opacity 0.5s ease-out;
+	padding: 10px 0;
+	box-sizing: border-box;
+	color: oColorsGetPaletteColor('black');
+
+	.user-comment + & {
+		padding-top: 20px;
+	}
+
+	.messagebody {
+		background-repeat: no-repeat;
+		padding: 0;
+
+		@include oGridRespondTo(M) {
+			padding-left: 50px;
+		}
+	}
+
+	p {
+		margin: 0;
+	}
+
+	&:after {
+		visibility: hidden;
+		display: block;
+		font-size: 0;
+		content: " ";
+		clear: both;
+		height: 0;
+	}
+
+	blockquote {
+		border: 1px solid #dddddd;
+		border-radius: 3px;
+		background-image: none;
+		background-color: #f0f0f0;
+		padding: 12px 12px 4px;
+		margin: 0 0 0 30px;
+		font-style: italic;
+
+		@include oGridRespondTo(M) {
+			margin-left: 0;
+		}
+
+		p {
+			margin-bottom: 0.7em;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.messageheader {
+		float: left;
+		margin-right: 10px;
+
+		.participant {
+			padding: 5px 4px;
+			border-radius: 30px;
+			font-family: Georgia, sans-serif;
+			font-weight: normal;
+			color: oColorsGetPaletteColor('white');
+			background-color: oColorsGetPaletteColor('claret');
+			vertical-align: top;
+			font-size: 11px;
+
+			@include oGridRespondTo(M) {
+				font-weight: bold;
+				padding: 6px 5px;
+				font-size: 13px;
+			}
+		}
+
+		.timestamp {
+			display: none;
+		}
+	}
+
+	.webchat-emoticon {
+		margin: -2px 5px;
+	}
+
+	.picture {
+		max-width: 95%;
+		margin-top: 10px;
+
+		@include oGridRespondTo(M) {
+			margin-top: 0;
+		}
+	}
+
+	&.price .messagebody {
+		padding-left: 30px;
+		background-position: 0 3px;
+		background-image: url(oAssetsResolve("src/images/icons/charticon.png", webchat));
+
+		@include oGridRespondTo(M) {
+			padding-left: 50px;
+		}
+	}
+
+	&.separator {
+		font-weight: bold;
+		border-top: 1px solid #f4cec1;
+		border-bottom: 1px solid #f4cec1;
+	}
+
+	.block {
+		display: none;
+
+		background-color: #ffffff;
+		border: 1px solid #aaaaaa;
+		padding: 3px;
+		border-radius: 3px;
+		cursor: pointer;
+		color: #888888;
+		font-size: 80%;
+		position: absolute;
+		top: 5px;
+		right: 5px;
+
+		&:hover {
+			border-color: red;
+			color: red;
+		}
+	}
+
+	&.prepub .block {
+		display: block;
+	}
+
+	.participant-options {
+		display: none;
+		position: absolute;
+		right: 1px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 12px;
+		background: #eeeeee;
+		padding: 0px 5px;
+	}
+
+	.participant-option-delete {
+		margin: 0 0 0 2px;
+		padding: 0 0 0 4px;
+		border-left: 1px solid #a7a59b;
+	}
+}
+
+&.show-participant-options .msg:hover .participant-options {
+	display: block;
+}
+
+&.show-participant-options .msg.prepub:hover .participant-options {
+	display: none;
+}
+
+.blocknotice {
+	position: absolute;
+	top: 10px;
+	right: 20px;
+
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 10px;
+	color: oColorsGetPaletteColor('red');
+}
+
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	margin: 0px 10px 20px 0px;
+	height: 0;
+	overflow: hidden;
+}
+
+.video-container[data-aspect-ratio="16:9"] {
+	padding-bottom: 56.25%;
+}
+
+.video-container[data-aspect-ratio="1:1"] {
+	padding-bottom: 100%;
+}
+
+.video-container[data-aspect-ratio="4:3"] {
+	padding-bottom: 75%;
+}
+
+.video-container div,
+.video-container iframe,
+.video-container object,
+.video-container embed,
+.video-container video,
+.video-container img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.morevideo {
+	display: none;
+}
+
+
+.webchat-emoticon {
+	display: inline-block;
+	text-indent: -9999px;
+	width: 16px;
+	height: 16px;
+	line-height: 1em;
+	vertical-align: text-bottom;
+}
+
+.webchat-emoticon--thumbs_down {
+	background: url(oAssetsResolve("src/images/emoticons/thumbs_down.gif", webchat));
+}
+
+.webchat-emoticon--thumbs_up {
+	background: url(oAssetsResolve("src/images/emoticons/thumbs_up.gif", webchat));
+}
+
+.webchat-emoticon--teeth_smile {
+	background: url(oAssetsResolve("src/images/emoticons/teeth_smile.gif", webchat));
+}
+
+.webchat-emoticon--cry_smile {
+	background: url(oAssetsResolve("src/images/emoticons/cry_smile.gif", webchat));
+}
+
+.webchat-emoticon--omg_smile {
+	background: url(oAssetsResolve("src/images/emoticons/omg_smile.gif", webchat));
+}
+
+.webchat-emoticon--embarassed_smile {
+	background: url(oAssetsResolve("src/images/emoticons/embarassed_smile.gif", webchat));
+}
+
+.webchat-emoticon--censored {
+	background: url(oAssetsResolve("src/images/emoticons/censored.gif", webchat));
+}
+
+.webchat-emoticon--angry_smile {
+	background: url(oAssetsResolve("src/images/emoticons/angry_smile.gif", webchat));
+}
+
+.webchat-emoticon--devil_smile {
+	background: url(oAssetsResolve("src/images/emoticons/devil_smile.gif", webchat));
+}
+
+.webchat-emoticon--wink_smile {
+	background: url(oAssetsResolve("src/images/emoticons/wink_smile.gif", webchat));
+}
+
+.webchat-emoticon--lightbulb {
+	background: url(oAssetsResolve("src/images/emoticons/lightbulb.gif", webchat));
+}
+
+.webchat-emoticon--bandit1 {
+	background: url(oAssetsResolve("src/images/emoticons/bandit1.gif", webchat));
+	width: 32px;
+}
+
+.webchat-emoticon--bandit2 {
+	background: url(oAssetsResolve("src/images/emoticons/bandit2.gif", webchat));
+	width: 32px;
+}
+
+.webchat-emoticon--bandit3 {
+	background: url(oAssetsResolve("src/images/emoticons/bandit3.gif", webchat));
+	width: 32px;
+}
+
+.webchat-emoticon--bandit4 {
+	background: url(oAssetsResolve("src/images/emoticons/bandit4.gif", webchat));
+	width: 32px;
+}
+
+.webchat-emoticon--bandit5 {
+	background: url(oAssetsResolve("src/images/emoticons/bandit5.gif", webchat));
+	width: 32px;
+}
+
+.webchat-emoticon--bandit6 {
+	background: url(oAssetsResolve("src/images/emoticons/bandit6.gif", webchat));
+	width: 32px;
+}
+
+.webchat-emoticon--bandit7 {
+	background: url(oAssetsResolve("src/images/emoticons/bandit7.gif", webchat));
+	width: 32px;
+}
+
+.webchat-emoticon--bandit8 {
+	background: url(oAssetsResolve("src/images/emoticons/bandit8.gif", webchat));
+	width: 32px;
+}
+
+.webchat-emoticon--bandit9 {
+	background: url(oAssetsResolve("src/images/emoticons/bandit9.gif", webchat));
+	width: 32px;
+}
+
+.webchat-emoticon--bandit10 {
+	background: url(oAssetsResolve("src/images/emoticons/bandit10.gif", webchat));
+	width: 32px;
+}
+
+.webchat-emoticon--bear {
+	background: url(oAssetsResolve("src/images/emoticons/bear.gif", webchat));
+}
+
+.webchat-emoticon--bull {
+	background: url(oAssetsResolve("src/images/emoticons/bull.gif", webchat));
+}
+
+.webchat-emoticon--buy {
+	background: url(oAssetsResolve("src/images/emoticons/buy.gif", webchat));
+}
+
+.webchat-emoticon--sell {
+	background: url(oAssetsResolve("src/images/emoticons/sell.gif", webchat));
+}
+
+.webchat-emoticon--cash {
+	background: url(oAssetsResolve("src/images/emoticons/cash.gif", webchat));
+}
+
+.webchat-emoticon--danger {
+	background: url(oAssetsResolve("src/images/emoticons/danger.gif", webchat));
+}
+
+.webchat-emoticon--deadcat {
+	background: url(oAssetsResolve("src/images/emoticons/deadcat.gif", webchat));
+}
+
+.webchat-emoticon--feltcollaredsource {
+	background: url(oAssetsResolve("src/images/emoticons/feltcollaredsource.gif", webchat));
+}
+
+.webchat-emoticon--financier {
+	background: url(oAssetsResolve("src/images/emoticons/financier.gif", webchat));
+}
+
+.webchat-emoticon--rocket {
+	background: url(oAssetsResolve("src/images/emoticons/rocket.gif", webchat));
+}
+
+.webchat-emoticon--scorchedfingers {
+	background: url(oAssetsResolve("src/images/emoticons/scorchedfingers.gif", webchat));
+}
+
+.webchat-emoticon--swag {
+	background: url(oAssetsResolve("src/images/emoticons/swag.gif", webchat));
+}
+
+.webchat-emoticon--tinhat {
+	background: url(oAssetsResolve("src/images/emoticons/tinhat.gif", webchat));
+}
+
+.webchat-emoticon--separator {
+	background: url(oAssetsResolve("src/images/emoticons/separator.gif", webchat));
+}
+
+.webchat-emoticon--breaking_news {
+	background: url(oAssetsResolve("src/images/emoticons/breaking_news.gif", webchat));
+	width: 109px;
 }
