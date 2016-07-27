@@ -2,14 +2,22 @@
 @import 'o-typography/main';
 
 .article__author-headshots {
+	display: inline-block;
 	list-style: none;
 	margin-bottom: 16px;
 	background: #ffead7;
-	padding: 0;
+	width: 100%;
+	padding: 0 oGridGutter(S);
+	margin-left: -#{oGridGutter(S)};
+
+	@include oGridRespondTo(M) {
+		width: auto;
+		margin-left: 0;
+	}
 
 	li {
 		display: inline-block;
-		padding: 4px;
+		padding: 4px 10px;
 
 		img {
 			width: 30px;
@@ -33,7 +41,18 @@
 }
 
 
-.user-comment {
+.marketslive-timestamp {
+	@include oTypographySans(s);
+	color: oColorsGetPaletteColor('warm-6');
+	margin-top: 16px;
+
+	@include oGridRespondTo(M) {
+		margin-left: -20px;
+	}
+}
+
+
+.marketslive-user-comment {
 	@include oTypographySans(s);
 	font-size: 15px;
 	color: oColorsGetPaletteColor('grey-tint4');
@@ -46,14 +65,14 @@
 		margin-left: 50px;
 	}
 
-	.user-comment-pseudonym {
+	.marketslive-user-comment-pseudonym {
 		@include oTypographySerifItalic(s);
 		font-weight: bold;
 		color: oColorsGetPaletteColor('grey-tint5');
 		display: inline-block;
 	}
 
-	& + .user-comment {
+	& + .marketslive-user-comment {
 		border-top: 0;
 	}
 
@@ -69,7 +88,7 @@
 	border: 0;
 
 	@include oGridRespondTo(M) {
-		margin-left: 10px;
+		margin-left: 20px;
 	}
 }
 
@@ -84,7 +103,7 @@
 	box-sizing: border-box;
 	color: oColorsGetPaletteColor('black');
 
-	.user-comment + & {
+	.marketslive-user-comment + & {
 		padding-top: 20px;
 	}
 
