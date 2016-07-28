@@ -51,6 +51,9 @@
 
             </div>
             <div class="article__aside o-grid-remove-gutters--XL" data-o-grid-colspan="0 L4 XL3 XLoffset1">
+                {{#with mostRecentPost }}
+                    {{> recent-post-widget }}
+                {{/with}}
                 {{> alphaville-ads/templates/dmpu_desktop}}
                 {{> twitterWidget}}
             </div>
