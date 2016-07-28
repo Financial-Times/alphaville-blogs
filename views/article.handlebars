@@ -26,58 +26,57 @@
 </div>
 
 <div class="article__wrapper ">
-	<div class="o-grid-container">
-		<div class="article__main o-grid-row">
-			<div data-o-grid-colspan="12 L8 XL7 XLoffset1">
-				{{> shareComponent position='top'}}
+    <div class="o-grid-container">
+        <div class="article__main o-grid-row">
+            <div data-o-grid-colspan="12 L8 XL7 XLoffset1">
+                {{> shareComponent position='top'}}
 
-				<div class="article__time-byline">
-					<time class="article__timestamp o-date" data-o-component="o-date" datetime="{{article.publishedDate}}" data-o-date-js="" title="{{article.publishedDate}}" aria-label="{{article.publishedDate}}">{{article.publishedDate}}</time>
-					<p class="article__byline">by: {{article.byline}}</p>
-				</div>
+                <div class="article__time-byline">
+                    <time class="article__timestamp o-date" data-o-component="o-date" datetime="{{article.publishedDate}}" data-o-date-js="" title="{{article.publishedDate}}" aria-label="{{article.publishedDate}}">{{article.publishedDate}}</time>
+                    <p class="article__byline">by: {{article.byline}}</p>
+                </div>
 
-				<div class="article__body n-content-body">
-					{{#article.attachments}}
-					<audio controls>
-						<source src="{{url}}" type="{{mediaType}}">
-							<p>
-								Your browser does not support playing this file but you can still <a href="{{url}}">download the MP3 file</a> to play locally.
-							</p>
-					</audio>
-					{{/article.attachments}}
+                <div class="article__body n-content-body">
+                    {{#article.attachments}}
+                        <audio controls>
+                            <source src="{{url}}" type="{{mediaType}}">
+                            <p>
+                                Your browser does not support playing this file but you can still <a href="{{url}}">download the MP3 file</a> to play locally.
+                            </p>
+                        </audio>
+                    {{/article.attachments}}
 
 
-					{{{article.bodyHTML}}}
+                    {{{article.bodyHTML}}}
 
-					<div class="alphaville-in-article-ad">
-						{{> alphaville-ads/templates/mpu_mobile}}
-					</div>
+                    <div class="alphaville-in-article-ad">
+                        {{> alphaville-ads/templates/mpu_mobile}}
+                    </div>
 
-					<footer class="n-content-copyright">
-						<small>
-							<a href="http://www.ft.com/servicestools/help/copyright" data-trackable="link-copyright">Copyright</a> The Financial Times Limited 2016. All rights reserved. You may share using our article tools. Please don't cut articles from FT.com and redistribute by email or post to the web.
-						</small>
-					</footer>
-				</div>
+                    <footer class="n-content-copyright">
+                        <small>
+                            <a href="http://www.ft.com/servicestools/help/copyright" data-trackable="link-copyright">Copyright</a> The Financial Times Limited 2016. All rights reserved. You may share using our article tools. Please don't cut articles from FT.com and redistribute by email or post to the web.
+                        </small>
+                    </footer>
+                </div>
 
-				{{> shareComponent position='bottom'}}
-				<div data-n-article-email-bottom-container=""></div>
+                {{> shareComponent position='bottom'}}
+                <div data-n-article-email-bottom-container=""></div>
 
-				{{#article.comments.enabled}}
-				<div data-o-component="o-comments" data-o-comments-config-title="FT Alphaville2 Blogs Test" data-o-comments-config-url="https://ftalphaville2.ft.com/content/{{article.id}}" data-o-comments-config-articleId="{{article.id}}"></div>
-				{{/article.comments.enabled}}
+                {{#article.comments.enabled}}
+                    <div data-o-component="o-comments" data-o-comments-config-title="FT Alphaville2 Blogs Test" data-o-comments-config-url="https://ftalphaville2.ft.com/content/{{article.id}}" data-o-comments-config-articleId="{{article.id}}"></div>
+                {{/article.comments.enabled}}
 
-				</div>
-				<div class="article__aside o-grid-remove-gutters--XL" data-o-grid-colspan="0 L4 XL3 XLoffset1">
-                    {{#with mostRecentPost }}
-                        {{> recent-post-widget }}
-                    {{/with}}
-					{{> alphaville-ads/templates/dmpu_desktop}}
-					{{> twitterWidget}}
-				</div>
-			</div>
-		</div>
-	</div>
+            </div>
+            <div class="article__aside o-grid-remove-gutters--XL" data-o-grid-colspan="0 L4 XL3 XLoffset1">
+                {{#with mostRecentPost }}
+                    {{> recent-post-widget }}
+                {{/with}}
+                {{> alphaville-ads/templates/dmpu_desktop}}
+                {{> twitterWidget}}
+            </div>
+        </div>
+    </div>
 </div>
 
 
