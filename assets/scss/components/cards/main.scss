@@ -38,203 +38,12 @@ $alphaville-card__color--strip: #d8c2b8;
 	position: relative;
 }
 
-.alphaville-card__image {
-	text-align: center;
-	height: 50%;
-	position: relative;
-
-	img {
-		max-width: 100%;
-		max-height: 100%;
-		display: inline-block;
-	}
-}
-
-.alphaville-card__byline a {
-	@include oTypographySerif('m');
-	color: oColorsGetPaletteColor('grey-tint5');
-}
-
-.alphaville-card--hero {
-	@include oCard;
-	background-color: $alphaville-card__color--bg-lead;
-	position: relative;
-	padding: 20px;
-
-	&:before {
-		@include oTypographySansBold('xl');
-		content: 'AV';
-		position: absolute;
-		right: -10%;
-		top: 35%;
-		font-weight: bold;
-		font-size: 620px;
-		color: $alphaville-card__color--av-text-bg;
-		letter-spacing: -40px;
-	}
-
-	&:after {
-		content: '';
-		position: absolute;
-		left: 0;
-		top: 0;
-		background-image: repeating-linear-gradient(
-			45deg,
-			transparent,
-			transparent 4px,
-			$alphaville-card__color--strip 4px,
-			$alphaville-card__color--strip 5px);
-		background-size: 9px 7px;
-		height: 100%;
-		width: 9px;
-	}
-
-	.alphaville-card__content {
-		max-height: 100%;
-		overflow: hidden;
-	}
-
-	.alphaville-card__image {
-		width: 100%;
-		height: auto;
-	}
-
-	.alphaville-card__heading {
-		@include oTypographySansBold('l');
-		font-weight: bold;
-		color: $alphaville-card__color--heading-lead;
-
-		@include oGridRespondTo(M) {
-			@include oTypographySansBold('xl');
-		}
-
-		&.alphaville-card__heading-truncate {
-			@include oGridRespondTo(M) {
-				max-height: 80px;
-			}
-		}
-	}
-
-	.alphaville-card__standfirst {
-		color: oColorsGetPaletteColor('cold-1');
-	}
-
-	.alphaville-card__tag {
-		margin: 0 0 8px;
-	}
-
-	.alphaville-card__timestamp {
-		padding: 16px 0 10px;
-	}
-}
-
-.alphaville-card--author-lead {
-	@include oCard;
-	background-color: $alphaville-card__color--bg-lead;
-	position: relative;
-	padding: 20px;
-
-	&:before {
-		@include oTypographySansBold('xl');
-		content: 'AV';
-		position: absolute;
-		right: -80%;
-		top: 40%;
-		font-size: 520px;
-		color: $alphaville-card__color--av-text-bg;
-		letter-spacing: -64px;
-		width: 250%;
-		text-align: center;
-	}
-
-	.alphaville-card__background-image {
-		position: absolute;
-		top: 0;
-		left: 0;
-		padding: 4px;
-
-		&:after {
-			position: absolute;
-			content: '';
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background: transparent;
-			background-image: linear-gradient(to bottom, transparent, $alphaville-card__color--bg-lead);
-			background-repeat: repeat-x;
-			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='transparent', endColorstr='$alphaville-card__color--bg-lead',GradientType=0); /* ie6-9 */
-		}
-
-		img {
-			width: 100%;
-		}
-	}
-
-	.alphaville-card__image {
-		height: 124px;
-
-		&:before {
-			content: '';
-			display: block;
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 58px;
-			height: 46px;
-			background: url($in-app-assets-global-path + 'images/quotes.svg');
-			background-size: 58px 46px;
-			opacity: 0.5;
-		}
-
-		img {
-			border-radius: 50%;
-			background: oColorsGetPaletteColor('white');
-		}
-	}
-
-	.alphaville-card__heading {
-		@include oTypographySansBold('l');
-		font-weight: bold;
-		color: $alphaville-card__color--heading-lead;
-
-		@include oGridRespondTo(M) {
-			font-size: 32px;
-			line-height: 30px;
-		}
-	}
-
-	.alphaville-card__standfirst {
-		color: oColorsGetPaletteColor('cold-1');
-	}
-
-	.alphaville-card__tag {
-		margin: 0 0 8px;
-	}
-
-	.alphaville-card__timestamp {
-		padding: 8px 0 0;
-	}
-
-
-
-	&.alphaville-card--author-lead {
-		&:before {
-			display: none;
-		}
-
-		.alphaville-card__image:before {
-			display: none;
-		}
-	}
-}
-
 
 .alphaville-card--marketslive-live {
 	@include oCard;
 	background-color: $alphaville-card__color--bg-lead;
 	position: relative;
-	padding: 20px;
+	padding: 10px;
 
 	.alphaville-card--marketslive-live--lozenge {
 		@include marketslive-lozenge-icon(120);
@@ -245,7 +54,7 @@ $alphaville-card__color--strip: #d8c2b8;
 	}
 
 	&:before {
-		@include oTypographySansBold('xl');
+		@include oTypographySansBold('l');
 		content: 'ML';
 		position: absolute;
 		right: -64%;
@@ -261,12 +70,6 @@ $alphaville-card__color--strip: #d8c2b8;
 	.alphaville-card__heading--invert {
 		@include oTypographySansBold('l');
 		font-weight: bold;
-		margin-bottom: 0;
-
-		@include oGridRespondTo(M) {
-			font-size: 32px;
-			line-height: 30px;
-		}
 	}
 
 	.alphaville-card__heading {
@@ -274,9 +77,8 @@ $alphaville-card__color--strip: #d8c2b8;
 	}
 
 	.alphaville-card__theme {
-		@include oTypographySans('l');
-		font-size: 32px;
-		line-height: 24px;
+		@include oTypographySans('m');
+		line-height: 20px;
 
 		a {
 			@include marketslive-live-title();
@@ -284,7 +86,11 @@ $alphaville-card__color--strip: #d8c2b8;
 			text-transform: uppercase;
 		}
 
-		margin-bottom: 40px;
+		margin-bottom: 20px;
+	}
+
+	.marketslive-live-lozenge-icon {
+		margin-bottom: -2px;
 	}
 }
 

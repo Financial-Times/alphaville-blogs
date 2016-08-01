@@ -12,20 +12,7 @@
 
 <div class="o-grid-container alphaville-article-grid">
 	<div class="o-grid-row">
-		{{#hero}}
-			{{> grid-cards/card-hero}}
-		{{/hero}}
-
 		{{#searchResults}}
-
-			{{#isBlog}}
-				{{> grid-cards/card-blog}}
-			{{/isBlog}}
-
-			{{#isBriefing}}
-				{{> grid-cards/card-briefing}}
-			{{/isBriefing}}
-
 			{{#isMarketsLive}}
 				{{#isLive}}
 					{{> grid-cards/card-marketslive-live}}
@@ -35,25 +22,9 @@
 				{{/isLive}}
 			{{/isMarketsLive}}
 
-			{{#isPodcast}}
-				{{> grid-cards/card-podcast}}
-			{{/isPodcast}}
-
-			{{#isAuthorLead}}
-				{{> grid-cards/card-authorLead}}
-			{{/isAuthorLead}}
-
-			{{#isAuthorLeadWithImage}}
-				{{> grid-cards/card-authorLeadWithImage}}
-			{{/isAuthorLeadWithImage}}
-
-			{{#isTopicLead}}
-				{{> grid-cards/card-topicLead}}
-			{{/isTopicLead}}
-
-			{{#isStoryImage}}
-				{{> grid-cards/card-storyImage}}
-			{{/isStoryImage}}
+			{{^isMarketsLive}}
+				{{> grid-cards/card-blog}}
+			{{/isMarketsLive}}
 
 			{{> adBetweenCards}}
 
