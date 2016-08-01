@@ -15,12 +15,6 @@ $o-card-is-silent: false;
 		a {
 			border-bottom: 0;
 		}
-
-		@include oGridRespondTo(XL) {
-			&:last-child {
-				display: none;
-			}
-		}
 	}
 }
 
