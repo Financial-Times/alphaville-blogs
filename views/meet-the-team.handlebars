@@ -26,7 +26,7 @@
             </ul>
         </div>
         <div data-o-grid-colspan="L8">
-            {{# selectedMember }}
+            {{#selectedMember}}
                 <div class="member-info">
                     <h2 class="member-info__name">{{data.title}}</h2>
                     <img class="member-info__pic" src="{{data.main_image.url}}" />
@@ -39,9 +39,22 @@
                     {{{data.content}}}
                 </div>
                 <div id="latestPosts" class="o-tabs__tabpanel">
-                    {{# latestArticles }}
-                        {{> list-cards/card-generic }}
-                    {{/latestArticles}}
+                    <div class="alphaville-article-list">
+                        {{#latestArticles}}
+                            {{#isMarketsLive}}
+                                {{> list-cards/card-marketslive}}
+                            {{/isMarketsLive}}
+
+                            {{^isMarketsLive}}
+                                {{#withImage}}
+                                    {{> list-cards/card-image}}
+                                {{/withImage}}
+                                {{^withImage}}
+                                    {{> list-cards/card-generic}}
+                                {{/withImage}}
+                            {{/isMarketsLive}}
+                        {{/latestArticles}}
+                    </div>
                 </div>
             {{/selectedMember}}
         </div>

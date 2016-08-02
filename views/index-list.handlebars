@@ -20,7 +20,12 @@
 					{{/isMarketsLive}}
 
 					{{^isMarketsLive}}
-						{{> list-cards/card-generic}}
+						{{#withImage}}
+							{{> list-cards/card-image}}
+						{{/withImage}}
+						{{^withImage}}
+							{{> list-cards/card-generic}}
+						{{/withImage}}
 					{{/isMarketsLive}}
 
 					{{> adBetweenCards}}

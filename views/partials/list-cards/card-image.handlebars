@@ -1,0 +1,26 @@
+<div class="alphaville-card-container">
+	<div class="alphaville-card o-card o-card--landscape" data-o-component="o-card">
+		<div class="o-card__content">
+			<div class="o-card__meta">
+				<a href="/search?q={{_source.byline}}" class="o-card__tag">{{_source.byline}}</a>
+			</div>
+
+			<h3 class="o-card__heading"><a href="/content/{{_source.id}}">{{_source.title}}</a></h3>
+			
+			<div class="o-grid-container o-grid-container--bleed">
+				<div class="o-grid-row">
+					<div data-o-grid-colspan="6 S4">
+						<div class="o-card__image">
+							<img src="{{_source.mainImage.url}}" alt="{{_source.mainImage.title}}" />
+						</div>
+					</div>
+					<div data-o-grid-colspan="6 S8">
+						<p class="o-card__standfirst">{{{_source.summaries}}}</p>
+
+						<time data-o-component="o-date" class="o-date o-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
