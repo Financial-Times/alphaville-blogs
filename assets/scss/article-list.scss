@@ -2,6 +2,16 @@
 @import 'o-colors/main';
 
 .alphaville-article-list {
+	.alphaville-list-time {
+		font-size: 14px;
+		font-weight: bold;
+		margin-top: 15px;
+	}
+
+	.alphaville-list-items {
+		margin-top: 15px;
+	}
+
 	.alphaville-card {
 		background: none;
 		padding-left: 0;

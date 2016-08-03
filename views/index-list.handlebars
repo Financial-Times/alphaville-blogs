@@ -13,24 +13,31 @@
 <div class="o-grid-container alphaville-article-list">
 	<div class="o-grid-row">
 		<div class="main" data-o-grid-colspan="12 L8">
-			<div class="article-list">
-				{{#searchResults}}
-					{{#isMarketsLive}}
-						{{> list-cards/card-marketslive}}
-					{{/isMarketsLive}}
+			{{#searchResults}}
+				<div class="o-grid-row">
+					<div class="alphaville-list-time" data-o-grid-colspan="12 L2">{{label}}</div>
+					<div class="alphaville-list-items" data-o-grid-colspan="12 L9">
+						{{#items}}
+							{{#isMarketsLive}}
+								{{> list-cards/card-marketslive}}
+							{{/isMarketsLive}}
 
-					{{^isMarketsLive}}
-						{{#withImage}}
-							{{> list-cards/card-image}}
-						{{/withImage}}
-						{{^withImage}}
-							{{> list-cards/card-generic}}
-						{{/withImage}}
-					{{/isMarketsLive}}
+							{{^isMarketsLive}}
+								{{#withImage}}
+									{{> list-cards/card-image}}
+								{{/withImage}}
+								{{^withImage}}
+									{{> list-cards/card-generic}}
+								{{/withImage}}
+							{{/isMarketsLive}}
+						{{/items}}
+					</div>
+				</div>
 
-					{{> adBetweenCards}}
-				{{/searchResults}}
-			</div>
+				{{#mpu}}
+					{{> alphaville-ads/templates/mpu_mobile mpu_mobile_index=.}}
+				{{/mpu}}
+			{{/searchResults}}
 		</div>
 		<div class="main" data-o-grid-colspan="hide L4">
 			{{> twitterWidget}}
