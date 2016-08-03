@@ -163,7 +163,6 @@
 			font-weight: normal;
 			color: oColorsGetPaletteColor('white');
 			background-color: oColorsGetPaletteColor('claret');
-			vertical-align: top;
 			font-size: 11px;
 
 			@include oGridRespondTo(M) {
