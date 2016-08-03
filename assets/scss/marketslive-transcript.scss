@@ -175,6 +175,22 @@
 		.timestamp {
 			display: none;
 		}
+
+		&.par {
+			padding: 1px 4px;
+			border-radius: 30px;
+			font-family: Georgia, sans-serif;
+			font-weight: normal;
+			color: oColorsGetPaletteColor('white');
+			background-color: oColorsGetPaletteColor('claret');
+			font-size: 11px;
+
+			@include oGridRespondTo(M) {
+				font-weight: bold;
+				padding: 4px 5px 3px;
+				font-size: 13px;
+			}
+		}
 	}
 
 	.webchat-emoticon {
