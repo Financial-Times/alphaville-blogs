@@ -23,6 +23,8 @@
 			width: 30px;
 			border-radius: 100%;
 			background-color: oColorsGetPaletteColor('white');
+			vertical-align: middle;
+			margin-top: -3px;
 		}
 
 		a {
@@ -30,7 +32,6 @@
 			line-height: 30px;
 			color: oColorsGetPaletteColor('claret');
 			text-decoration: none;
-			vertical-align: bottom;
 
 			&:hover {
 				color: oColorsGetPaletteColor('cold-2');
