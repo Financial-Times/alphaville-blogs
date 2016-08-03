@@ -53,19 +53,6 @@ $alphaville-card__color--strip: #d8c2b8;
 		right: -60px;
 	}
 
-	&:before {
-		@include oTypographySansBold('l');
-		content: 'ML';
-		position: absolute;
-		right: -64%;
-		top: 40%;
-		font-size: 520px;
-		color: $alphaville-card__color--av-text-bg;
-		letter-spacing: -40px;
-		width: 250%;
-		text-align: center;
-	}
-
 	.alphaville-card__heading,
 	.alphaville-card__heading--invert {
 		@include oTypographySansBold('l');
