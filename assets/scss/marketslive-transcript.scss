@@ -46,7 +46,7 @@
 
 .marketslive-timestamp {
 	@include oTypographySans(s);
-	color: oColorsGetPaletteColor('warm-6');
+	color: oColorsGetPaletteColor('claret');
 	margin-top: 16px;
 
 	@include oGridRespondTo(M) {
@@ -66,6 +66,13 @@
 
 	@include oGridRespondTo(M) {
 		margin-left: 50px;
+	}
+
+	&:before {
+		@include oIconsGetIcon('comment', oColorsGetPaletteColor('pink-tint3'), 15);
+		content: '';
+		vertical-align: middle;
+		margin-right: 5px;
 	}
 
 	.marketslive-user-comment-pseudonym {
