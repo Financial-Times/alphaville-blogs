@@ -39,7 +39,8 @@
     "o-tabs": "^2.3.3",
     "o-share": "^2.1.4",
     "webchat": "Financial-Times/webchat#^0.5.0",
-    "o-tracking": "^1.1.8"
+    "o-tracking": "^1.1.8",
+    "o-video": "^1.0.0"
   },
   "resolutions": {
     "o-hoverable": ">=0.1.1 <4",

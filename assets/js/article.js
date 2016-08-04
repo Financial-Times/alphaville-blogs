@@ -4,6 +4,7 @@ require('o-date');
 require('o-author-alerts');
 require('o-comments');
 require('o-comment-count');
+require('o-video');
 
 const oAds = require('alphaville-ads')['o-ads'];
 

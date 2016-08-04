@@ -8,6 +8,9 @@
 $spacing-unit: 16px;
 @import 'components/article-content-body/main';
 
+$o-video-is-silent: false;
+@import 'o-video/main';
+
 .o-footer {
 	margin-top: 0;
 }
