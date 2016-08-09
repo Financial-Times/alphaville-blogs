@@ -3,13 +3,18 @@
 
 .alphaville-article-list {
 	.alphaville-list-time {
-		font-size: 14px;
-		font-weight: bold;
 		margin-top: 15px;
-	}
 
-	.alphaville-list-items {
-		margin-top: 15px;
+		.alphaville-list-time-label {
+			font-size: 16px;
+			line-height: 18px;
+			font-weight: bold;
+		}
+
+		.alphaville-list-time-date {
+			font-size: 16px;
+			line-height: 18px;
+		}
 	}
 
 	.alphaville-card {
