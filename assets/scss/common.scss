@@ -22,7 +22,7 @@ html {
 	@include oColorsFor(page, background);
 
 	// Set a font family on the whole document
-	@include oTypographySansData(s);
+	@include oTypographySansData(m);
 
 	// Prevent navigation menus from creating
 	// extra space on sides of the page
@@ -30,7 +30,6 @@ html {
 }
 
 body {
-	font-size: 12px;
 	margin: 0;
 }
 
