@@ -7,12 +7,15 @@ $o-grid-is-silent: false;
 $o-fonts-is-silent: false;
 
 // Output icon helper classes
-$o-ft-icons-is-silent: false;
+$o-icons-is-silent: false;
+
+$o-typography-is-silent: false;
 
 // Import Origami components
 @import 'o-grid/main';
 @import 'o-fonts/main';
-@import 'o-ft-icons/main';
+@import 'o-typography/main';
+@import 'o-icons/main';
 @import 'o-colors/main';
 @import 'o-author-alerts/main';
 @import 'o-comments/main';
@@ -22,7 +25,8 @@ html {
 	@include oColorsFor(page, background);
 
 	// Set a font family on the whole document
-	@include oTypographySansData(m);
+	font-family: $o-typography-sans;
+	font-size: initial;
 
 	// Prevent navigation menus from creating
 	// extra space on sides of the page
