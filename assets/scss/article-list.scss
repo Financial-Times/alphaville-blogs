@@ -5,6 +5,10 @@
 	.alphaville-list-time {
 		margin-top: 15px;
 
+		@include oGridRespondTo(L) {
+			text-align: right;
+		}
+
 		.alphaville-list-time-label {
 			font-size: 16px;
 			line-height: 18px;
