@@ -17,15 +17,12 @@ $o-ft-icons-is-silent: false;
 @import 'o-author-alerts/main';
 @import 'o-comments/main';
 
-// Store the default FT sans-serif font stack in a variable
-$sans-serif: oFontsGetFontFamilyWithFallbacks(BentonSans);
-
 html {
 	// The iconic pink background
 	@include oColorsFor(page, background);
 
 	// Set a font family on the whole document
-	font-family: $sans-serif;
+	@include oTypographySansData(s);
 
 	// Prevent navigation menus from creating
 	// extra space on sides of the page
