@@ -8,10 +8,8 @@
 @include oShareActionIcon(email, o-share);
 
 .article__share {
-	overflow: hidden;
 	position: relative;
 	margin-top: 15px;
-	padding: 5px 0;
 	border-top: 1px solid oColorsGetPaletteColor('warm-3');
 	border-bottom: 1px solid oColorsGetPaletteColor('warm-3');
 
@@ -22,7 +20,6 @@
 
 	&__count {
 		@include oTypographySansSize(s);
-		overflow: hidden;
 		position: relative;
 		top: -5px;
 		display: none;
@@ -34,35 +31,29 @@
 
 	&__comments {
 		@include oTypographySansSize(s);
-		border-bottom-width: 0;
-		float: right;
-		margin-right: 16px;
 
 		&:before {
-			@include oIconsGetIcon('comment', oColorsGetPaletteColor('cold-1'), 17);
+			@include oIconsGetIcon('comment', oColorsGetPaletteColor('cold-1'), 18);
 			content: '';
 			position: relative;
-			top: 5px;
 			margin-right: 5px;
+			vertical-align: middle;
 		}
 	}
 
 	&__print {
 		display: none;
-		border-bottom-width: 0;
-		float: left;
-		margin-right: 16px;
 
 		@include oGridRespondTo(M) {
 			display: block;
 		}
 
 		&:before {
-			@include oIconsGetIcon('printer', oColorsGetPaletteColor('cold-1'), 17);
+			@include oIconsGetIcon('printer', oColorsGetPaletteColor('cold-1'), 18);
 			content: '';
 			position: relative;
-			top: 5px;
 			margin-right: 5px;
+			vertical-align: middle;
 		}
 	}
 
@@ -71,10 +62,21 @@
 		margin-bottom: 15px;
 	}
 
-	.o-share {
-		display: block; // prevent inline-block spacing issue
+	&-item {
+		height: 24px;
+		padding: 6px;
+		line-height: 24px;
+		vertical-align: middle;
+		float: right;
+		margin-right: 16px;
 	}
 
+	.o-share {
+		display: block;
+		float: left;
+	}
+
+	/*
 	.o-share__action a {
 		border-bottom-width: 0;
 	}
@@ -98,17 +100,13 @@
 		@include oGridColspan((S: hide));
 		padding: 0;
 	}
-
-	.article__save {
-		float: right;
-	}
+	*/
 
 	.n-myft-ui__button {
 		min-height: 24px;
 		padding-top: 4px;
 		padding-bottom: 4px;
 	}
-
 }
 
 .article__main .email-article .email-article__border {
