@@ -25,6 +25,9 @@
             </div>
         </div>
         <div data-o-grid-colspan="hide L4">
+            {{#with mostRecentPost }}
+                {{> recent-post-widget }}
+            {{/with}}
             {{> alphaville-ads/templates/dmpu_desktop}}
             {{> twitterWidget}}
         </div>
