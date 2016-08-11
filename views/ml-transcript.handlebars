@@ -10,61 +10,58 @@
 	</script>
 {{/contentFor}}
 
-<div class="article__header">
+<div class="article__wrapper alphaville-content">
     <div class="o-grid-container">
-        <div class="article__header-inner o-grid-row">
-
+        <div class="o-grid-row">
             <div data-o-grid-colspan="12 L8 XL7 XLoffset1">
-                <header class="article__header--wrapper ">
-                    <div class="article__header-primary">
-                        <div class="article__primary-theme" data-trackable="primary-theme">
-                            <a href="/search?q={{article.primaryTheme}}" class="n-content-tag n-content-tag--medium" data-trackable="section-link" aria-label="posted in category {{article.primaryTheme}}">{{article.primaryTheme}}</a>
-                        </div>
-                        <h1 class="article__title">{{article.title}}</h1>
-                        <div class="article__header-secondary">
-                            <p class="article__stand-first">{{article.openingHTML}}</p>
-                        </div>
+                <div class="article__header">
+                    <div class="article__header-inner">
+                        <header class="article__header--wrapper ">
+                            <div class="article__header-primary">
+                                <div class="article__primary-theme" data-trackable="primary-theme">
+                                    <a href="/search?q={{article.primaryTheme}}" class="n-content-tag n-content-tag--medium" data-trackable="section-link" aria-label="posted in category {{article.primaryTheme}}">{{article.primaryTheme}}</a>
+                                </div>
+                                <h1 class="article__title">{{article.title}}</h1>
+                                <div class="article__header-secondary">
+                                    <p class="article__stand-first">{{article.openingHTML}}</p>
+                                </div>
+                            </div>
+                        </header>
                     </div>
-                </header>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="article__wrapper ">
-    <div class="o-grid-container">
-        <div class="article__main o-grid-row">
-            <div data-o-grid-colspan="12 L8 XL7 XLoffset1">
-                {{> shareComponent position='top'}}
-
-                <div class="article__time-byline">
-                    <time class="article__timestamp o-date" data-o-component="o-date" datetime="{{article.publishedDate}}" title="{{article.publishedDate}}" aria-label="{{article.publishedDate}}">{{article.publishedDate}}</time>
-                </div>
-                <ul class="article__author-headshots">
-                    {{#article.authors}}
-                        <li>
-                            <a href="/search?q={{name}}">{{#headshotUrl}}<img src="{{.}}" />{{/headshotUrl}} {{name}}</a>
-                        </li>
-                    {{/article.authors}}
-                </ul>
-
-
-                <div class="article__body n-content-body">
-                    {{{article.bodyHTML}}}
-
-                    <div class="alphaville-in-article-ad">
-                        {{> alphaville-ads/templates/mpu_mobile}}
-                    </div>
-
-                    <footer class="n-content-copyright">
-                        <small>
-                            <a href="http://www.ft.com/servicestools/help/copyright" data-trackable="link-copyright">Copyright</a> The Financial Times Limited 2016. All rights reserved. You may share using our article tools. Please don't cut articles from FT.com and redistribute by email or post to the web.
-                        </small>
-                    </footer>
                 </div>
 
-                {{> shareComponent position='bottom'}}
-                <div data-n-article-email-bottom-container=""></div>
+                <div class="article__main">
+                    {{> shareComponent position='top'}}
 
+                    <div class="article__time-byline">
+                        <time class="article__timestamp o-date" data-o-component="o-date" datetime="{{article.publishedDate}}" title="{{article.publishedDate}}" aria-label="{{article.publishedDate}}">{{article.publishedDate}}</time>
+                    </div>
+                    <ul class="article__author-headshots">
+                        {{#article.authors}}
+                            <li>
+                                <a href="/search?q={{name}}">{{#headshotUrl}}<img src="{{.}}" />{{/headshotUrl}} {{name}}</a>
+                            </li>
+                        {{/article.authors}}
+                    </ul>
+
+
+                    <article class="article__body n-content-body">
+                        {{{article.bodyHTML}}}
+
+                        <div class="alphaville-in-article-ad">
+                            {{> alphaville-ads/templates/mpu_mobile}}
+                        </div>
+
+                        <footer class="n-content-copyright">
+                            <small>
+                                <a href="http://www.ft.com/servicestools/help/copyright" data-trackable="link-copyright">Copyright</a> The Financial Times Limited 2016. All rights reserved. You may share using our article tools. Please don't cut articles from FT.com and redistribute by email or post to the web.
+                            </small>
+                        </footer>
+                    </article>
+
+                    {{> shareComponent position='bottom'}}
+                    <div data-n-article-email-bottom-container=""></div>
+                </div>
             </div>
             <div class="article__aside o-grid-remove-gutters--XL" data-o-grid-colspan="0 L4 XL3 XLoffset1">
                 {{#with mostRecentPost }}

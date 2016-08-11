@@ -10,58 +10,56 @@
 	</script>
 {{/contentFor}}
 
-<div class="article__header">
-	<div class="o-grid-container">
-		<div class="article__header-inner o-grid-row">
 
-			<div data-o-grid-colspan="12 L8 XL7 XLoffset1">
-				<header class="article__header--wrapper ">
-					<div class="article__header-primary">
-						<h1 class="article__title">{{article.title}}</h1>
-					</div>
-				</header>
-			</div>
-		</div>
-	</div>
-</div>
 
-<div class="article__wrapper ">
+<div class="article__wrapper alphaville-content">
     <div class="o-grid-container">
-        <div class="article__main o-grid-row">
+        <div class="o-grid-row">
             <div data-o-grid-colspan="12 L8 XL7 XLoffset1">
-                {{> shareComponent position='top'}}
-
-                <div class="article__time-byline">
-                    <time class="article__timestamp o-date" data-o-component="o-date" datetime="{{article.publishedDate}}" data-o-date-js="" title="{{article.publishedDate}}" aria-label="{{article.publishedDate}}">{{article.publishedDate}}</time>
-                    <p class="article__byline">by: {{article.byline}}</p>
+                <div class="article__header">
+                    <div class="article__header-inner">
+                        <header class="article__header--wrapper ">
+                            <div class="article__header-primary">
+                                <h1 class="article__title">{{{article.title}}}</h1>
+                            </div>
+                        </header>
+                    </div>
                 </div>
+                <div class="article__main">
+                    {{> shareComponent position='top'}}
 
-                <div class="article__body n-content-body">
-                    {{#article.attachments}}
-                        <audio controls>
-                            <source src="{{url}}" type="{{mediaType}}">
-                            <p>
-                                Your browser does not support playing this file but you can still <a href="{{url}}">download the MP3 file</a> to play locally.
-                            </p>
-                        </audio>
-                    {{/article.attachments}}
-
-
-                    {{{article.bodyHTML}}}
-
-                    <div class="alphaville-in-article-ad">
-                        {{> alphaville-ads/templates/mpu_mobile}}
+                    <div class="article__time-byline">
+                        <time class="article__timestamp o-date" data-o-component="o-date" datetime="{{article.publishedDate}}" data-o-date-js="" title="{{article.publishedDate}}" aria-label="{{article.publishedDate}}">{{article.publishedDate}}</time>
+                        <p class="article__byline">by: {{article.byline}}</p>
                     </div>
 
-                    <footer class="n-content-copyright">
-                        <small>
-                            <a href="http://www.ft.com/servicestools/help/copyright" data-trackable="link-copyright">Copyright</a> The Financial Times Limited 2016. All rights reserved. You may share using our article tools. Please don't cut articles from FT.com and redistribute by email or post to the web.
-                        </small>
-                    </footer>
-                </div>
+                    <article class="article__body n-content-body">
+                        {{#article.attachments}}
+                            <audio controls>
+                                <source src="{{url}}" type="{{mediaType}}">
+                                <p>
+                                    Your browser does not support playing this file but you can still <a href="{{url}}">download the MP3 file</a> to play locally.
+                                </p>
+                            </audio>
+                        {{/article.attachments}}
 
-                {{> shareComponent position='bottom'}}
-                <div data-n-article-email-bottom-container=""></div>
+
+                        {{{article.bodyHTML}}}
+
+                        <div class="alphaville-in-article-ad">
+                            {{> alphaville-ads/templates/mpu_mobile}}
+                        </div>
+
+                        <footer class="n-content-copyright">
+                            <small>
+                                <a href="http://www.ft.com/servicestools/help/copyright" data-trackable="link-copyright">Copyright</a> The Financial Times Limited 2016. All rights reserved. You may share using our article tools. Please don't cut articles from FT.com and redistribute by email or post to the web.
+                            </small>
+                        </footer>
+                    </article>
+
+                    {{> shareComponent position='bottom'}}
+                    <div data-n-article-email-bottom-container=""></div>
+                </div>
 
                 {{#article.comments.enabled}}
                     <a name="comments"></a>
@@ -70,9 +68,6 @@
 
             </div>
             <div class="article__aside o-grid-remove-gutters--XL" data-o-grid-colspan="0 L4 XL3 XLoffset1">
-                {{#with mostRecentPost }}
-                    {{> recent-post-widget }}
-                {{/with}}
                 {{> alphaville-ads/templates/dmpu_desktop}}
                 {{> twitterWidget}}
             </div>

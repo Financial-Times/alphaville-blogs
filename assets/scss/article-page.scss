@@ -17,7 +17,6 @@ $o-video-is-silent: false;
 //ARTICLE HEADER
 .article__header {
 	position: relative;
-	background: oColorsGetPaletteColor('pink');
 }
 
 .article__header--wrapper {
@@ -26,8 +25,6 @@ $o-video-is-silent: false;
 }
 
 .article__header-inner {
-	padding-top: 12px;
-
 	@include oGridRespondTo(L) {
 		display: flex;
 	}
@@ -73,7 +70,7 @@ $o-video-is-silent: false;
 }
 
 .article__wrapper {
-	background-color: oColorsGetPaletteColor('pink');
+	
 }
 
 .article__meta {
