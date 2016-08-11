@@ -1,5 +1,7 @@
 const alphavilleExpress = require('alphaville-express');
 const fingerprint = require('./build_config/js/fingerprint');
+const _ = require('lodash');
+const articleService = require('./lib/services/article');
 
 const env = process.env.ENVIRONMENT === 'prod' ? 'prod' : 'test';
 
@@ -10,6 +12,27 @@ const app = alphavilleExpress({
 	navSelected: 'The Blog',
 	fingerprint: fingerprint,
 	env: env
+});
+
+
+app.use(function (req, res, next ) {
+	const _render = res.render;
+	res.render = function( view, options, fn ) {
+		if (options.withMostRecentPost === true) {
+			articleService.getRecentPosts().then((mostRecentPost) => {
+				const viewModel = _.merge({}, options, {
+					mostRecentPost: mostRecentPost.hits.hits[0]._source
+				});
+				_render.call(this, view, viewModel, fn);
+			}).catch((e) => {
+				console.log("Error fetching most recent post: ", e);
+				_render.call(this, view, options, fn);
+			});
+		} else {
+			_render.call(this, view, options, fn);
+		}
+	};
+	next();
 });
 
 app.use('/', require('./routes/__gtg'));

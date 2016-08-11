@@ -45,6 +45,9 @@
 			{{/searchResults}}
 		</div>
 		<div class="main" data-o-grid-colspan="hide L4">
+			{{#with mostRecentPost }}
+                {{> alphaville-most-recent-post/main }}
+            {{/with}}
 			{{> alphaville-ads/templates/dmpu_desktop}}
 			{{> twitterWidget}}
 		</div>

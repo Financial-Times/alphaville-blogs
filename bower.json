@@ -31,6 +31,7 @@
     "alphaville-marketslive-session-notification": "Financial-Times/alphaville-marketslive-session-notification#^0.1.0",
     "alphaville-comments-config": "Financial-Times/alphaville-comments-config#^0.2.0",
     "alphaville-ads": "Financial-Times/alphaville-ads#^0.3.0",
+    "alphaville-most-recent-post": "Financial-Times/alphaville-most-recent-post#^0.1.0",
     "o-author-alerts": "^3.0.0",
     "o-date": "^2.3.1",
     "o-comments": "^3.0.0",
