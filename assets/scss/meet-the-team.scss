@@ -1,15 +1,17 @@
-$o-tabs-is-silent: false;
-$o-card-is-silent: false;
-
 @import './common';
+
+$o-tabs-is-silent: false;
 @import 'o-tabs/main';
+
+$o-card-is-silent: false;
 @import 'o-card/main';
+
 @import './article-list';
 
 
 $team-member-thumb-bg: #959387;
 $team-member-name-color: #555555;
-$team-member-item-bg: #f6e9d8 url("http://ftalphaville.ft.com/wp-content/plugins/assanka_team_members/img/team-member-menu-item.png") 97% 50% no-repeat;
+$team-member-item-bg: oColorsGetPaletteColor('pink-tint1') url("http://ftalphaville.ft.com/wp-content/plugins/assanka_team_members/img/team-member-menu-item.png") 97% 50% no-repeat;
 $team-member-item-bg--active: #5a8eb3 url("http://ftalphaville.ft.com/wp-content/plugins/assanka_team_members/img/team-member-menu-item-active.png") 97% 50% no-repeat;
 $team-member-font: Arial, Helvetica, sans-serif;
 $team-member-border-top: 1px dotted #959387;
@@ -44,7 +46,7 @@ $team-member-border-top: 1px dotted #959387;
 	background: $team-member-item-bg--active;
 	.team__member__name {
 		color: white;
-		text-shadow: 1px 1px 1px #333;
+		text-shadow: 1px 1px 1px oColorsGetPaletteColor('grey-tint5');
 	}
 }
 

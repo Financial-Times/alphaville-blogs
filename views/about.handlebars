@@ -31,7 +31,7 @@
                         {{{article.body}}}
 
                         <div class="alphaville-in-article-ad">
-                            {{> alphaville-ads/templates/mpu_mobile}}
+                            {{> alphaville-ui/ads/templates/mpu_mobile}}
                         </div>
 
                         <footer class="n-content-copyright">
@@ -47,9 +47,9 @@
             </div>
             <div class="article__aside o-grid-remove-gutters--XL" data-o-grid-colspan="0 L4 XL3 XLoffset1">
                 {{#with mostRecentPost }}
-                    {{> alphaville-most-recent-post/main }}
+                    {{> alphaville-ui/most-recent-post/main }}
                 {{/with}}
-                {{> alphaville-ads/templates/dmpu_desktop}}
+                {{> alphaville-ui/ads/templates/dmpu_desktop}}
                 {{> twitterWidget}}
             </div>
         </div>

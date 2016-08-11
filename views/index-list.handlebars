@@ -40,15 +40,15 @@
 				</div>
 
 				{{#mpu}}
-					{{> alphaville-ads/templates/mpu_mobile mpu_mobile_index=.}}
+					{{> alphaville-ui/ads/templates/mpu_mobile mpu_mobile_index=.}}
 				{{/mpu}}
 			{{/searchResults}}
 		</div>
 		<div class="main" data-o-grid-colspan="hide L4">
 			{{#with mostRecentPost }}
-                {{> alphaville-most-recent-post/main }}
+                {{> alphaville-ui/most-recent-post/main }}
             {{/with}}
-			{{> alphaville-ads/templates/dmpu_desktop}}
+			{{> alphaville-ui/ads/templates/dmpu_desktop}}
 			{{> twitterWidget}}
 		</div>
 	</div>

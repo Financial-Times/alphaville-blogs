@@ -1,13 +1,10 @@
 require('./common');
-require('alphaville-header');
-require('o-date');
-require('o-author-alerts');
 require('o-comments');
 require('o-comment-count');
 require('o-video');
 require('o-share');
 
-const oAds = require('alphaville-ads')['o-ads'];
+const oAds = require('alphaville-ui')['o-ads'];
 
 const embeddedMedia = require('webchat/src/js/ui/embeddedMedia');
 

@@ -19,33 +19,19 @@
     "tests"
   ],
   "dependencies": {
-    "o-grid": "^4.0.0",
-    "o-colors": "^3.3.0",
-    "o-fonts": "^2.0.0",
-    "o-ft-icons": "^3.3.0",
-    "o-autoinit": "^1.2.0",
-    "alphaville-header": "Financial-Times/alphaville-header#^0.9.0",
-    "alphaville-footer": "Financial-Times/alphaville-footer#^0.4.0",
-    "alphaville-barrier": "Financial-Times/alphaville-barrier#^0.1.0",
-    "alphaville-marketslive-session-listener": "Financial-Times/alphaville-marketslive-session-listener#^0.1.0",
-    "alphaville-marketslive-session-notification": "Financial-Times/alphaville-marketslive-session-notification#^0.1.0",
+    "alphaville-ui": "Financial-Times/alphaville-ui#^0.1.0",
     "alphaville-comments-config": "Financial-Times/alphaville-comments-config#^0.2.0",
-    "alphaville-ads": "Financial-Times/alphaville-ads#^0.3.0",
-    "alphaville-most-recent-post": "Financial-Times/alphaville-most-recent-post#^0.1.0",
-    "o-author-alerts": "^3.0.0",
-    "o-date": "^2.3.1",
+    "webchat": "Financial-Times/webchat#^0.5.0",
+    "o-autoinit": "^1.2.0",
     "o-comments": "^3.0.0",
     "o-comment-count": "^0.2.0-beta.1",
     "o-card": "^2.1.1",
     "o-tabs": "^2.3.3",
     "o-share": "^2.1.4",
-    "webchat": "Financial-Times/webchat#^0.5.0",
-    "o-tracking": "^1.1.8",
     "o-video": "^1.0.0"
   },
   "resolutions": {
     "o-hoverable": ">=0.1.1 <4",
-    "o-buttons": "^4.0.1",
-    "o-typography": "^4.1.0"
+    "o-buttons": "^4.0.1"
   }
 }
