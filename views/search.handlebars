@@ -17,7 +17,18 @@
                 <h1 class="o-typography-heading1">Search results: {{searchTerm}}</h1>
                 {{#if searchResults}}
                     {{#each searchResults}}
-                        {{> list-cards/card-generic }}
+                        {{#isMarketsLive}}
+                            {{> list-cards/card-marketslive}}
+                        {{/isMarketsLive}}
+
+                        {{^isMarketsLive}}
+                            {{#withImage}}
+                                {{> list-cards/card-image}}
+                            {{/withImage}}
+                            {{^withImage}}
+                                {{> list-cards/card-generic}}
+                            {{/withImage}}
+                        {{/isMarketsLive}}
                     {{/each}}
                 {{else}}
                     <p>No results found.</p>
