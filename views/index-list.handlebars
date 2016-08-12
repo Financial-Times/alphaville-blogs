@@ -23,21 +23,23 @@
 							{{/date}}
 						</div>
 					</div>
-					<div class="alphaville-list-items" data-o-grid-colspan="12 M9">
-						{{#items}}
-							{{#isMarketsLive}}
-								{{> list-cards/card-marketslive}}
-							{{/isMarketsLive}}
+					<div data-o-grid-colspan="12 M9">
+						<div class="alphaville-list-items">
+							{{#items}}
+								{{#isMarketsLive}}
+									{{> list-cards/card-marketslive}}
+								{{/isMarketsLive}}
 
-							{{^isMarketsLive}}
-								{{#withImage}}
-									{{> list-cards/card-image}}
-								{{/withImage}}
-								{{^withImage}}
-									{{> list-cards/card-generic}}
-								{{/withImage}}
-							{{/isMarketsLive}}
-						{{/items}}
+								{{^isMarketsLive}}
+									{{#withImage}}
+										{{> list-cards/card-image}}
+									{{/withImage}}
+									{{^withImage}}
+										{{> list-cards/card-generic}}
+									{{/withImage}}
+								{{/isMarketsLive}}
+							{{/items}}
+						</div>
 					</div>
 				</div>
 
