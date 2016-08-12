@@ -40,12 +40,12 @@
 								{{/isMarketsLive}}
 							{{/items}}
 						</div>
+
+						{{#mpu}}
+							{{> alphaville-ui/ads/templates/mpu_mobile mpu_mobile_index=.}}
+						{{/mpu}}
 					</div>
 				</div>
-
-				{{#mpu}}
-					{{> alphaville-ui/ads/templates/mpu_mobile mpu_mobile_index=.}}
-				{{/mpu}}
 			{{/searchResults}}
 		</div>
 		<div class="main" data-o-grid-colspan="hide L4">
