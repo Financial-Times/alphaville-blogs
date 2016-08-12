@@ -101,4 +101,20 @@ $alphaville-card__color--strip: #d8c2b8;
 		max-height: 50px;
 		overflow: hidden;
 	}
+
+	$comment-counter-color: #22757c;
+	.alphaville-card--comment-counter {
+		@include oTypographySansSize(s);
+		color: $comment-counter-color;
+		float: right;
+		padding: 8px 0;
+
+		&:before {
+			@include oIconsGetIcon('comment', $comment-counter-color, 14);
+			content: '';
+			position: relative;
+			margin-right: 5px;
+			vertical-align: middle;
+		}
+	}
 }
