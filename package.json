@@ -10,7 +10,7 @@
 	"dependencies": {
 		"alphaville-auth-middleware": "Financial-Times/alphaville-auth-middleware#0.3.0",
 		"alphaville-build-tools": "Financial-Times/alphaville-build-tools#0.1.6",
-		"alphaville-es-interface": "Financial-Times/alphaville-es-interface#0.4.9",
+		"alphaville-es-interface": "Financial-Times/alphaville-es-interface#0.5.0",
 		"alphaville-express": "Financial-Times/alphaville-express#0.6.0",
 		"alphaville-header-config": "Financial-Times/alphaville-header-config#0.4.1",
 		"bluebird": "^3.4.1",
