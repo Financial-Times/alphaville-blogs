@@ -105,15 +105,16 @@ $alphaville-card__color--strip: #d8c2b8;
 	$comment-counter-color: #22757c;
 	.alphaville-card--comment-counter {
 		@include oTypographySansSize(s);
+		font-size: 14px;
 		color: $comment-counter-color;
 		float: right;
-		padding: 8px 0;
+		padding: 9px 0;
 
-		&:before {
+		&:after {
 			@include oIconsGetIcon('comment', $comment-counter-color, 14);
 			content: '';
 			position: relative;
-			margin-right: 5px;
+			margin-left: 5px;
 			vertical-align: middle;
 		}
 	}
