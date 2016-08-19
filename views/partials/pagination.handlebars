@@ -1,0 +1,66 @@
+<div class="alphaville-pagination">
+	{{#show}}
+		{{#left}}
+			{{#enabled}}
+				<a href="{{../../baseUrl}}page={{page}}" class="o-buttons o-buttons-icon o-buttons-icon--arrow-left o-buttons-icon--icon-only">
+					<span class="o-buttons-icon__label">Newer results</span>
+				</a>
+			{{/enabled}}
+			{{^enabled}}
+				<button class="o-buttons o-buttons-icon o-buttons-icon--arrow-left o-buttons-icon--icon-only" disabled>
+					<span class="o-buttons-icon__label">Newer results</span>
+				</button>
+			{{/enabled}}
+			
+		{{/left}}
+
+		{{#start}}
+			{{#selected}}
+				<button href="{{../../baseUrl}}page={{page}}" class="o-buttons" aria-selected="true">{{page}}</button>
+			{{/selected}}
+			{{^selected}}
+				<a href="{{../../baseUrl}}page={{page}}" class="o-buttons">{{page}}</a>
+			{{/selected}}
+		{{/start}}
+
+		{{#dot1}}
+			...
+		{{/dot1}}
+
+		{{#center}}
+			{{#selected}}
+				<button href="{{../../baseUrl}}page={{page}}" class="o-buttons" aria-selected="true">{{page}}</button>
+			{{/selected}}
+			{{^selected}}
+				<a href="{{../../baseUrl}}page={{page}}" class="o-buttons">{{page}}</a>
+			{{/selected}}
+		{{/center}}
+		
+		{{#dot2}}
+			...
+		{{/dot2}}
+		
+		{{#end}}
+			{{#selected}}
+				<button href="{{../../baseUrl}}page={{page}}" class="o-buttons" aria-selected="true">{{page}}</button>
+			{{/selected}}
+			{{^selected}}
+				<a href="{{../../baseUrl}}page={{page}}" class="o-buttons">{{page}}</a>
+			{{/selected}}
+		{{/end}}
+
+		{{#right}}
+			{{#enabled}}
+				<a href="{{../../baseUrl}}page={{page}}" class="o-buttons o-buttons-icon o-buttons-icon--arrow-right o-buttons-icon--icon-only">
+					<span class="o-buttons-icon__label">Older results</span>
+				</a>
+			{{/enabled}}
+			{{^enabled}}
+				<button class="o-buttons o-buttons-icon o-buttons-icon--arrow-right o-buttons-icon--icon-only" disabled>
+					<span class="o-buttons-icon__label">Older results</span>
+				</button>
+			{{/enabled}}
+			
+		{{/right}}
+	{{/show}}
+</div>

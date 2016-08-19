@@ -1,4 +1,8 @@
 @import './assets';
 
 @import 'alphaville-ui/main';
-@import 'o-comments/main';
+
+.alphaville-pagination {
+	text-align: center;
+	margin: 15px;
+}

@@ -34,6 +34,14 @@
                     <p>No results found.</p>
                 {{/if}}
             </div>
+
+            <div class="o-grid-row">
+                <div data-o-grid-colspan="12">
+                    {{#pagination}}
+                        {{> pagination}}
+                    {{/pagination}}
+                </div>
+            </div>
         </div>
         <div data-o-grid-colspan="hide L4">
             {{#with mostRecentPost }}
