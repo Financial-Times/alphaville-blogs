@@ -1,0 +1,45 @@
+{{#contentFor "head"}}
+	<link rel="stylesheet" href="{{assetsBasePath}}/build/ml-live.css" />
+
+	<script>
+		(function () {
+			ctmLoadScript({
+				src: "//js.pusher.com/2.0.5/pusher.min.js"
+			}, function (errPusher) {
+				document.addEventListener('o.DOMContentLoaded', function () {
+					document.addEventListener('mlLiveBundle.loaded', function () {
+						mlLiveBundle.marketsLiveSessionNotification.sessionSeen('{{articleId}}');
+						
+						var webChat = new mlLiveBundle.Webchat(document.querySelector('.chat'), {
+							articleId: '{{articleId}}',
+							apiUrl: '{{apiUrl}}'
+						});
+					});
+				});
+
+				ctmLoadScript({
+					src: "{{assetsBasePath}}/build/ml-live.js",
+					async: true
+				}, function () {
+					document.dispatchEvent(new CustomEvent('mlLiveBundle.loaded', {
+						bubbles: true
+					}));
+				});
+			});
+		}());
+	</script>
+{{/contentFor}}
+
+
+
+<div class="session-container">
+	<div class="o-grid-container o-grid-container--bleed">
+		<div class="o-grid-row">
+			<div data-o-grid-colspan="12">
+				<div class="chat-panel">
+					<div class="chat"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

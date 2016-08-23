@@ -1,0 +1,59 @@
+@import './common';
+@import 'webchat/main';
+@import './ml-responsive_tabs';
+@import 'alphaville-marketslive-chat/main';
+
+
+.alphaville-content {
+	margin-top: 0;
+}
+
+.alphaville-footer {
+	display: none;
+}
+
+.marketslive-terms-conditions {
+	border-top: 5px solid oColorsGetPaletteColor('pink-tint3');
+	color: oColorsGetPaletteColor('grey-tint3');
+	padding: 15px 10px;
+	text-align: center;
+
+	a {
+		color: oColorsGetPaletteColor('blue');
+		-webkit-font-smoothing: antialiased;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	@include oGridRespondTo($until: L) {
+		border-top-width: 3px;
+		padding: 5px;
+		text-align: left;
+	}
+}
+
+
+.chat-panel {
+	padding-bottom: 10px;
+
+	@include oGridRespondTo(L) {
+		padding-left: oGridGutter(L);
+		padding-right: oGridGutter(L);
+		border-right: 1px solid #dfd2c3;
+	}
+}
+
+.comments-panel {
+	@include oGridRespondTo(L) {
+		padding-right: oGridGutter(L);
+	}
+}
+
+.alphaville-content {
+	&.alphaville-alternative-bg {
+		background-color: #fdf8f2;
+	}
+}

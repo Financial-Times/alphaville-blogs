@@ -1,0 +1,87 @@
+{{#contentFor "head"}}
+	<link rel="stylesheet" href="{{assetsBasePath}}/build/ml-index.css" />
+
+	<script>
+		document.addEventListener('o.DOMContentLoaded', function () {
+			document.addEventListener('mlIndexBundle.loaded', function () {
+				mlIndexBundle.liveSessionRedirecter.init();
+			});
+		})
+		
+		ctmLoadScript({
+			src: "{{assetsBasePath}}/build/ml-index.js",
+			async: true
+		}, function () {
+			document.dispatchEvent(new CustomEvent('mlIndexBundle.loaded', {
+				bubbles: true
+			}));
+		});
+	</script>
+{{/contentFor}}
+
+
+<div class="o-grid-container">
+	<div class="o-grid-row">
+		<div data-o-grid-colspan="12 L8">
+			<div class="o-grid-row">
+				<div data-o-grid-colspan="12 M9 Moffset3">
+					<h1 class="o-typography-heading1">Real-time  views on moves and news in the markets</h1>
+
+					<p>The daily chat with FT Alphaville Editor Paul Murphy and Bryce Elder from the FT’s London markets team, begins at 11am, London time.</p>
+
+					<p>Paul and Bryce offer insight into share price moves and other financial asset news, dissect analysts’ research notes and highlight market-moving events. They also break price-moving news.</p>
+				</div>
+
+				<div class="marketslive-list" data-o-grid-colspan="12">
+					{{#transcripts}}
+						<div class="o-grid-row">
+							<div data-o-grid-colspan="12 M3">
+								<div class="marketslive-list-time">
+									<div class="marketslive-list-time-label">{{label}}</div>
+									{{#date}}
+										<time class="o-date marketslive-list-time-date" data-o-component="o-date" data-o-date-format="date-only" datetime="{{.}}"></time>
+									{{/date}}
+								</div>
+							</div>
+							<div data-o-grid-colspan="12 M9">
+								<div class="marketslive-list-items {{#mpu}}alphaville-list-item--with-ad-after{{/mpu}}">
+									{{#items}}
+										{{#_source}}
+											<div class="o-card o-card--landscape o-card--image-" data-o-component="o-card">
+												<div class="o-card__content">
+													<h2 class="o-card__heading"><a href="{{av2WebUrl}}">{{title}}</a></h2>
+													<div class="o-card__standfirst">{{summaries}}</div>
+												</div>
+											</div>
+										{{/_source}}
+									{{/items}}
+								</div>
+
+								{{#mpu}}
+									{{> alphaville-ui/ads/templates/mpu_mobile mpu_mobile_index=.}}
+								{{/mpu}}
+							</div>
+						</div>
+					{{/transcripts}}
+
+					<div class="o-grid-row">
+						<div data-o-grid-colspan="12">
+							{{#pagination}}
+								{{> pagination}}
+							{{/pagination}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-o-grid-colspan="hide L4">
+			<aside class="side-component">
+				{{#with mostRecentPost }}
+                    {{> alphaville-ui/most-recent-post/main }}
+                {{/with}}
+				{{> alphaville-ui/ads/templates/dmpu_desktop}}
+				{{> alphaville-ui/twitter-widget/main}}
+			</aside>
+		</div>
+	</div>
+</div>

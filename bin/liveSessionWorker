@@ -1,0 +1,136 @@
+"use strict";
+
+const Pusher = require('pusher-client');
+const wpApiBaseUrl = process.env.WP_URL;
+const fetch = require('node-fetch');
+const db = require('../lib/services/db');
+
+const eventsToTryAgain = [];
+
+let waitTime = 500;
+function fetchChannels () {
+	return fetch(wpApiBaseUrl + '/notify/channels').then((response) => {
+		if (response.status < 200 || response.status >= 400) {
+			throw new Error("Request failed");
+		}
+
+		return response.json();
+	}).catch(() => {
+		return new Promise((resolve) => {
+			setTimeout(() => {
+				if (waitTime < 10000) {
+					waitTime *= 2;
+				}
+				fetchChannels().then(resolve);
+			}, waitTime);
+		});
+	});
+}
+
+
+function onSessionStart (data, retried) {
+	console.log('session start', data);
+	return db.oneOrNone('SELECT id FROM live_sessions WHERE id = $1', data.uuid).then((session) => {
+		const url = data.url.replace(/http(s?):\/\/[^\/]+/, '');
+
+		if (!session) {
+			return db.none('INSERT INTO live_sessions (id, url, created_at) VALUES($1, $2, $3)', [data.uuid, url, data.pubdate]);
+		}
+
+		return;
+	}).catch((err) => {
+		console.log('Error starting session.', data.uuid, err);
+
+		if (!retried) {
+			eventsToTryAgain.push({
+				event: 'session-start',
+				data: data
+			});
+		}
+
+		throw err;
+	});
+}
+
+function onSessionEnd (data, retried) {
+	console.log('session end', data);
+	if (!retried) {
+		for (let i = 0; i < eventsToTryAgain.length; i++) {
+			if (eventsToTryAgain[i].event === 'session-start' && eventsToTryAgain[i].data.uuid === data.uuid) {
+				eventsToTryAgain.splice(i, 1);
+				break;
+			}
+		}
+	}
+
+	return db.oneOrNone('SELECT id FROM live_sessions WHERE id = $1', data.uuid).then((session) => {
+		if (session) {
+			db.none('DELETE FROM live_sessions WHERE id = $1', data.uuid);
+		}
+
+		return fetch(`https://${process.env.CCS_URL}/v1/closeCollection?articleId=${data.uuid}`, {
+			headers: {
+				'X-Api-Key': process.env.CCS_API_KEY
+			}
+		}).then((response) => {
+			if (response.status < 200 || response.status >= 400) {
+				throw new Error("Closing Livefyre session failed.");
+			}
+
+			return response.json();
+		}).then((responseJson) => {
+			if (responseJson.success === true) {
+				return;
+			} else {
+				throw new Error("Unexpected response from CCS.");
+			}
+		}).catch((err) => {
+			console.log('Error ending session.', data.uuid, err);
+
+			if (!retried) {
+				eventsToTryAgain.push({
+					event: 'session-end',
+					data: data
+				});
+			}
+		});
+	});
+}
+
+fetchChannels().then((channelInfo) => {
+	const socket = new Pusher(channelInfo.pusherkey);
+	const webChatChannel = socket.subscribe(channelInfo['web-chats']);
+
+	webChatChannel.bind('session-start', (data) => {
+		if (data.post_type === 'webchat-markets-live') {
+			onSessionStart(data, false);
+		}
+	});
+	webChatChannel.bind('session-end', (data) => {
+		if (data.post_type === 'webchat-markets-live') {
+			onSessionEnd(data, false);
+		}
+	});
+});
+
+
+function retryItem () {
+	switch (eventsToTryAgain[0].event) {
+		case 'session-start':
+			return onSessionStart(eventsToTryAgain[0].data, true);
+		case 'session-end':
+			return onSessionEnd(eventsToTryAgain[0].data, true);
+	}
+}
+
+function retryFailed () {
+	if (eventsToTryAgain.length) {
+		retryItem().then(() => {
+			eventsToTryAgain.shift();
+			setTimeout(retryFailed, 0);
+		});
+	} else {
+		setTimeout(retryFailed, 10000);
+	}
+}
+retryFailed();

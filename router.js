@@ -10,6 +10,7 @@ router.use('/search', require('./routes/search'));
 router.use('/about', require('./routes/about'));
 router.use('/meet-the-team', require('./routes/meet'));
 
+router.use('/', auth(), require('./routes/marketslive'));
 router.use('/', auth(), require('./routes/article'));
 
 module.exports = router;

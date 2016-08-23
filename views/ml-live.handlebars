@@ -1,0 +1,111 @@
+{{#contentFor "head"}}
+	<link rel="stylesheet" href="{{assetsBasePath}}/build/ml-live.css" />
+
+	<script>
+		(function () {
+			var oChatInstance;
+			document.addEventListener('o.DOMContentLoaded', function () {
+				document.body.addEventListener('alphavilleMarketsliveChat.ready', function (evt) {
+					oChatInstance = evt.detail.instance;
+				});
+			});
+
+			ctmLoadScript({
+				src: "//js.pusher.com/2.0.5/pusher.min.js"
+			}, function (errPusher) {
+				document.addEventListener('o.DOMContentLoaded', function () {
+					document.addEventListener('mlLiveBundle.loaded', function () {
+						mlLiveBundle.marketsLiveSessionNotification.sessionSeen('{{articleId}}');
+						
+						var webChat = new mlLiveBundle.Webchat(document.querySelector('.chat'), {
+							articleId: '{{articleId}}',
+							apiUrl: '{{apiUrl}}'
+						});
+
+						var mlTabContainer = document.querySelector('.ml-tabs-container');
+						mlTabContainer.addEventListener('oTabs.tabSelect', function (evt) {
+							switch (evt.detail.selected) {
+								case 0:
+									webChat.setFixedHeight();
+									break;
+								case 1:
+									if (oChatInstance) {
+										oChatInstance.stretchVertical();
+									}
+									break;
+							}
+						});
+					});
+				});
+
+				ctmLoadScript({
+					src: "{{assetsBasePath}}/build/ml-live.js",
+					async: true
+				}, function () {
+					document.dispatchEvent(new CustomEvent('mlLiveBundle.loaded', {
+						bubbles: true
+					}));
+				});
+			});
+		}());
+	</script>
+{{/contentFor}}
+
+
+
+<div class="session-container">
+	<div class="o-grid-container o-grid-container--bleed">
+		<div class="o-grid-row">
+			<div class="ml-tabs-container" data-o-grid-colspan="12 Mhide">
+				<ul data-o-component="o-tabs" class="o-tabs ml-tabs" role="tablist" data-o-tabs-disablefocus="true">
+					<li role="tab"><a href="#ml-main-content">Markets Live</a></li>
+					<li role="tab"><a href="#ml-user-comments">Comments</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="o-grid-row">
+			<div data-o-grid-colspan="12 M8" id="ml-main-content" class="o-tabs__tabpanel ml-tab-content">
+				<div class="chat-panel">
+					<div class="chat"></div>
+				</div>
+			</div>
+			<div data-o-grid-colspan="12 M4" id="ml-user-comments" class="o-tabs__tabpanel ml-tab-content">
+				<div id="ft-article-comments" class="comments-panel">
+					<a name="comments"></a>
+					<div data-o-component="alphaville-marketslive-chat" data-alphaville-marketslive-chat-config-title="{{title}}" data-alphaville-marketslive-chat-config-url="http://ftalphaville2.ft.com/marketslive/{{articleId}}" data-alphaville-marketslive-chat-config-articleId="{{articleId}}" data-alphaville-marketslive-chat-config-order="inverted" data-alphaville-marketslive-chat-config-stretch-vertical="true"></div>
+				</div>
+
+				<div class="o-grid-row o-grid-row--compact">
+					<div data-o-grid-colspan="12 Mhide">
+						<div class="marketslive-terms-conditions">
+							<div class="marketslive-terms">By submitting this comment I confirm that I have read and agreed to the <a href="http://www.ft.com/servicestools/help/terms" target="_blank">FT Terms and Conditions. Please also see our <a href="http://www.ft.com/servicestools/help/comments-policy" target="_blank">commenting guidelines</a>.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="o-grid-row">
+			<div data-o-grid-colspan="hide M12">
+				<div class="marketslive-terms-conditions">
+					<div class="marketslive-terms">By submitting this comment I confirm that I have read and agreed to the <a href="http://www.ft.com/servicestools/help/terms" target="_blank">FT Terms and Conditions</a>. Please also see our <a href="http://www.ft.com/servicestools/help/comments-policy" target="_blank">commenting guidelines</a>.</div>
+					<div class="marketslive-ft-credit">&copy; THE FINANCIAL TIMES LTD . FT and ‘Financial Times’ are trademarks of The Financial Times Ltd.</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{{#isTest}}
+<script data-alphaville-marketslive-chat-config type="application/json">
+	{
+		"livefyre": {
+			"network": "ft-1.fyre.co",
+			"domain": "ft-1.auth.fyre.co"
+		},
+		"showEnvironment": true
+	}
+</script>
+{{/isTest}}
+
+{{> alphaville-ui/comments-config/main }}

@@ -20,6 +20,7 @@
   ],
   "dependencies": {
     "alphaville-ui": "Financial-Times/alphaville-ui#^0.1.0",
+    "alphaville-marketslive-chat": "Financial-Times/alphaville-marketslive-chat#^0.1.0",
     "webchat": "Financial-Times/webchat#^0.5.0",
     "o-autoinit": "^1.2.0",
     "o-comments": "^3.0.0",

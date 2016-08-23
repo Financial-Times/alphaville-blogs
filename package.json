@@ -10,16 +10,20 @@
 	"dependencies": {
 		"alphaville-auth-middleware": "Financial-Times/alphaville-auth-middleware#0.3.0",
 		"alphaville-build-tools": "Financial-Times/alphaville-build-tools#0.1.6",
-		"alphaville-es-interface": "Financial-Times/alphaville-es-interface#0.5.0",
+		"alphaville-es-interface": "Financial-Times/alphaville-es-interface#0.6.0",
 		"alphaville-express": "Financial-Times/alphaville-express#0.6.0",
 		"alphaville-header-config": "Financial-Times/alphaville-header-config#0.4.1",
+		"alphaville-marketslive-wordpress-api": "Financial-Times/alphaville-marketslive-wordpress-api#0.3.0",
 		"bluebird": "^3.4.1",
 		"bower": "^1.7.7",
 		"cheerio": "^0.20.0",
 		"debug": "~2.2.0",
 		"gulp": "^3.9.1",
 		"memory-cache": "^0.1.6",
-		"moment-timezone": "^0.5.5"
+		"moment-timezone": "^0.5.5",
+		"node-fetch": "^1.5.2",
+		"pg-promise": "^4.3.2",
+		"pusher-client": "^1.1.0"
 	},
 	"engines": {
 		"node": "^5"

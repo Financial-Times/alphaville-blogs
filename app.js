@@ -3,6 +3,9 @@ const fingerprint = require('./build_config/js/fingerprint');
 const _ = require('lodash');
 const articleService = require('./lib/services/article');
 
+const WpApi = require('alphaville-marketslive-wordpress-api');
+WpApi.setBaseUrl(process.env.WP_URL);
+
 const env = process.env.ENVIRONMENT === 'prod' ? 'prod' : 'test';
 
 const app = alphavilleExpress({
