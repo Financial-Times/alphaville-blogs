@@ -1,6 +1,7 @@
 require('./common');
 require('alphaville-marketslive-chat');
 require('./ml-pageBackground');
+require('o-tabs');
 
 exports.Webchat = require('webchat');
 
