@@ -1,0 +1,19 @@
+{{#items}}
+	{{#isMarketsLive}}
+		{{#isLive}}
+			{{> grid-cards/card-marketslive-live}}
+		{{/isLive}}
+		{{^isLive}}
+			{{> grid-cards/card-marketslive}}
+		{{/isLive}}
+	{{/isMarketsLive}}
+
+	{{^isMarketsLive}}
+		{{> grid-cards/card-blog}}
+	{{/isMarketsLive}}
+
+	{{^../withoutAds}}
+		{{> adBetweenCards}}
+	{{/../withoutAds}}
+
+{{/items}}

@@ -8,28 +8,11 @@
 		});
 	}());
 </script>
+{{> alphaville-ui/comments-config/main }}
 {{/contentFor}}
 
 <div class="o-grid-container alphaville-article-grid">
-	<div class="o-grid-row">
-		{{#searchResults}}
-			{{#isMarketsLive}}
-				{{#isLive}}
-					{{> grid-cards/card-marketslive-live}}
-				{{/isLive}}
-				{{^isLive}}
-					{{> grid-cards/card-marketslive}}
-				{{/isLive}}
-			{{/isMarketsLive}}
-
-			{{^isMarketsLive}}
-				{{> grid-cards/card-blog}}
-			{{/isMarketsLive}}
-
-			{{> adBetweenCards}}
-
-		{{/searchResults}}
+	<div class="o-grid-row alphaville-infinite-scroll-container">
+		{{> grid-cards/item-list}}
 	</div>
 </div>
-
-{{> alphaville-ui/comments-config/main }}
