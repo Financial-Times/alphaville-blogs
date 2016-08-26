@@ -21,7 +21,7 @@ document.addEventListener('o.DOMContentLoaded', function () {
 	let linesNumber;
 
 	if (isMlTranscript) {
-		linesNumber = document.querySelectorAll('.webchat-closed-content > div:not(.marketslive-timestamp)');
+		linesNumber = document.querySelectorAll('.webchat-closed-content > div.msg');
 
 		if (linesNumber.length > 0) {
 			if (linesNumber.length > 3) {
