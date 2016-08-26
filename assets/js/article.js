@@ -26,7 +26,11 @@ document.addEventListener('o.DOMContentLoaded', function () {
 		if (linesNumber.length > 0) {
 			if (linesNumber.length > 3) {
 				const fourthLine = linesNumber[3];
-				fourthLine.parentNode.insertBefore(inArticleAd, fourthLine);
+				let beforeEl = fourthLine;
+				if (beforeEl.previousSibling.classList.contains('marketslive-timestamp')) {
+					beforeEl = beforeEl.previousSibling;
+				}
+				fourthLine.parentNode.insertBefore(inArticleAd, beforeEl);
 			} else {
 				const lastLine = linesNumber[linesNumber.length - 1];
 				lastLine.parentNode.insertBefore(inArticleAd, lastLine.nextSibling);
