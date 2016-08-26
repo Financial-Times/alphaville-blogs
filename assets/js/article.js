@@ -18,17 +18,31 @@ document.addEventListener('o.DOMContentLoaded', function () {
 	const inArticleAd = document.querySelector('.alphaville-in-article-ad');
 	const isMlTranscript = !!document.querySelector('.webchat-closed-content');
 
-	const linesNumber = (isMlTranscript) ?
-		document.querySelectorAll('.webchat-closed-content > div.msg') :
-		document.querySelectorAll('.article__body > p');
+	let linesNumber;
 
-	if (linesNumber.length > 0) {
-		if (linesNumber.length > 2) {
-			const thirdLine = linesNumber[2];
-			thirdLine.parentNode.insertBefore(inArticleAd, thirdLine.nextSibling);
-		} else {
-			const lastLine = linesNumber[linesNumber.length - 1];
-			lastLine.parentNode.insertBefore(inArticleAd, lastLine.nextSibling);
+	if (isMlTranscript) {
+		linesNumber = document.querySelectorAll('.webchat-closed-content > div:not(.marketslive-timestamp)');
+
+		if (linesNumber.length > 0) {
+			if (linesNumber.length > 3) {
+				const fourthLine = linesNumber[3];
+				fourthLine.parentNode.insertBefore(inArticleAd, fourthLine);
+			} else {
+				const lastLine = linesNumber[linesNumber.length - 1];
+				lastLine.parentNode.insertBefore(inArticleAd, lastLine.nextSibling);
+			}
+		}
+	} else {
+		linesNumber = document.querySelectorAll('.article__body > p');
+
+		if (linesNumber.length > 0) {
+			if (linesNumber.length > 2) {
+				const thirdLine = linesNumber[2];
+				thirdLine.parentNode.insertBefore(inArticleAd, thirdLine.nextSibling);
+			} else {
+				const lastLine = linesNumber[linesNumber.length - 1];
+				lastLine.parentNode.insertBefore(inArticleAd, lastLine.nextSibling);
+			}
 		}
 	}
 
