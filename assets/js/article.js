@@ -19,7 +19,7 @@ document.addEventListener('o.DOMContentLoaded', function () {
 	const isMlTranscript = !!document.querySelector('.webchat-closed-content');
 
 	const linesNumber = (isMlTranscript) ?
-		document.querySelectorAll('.webchat-closed-content > div:not(.marketslive-timestamp)') :
+		document.querySelectorAll('.webchat-closed-content > div.msg') :
 		document.querySelectorAll('.article__body > p');
 
 	if (linesNumber.length > 0) {
