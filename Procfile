@@ -1,2 +1,2 @@
-web: node-dev ./bin/www
-worker: node-dev bin/liveSessionWorker
+web: npm start
+worker: node bin/liveSessionWorker
