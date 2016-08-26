@@ -93,6 +93,7 @@
 .webchat-closed-content {
 	position: relative;
 	border: 0;
+	overflow: hidden;
 
 	@include oGridRespondTo(M) {
 		margin-left: 20px;
@@ -161,6 +162,7 @@
 	.messageheader {
 		float: left;
 		margin-right: 10px;
+		margin-bottom: 5px;
 
 		.participant {
 			padding: 5px 4px;
