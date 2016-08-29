@@ -6,14 +6,16 @@ const oDate = require('o-date');
 const InfiniteScroll = require('alphaville-ui').InfiniteScroll;
 
 document.addEventListener('o.DOMContentLoaded', function () {
-	new InfiniteScroll({
-		pageParamName: 'page',
-		container: '.alphaville-infinite-scroll-container',
-		onNewPage: () => {
-			oDate.init();
-			oCommentCount.init();
-		}
-	});
+	if (document.querySelector('.alphaville-infinite-scroll-container')) {
+		new InfiniteScroll({
+			pageParamName: 'page',
+			container: '.alphaville-infinite-scroll-container',
+			onNewPage: () => {
+				oDate.init();
+				oCommentCount.init();
+			}
+		});
+	}
 });
 
 require('o-autoinit');
