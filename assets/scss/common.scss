@@ -5,4 +5,9 @@
 .alphaville-pagination {
 	text-align: center;
 	margin: 15px;
+
+	.alphaville-pagination-label {
+		margin: 0 15px;
+		display: inline-block;
+	}
 }
