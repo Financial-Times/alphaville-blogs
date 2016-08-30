@@ -5,6 +5,13 @@ $alphaville-card__color--av-text-bg: #f6d6ce;
 $alphaville-card__color--heading-lead: #a02d4f;
 $alphaville-card__color--strip: #d8c2b8;
 
+
+$alphaville-card--marketslive__color--bg: #443c47;
+$alphaville-card--marketslive__color--notification: #6a636c;
+$alphaville-card--marketslive__color--label: #f4a208;
+$alphaville-card--marketslive__color--heading: #fffce9;
+$alphaville-card--marketslive__color--standfirst: #c6c4c6;
+
 .alphaville-card--fill-space {
 	height: 100%;
 	padding-bottom: 10px;
@@ -39,43 +46,58 @@ $alphaville-card__color--strip: #d8c2b8;
 
 .alphaville-card--marketslive-live {
 	@include oCard;
-	background-color: $alphaville-card__color--bg-lead;
+	background-color: $alphaville-card--marketslive__color--bg;
 	position: relative;
 	padding: 10px;
 
 	.alphaville-card--marketslive-live--lozenge {
-		@include marketslive-lozenge-icon(120);
+		@include marketslive-lozenge-icon(
+			$size: 120,
+			$color: $alphaville-card--marketslive__color--notification);
 
 		position: absolute;
 		top: -55px;
 		right: -60px;
 	}
 
-	.alphaville-card__heading,
-	.alphaville-card__heading--invert {
-		@include oTypographySansBold('l');
-		font-weight: bold;
+	.alphaville-card--marketslive-live-lozenge-icon {
+		@include marketslive-lozenge-icon(
+			$size: 18,
+			$bgColor: oColorsGetPaletteColor('pink'));
+		margin-bottom: -2px;
 	}
 
 	.alphaville-card__heading {
-		color: $alphaville-card__color--heading-lead;
+		@include oTypographySansData('l');
+		margin-bottom: 18px;
+
+		&,
+		a {
+			color: $alphaville-card--marketslive__color--heading;
+		}
 	}
 
 	.alphaville-card__theme {
-		@include oTypographySans('m');
-		line-height: 20px;
+		@include oTypographySansData('l');
+		margin-bottom: 6px;
 
 		a {
-			@include marketslive-live-title();
 			text-decoration: none;
 			text-transform: uppercase;
-		}
 
-		margin-bottom: 20px;
+			.alphaville-card__theme-part1 {
+				color: $alphaville-card--marketslive__color--label;
+			}
+
+			.alphaville-card__theme-part2 {
+				color: oColorsGetPaletteColor('white');
+				font-weight: 600;
+			}
+		}
 	}
 
-	.marketslive-live-lozenge-icon {
-		margin-bottom: -2px;
+	.alphaville-card__standfirst {
+		color: $alphaville-card--marketslive__color--standfirst;
 	}
 }
 
