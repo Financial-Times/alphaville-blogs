@@ -69,8 +69,8 @@ $alphaville-card--marketslive__color--standfirst: #c6c4c6;
 
 	.alphaville-card__heading {
 		@include oTypographySansData('xl');
-		line-height: 27px;
-		font-size: 26px;
+		line-height: 26px;
+		font-size: 25px;
 		margin-bottom: 12px;
 
 		&,
@@ -81,9 +81,20 @@ $alphaville-card--marketslive__color--standfirst: #c6c4c6;
 
 	.alphaville-card__theme {
 		@include oTypographySansData('xl');
-		line-height: 27px;
-		font-size: 26px;
+		line-height: 26px;
+		font-size: 25px;
 		margin-bottom: 4px;
+
+		&:before {
+			position: absolute;
+			top: 0;
+			left: 2px;
+			width: 101px;
+			height: 8px;
+			content: '';
+			background: #f4a208;
+			margin-top: -10px;
+		}
 
 		a {
 			text-decoration: none;
