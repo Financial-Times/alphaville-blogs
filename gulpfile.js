@@ -24,14 +24,6 @@ alphavilleBuildTools(gulp, {
 			buildCss: 'article.css'
 		},
 		{
-			id: 'search',
-			standalone: 'searchBundle',
-			js: './assets/js/search.js',
-			sass: './assets/scss/search.scss',
-			buildJs: 'search.js',
-			buildCss: 'search.css'
-		},
-		{
 			id: 'meetTheTeam',
 			standalone: 'meetTheTeam',
 			js: './assets/js/meetTheTeam.js',
