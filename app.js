@@ -12,7 +12,7 @@ const app = alphavilleExpress({
 	directory: __dirname,
 	appBasePath: 'index',
 	headerConfig: require('alphaville-header-config'),
-	navSelected: 'The Blog',
+	navSelected: 'Home',
 	fingerprint: fingerprint,
 	env: env
 });
