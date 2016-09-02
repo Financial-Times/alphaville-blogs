@@ -1,5 +1,5 @@
 <div class="alphaville-card-container {{_source.cardType}}" data-o-grid-colspan="12 S6 M4 XL4">
-	<div class="alphaville-card alphaville-card--fill-space o-card o-card-- o-card--image-" data-o-component="o-card">
+	<div class="alphaville-card alphaville-card--fill-space o-card" data-o-component="o-card">
 		<div class="o-card__content">
 			<div class="o-card__meta card-primaryTheme">
 				<a href="/marketslive" class="o-card__tag">
@@ -12,7 +12,7 @@
 			</h2>
 
 			<p class="o-card__standfirst alphaville-card__standfirst-truncate">
-				{{_source.summaries}}
+				{{_source.summaries.[0]}}
 			</p>
 
 			<time data-o-component="o-date" class="o-date o-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
