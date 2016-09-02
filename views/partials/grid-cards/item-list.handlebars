@@ -8,12 +8,15 @@
 		{{/isLive}}
 	{{/isMarketsLive}}
 
-	{{^isMarketsLive}}
+	{{#isFirstFT}}
+		{{> grid-cards/card-firstft}}
+	{{/isFirstFT}}
+
+	{{#isBlog}}
 		{{> grid-cards/card-blog}}
-	{{/isMarketsLive}}
+	{{/isBlog}}
 
-	{{^../withoutAds}}
+	{{^ ../withoutAds}}
 		{{> adBetweenCards}}
-	{{/../withoutAds}}
-
+	{{/ ../withoutAds}}
 {{/items}}
