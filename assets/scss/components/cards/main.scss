@@ -18,7 +18,6 @@ $alphaville-card--firstft__color--heading: oColorsGetPaletteColor('grey-tint3');
 .alphaville-card--fill-space {
 	height: 100%;
 	padding-bottom: 10px;
-	background-color: oColorsGetPaletteColor('warm-5');
 }
 
 .alphaville-card__heading {
@@ -30,12 +29,27 @@ $alphaville-card--firstft__color--heading: oColorsGetPaletteColor('grey-tint3');
 	color: oColorsGetPaletteColor('cold-2');
 }
 
+.alphaville-card__heading-truncate {
+	max-height: 60px;
+	overflow: hidden;
+}
+
+.alphaville-card__heading-truncate--3lines {
+	max-height: 90px;
+	overflow: hidden;
+}
+
 .alphaville-card__tag {
 	@include oCardTag;
 }
 
 .alphaville-card__standfirst {
 	@include oCardStandfirst;
+}
+
+.alphaville-card__standfirst-truncate {
+	max-height: 50px;
+	overflow: hidden;
 }
 
 .alphaville-card__timestamp {
@@ -47,8 +61,33 @@ $alphaville-card--firstft__color--heading: oColorsGetPaletteColor('grey-tint3');
 }
 
 
+.alphaville-card {
+	overflow: hidden;
+	background-color: oColorsGetPaletteColor('warm-5');
+
+	p {
+		margin: 0;
+	}
+
+	$comment-counter-color: #22757c;
+	.alphaville-card--comment-counter {
+		@include oTypographySansSize(s);
+		font-size: 14px;
+		color: $comment-counter-color;
+		float: right;
+		padding: 9px 0;
+
+		&:after {
+			@include oIconsGetIcon('comment', $comment-counter-color, 14);
+			content: '';
+			position: relative;
+			margin-left: 5px;
+			vertical-align: middle;
+		}
+	}
+}
+
 .alphaville-card--marketslive-live {
-	@include oCard;
 	background-color: $alphaville-card--marketslive__color--bg;
 	position: relative;
 	padding: 10px;
@@ -92,7 +131,7 @@ $alphaville-card--firstft__color--heading: oColorsGetPaletteColor('grey-tint3');
 			position: absolute;
 			top: 0;
 			left: 2px;
-			width: 101px;
+			width: 97px;
 			height: 8px;
 			content: '';
 			background: #f4a208;
@@ -143,6 +182,16 @@ $alphaville-card--firstft__color--heading: oColorsGetPaletteColor('grey-tint3');
 		}
 	}
 
+	.alphaville-card__heading-truncate {
+		max-height: 34px;
+		overflow: hidden;
+	}
+
+	.alphaville-card__heading-truncate--3lines {
+		max-height: 51px;
+		overflow: hidden;
+	}
+
 	.alphaville-card__byline {
 		margin: 10px 0 0;
 		padding: 0;
@@ -167,47 +216,6 @@ $alphaville-card--firstft__color--heading: oColorsGetPaletteColor('grey-tint3');
 			@include oTypographySerif('s');
 			font-size: 18px;
 			color: $alphaville-card--firstft__color--heading;
-		}
-	}
-}
-
-
-.alphaville-card {
-	overflow: hidden;
-
-	p {
-		margin: 0;
-	}
-
-	.alphaville-card__heading-truncate {
-		max-height: 60px;
-		overflow: hidden;
-	}
-
-	.alphaville-card__heading-truncate--3lines {
-		max-height: 90px;
-		overflow: hidden;
-	}
-
-	.alphaville-card__standfirst-truncate {
-		max-height: 50px;
-		overflow: hidden;
-	}
-
-	$comment-counter-color: #22757c;
-	.alphaville-card--comment-counter {
-		@include oTypographySansSize(s);
-		font-size: 14px;
-		color: $comment-counter-color;
-		float: right;
-		padding: 9px 0;
-
-		&:after {
-			@include oIconsGetIcon('comment', $comment-counter-color, 14);
-			content: '';
-			position: relative;
-			margin-left: 5px;
-			vertical-align: middle;
 		}
 	}
 }
