@@ -191,31 +191,4 @@ $alphaville-card--firstft__color--heading: oColorsGetPaletteColor('grey-tint3');
 		max-height: 51px;
 		overflow: hidden;
 	}
-
-	.alphaville-card__byline {
-		margin: 10px 0 0;
-		padding: 0;
-		@include oTypographySerif('s');
-		font-size: 18px;
-		color: $alphaville-card--firstft__color--heading;
-
-		li {
-			display: inline-block;
-			list-style-type: none;
-
-			&:after {
-				content: ', ';
-			}
-
-			&:last-child:after {
-				content: '';
-			}
-		}
-
-		a {
-			@include oTypographySerif('s');
-			font-size: 18px;
-			color: $alphaville-card--firstft__color--heading;
-		}
-	}
 }

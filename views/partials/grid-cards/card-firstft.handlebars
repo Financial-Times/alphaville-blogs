@@ -9,18 +9,12 @@
 			</div>
 
 			<h2 class="alphaville-card__heading alphaville-card__heading-truncate">
-				<a href="{{_source.av2WebUrl}}">{{_source.title}}</a>
+				<a href="{{_source.av2WebUrl}}">Your essential daily briefing:</a>
 			</h2>
 
-			<p class="alphaville-card__standfirst alphaville-card__standfirst-truncate">{{{_source.summaries.[0]}}}</p>
+			<p class="alphaville-card__standfirst alphaville-card__standfirst-truncate">{{_source.title}}</p>
 
-			<ul class="alphaville-card__byline">
-				{{#_source.authors}}
-					<li><a href="/search?q={{this}}">{{{this}}}</a></li>
-				{{/_source.authors}}
-			</ul>
-
-			{{>comment-counter}}
+			{{> comment-counter}}
 			<time data-o-component="o-date" class="o-date alphaville-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
 		</div>
 	</div>
