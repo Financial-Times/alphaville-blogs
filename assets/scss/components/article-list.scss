@@ -90,6 +90,14 @@
 
 	.o-expander__content {
 		clear: both;
+		transition: 2s all ease;
+		max-height: 9999px;
+
+		&[aria-hidden="true"] {
+			display: block;
+			max-height: 0;
+			transition: 0.2s all ease;
+		}
 
 		.alphaville-spinner {
 			margin: 30px auto;
