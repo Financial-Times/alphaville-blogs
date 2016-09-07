@@ -28,7 +28,8 @@
     "o-card": "^2.1.1",
     "o-tabs": "^2.3.3",
     "o-share": "^2.1.4",
-    "o-video": "^1.0.0"
+    "o-video": "^1.0.0",
+    "o-expander": "^4.0.0"
   },
   "resolutions": {
     "o-hoverable": ">=0.1.1 <4",

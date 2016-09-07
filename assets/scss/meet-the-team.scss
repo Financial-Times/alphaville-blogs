@@ -6,7 +6,7 @@ $o-tabs-is-silent: false;
 $o-card-is-silent: false;
 @import 'o-card/main';
 
-@import './article-list';
+@import './components/article-list';
 
 
 $team-member-thumb-bg: #959387;
@@ -94,9 +94,3 @@ $team-member-border-top: 1px dotted #959387;
 		margin-bottom: 1px;
 	}
 }
-
-
-
-
-
-

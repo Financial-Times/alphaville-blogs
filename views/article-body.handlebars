@@ -1,0 +1,12 @@
+<article class="article__body n-content-body">
+	{{#article.attachments}}
+		<audio controls>
+			<source src="{{url}}" type="{{mediaType}}">
+			<p>
+				Your browser does not support playing this file but you can still <a href="{{url}}">download the MP3 file</a> to play locally.
+			</p>
+		</audio>
+	{{/article.attachments}}
+
+	{{{article.bodyHTML}}}
+</article>

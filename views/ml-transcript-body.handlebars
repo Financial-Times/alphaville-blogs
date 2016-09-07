@@ -1,0 +1,10 @@
+<ul class="article__author-headshots">
+	{{#article.authors}}
+		<li>
+			<a href="/search?q={{name}}">{{#headshotUrl}}<img src="{{.}}" />{{/headshotUrl}} {{name}}</a>
+		</li>
+	{{/article.authors}}
+</ul>
+<article class="article__body n-content-body">
+	{{{article.bodyHTML}}}
+</article>

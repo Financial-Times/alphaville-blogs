@@ -26,18 +26,7 @@
 					<div data-o-grid-colspan="12 M9">
 						<div class="alphaville-list-items {{#mpu}}alphaville-list-item--with-ad-after{{/mpu}}">
 							{{#items}}
-								{{#isMarketsLive}}
-									{{> list-cards/card-marketslive}}
-								{{/isMarketsLive}}
-
-								{{^isMarketsLive}}
-									{{#withImage}}
-										{{> list-cards/card-image}}
-									{{/withImage}}
-									{{^withImage}}
-										{{> list-cards/card-generic}}
-									{{/withImage}}
-								{{/isMarketsLive}}
+								{{> list-cards/item}}
 							{{/items}}
 						</div>
 

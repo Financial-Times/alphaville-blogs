@@ -1,6 +1,7 @@
 @import './assets';
 
 @import 'alphaville-ui/main';
+@import './components/spinner';
 
 .alphaville-pagination {
 	text-align: center;
@@ -10,4 +11,8 @@
 		margin: 0 15px;
 		display: inline-block;
 	}
+}
+
+.alphaville-spinner {
+	@include alphaville-spinner($size: 30px, $color: oColorsGetPaletteColor('pink-tint2'));
 }

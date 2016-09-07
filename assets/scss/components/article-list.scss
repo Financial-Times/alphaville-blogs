@@ -66,4 +66,33 @@
 	.o-card__timestamp {
 		padding-top: 8px;
 	}
+
+	.o-expander {
+		margin-bottom: 8px;
+	}
+
+	.o-expander__toggle {
+		float: right;
+		color: oColorsGetPaletteColor('teal-1');
+		font-weight: bold;
+		outline: 0;
+
+		i {
+			@include oIconsGetIcon('arrow-down', oColorsGetPaletteColor('teal-1'), 17);
+			position: relative;
+			top: 5px;
+		}
+
+		&[aria-expanded="true"] i {
+			@include oIconsGetIcon('arrow-up', oColorsGetPaletteColor('teal-1'), 17);	
+		}
+	}
+
+	.o-expander__content {
+		clear: both;
+
+		.alphaville-spinner {
+			margin: 30px auto;
+		}
+	}
 }

@@ -2,9 +2,13 @@
 
 $o-card-is-silent: false;
 @import 'o-card/main';
-
 @import 'components/cards/main';
-@import 'components/share/main';
+
+$o-expander-is-silent: false;
+@import 'o-expander/main';
+
+$o-video-is-silent: false;
+@import 'o-video/main';
 
 .alphaville-article-grid {
 	.alphaville-card-container {
@@ -18,4 +22,6 @@ $o-card-is-silent: false;
 	}
 }
 
-@import './article-list';
+@import './components/article-list';
+@import './components/article-content-body/main';
+@import './components/marketslive-transcript';

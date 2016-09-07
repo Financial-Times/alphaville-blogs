@@ -1,24 +1,22 @@
-<div class="alphaville-card-container">
-	<div class="alphaville-card o-card o-card--landscape" data-o-component="o-card">
-		<div class="o-card__content">
-			<div class="o-card__meta">
-				<a href="/search?q={{_source.byline}}" class="o-card__tag">{{_source.byline}}</a>
-			</div>
+<div class="alphaville-card o-card o-card--landscape" data-o-component="o-card">
+	<div class="o-card__content">
+		<div class="o-card__meta">
+			<a href="/search?q={{_source.byline}}" class="o-card__tag">{{_source.byline}}</a>
+		</div>
 
-			<h3 class="o-card__heading"><a href="{{_source.av2WebUrl}}">{{_source.title}}</a></h3>
-			
-			<div class="o-grid-container o-grid-container--bleed">
-				<div class="o-grid-row">
-					<div data-o-grid-colspan="6 S4 M3 L5">
-						<div class="o-card__image">
-							<a href="{{_source.av2WebUrl}}"><img src="{{_source.mainImage.url}}" alt="{{_source.mainImage.title}}" /></a>
-						</div>
+		<h3 class="o-card__heading"><a href="{{_source.av2WebUrl}}">{{_source.title}}</a></h3>
+		
+		<div class="o-grid-container o-grid-container--bleed">
+			<div class="o-grid-row">
+				<div data-o-grid-colspan="6 S4 M3 L5">
+					<div class="o-card__image">
+						<a href="{{_source.av2WebUrl}}"><img src="{{_source.mainImage.url}}" alt="{{_source.mainImage.title}}" /></a>
 					</div>
-					<div data-o-grid-colspan="6 S8 M9 L7">
-						<p class="o-card__standfirst">{{{_source.summaries.[0]}}}</p>
+				</div>
+				<div data-o-grid-colspan="6 S8 M9 L7">
+					<p class="o-card__standfirst">{{{_source.summaries.[0]}}}</p>
 
-						<time data-o-component="o-date" class="o-date o-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
-					</div>
+					<time data-o-component="o-date" class="o-date o-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
 				</div>
 			</div>
 		</div>

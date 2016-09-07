@@ -174,7 +174,7 @@
 		@include articleLinksTopic();
 	}
 	display: block;
-	padding: 2px 15px 2px $spacing-unit/2;
+	padding: 2px 15px 2px $article-body-spacing-unit/2;
 	position: relative;
 	text-decoration: none;
 	border-bottom-width: 0;

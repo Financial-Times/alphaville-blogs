@@ -29,7 +29,7 @@
 
 .n-content-tags__list {
 	@include articleLists();
-	margin: ($spacing-unit/2) 0 0;
+	margin: ($article-body-spacing-unit/2) 0 0;
 	@include oGridRespondTo($until: S) {
 		width: 100%;
 	}
