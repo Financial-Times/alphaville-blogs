@@ -60,6 +60,33 @@ $alphaville-card--firstft__color--heading: oColorsGetPaletteColor('grey-tint3');
 	position: relative;
 }
 
+.alphaville-card--inline-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+	li {
+		padding-right: 4px;
+
+		&,
+		a {
+			display: inline-block;
+		}
+
+		a:after {
+			content: ', ';
+		}
+
+		&:last-child {
+			padding-right: 0;
+			
+			a:after {
+				content: '';
+			}
+		}
+	}
+}
+
 
 .alphaville-card {
 	overflow: hidden;
