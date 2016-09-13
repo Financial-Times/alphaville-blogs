@@ -1,4 +1,8 @@
 {{#items}}
+	{{#isHero}}
+		{{> grid-cards/card-hero}}
+	{{/isHero}}
+
 	{{#isMarketsLive}}
 		{{#isLive}}
 			{{> grid-cards/card-marketslive-live}}

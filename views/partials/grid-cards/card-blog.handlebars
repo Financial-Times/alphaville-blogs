@@ -1,21 +1,11 @@
-<div class="alphaville-card-container {{_source.cardType}}" data-o-grid-colspan="12 S6 M4 XL4">
+<div class="alphaville-card-container {{_source.cardType}}" data-o-grid-colspan="12 S6 M4">
 	<div class="alphaville-card alphaville-card--fill-space o-card" data-o-component="o-card">
 		<div class="o-card__content">
-			<div class="o-card__meta card-primaryTheme">
-				<ul class="alphaville-card--inline-list">
-					{{#if _source.authors}}
-						<li>
-							<a href="/search?q={{_source.authors.[0]}}" class="o-card__tag">{{_source.authors.[0]}}</a>
-						</li>
-					{{else}}
-						{{#_source.primaryTheme}}
-						<li>
-							<a href="/search?q={{.}}" class="o-card__tag">{{.}}</a>
-						</li>
-						{{/_source.primaryTheme}}
-					{{/if}}
-				</ul>
-			</div>
+			{{#_source.primaryTheme}}
+				<div class="o-card__meta">
+					<a href="/search?q={{.}}" class="o-card__tag">{{.}}</a>
+				</div>
+			{{/_source.primaryTheme}}
 
 			<h2 class="o-card__heading alphaville-card__heading-truncate">
 				<a href="{{_source.av2WebUrl}}">{{_source.title}}</a>

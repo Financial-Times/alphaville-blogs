@@ -1,19 +1,13 @@
+$o-card-is-silent: false;
 @import 'o-card/main';
 
-$alphaville-card__color--bg-lead: #fce2d7;
-$alphaville-card__color--av-text-bg: #f6d6ce;
-$alphaville-card__color--heading-lead: #a02d4f;
-$alphaville-card__color--strip: #d8c2b8;
-
-
-$alphaville-card--marketslive__color--bg: #443c47;
-$alphaville-card--marketslive__color--notification: #6a636c;
-$alphaville-card--marketslive__color--label: #f4a208;
-$alphaville-card--marketslive__color--heading: #fffce9;
-$alphaville-card--marketslive__color--standfirst: #c6c4c6;
-
-$alphaville-card--firstft__color--label: #b35400;
-$alphaville-card--firstft__color--heading: oColorsGetPaletteColor('grey-tint3');
+$alphaville-card__color--pink-tint1: #ebe0d1;
+$alphaville-card__color--grey-tint1: #c6c4c6;
+$alphaville-card__color--grey-tint2: #6a636c;
+$alphaville-card__color--grey-tint3: #443c47;
+$alphaville-card__color--yellow-tint1: #fffce9;
+$alphaville-card__color--yellow-tint2: #f4a208;
+$alphaville-card__color--yellow-tint3: #b35400;
 
 .alphaville-card--fill-space {
 	height: 100%;
@@ -115,14 +109,14 @@ $alphaville-card--firstft__color--heading: oColorsGetPaletteColor('grey-tint3');
 }
 
 .alphaville-card--marketslive-live {
-	background-color: $alphaville-card--marketslive__color--bg;
+	background-color: $alphaville-card__color--grey-tint3;
 	position: relative;
 	padding: 10px;
 
 	.alphaville-card--marketslive-live--lozenge {
 		@include marketslive-lozenge-icon(
 			$size: 120,
-			$color: $alphaville-card--marketslive__color--notification);
+			$color: $alphaville-card__color--grey-tint2);
 
 		position: absolute;
 		top: -55px;
@@ -144,7 +138,7 @@ $alphaville-card--firstft__color--heading: oColorsGetPaletteColor('grey-tint3');
 
 		&,
 		a {
-			color: $alphaville-card--marketslive__color--heading;
+			color: $alphaville-card__color--yellow-tint1;
 		}
 	}
 
@@ -161,7 +155,7 @@ $alphaville-card--firstft__color--heading: oColorsGetPaletteColor('grey-tint3');
 			width: 97px;
 			height: 8px;
 			content: '';
-			background: #f4a208;
+			background: $alphaville-card__color--yellow-tint2;
 			margin-top: -10px;
 		}
 
@@ -170,7 +164,7 @@ $alphaville-card--firstft__color--heading: oColorsGetPaletteColor('grey-tint3');
 			text-transform: uppercase;
 
 			.alphaville-card__theme-part1 {
-				color: $alphaville-card--marketslive__color--label;
+				color: $alphaville-card__color--yellow-tint2;
 			}
 
 			.alphaville-card__theme-part2 {
@@ -181,14 +175,14 @@ $alphaville-card--firstft__color--heading: oColorsGetPaletteColor('grey-tint3');
 	}
 
 	.alphaville-card__standfirst {
-		color: $alphaville-card--marketslive__color--standfirst;
+		color: $alphaville-card__color--grey-tint1;
 	}
 }
 
 .alphaville-card--firstft {
 	.alphaville-card__tag {
 		@include oTypographySerif('l');
-		color: $alphaville-card--firstft__color--label;
+		color: $alphaville-card__color--yellow-tint3;
 		font-size: 28px;
 		line-height: 29px;
 		margin-bottom: 2px;
@@ -205,7 +199,7 @@ $alphaville-card--firstft__color--heading: oColorsGetPaletteColor('grey-tint3');
 
 		&,
 		a {
-			color: $alphaville-card--firstft__color--heading;
+			color: oColorsGetPaletteColor('grey-tint1');
 		}
 	}
 
@@ -217,5 +211,53 @@ $alphaville-card--firstft__color--heading: oColorsGetPaletteColor('grey-tint3');
 	.alphaville-card__heading-truncate--3lines {
 		max-height: 51px;
 		overflow: hidden;
+	}
+}
+
+
+.alphaville-card--hero {
+	background-color: $alphaville-card__color--pink-tint1;
+	position: relative;
+	padding: 20px;
+
+	.alphaville-card__heading {
+		@include oTypographySansBold('l');
+		font-size: 25px;
+		line-height: 26px;
+		margin-bottom: 10px;
+
+		&,
+		a {
+			color: $alphaville-card__color--grey-tint3;
+		}
+	}
+
+	.alphaville-card__theme {
+		@include oTypographySansData('xl');
+		font-size: 25px;
+		line-height: 26px;
+		text-transform: uppercase;
+		margin-bottom: 6px;
+
+		&,
+		a {
+			color: $alphaville-card__color--yellow-tint2;
+		}
+
+		&:before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 118px;
+			height: 8px;
+			content: '';
+			background: $alphaville-card__color--yellow-tint2;
+			margin-top: -20px;
+		}
+	}
+
+	.alphaville-card__image {
+		max-width: 100%;
+		max-height: 70%;
 	}
 }
