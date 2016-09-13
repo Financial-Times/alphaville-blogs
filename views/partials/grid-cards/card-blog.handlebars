@@ -3,18 +3,17 @@
 		<div class="o-card__content">
 			<div class="o-card__meta card-primaryTheme">
 				<ul class="alphaville-card--inline-list">
-					{{#_source.authors}}
+					{{#if _source.authors}}
 						<li>
-							<a href="/search?q={{.}}" class="o-card__tag">{{.}}</a>
+							<a href="/search?q={{_source.authors.[0]}}" class="o-card__tag">{{_source.authors.[0]}}</a>
 						</li>
-					{{/_source.authors}}
-					{{^_source.authors}}
+					{{else}}
 						{{#_source.primaryTheme}}
 						<li>
 							<a href="/search?q={{.}}" class="o-card__tag">{{.}}</a>
 						</li>
 						{{/_source.primaryTheme}}
-					{{/_source.authors}}
+					{{/if}}
 				</ul>
 			</div>
 
@@ -24,7 +23,7 @@
 
 			<p class="o-card__standfirst alphaville-card__standfirst-truncate">{{{_source.summaries.[0]}}}</p>
 
-			{{>comment-counter}}
+			{{> comment-counter}}
 			<time data-o-component="o-date" class="o-date o-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
 		</div>
 	</div>
