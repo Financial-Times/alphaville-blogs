@@ -233,7 +233,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	}
 
 	.alphaville-card__theme {
-		@include oTypographySansData('xl');
+		@include oTypographySansBold('xl');
 		font-size: 25px;
 		line-height: 26px;
 		text-transform: uppercase;
