@@ -14,7 +14,7 @@
     <div class="o-grid-row">
         <div class="main" data-o-grid-colspan="L8">
             <div class="article-list">
-                <h1 class="o-typography-heading1">Search results: {{searchTerm}}</h1>
+                <h1 class="o-typography-heading1">Search results{{#if searchTerm}}: {{searchTerm}}{{/if}}</h1>
                 {{#if searchResults}}
                     {{#each searchResults}}
                         {{#isMarketsLive}}
@@ -31,7 +31,11 @@
                         {{/isMarketsLive}}
                     {{/each}}
                 {{else}}
-                    <p>No results found.</p>
+                    {{#if message}}
+                        <p>{{message}}</p>
+                    {{else}}
+                        <p>No search results were found.</p>
+                    {{/if}}
                 {{/if}}
             </div>
 
