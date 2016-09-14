@@ -3,7 +3,7 @@
 		<div class="o-card__content">
 			{{#if _source.authors}}
 				<div class="o-card__meta">
-					<a href="/author?q={{_source.authors.[0]}}" class="o-card__tag">{{_source.authors.[0]}}</a>
+					<a href="/author?q={{_source.authors.[0].name}}" class="o-card__tag">{{_source.authors.[0].name}}</a>
 				</div>
 			{{else}}
 				{{#_source.primaryTheme}}

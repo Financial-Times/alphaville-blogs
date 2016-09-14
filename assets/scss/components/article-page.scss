@@ -1,6 +1,8 @@
 $article-body-spacing-unit: 16px;
 @import './article-content-body/main';
 
+@import './cards/main';
+
 //ARTICLE HEADER
 .article__header {
 	position: relative;
@@ -70,6 +72,10 @@ $article-body-spacing-unit: 16px;
 	@include oTypographySans(s);
 	display: inline-block;
 	margin: 0;
+}
+.article__byline-tag {
+	@include oCardTag;
+	display: inline;
 }
 .article__timestamp {
 	@include oTypographySans(xs);
