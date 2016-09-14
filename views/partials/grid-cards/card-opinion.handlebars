@@ -17,10 +17,12 @@
 				<a href="{{_source.av2WebUrl}}">{{{_source.title}}}</a>
 			</h2>
 
-			<div class="o-grid-row">
-				<div data-o-grid-colspan="8">
-					{{> comment-counter}}
-					<time data-o-component="o-date" class="o-date alphaville-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
+			<div class="alphaville-card__footer">
+				<div class="o-grid-row">
+					<div data-o-grid-colspan="8">
+						{{> comment-counter}}
+						<time data-o-component="o-date" class="o-date alphaville-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
+					</div>
 				</div>
 			</div>
 

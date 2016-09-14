@@ -14,8 +14,10 @@
 
 			<p class="alphaville-card__standfirst alphaville-card__standfirst-truncate">{{_source.title}}</p>
 
-			{{> comment-counter}}
-			<time data-o-component="o-date" class="o-date alphaville-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
+			<div class="alphaville-card__footer">
+				{{> comment-counter}}
+				<time data-o-component="o-date" class="o-date alphaville-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
+			</div>
 		</div>
 	</div>
 </div>

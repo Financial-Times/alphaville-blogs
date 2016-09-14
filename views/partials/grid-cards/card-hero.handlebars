@@ -2,7 +2,7 @@
 	<div class="alphaville-card alphaville-card--fill-space alphaville-card--hero o-card" data-o-component="o-card">
 		{{#if withImage}}
 			<div class="o-grid-row">
-				<div data-o-grid-colspan="8">
+				<div data-o-grid-colspan="7 XL8">
 					<div class="alphaville-card__content">
 						{{#if _source.authors}}
 							<div class="alphaville-card__theme">
@@ -25,7 +25,7 @@
 						</div>
 					</div>
 				</div>
-				<div data-o-grid-colspan="4">
+				<div data-o-grid-colspan="5 XL4">
 					<img class="alphaville-card__image" src="{{_source.mainImage.url}}" alt="{{_source.mainImage.title}}">
 
 					{{> comment-counter}}
@@ -48,8 +48,10 @@
 					{{{_source.summaries.[0]}}}
 				</div>
 
-				{{> comment-counter}}
-				<time data-o-component="o-date" class="o-date alphaville-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
+				<div class="alphaville-card__footer">
+					{{> comment-counter}}
+					<time data-o-component="o-date" class="o-date alphaville-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
+				</div>
 			</div>
 		{{/if}}
 	</div>

@@ -1,6 +1,6 @@
 <div class="alphaville-card-container {{_source.cardType}}" data-o-grid-colspan="12 S6 M4">
 	<div class="alphaville-card alphaville-card--fill-space o-card" data-o-component="o-card">
-		<div class="o-card__content">
+		<div class="alphaville-card__content">
 			{{#if _source.authors}}
 				<div class="o-card__meta">
 					<a href="/author?q={{_source.authors.[0].name}}" class="o-card__tag">{{_source.authors.[0].name}}</a>
@@ -19,8 +19,10 @@
 
 			<p class="o-card__standfirst alphaville-card__standfirst-truncate">{{{_source.summaries.[0]}}}</p>
 
-			{{> comment-counter}}
-			<time data-o-component="o-date" class="o-date o-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
+			<div class="alphaville-card__footer">
+				{{> comment-counter}}
+				<time data-o-component="o-date" class="o-date o-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
+			</div>
 		</div>
 	</div>
 </div>
