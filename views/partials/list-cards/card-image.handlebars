@@ -1,8 +1,22 @@
 <div class="alphaville-card o-card o-card--landscape" data-o-component="o-card">
 	<div class="o-card__content">
-		<div class="o-card__meta">
-			<a href="/search?q={{_source.byline}}" class="o-card__tag">{{_source.byline}}</a>
-		</div>
+		{{#if _source.authors}}
+			<div class="o-card__meta">
+				<ul class="alphaville-card--inline-list">
+					{{#_source.authors}}
+						<li>
+							<a href="/author?q={{.}}" class="o-card__tag">{{.}}</a>
+						</li>
+					{{/_source.authors}}
+				</ul>
+			</div>
+		{{else}}
+			{{#_source.primaryTheme}}
+				<div class="o-card__meta">
+					<a href="/search?q={{.}}" class="o-card__tag">{{.}}</a>
+				</div>
+			{{/_source.primaryTheme}}
+		{{/if}}
 
 		<h3 class="o-card__heading"><a href="{{_source.av2WebUrl}}">{{_source.title}}</a></h3>
 		
