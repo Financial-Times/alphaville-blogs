@@ -20,6 +20,8 @@ const app = alphavilleExpress({
 app.use(function (req, res, next ) {
 	const _render = res.render;
 	res.render = function( view, options, fn ) {
+		options = options || {};
+
 		if (options.withMostRecentPost === true) {
 			articleService.getRecentPosts().then((mostRecentPost) => {
 				const viewModel = _.merge({}, options, {
@@ -56,7 +58,8 @@ app.use(function(req, res, next) {
 if (app.get('env') === 'development' || process.env.ENVIRONMENT !== 'prod') {
 	app.use(function(err, req, res, next) {
 		if (err.status === 404) {
-			res.sendStatus(404);
+			res.status(404);
+			res.render('error_404');
 		} else {
 			res.status(err.status || 503);
 			res.render('error', {
@@ -71,13 +74,12 @@ if (app.get('env') === 'development' || process.env.ENVIRONMENT !== 'prod') {
 // no stacktraces leaked to user
 app.use(function(err, req, res, next) {
 	if (err.status === 404) {
-		res.sendStatus(404);
+		res.status(404);
+		res.render('error_404');
 	} else {
+		console.log("Error: ", err);
 		res.status(err.status || 503);
-		res.render('error', {
-			message: err.errMsg || err.message,
-			error: {}
-		});
+		res.render('error');
 	}
 });
 
