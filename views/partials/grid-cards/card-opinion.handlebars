@@ -1,0 +1,34 @@
+<div class="alphaville-card-container" data-o-grid-colspan="12 S6 M4">
+	<div class="alphaville-card alphaville-card--fill-space alphaville-card--opinion o-card" data-o-component="o-card">		
+		<div class="alphaville-card__content">
+			{{#if _source.authors}}
+				<div class="alphaville-card__theme">
+					<a href="/author?q={{_source.authors.[0].name}}" class="o-card__tag">{{_source.authors.[0].name}}</a>
+				</div>
+			{{else}}
+				{{#_source.primaryTheme}}
+					<div class="alphaville-card__theme">
+						<a href="/search?q={{.}}" class="o-card__tag">{{.}}</a>
+					</div>
+				{{/_source.primaryTheme}}
+			{{/if}}
+
+			<h2 class="alphaville-card__heading alphaville-card__heading-truncate">
+				<a href="{{_source.av2WebUrl}}">{{{_source.title}}}</a>
+			</h2>
+
+			<div class="o-grid-row">
+				<div data-o-grid-colspan="8">
+					{{> comment-counter}}
+					<time data-o-component="o-date" class="o-date alphaville-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
+				</div>
+			</div>
+
+			{{#if _source.authors}}
+				<div class="alphaville-card__headshot">
+					<img src="{{_source.authors.[0].headshotUrl}}" />
+				</div>
+			{{/if}}
+		</div>
+	</div>
+</div>

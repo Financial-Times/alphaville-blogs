@@ -3,6 +3,10 @@
 		{{> grid-cards/card-hero}}
 	{{/isHero}}
 
+	{{#isOpinion}}
+		{{> grid-cards/card-opinion}}
+	{{/isOpinion}}
+
 	{{#isMarketsLive}}
 		{{#isLive}}
 			{{> grid-cards/card-marketslive-live}}
