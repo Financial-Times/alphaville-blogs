@@ -79,7 +79,7 @@ $contact_color: #27757B;
 		}
 	}
 	@include oGridRespondTo(M) {
-		margin: 16px 0 16px 112px;
+		margin: 0 0 16px 112px;
 		& > li {
 			width: 30%;
 			display: inline-block;
