@@ -3,9 +3,102 @@
 const Pusher = require('pusher-client');
 const wpApiBaseUrl = process.env.WP_URL;
 const fetch = require('node-fetch');
+
 const db = require('../lib/services/db');
+require('../lib/dbModels');
+const LiveSession = require('../lib/dbModels/LiveSession');
+
 
 const eventsToTryAgain = [];
+
+
+function onSessionStart (data, retried) {
+	console.log('session start', data);
+
+	const url = data.url.replace(/http(s?):\/\/[^\/]+/, '');
+	return LiveSession.findOneAndUpdate({
+			sessionId: data.uuid
+		}, {
+			sessionId: data.uuid,
+			url: url,
+			createdAt: new Date(data.pubdate)
+		}, {
+			upsert: true
+		})
+	.exec()
+	.catch((err) => {
+		console.log('Error starting session.', data.uuid, err);
+
+		if (!retried) {
+			eventsToTryAgain.push({
+				event: 'session-start',
+				data: data
+			});
+		}
+
+		throw err;
+	});
+}
+
+function onSessionEnd (data, retried) {
+	console.log('session end', data);
+	
+	if (!retried) {
+		for (let i = 0; i < eventsToTryAgain.length; i++) {
+			if (eventsToTryAgain[i].event === 'session-start' && eventsToTryAgain[i].data.uuid === data.uuid) {
+				eventsToTryAgain.splice(i, 1);
+				break;
+			}
+		}
+	}
+
+	return LiveSession.find({
+		sessionId: data.uuid
+	})
+	.remove()
+	.exec()
+	.then(() => {
+		return fetch(`https://${process.env.CCS_URL}/v1/closeCollection?articleId=${data.uuid}`, {
+			headers: {
+				'X-Api-Key': process.env.CCS_API_KEY
+			}
+		}).then((response) => {
+			if (response.status < 200 || response.status >= 400) {
+				throw new Error("Closing Livefyre session failed.");
+			}
+
+			return response.json();
+		}).then((responseJson) => {
+			if (responseJson.success === true) {
+				console.log("Livefyre session closed for ", data);
+				return;
+			} else {
+				throw new Error("Unexpected response from CCS.");
+			}
+		}).catch((err) => {
+			console.log('Error ending session.', data.uuid, err);
+
+			if (!retried) {
+				eventsToTryAgain.push({
+					event: 'session-end',
+					data: data
+				});
+			}
+		});
+	})
+	.catch((err) => {
+		console.log('Error ending session.', data.uuid, err);
+
+		if (!retried) {
+			eventsToTryAgain.push({
+				event: 'session-end',
+				data: data
+			});
+		}
+	});
+}
+
+
 
 let waitTime = 500;
 function fetchChannels () {
@@ -27,89 +120,21 @@ function fetchChannels () {
 	});
 }
 
-
-function onSessionStart (data, retried) {
-	console.log('session start', data);
-	return db.oneOrNone('SELECT id FROM live_sessions WHERE id = $1', data.uuid).then((session) => {
-		const url = data.url.replace(/http(s?):\/\/[^\/]+/, '');
-
-		if (!session) {
-			return db.none('INSERT INTO live_sessions (id, url, created_at) VALUES($1, $2, $3)', [data.uuid, url, data.pubdate]);
-		}
-
-		return;
-	}).catch((err) => {
-		console.log('Error starting session.', data.uuid, err);
-
-		if (!retried) {
-			eventsToTryAgain.push({
-				event: 'session-start',
-				data: data
-			});
-		}
-
-		throw err;
-	});
-}
-
-function onSessionEnd (data, retried) {
-	console.log('session end', data);
-	if (!retried) {
-		for (let i = 0; i < eventsToTryAgain.length; i++) {
-			if (eventsToTryAgain[i].event === 'session-start' && eventsToTryAgain[i].data.uuid === data.uuid) {
-				eventsToTryAgain.splice(i, 1);
-				break;
-			}
-		}
-	}
-
-	return db.oneOrNone('SELECT id FROM live_sessions WHERE id = $1', data.uuid).then((session) => {
-		if (session) {
-			db.none('DELETE FROM live_sessions WHERE id = $1', data.uuid);
-		}
-
-		return fetch(`https://${process.env.CCS_URL}/v1/closeCollection?articleId=${data.uuid}`, {
-			headers: {
-				'X-Api-Key': process.env.CCS_API_KEY
-			}
-		}).then((response) => {
-			if (response.status < 200 || response.status >= 400) {
-				throw new Error("Closing Livefyre session failed.");
-			}
-
-			return response.json();
-		}).then((responseJson) => {
-			if (responseJson.success === true) {
-				return;
-			} else {
-				throw new Error("Unexpected response from CCS.");
-			}
-		}).catch((err) => {
-			console.log('Error ending session.', data.uuid, err);
-
-			if (!retried) {
-				eventsToTryAgain.push({
-					event: 'session-end',
-					data: data
-				});
-			}
-		});
-	});
-}
-
 fetchChannels().then((channelInfo) => {
 	const socket = new Pusher(channelInfo.pusherkey);
 	const webChatChannel = socket.subscribe(channelInfo['web-chats']);
 
-	webChatChannel.bind('session-start', (data) => {
-		if (data.post_type === 'webchat-markets-live') {
-			onSessionStart(data, false);
-		}
-	});
-	webChatChannel.bind('session-end', (data) => {
-		if (data.post_type === 'webchat-markets-live') {
-			onSessionEnd(data, false);
-		}
+	db.connect(() => {
+		webChatChannel.bind('session-start', (data) => {
+			if (data.post_type === 'webchat-markets-live') {
+				onSessionStart(data, false);
+			}
+		});
+		webChatChannel.bind('session-end', (data) => {
+			if (data.post_type === 'webchat-markets-live') {
+				onSessionEnd(data, false);
+			}
+		});
 	});
 });
 
