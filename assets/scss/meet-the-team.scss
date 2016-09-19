@@ -4,58 +4,85 @@ $separator_color: #cec6b9;
 $contact_color: #27757B;
 
 .title {
-	margin: 32px 0 0 112px;
-  	font-size: 44px;
+  	margin: 16px 0 0 16px;
+	font-size: 34px;
 	font-weight: 400;
+    @include oGridRespondTo(M) {
+		margin: 32px 0 0 112px;
+		font-size: 44px;
+    }
 }
 
 .team__member {
 	clear: both;
-	padding-top: 32px;
+	padding-top: 16px;
+	margin-left: 16px;
 	border-top: 1px solid $separator_color;
   	&:first-child {
 		border: 0;
 	}
+	@include oGridRespondTo(M) {
+		padding-top: 32px;
+		margin-left: 0;
+	}
 }
 
 .team__member__name {
-    font-size: 34px;
+    font-size: 24px;
 	font-weight: 400;
+	@include oGridRespondTo(M) {
+		font-size: 34px;
+	}
 }
 
 .team__member__thumb {
-	width: 80px;
-  	float: left;
-  	margin-right: 32px;
+	width: 40px;
+	height: 40px;
+    margin-right: 16px;
+	float: left;
 	img {
       	width: 100%;
-		height: 80px;
+        height: 100%;
 		border-radius: 50%;
         background-size: 100% 0;
 		background-color: white;
         overflow: hidden;
         background-position: 50% 50%;
 	}
+	@include oGridRespondTo(M) {
+		width: 80px;
+		height: 80px;
+		margin-right: 32px;
+	}
 }
 
 .team__member__info {
-	overflow: hidden;
 	p {
 		margin: 16px 0 0 0;
 		text-align: justify;
+	}
+	@include oGridRespondTo(M) {
+		overflow: hidden;
 	}
 }
 
 .team__member__links {
 	width: 100%;
-	margin: 16px 0 16px 112px;
 	padding: 0;
 	list-style-type: none;
 	& > li {
-		width: 33%;
-		display: inline-block;
+		display: block;
+		width: auto;
+		margin-top: 16px;
 		a {
 			color: $contact_color;
+		}
+	}
+	@include oGridRespondTo(M) {
+		margin: 16px 0 16px 112px;
+		& > li {
+			width: 30%;
+			display: inline-block;
 		}
 	}
 }
