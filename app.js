@@ -52,35 +52,22 @@ app.use(function(req, res, next) {
 });
 
 // error handlers
+const errorHandler = (err, req, res, next) => {
+	const isNotProdEnv = app.get('env') === 'development' ||
+		process.env.ENVIRONMENT !== 'prod';
 
-// development error handler
-// will print stacktrace
-if (app.get('env') === 'development' || process.env.ENVIRONMENT !== 'prod') {
-	app.use(function(err, req, res, next) {
-		if (err.status === 404) {
-			res.status(404);
-			res.render('error_404');
-		} else {
-			res.status(err.status || 503);
-			res.render('error', {
-				message: err.errMsg || err.message,
-				error: err
-			});
-		}
-	});
-}
-
-// production error handler
-// no stacktraces leaked to user
-app.use(function(err, req, res, next) {
 	if (err.status === 404) {
 		res.status(404);
 		res.render('error_404');
 	} else {
-		console.log("Error: ", err);
 		res.status(err.status || 503);
-		res.render('error');
+		res.render('error', {
+			message: err.errMsg || err.message,
+			error: isNotProdEnv ? err : {}
+		});
 	}
-});
+};
+
+app.use(errorHandler);
 
 module.exports = app;
