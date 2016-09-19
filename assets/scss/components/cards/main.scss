@@ -281,6 +281,16 @@ $alphaville-card__color--yellow-tint3: #b35400;
 		margin: 0 auto;
 		display: block;
 	}
+
+	.alphaville-card__heading-truncate {
+		max-height: 54px;
+		overflow: hidden;
+	}
+
+	.alphaville-card__heading-truncate--3lines {
+		max-height: 81px;
+		overflow: hidden;
+	}
 }
 
 .alphaville-card--opinion {
@@ -320,7 +330,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 			height: 8px;
 			content: '';
 			background: $alphaville-card__color--yellow-tint2;
-			margin-top: -20px;
+			margin-top: -10px;
 		}
 	}
 
