@@ -67,7 +67,7 @@ document.addEventListener('o.DOMContentLoaded', () => {
 					cardContainer.classList.remove('alphaville-curation--save-in-progress');
 					const spinner = cardContainer.querySelector('.alphaville-curation--spinner');
 					if (spinner) {
-						cardContainer.removeChild();
+						cardContainer.removeChild(spinner);
 					}
 				}
 
