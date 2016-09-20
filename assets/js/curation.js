@@ -55,25 +55,28 @@ document.addEventListener('o.DOMContentLoaded', () => {
 				}
 
 				function onFail (err) {
-					new alphavilleUi.AlertOverlay('Error', err.message || "An error occured.");
+					new alphavilleUi.AlertOverlay('Error', err.msg || "An error occured.");
 					select.querySelector('[selected]').removeAttribute('selected');
 					select.querySelector(`[value="${select.getAttribute('data-last-selected')}"]`).setAttribute('selected', 'selected');
 					select.removeAttribute('disabled');
 					cardContainer.classList.remove('alphaville-curation--save-in-progress');
-					cardContainer.removeChild(cardContainer.querySelector('.alphaville-curation--spinner'));
+					const spinner = cardContainer.querySelector('.alphaville-curation--spinner');
+					if (spinner) {
+						cardContainer.removeChild();
+					}
 				}
 
 				if (selectedValue === 'blog') {
-					alphavilleUi.utils.httpRequest.post({
+					alphavilleUi.utils.httpRequest.get({
 						url: `${curationApiUrl}/delete`,
-						body: {
+						query: {
 							uuid: uuid
 						}
 					}).then(onSuccess).catch(onFail);
 				} else {
-					alphavilleUi.utils.httpRequest.post({
+					alphavilleUi.utils.httpRequest.get({
 						url: `${curationApiUrl}/save`,
-						body: {
+						query: {
 							uuid: uuid,
 							type: selectedValue
 						}

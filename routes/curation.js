@@ -7,7 +7,7 @@ const curationCtrl = require('../lib/controllers/curationCtrl');
 router.get('/', curationCtrl.index);
 router.get('/list', curationCtrl.list);
 
-router.post('/save', curationCtrl.save);
-router.post('/delete', curationCtrl.delete);
+router.get('/save', curationCtrl.save);
+router.get('/delete', curationCtrl.delete);
 
 module.exports = router;
