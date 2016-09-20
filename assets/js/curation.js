@@ -1,5 +1,6 @@
 require('./common');
 require('o-date');
+require('o-comment-count');
 
 const alphavilleUi = require('alphaville-ui');
 const Delegate = require('dom-delegate');
