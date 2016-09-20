@@ -36,21 +36,25 @@ document.addEventListener('o.DOMContentLoaded', () => {
 				`));
 
 				function onSuccess (data) {
-					cardContainer.classList.remove('alphaville-curation--save-in-progress');
-					cardContainer.removeChild(cardContainer.querySelector('.alphaville-curation--spinner'));
-
 					if (typeof data === 'string') {
 						data = JSON.parse(data);
 					}
 
-					if (data.html) {
-						const domObj = alphavilleUi.utils.dom.toDOM(data.html);
-						cardContainer.innerHTML = domObj.querySelector('.alphaville-card-container').innerHTML;
+					if (data.status === 'ok') {
+						cardContainer.classList.remove('alphaville-curation--save-in-progress');
+						cardContainer.removeChild(cardContainer.querySelector('.alphaville-curation--spinner'));
+
+						if (data.html) {
+							const domObj = alphavilleUi.utils.dom.toDOM(data.html);
+							cardContainer.innerHTML = domObj.querySelector('.alphaville-card-container').innerHTML;
+						} else {
+							new alphavilleUi.AlertOverlay('Warning', `
+								The data has been saved, but for some reason the card could not be updated.<br/>
+								Please refresh the page to see the updated cards.
+							`);
+						}
 					} else {
-						new alphavilleUi.AlertOverlay('Warning', `
-							The data has been saved, but for some reason the card could not be updated.<br/>
-							Please refresh the page to see the updated cards.
-						`);
+						onFail(data);
 					}
 				}
 
@@ -67,16 +71,16 @@ document.addEventListener('o.DOMContentLoaded', () => {
 				}
 
 				if (selectedValue === 'blog') {
-					alphavilleUi.utils.httpRequest.get({
+					alphavilleUi.utils.httpRequest.post({
 						url: `${curationApiUrl}/delete`,
-						query: {
+						body: {
 							uuid: uuid
 						}
 					}).then(onSuccess).catch(onFail);
 				} else {
-					alphavilleUi.utils.httpRequest.get({
+					alphavilleUi.utils.httpRequest.post({
 						url: `${curationApiUrl}/save`,
-						query: {
+						body: {
 							uuid: uuid,
 							type: selectedValue
 						}

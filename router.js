@@ -11,8 +11,8 @@ router.use('/about', require('./routes/about'));
 router.use('/meet-the-team', require('./routes/meet'));
 router.use('/author', require('./routes/author'));
 
-router.use('/curation', auth(), require('./routes/curation'));
 router.use('/', auth(), require('./routes/marketslive'));
 router.use('/', auth(), require('./routes/article'));
+router.use('/curation', require('./routes/curation'));
 
 module.exports = router;

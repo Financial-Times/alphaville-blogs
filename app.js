@@ -16,6 +16,8 @@ const app = alphavilleExpress({
 	env: env
 });
 
+app.set('s3o-cookie-ttl', 86400000); // one day (in ms)
+
 
 app.use(function (req, res, next ) {
 	const _render = res.render;
