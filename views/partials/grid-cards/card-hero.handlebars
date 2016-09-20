@@ -26,7 +26,9 @@
 					</div>
 				</div>
 				<div data-o-grid-colspan="5 XL4">
-					<img class="alphaville-card__image" src="{{_source.mainImage.url}}" alt="{{_source.mainImage.title}}">
+					<a href="{{_source.av2WebUrl}}">
+						<img class="alphaville-card__image" src="{{_source.mainImage.url}}" alt="{{_source.mainImage.title}}">
+					</a>
 
 					{{> comment-counter}}
 					<time data-o-component="o-date" class="o-date alphaville-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
