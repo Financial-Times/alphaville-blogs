@@ -46,6 +46,14 @@ alphavilleBuildTools(gulp, {
 			sass: './assets/scss/ml-index.scss',
 			buildJs: 'ml-index.js',
 			buildCss: 'ml-index.css'
+		},
+		{
+			id: 'curation',
+			standalone: 'mlIndexBundle',
+			js: './assets/js/curation.js',
+			sass: './assets/scss/curation.scss',
+			buildJs: 'curation.js',
+			buildCss: 'curation.css'
 		}
 	]
 });

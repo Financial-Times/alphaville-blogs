@@ -1,5 +1,5 @@
 <div class="alphaville-card-container" data-o-grid-colspan="12 S6 M4">
-	<div class="alphaville-card alphaville-card--fill-space alphaville-card--opinion o-card" data-o-component="o-card">		
+	<div class="alphaville-card alphaville-card--fill-space alphaville-card--opinion o-card" data-o-component="o-card" data-article-id="{{_id}}" data-card-type="opinion">
 		<div class="alphaville-card__content">
 			{{#if _source.authors}}
 				<div class="alphaville-card__theme">
@@ -19,7 +19,7 @@
 
 			<div class="alphaville-card__footer">
 				<div class="o-grid-row">
-					<div data-o-grid-colspan="8">
+					<div data-o-grid-colspan="7 L8">
 						{{> comment-counter}}
 						<time data-o-component="o-date" class="o-date alphaville-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
 					</div>
@@ -33,4 +33,8 @@
 			{{/if}}
 		</div>
 	</div>
+
+	{{#if curation}}
+		{{> curation}}
+	{{/if}}
 </div>

@@ -1,0 +1,17 @@
+{{#contentFor "head"}}
+<link rel="stylesheet" href="{{assetsBasePath}}/build/curation.css" />
+<script>
+	(function () {
+		ctmLoadScript({
+			src: "{{assetsBasePath}}/build/curation.js",
+			async: true
+		});
+	}());
+</script>
+{{/contentFor}}
+
+<div class="o-grid-container alphaville-article-grid">
+	<div class="o-grid-row">
+		{{> grid-cards/item-list}}
+	</div>
+</div>
