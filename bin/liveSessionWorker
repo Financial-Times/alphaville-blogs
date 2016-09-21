@@ -6,7 +6,7 @@ const fetch = require('node-fetch');
 
 const db = require('../lib/services/db');
 require('../lib/dbModels');
-const LiveSession = require('../lib/dbModels/LiveSession');
+const LiveSessionModel = require('../lib/dbModels/LiveSession');
 
 
 const eventsToTryAgain = [];
@@ -16,7 +16,7 @@ function onSessionStart (data, retried) {
 	console.log('session start', data);
 
 	const url = data.url.replace(/http(s?):\/\/[^\/]+/, '');
-	return LiveSession.findOneAndUpdate({
+	return LiveSessionModel.findOneAndUpdate({
 			sessionId: data.uuid
 		}, {
 			sessionId: data.uuid,
@@ -52,7 +52,7 @@ function onSessionEnd (data, retried) {
 		}
 	}
 
-	return LiveSession.find({
+	return LiveSessionModel.find({
 		sessionId: data.uuid
 	})
 	.remove()
