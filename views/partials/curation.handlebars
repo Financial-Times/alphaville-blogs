@@ -1,7 +1,12 @@
-{{#curation}}
-	<select class="alphaville-card-curation" data-last-selected="{{selected}}">
-		{{#options}}
-			<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{label}}</option>
-		{{/options}}
-	</select>
-{{/curation}}
+{{#curationOptions}}
+	<div class="alphaville-card-curation">
+		<select name="alphaville-card-curation-type" data-last-selected="{{selected}}">
+			{{#options}}
+				<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{label}}</option>
+			{{/options}}
+		</select>
+		{{#hero}}
+			<input type="checkbox" name="alphaville-card-curation-hero" value="{{value}}" {{#selected}}checked="checked"{{/selected}} /> {{label}}
+		{{/hero}}
+	</div>
+{{/curationOptions}}

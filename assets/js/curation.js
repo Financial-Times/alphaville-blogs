@@ -1,6 +1,6 @@
 require('./common');
-require('o-date');
-require('o-comment-count');
+const oDate = require('o-date');
+const oCommentCount = require('o-comment-count');
 
 const alphavilleUi = require('alphaville-ui');
 const Delegate = require('dom-delegate');
@@ -20,7 +20,7 @@ const curationApiUrl = '/curation';
 
 document.addEventListener('o.DOMContentLoaded', () => {
 	const curationDelegate = new Delegate(document.body);
-	curationDelegate.on('change', '.alphaville-card-curation', (e) => {
+	curationDelegate.on('change', '[name="alphaville-card-curation-type"]', (e) => {
 		const select = e.target;
 		const selectedValue = select.options[select.selectedIndex].value;
 		let cardContainer = alphavilleUi.utils.dom.getParents(e.target, '.alphaville-card-container');
@@ -46,8 +46,9 @@ document.addEventListener('o.DOMContentLoaded', () => {
 						cardContainer.removeChild(cardContainer.querySelector('.alphaville-curation--spinner'));
 
 						if (data.html) {
-							const domObj = alphavilleUi.utils.dom.toDOM(data.html);
-							cardContainer.innerHTML = domObj.querySelector('.alphaville-card-container').innerHTML;
+							document.querySelector('.alphaville-article-grid .o-grid-row').innerHTML = data.html;
+							oDate.init();
+							oCommentCount.init();
 						} else {
 							new alphavilleUi.AlertOverlay('Warning', `
 								The data has been saved, but for some reason the card could not be updated.<br/>
@@ -84,6 +85,76 @@ document.addEventListener('o.DOMContentLoaded', () => {
 						body: {
 							uuid: uuid,
 							type: selectedValue
+						}
+					}).then(onSuccess).catch(onFail);
+				}
+			}
+		}
+	});
+
+	curationDelegate.on('change', '[name="alphaville-card-curation-hero"]', (e) => {
+		const checked = e.target.checked;
+		const checkbox = e.target;
+
+		let cardContainer = alphavilleUi.utils.dom.getParents(e.target, '.alphaville-card-container');
+		if (cardContainer && cardContainer.length) {
+			cardContainer = cardContainer[0];
+
+			const card = cardContainer.querySelector('.alphaville-card');
+			if (card) {
+				const uuid = card.getAttribute('data-article-id');
+				checkbox.setAttribute('disabled', 'disabled');
+				cardContainer.classList.add('alphaville-curation--save-in-progress');
+				cardContainer.appendChild(alphavilleUi.utils.dom.toDOM(`
+					<div class="alphaville-curation--spinner"></div>
+				`));
+
+				function onSuccess (data) {
+					if (typeof data === 'string') {
+						data = JSON.parse(data);
+					}
+
+					if (data.status === 'ok') {
+						cardContainer.classList.remove('alphaville-curation--save-in-progress');
+						cardContainer.removeChild(cardContainer.querySelector('.alphaville-curation--spinner'));
+
+						if (data.html) {
+							document.querySelector('.alphaville-article-grid .o-grid-row').innerHTML = data.html;
+							oDate.init();
+							oCommentCount.init();
+						} else {
+							new alphavilleUi.AlertOverlay('Warning', `
+								The data has been saved, but for some reason the card could not be updated.<br/>
+								Please refresh the page to see the updated cards.
+							`);
+						}
+					} else {
+						onFail(data);
+					}
+				}
+
+				function onFail (err) {
+					new alphavilleUi.AlertOverlay('Error', err.msg || "An error occured.");
+					cardContainer.classList.remove('alphaville-curation--save-in-progress');
+					const spinner = cardContainer.querySelector('.alphaville-curation--spinner');
+					if (spinner) {
+						cardContainer.removeChild(spinner);
+					}
+				}
+
+				if (!checked) {
+					alphavilleUi.utils.httpRequest.post({
+						url: `${curationApiUrl}/delete`,
+						body: {
+							type: 'hero'
+						}
+					}).then(onSuccess).catch(onFail);
+				} else {
+					alphavilleUi.utils.httpRequest.post({
+						url: `${curationApiUrl}/save`,
+						body: {
+							uuid: uuid,
+							type: 'hero'
 						}
 					}).then(onSuccess).catch(onFail);
 				}
