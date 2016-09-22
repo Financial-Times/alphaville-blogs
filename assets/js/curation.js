@@ -1,6 +1,7 @@
 require('./common');
 const oDate = require('o-date');
 const oCommentCount = require('o-comment-count');
+const oAds = require('o-ads');
 
 const alphavilleUi = require('alphaville-ui');
 const Delegate = require('dom-delegate');
@@ -49,6 +50,7 @@ document.addEventListener('o.DOMContentLoaded', () => {
 							document.querySelector('.alphaville-article-grid .o-grid-row').innerHTML = data.html;
 							oDate.init();
 							oCommentCount.init();
+							oAds.init();
 						} else {
 							new alphavilleUi.AlertOverlay('Warning', `
 								The data has been saved, but for some reason the card could not be updated.<br/>
@@ -122,6 +124,7 @@ document.addEventListener('o.DOMContentLoaded', () => {
 							document.querySelector('.alphaville-article-grid .o-grid-row').innerHTML = data.html;
 							oDate.init();
 							oCommentCount.init();
+							oAds.init();
 						} else {
 							new alphavilleUi.AlertOverlay('Warning', `
 								The data has been saved, but for some reason the card could not be updated.<br/>
