@@ -3,7 +3,6 @@
 const Router = require('express').Router;
 const router = new Router();
 const auth = require('alphaville-auth-middleware');
-const restrictedAccess = require('./lib/middlewares/restrictedAccess');
 
 router.use('/', require('./routes/index'));
 router.use('/home', require('./routes/home'));
@@ -14,6 +13,6 @@ router.use('/author', require('./routes/author'));
 
 router.use('/', require('./routes/marketslive'));
 router.use('/', auth(), require('./routes/article'));
-router.use('/curation', auth(), restrictedAccess, require('./routes/curation'));
+router.use('/curation', require('./routes/curation'));
 
 module.exports = router;
