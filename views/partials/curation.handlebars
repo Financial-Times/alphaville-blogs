@@ -1,12 +1,14 @@
 {{#curationOptions}}
 	<div class="alphaville-card-curation">
-		<select name="alphaville-card-curation-type" data-last-selected="{{selected}}">
+		{{#hero}}
+			<input type="checkbox" id="alphaville-card-curation-hero-{{../_id}}" name="alphaville-card-curation-hero" value="{{value}}" class="o-forms-checkbox o-forms-checkbox--small" {{#selected}}checked="checked"{{/selected}} />
+			<label class="o-forms-label" for="alphaville-card-curation-hero-{{../_id}}">{{label}}</label>
+		{{/hero}}
+		
+		<select class="o-forms-select o-forms-select--small" name="alphaville-card-curation-type" data-last-selected="{{selected}}" {{#disabled}}disabled="disabled"{{/disabled}}>
 			{{#options}}
 				<option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{label}}</option>
 			{{/options}}
 		</select>
-		{{#hero}}
-			<input type="checkbox" name="alphaville-card-curation-hero" value="{{value}}" {{#selected}}checked="checked"{{/selected}} /> {{label}}
-		{{/hero}}
 	</div>
 {{/curationOptions}}

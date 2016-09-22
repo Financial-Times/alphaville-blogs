@@ -1,6 +1,9 @@
 @import './common';
 @import 'components/cards/main';
 
+$o-forms-is-silent: false;
+@import 'o-forms/main';
+
 .alphaville-article-grid {
 	.alphaville-card-container {
 		margin-top: 10px;
@@ -17,8 +20,13 @@
 	position: absolute;
 	top: 0;
 	right: 0;
-	background: white;
+	background: rgba(255, 255, 255, 0.5);
 	padding: 5px;
+	white-space: nowrap;
+
+	.o-forms-select {
+		width: auto;
+	}
 }
 
 .alphaville-curation--save-in-progress {
