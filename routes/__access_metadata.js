@@ -15,7 +15,7 @@ router.get('/__access_metadata', (req, res) => {
 			path_regex: "/marketslive/(?<uid>[a-f0-9\-]+)",
 			classification: "conditional_registered"
 		}, {
-			path_regex: "/marketslive/([0-9]+\-[0-9]+\-[0-9]+-?[0-9]+?\/?)",
+			path_regex: "/marketslive/([0-9]+)-([0-9]+)-([0-9]+)(?-)(?[0-9]+).*",
 			classification: "conditional_registered"
 		}, {
 			path_regex: "/curation/.*",
