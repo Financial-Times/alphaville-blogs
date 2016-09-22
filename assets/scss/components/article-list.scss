@@ -76,6 +76,7 @@
 		color: oColorsGetPaletteColor('teal-1');
 		font-weight: bold;
 		outline: 0;
+		overflow: hidden;
 
 		i {
 			@include oIconsGetIcon('arrow-down', oColorsGetPaletteColor('teal-1'), 17);
