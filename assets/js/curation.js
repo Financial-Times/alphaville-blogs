@@ -73,16 +73,16 @@ document.addEventListener('o.DOMContentLoaded', () => {
 				}
 
 				if (selectedValue === 'blog') {
-					alphavilleUi.utils.httpRequest.post({
+					alphavilleUi.utils.httpRequest.get({
 						url: `${curationApiUrl}/delete`,
-						body: {
+						query: {
 							uuid: uuid
 						}
 					}).then(onSuccess).catch(onFail);
 				} else {
-					alphavilleUi.utils.httpRequest.post({
+					alphavilleUi.utils.httpRequest.get({
 						url: `${curationApiUrl}/save`,
-						body: {
+						query: {
 							uuid: uuid,
 							type: selectedValue
 						}
@@ -143,16 +143,16 @@ document.addEventListener('o.DOMContentLoaded', () => {
 				}
 
 				if (!checked) {
-					alphavilleUi.utils.httpRequest.post({
+					alphavilleUi.utils.httpRequest.get({
 						url: `${curationApiUrl}/delete`,
-						body: {
+						query: {
 							type: 'hero'
 						}
 					}).then(onSuccess).catch(onFail);
 				} else {
-					alphavilleUi.utils.httpRequest.post({
+					alphavilleUi.utils.httpRequest.get({
 						url: `${curationApiUrl}/save`,
-						body: {
+						query: {
 							uuid: uuid,
 							type: 'hero'
 						}
