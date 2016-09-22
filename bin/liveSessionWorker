@@ -180,18 +180,14 @@ setInterval(() => {
 						if (json && json.success === true) {
 							if (json.data.status === 'closed') {
 								onSessionEnd({
-									data: {
-										uuid: session.sessionId
-									}
+									uuid: session.sessionId
 								});
 							}
 						}
 					}).catch((err) => {
 						if (err && err.response && err.response.status === 404) {
 							onSessionEnd({
-								data: {
-									uuid: session.sessionId
-								}
+								uuid: session.sessionId
 							});
 						}
 					});
