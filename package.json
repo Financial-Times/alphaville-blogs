@@ -13,7 +13,7 @@
     "alphaville-es-interface": "Financial-Times/alphaville-es-interface#0.6.7",
     "alphaville-express": "Financial-Times/alphaville-express#0.7.8",
     "alphaville-header-config": "Financial-Times/alphaville-header-config#0.7.0",
-    "alphaville-marketslive-wordpress-api": "Financial-Times/alphaville-marketslive-wordpress-api#0.3.2",
+    "alphaville-marketslive-wordpress-api": "Financial-Times/alphaville-marketslive-wordpress-api#0.4.0",
     "alphaville-team-members": "Financial-Times/alphaville-team-members#0.3.0",
     "bluebird": "^3.4.1",
     "bower": "^1.7.7",

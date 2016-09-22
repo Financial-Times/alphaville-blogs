@@ -7,6 +7,8 @@ const fetch = require('node-fetch');
 const db = require('../lib/services/db');
 require('../lib/dbModels');
 const LiveSessionModel = require('../lib/dbModels/LiveSession');
+const WpApi = require('alphaville-marketslive-wordpress-api');
+WpApi.setBaseUrl(wpApiBaseUrl);
 
 
 const eventsToTryAgain = [];
@@ -62,12 +64,14 @@ function onSessionEnd (data, retried) {
 			headers: {
 				'X-Api-Key': process.env.CCS_API_KEY
 			}
-		}).then((response) => {
-			if (response.status < 200 || response.status >= 400) {
-				throw new Error("Closing Livefyre session failed.");
+		}).then((res) => {
+			if (res.ok) {
+				return res.json();
+			} else {
+				const error = new Error("Closing Livefyre session failed. " + res.statusText);
+				error.response = res;
+				throw error;
 			}
-
-			return response.json();
 		}).then((responseJson) => {
 			if (responseJson.success === true) {
 				console.log("Livefyre session closed for ", data);
@@ -102,12 +106,14 @@ function onSessionEnd (data, retried) {
 
 let waitTime = 500;
 function fetchChannels () {
-	return fetch(wpApiBaseUrl + '/notify/channels').then((response) => {
-		if (response.status < 200 || response.status >= 400) {
-			throw new Error("Request failed");
+	return fetch(wpApiBaseUrl + '/notify/channels').then((res) => {
+		if (res.ok) {
+			return res.json();
+		} else {
+			const error = new Error("Channel fetch failed. " + res.statusText);
+			error.response = res;
+			throw error;
 		}
-
-		return response.json();
 	}).catch(() => {
 		return new Promise((resolve) => {
 			setTimeout(() => {
@@ -159,3 +165,37 @@ function retryFailed () {
 	}
 }
 retryFailed();
+
+
+setInterval(() => {
+	LiveSessionModel
+		.find()
+		.exec()
+		.then((results) => {
+			if (results) {
+				results.forEach((session) => {
+					const wpApi = new WpApi(`${process.env.WP_URL}/${session.url}`);
+
+					wpApi.init().then((json) => {
+						if (json && json.success === true) {
+							if (json.data.status === 'closed') {
+								onSessionEnd({
+									data: {
+										uuid: session.sessionId
+									}
+								});
+							}
+						}
+					}).catch((err) => {
+						if (err && err.response && err.response.status === 404) {
+							onSessionEnd({
+								data: {
+									uuid: session.sessionId
+								}
+							});
+						}
+					});
+				});
+			}
+		});
+}, 60000);
