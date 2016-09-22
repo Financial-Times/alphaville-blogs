@@ -24,6 +24,10 @@ app.use(function (req, res, next ) {
 	res.render = function( view, options, fn ) {
 		options = options || {};
 
+		_.merge(options, {
+			appUrl: process.env.APP_URL
+		});
+
 		if (options.withMostRecentPost === true) {
 			articleService.getRecentPosts().then((mostRecentPost) => {
 				const viewModel = _.merge({}, options, {
