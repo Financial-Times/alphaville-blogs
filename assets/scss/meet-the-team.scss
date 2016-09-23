@@ -14,14 +14,15 @@ $contact_color: #27757B;
 }
 
 .team__member {
-	clear: both;
 	padding-top: 16px;
 	margin-left: 16px;
 	border-top: 1px solid $separator_color;
+	font: 16px/1.2 Georgia, serif;
   	&:first-child {
 		border: 0;
 	}
 	@include oGridRespondTo(M) {
+		font: 18px/1.4 Georgia, serif;
 		padding-top: 32px;
 		margin-left: 0;
 	}
@@ -59,7 +60,6 @@ $contact_color: #27757B;
 .team__member__info {
 	p {
 		margin: 16px 0 0 0;
-		text-align: justify;
 	}
 	@include oGridRespondTo(M) {
 		overflow: hidden;
@@ -73,7 +73,7 @@ $contact_color: #27757B;
 	& > li {
 		display: block;
 		width: auto;
-		margin-top: 16px;
+		margin-top: 8px;
 		a {
 			color: $contact_color;
 		}
@@ -81,6 +81,7 @@ $contact_color: #27757B;
 	@include oGridRespondTo(M) {
 		margin: 0 0 16px 112px;
 		& > li {
+			margin-top: 16px;
 			width: 30%;
 			display: inline-block;
 		}
