@@ -3,6 +3,9 @@ const router = require('express').Router();
 router.get('/__access_metadata', (req, res) => {
 	res.json({
 		access_metadata: [{
+			path_regex: "/curation/.*",
+			classification: "conditional_registered"
+		}, {
 			path_regex: "/marketslive/\\d{4}-\\d{2}-\\d{2}.*",
 			classification: "conditional_registered"
 		}, {
