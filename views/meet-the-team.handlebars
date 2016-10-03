@@ -23,18 +23,18 @@
                         <div class="team__member__info">
                             <h2 class="o-typography-heading2 team__member__name">{{title}}</h2>
                             {{{content}}}
+                            <ul class="team__member__links">
+                                <li class="email">
+                                    <a href="mailto:{{email}}?subject=ftalphaville">{{email}}</a>
+                                </li>
+                                <li class="twitter">
+                                    <a target="_blank" href="https://twitter.com/{{twitter}}">twitter: {{twitter}}</a>
+                                </li>
+                                <li class="posts">
+                                    <a href="/author?q={{title}}">see all posts</a>
+                                </li>
+                            </ul>
                         </div>
-                        <ul class="team__member__links">
-                            <li>
-                                <a href="mailto:{{email}}?subject=ftalphaville">{{email}}</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://twitter.com/{{twitter}}">twitter: {{twitter}}</a>
-                            </li>
-                            <li>
-                                <a href="/author?q={{title}}">see all posts</a>
-                            </li>
-                        </ul>
                     </div>
                 {{/team}}
             </div>
