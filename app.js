@@ -28,19 +28,7 @@ app.use(function (req, res, next ) {
 			appUrl: process.env.APP_URL
 		});
 
-		if (options.withMostRecentPost === true) {
-			articleService.getRecentPosts().then((mostRecentPost) => {
-				const viewModel = _.merge({}, options, {
-					mostRecentPost: mostRecentPost.hits.hits[0]._source
-				});
-				_render.call(this, view, viewModel, fn);
-			}).catch((e) => {
-				console.log("Error fetching most recent post: ", e);
-				_render.call(this, view, options, fn);
-			});
-		} else {
-			_render.call(this, view, options, fn);
-		}
+		_render.call(this, view, options, fn);
 	};
 	next();
 });
