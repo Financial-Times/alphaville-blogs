@@ -362,3 +362,100 @@ $alphaville-card__color--yellow-tint3: #b35400;
 		color: $alphaville-card__color--yellow-tint2;
 	}
 }
+
+.alphaville-card--image-lead {
+	background-color: $alphaville-card__color--grey-tint3;
+	position: relative;
+	padding: 10px;
+
+	.alphaville-card__heading {
+		@include oTypographySansBold('xl');
+		line-height: 26px;
+		font-size: 25px;
+		margin-bottom: 12px;
+
+		&,
+		a {
+			color: $alphaville-card__color--yellow-tint1;
+		}
+	}
+
+	.alphaville-card__theme {
+		margin-bottom: 6px;
+
+		&,
+		a,
+		.alphaville-card__tag {
+			@include oTypographySansData('xl');
+			font-size: 25px;
+			line-height: 26px;
+			text-transform: uppercase;
+			color: $alphaville-card__color--yellow-tint2;
+		}
+
+		&:before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 118px;
+			height: 8px;
+			content: '';
+			background: $alphaville-card__color--yellow-tint2;
+			margin-top: -10px;
+		}
+	}
+
+	.alphaville-card__heading-truncate {
+		max-height: 54px;
+		overflow: hidden;
+	}
+
+	.alphaville-card__heading-truncate--3lines {
+		max-height: 81px;
+		overflow: hidden;
+	}
+
+	.alphaville-card__timestamp {
+		color: $alphaville-card__color--yellow-tint1;
+	}
+
+	.alphaville-card--comment-counter {
+		color: $alphaville-card__color--yellow-tint1;
+
+		&:after {
+			@include oIconsGetIcon('comment', $alphaville-card__color--yellow-tint1, 14);
+			position: relative;
+			margin-left: 5px;
+			vertical-align: middle;
+		}
+	}
+
+	.alphaville-card__image-background {
+		position: absolute;
+		width: 98%;
+		height: 74%;
+		top: 25%;
+		left: 0;
+		overflow: hidden;
+		padding-left: 1%;
+		padding-right: 1%;
+
+		div {
+			width: 100%;
+			height: 100%;
+			position: relative;
+			opacity: 0.6;
+			background-size: cover;
+
+			&:before {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 54px;
+				top: 0;
+				left: 0;
+				background: linear-gradient(to bottom, $alphaville-card__color--grey-tint3 0%, transparent 100%);
+			}
+		}
+	}
+}

@@ -1,0 +1,33 @@
+<div class="alphaville-card-container" data-o-grid-colspan="12 S6 M4">
+	<div class="alphaville-card alphaville-card--fill-space alphaville-card--image-lead o-card" data-o-component="o-card" data-article-id="{{_id}}" data-card-type="imagelead">
+		<div class="alphaville-card__image-background">
+			<div style="background-image: url({{_source.mainImage.url}})"></div>
+		</div>
+		<div class="alphaville-card__content">
+			{{#if _source.authors}}
+				<div class="alphaville-card__theme">
+					<a href="/author?q={{_source.authors.[0].name}}" class="alphaville-card__tag">{{_source.authors.[0].name}}</a>
+				</div>
+			{{else}}
+				{{#_source.primaryTheme}}
+					<div class="alphaville-card__theme">
+						<a href="/search?q={{.}}" class="alphaville-card__tag">{{.}}</a>
+					</div>
+				{{/_source.primaryTheme}}
+			{{/if}}
+
+			<h2 class="alphaville-card__heading alphaville-card__heading-truncate">
+				<a href="{{_source.av2WebUrl}}">{{{_source.title}}}</a>
+			</h2>
+
+			<div class="alphaville-card__footer">
+				{{> comment-counter}}
+				<time data-o-component="o-date" class="o-date alphaville-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
+			</div>
+		</div>
+	</div>
+
+	{{#if curation}}
+		{{> curation}}
+	{{/if}}
+</div>
