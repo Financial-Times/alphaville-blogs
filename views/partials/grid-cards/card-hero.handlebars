@@ -6,12 +6,12 @@
 					<div class="alphaville-card__content">
 						{{#if _source.authors}}
 							<div class="alphaville-card__theme">
-								<a href="/author?q={{_source.authors.[0].name}}" class="o-card__tag">{{_source.authors.[0].name}}</a>
+								<a href="/author?q={{_source.authors.[0].name}}" class="alphaville-card__tag">{{_source.authors.[0].name}}</a>
 							</div>
 						{{else}}
 							{{#_source.primaryTheme}}
 								<div class="alphaville-card__theme">
-									<a href="/search?q={{.}}" class="o-card__tag">{{.}}</a>
+									<a href="/search?q={{.}}" class="alphaville-card__tag">{{.}}</a>
 								</div>
 							{{/_source.primaryTheme}}
 						{{/if}}

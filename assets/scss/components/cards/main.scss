@@ -252,14 +252,15 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	}
 
 	.alphaville-card__theme {
-		@include oTypographySansBold('xl');
-		font-size: 25px;
-		line-height: 26px;
-		text-transform: uppercase;
 		margin-bottom: 6px;
 
 		&,
-		a {
+		a,
+		.alphaville-card__tag {
+			@include oTypographySansBold('xl');
+			font-size: 25px;
+			line-height: 26px;
+			text-transform: uppercase;
 			color: $alphaville-card__color--yellow-tint2;
 		}
 
@@ -311,14 +312,15 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	}
 
 	.alphaville-card__theme {
-		@include oTypographySansData('xl');
-		font-size: 25px;
-		line-height: 26px;
-		text-transform: uppercase;
 		margin-bottom: 6px;
 
 		&,
-		a {
+		a,
+		.alphaville-card__tag {
+			@include oTypographySansData('xl');
+			font-size: 25px;
+			line-height: 26px;
+			text-transform: uppercase;
 			color: $alphaville-card__color--yellow-tint2;
 		}
 
