@@ -4,25 +4,11 @@
 			<div class="o-grid-row">
 				<div data-o-grid-colspan="7 XL8">
 					<div class="alphaville-card__content">
-						{{#if _source.authors}}
-							<div class="alphaville-card__theme">
-								<a href="/author?q={{_source.authors.[0].name}}" class="alphaville-card__tag">{{_source.authors.[0].name}}</a>
-							</div>
-						{{else}}
-							{{#_source.primaryTheme}}
-								<div class="alphaville-card__theme">
-									<a href="/search?q={{.}}" class="alphaville-card__tag">{{.}}</a>
-								</div>
-							{{/_source.primaryTheme}}
-						{{/if}}
+						{{> grid-cards/elements/primaryTheme}}
 
-						<h2 class="alphaville-card__heading alphaville-card__heading-truncate">
-							<a href="{{_source.av2WebUrl}}">{{_source.title}}</a>
-						</h2>
+						{{> grid-cards/elements/heading}}
 
-						<div class="alphaville-card__standfirst alphaville-card__standfirst-truncate">
-							{{{_source.summaries.[0]}}}
-						</div>
+						{{> grid-cards/elements/standfirst}}
 					</div>
 				</div>
 				<div data-o-grid-colspan="5 XL4">

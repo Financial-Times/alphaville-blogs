@@ -46,6 +46,11 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	overflow: hidden;
 }
 
+.alphaville-card__standfirst-truncate-xl {
+	max-height: 75px;
+	overflow: hidden;
+}
+
 .alphaville-card__timestamp {
 	@include oCardTimestamp;
 	padding: 10px 0 0;
