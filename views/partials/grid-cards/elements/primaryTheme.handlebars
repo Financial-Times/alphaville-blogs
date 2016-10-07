@@ -1,32 +1,32 @@
 {{#if isOpeningQuote}}
 	{{#_source.primaryTheme}}
-		<div class="o-card__meta">
-			<a href="/search?q={{.}}" class="o-card__tag">{{.}}</a>
+		<div class="alphaville-card__theme">
+			<a href="/search?q={{.}}" class="alphaville-card__tag">{{.}}</a>
 		</div>
 	{{/_source.primaryTheme}}
 {{else}}
 	{{#if isFurtherReading}}
 		{{#_source.primaryTheme}}
-			<div class="o-card__meta">
-				<a href="/search?q={{.}}" class="o-card__tag">{{.}}</a>
+			<div class="alphaville-card__theme">
+				<a href="/search?q={{.}}" class="alphaville-card__tag">{{.}}</a>
 			</div>
 		{{/_source.primaryTheme}}
 	{{else}}
 		{{#if isGuestPost}}
 			{{#_source.primaryTheme}}
-				<div class="o-card__meta">
-					<a href="/search?q={{.}}" class="o-card__tag">{{.}}</a>
+				<div class="alphaville-card__theme">
+					<a href="/search?q={{.}}" class="alphaville-card__tag">{{.}}</a>
 				</div>
 			{{/_source.primaryTheme}}
 		{{else}}
 			{{#if _source.authors}}
-				<div class="o-card__meta">
-					<a href="/author?q={{_source.authors.[0].name}}" class="o-card__tag">{{_source.authors.[0].name}}</a>
+				<div class="alphaville-card__theme">
+					<a href="/author?q={{_source.authors.[0].name}}" class="alphaville-card__tag">{{_source.authors.[0].name}}</a>
 				</div>
 			{{else}}
 				{{#_source.primaryTheme}}
-					<div class="o-card__meta">
-						<a href="/search?q={{.}}" class="o-card__tag">{{.}}</a>
+					<div class="alphaville-card__theme">
+						<a href="/search?q={{.}}" class="alphaville-card__tag">{{.}}</a>
 					</div>
 				{{/_source.primaryTheme}}
 			{{/if}}

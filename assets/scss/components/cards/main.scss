@@ -16,6 +16,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 
 .alphaville-card__heading {
 	@include oCardHeading;
+	line-height: 28px;
 }
 
 .alphaville-card__heading--invert {
@@ -35,6 +36,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 
 .alphaville-card__tag {
 	@include oCardTag;
+	margin-bottom: 5px;
 }
 
 .alphaville-card__standfirst {
