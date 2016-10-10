@@ -112,7 +112,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 		font-size: 14px;
 		color: $comment-counter-color;
 		float: right;
-		padding: 9px 0 0;
+		padding: 9px 0 0 5px;
 
 		&:after {
 			@include oIconsGetIcon('comment', $comment-counter-color, 14);
