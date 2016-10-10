@@ -22,11 +22,7 @@
 			</div>
 		{{else}}
 			<div class="alphaville-card__content">
-				{{#_source.primaryTheme}}
-					<div class="alphaville-card__theme">
-						<a href="/search?q={{this}}">{{this}}</a>
-					</div>
-				{{/_source.primaryTheme}}
+				{{> grid-cards/elements/primaryTheme}}
 
 				<h2 class="alphaville-card__heading alphaville-card__heading-truncate">
 					<a href="{{_source.av2WebUrl}}">{{_source.title}}</a>
