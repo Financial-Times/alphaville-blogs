@@ -1,19 +1,23 @@
 <div class="alphaville-card-container" data-o-grid-colspan="12 S6 M4">
-	<div class="alphaville-card alphaville-card--fill-space o-card" data-o-component="o-card" data-article-id="{{_id}}">
+	<div class="alphaville-card alphaville-card--fill-space alphaville-card--marketslive {{#isLive}}alphaville-card--marketslive-live{{/isLive}} o-card" data-o-component="o-card" data-article-id="{{_id}}">
+		<div class="alphaville-card--marketslive-live--lozenge"></div>
+		
 		<div class="alphaville-card__content">
-			<div class="o-card__meta card-primaryTheme">
-				<a href="/marketslive" class="o-card__tag">
-					Markets Live
+			<div class="alphaville-card__theme">
+				<a href="/marketslive">
+					<span class="alphaville-card__theme-part1">Markets</span>
+					<span class="alphaville-card__theme-part2">Live</span>
+					{{#isLive}}
+						<span class="alphaville-card--marketslive-live-lozenge-icon"></span>
+					{{/isLive}}
 				</a>
 			</div>
 
-			{{> grid-cards/elements/heading}}
+			<h2 class="alphaville-card__heading alphaville-card__heading-truncate">
+				<a href="{{_source.av2WebUrl}}">{{{_source.title}}}</a>
+			</h2>
 
 			{{> grid-cards/elements/standfirst}}
-
-			<div class="alphaville-card__footer">
-				<time data-o-component="o-date" class="o-date alphaville-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
-			</div>
 		</div>
 	</div>
 </div>

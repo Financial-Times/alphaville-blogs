@@ -8,12 +8,7 @@
 	{{/isOpinion}}
 
 	{{#isMarketsLive}}
-		{{#isLive}}
-			{{> grid-cards/card-marketslive-live}}
-		{{/isLive}}
-		{{^isLive}}
-			{{> grid-cards/card-marketslive}}
-		{{/isLive}}
+		{{> grid-cards/card-marketslive}}
 	{{/isMarketsLive}}
 
 	{{#isFirstFT}}

@@ -129,12 +129,12 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	}
 }
 
-.alphaville-card--marketslive-live {
+.alphaville-card--marketslive {
 	background-color: $alphaville-card__color--grey-tint3;
 	position: relative;
 	padding: 10px;
 
-	.alphaville-card--marketslive-live--lozenge {
+	.alphaville-card--marketslive--lozenge {
 		@include marketslive-lozenge-icon(
 			$size: 120,
 			$color: $alphaville-card__color--grey-tint2);
@@ -144,7 +144,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 		right: -60px;
 	}
 
-	.alphaville-card--marketslive-live-lozenge-icon {
+	.alphaville-card--marketslive-lozenge-icon {
 		@include marketslive-lozenge-icon(
 			$size: 18,
 			$bgColor: oColorsGetPaletteColor('pink'));
@@ -183,16 +183,17 @@ $alphaville-card__color--yellow-tint3: #b35400;
 		a {
 			text-decoration: none;
 			text-transform: uppercase;
-
-			.alphaville-card__theme-part1 {
-				color: $alphaville-card__color--yellow-tint2;
-			}
-
-			.alphaville-card__theme-part2 {
-				color: oColorsGetPaletteColor('white');
-				font-weight: 600;
-			}
 		}
+
+		.alphaville-card__theme-part1,
+		.alphaville-card__theme-part2 {
+			color: $alphaville-card__color--yellow-tint2;
+		}
+	}
+
+	&.alphaville-card--marketslive-live {
+		color: oColorsGetPaletteColor('white');
+		font-weight: 600;
 	}
 
 	.alphaville-card__standfirst {
