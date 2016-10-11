@@ -48,8 +48,13 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	overflow: hidden;
 }
 
-.alphaville-card__standfirst-truncate-xl {
+.alphaville-card__standfirst-truncate-4lines {
 	max-height: 75px;
+	overflow: hidden;
+}
+
+.alphaville-card__standfirst-truncate-7lines {
+	max-height: 133px;
 	overflow: hidden;
 }
 
