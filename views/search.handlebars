@@ -1,55 +1,54 @@
 {{#contentFor "head"}}
-    <link rel="stylesheet" href="{{assetsBasePath}}/build/main.css" />
-    <script>
-        (function () {
-            ctmLoadScript({
-                src: "{{assetsBasePath}}/build/main.js",
-                async: true
-            });
-        }());
-    </script>
+	<link rel="stylesheet" href="{{assetsBasePath}}/build/main.css" />
+	<script>
+		(function () {
+			ctmLoadScript({
+				src: "{{assetsBasePath}}/build/main.js",
+				async: true
+			});
+		}());
+	</script>
 {{/contentFor}}
 
 <div class="o-grid-container alphaville-article-list">
-    <div class="o-grid-row">
-        <div class="main" data-o-grid-colspan="L8">
-            <div class="article-list">
-                <h1 class="o-typography-heading1">Search results{{#if searchTerm}}: {{searchTerm}}{{/if}}</h1>
-                {{#if searchResults}}
-                    {{#each searchResults}}
-                        {{#isMarketsLive}}
-                            {{> list-cards/card-marketslive}}
-                        {{/isMarketsLive}}
+	<div class="o-grid-row">
+		<div class="main" data-o-grid-colspan="L8">
+			<div class="article-list">
+				<h1 class="o-typography-heading1">Search results{{#if searchTerm}}: {{searchTerm}}{{/if}}</h1>
+				{{#if searchResults}}
+					{{#each searchResults}}
+						{{#isMarketsLive}}
+							{{> list-cards/card-marketslive}}
+						{{/isMarketsLive}}
 
-                        {{^isMarketsLive}}
-                            {{#withImage}}
-                                {{> list-cards/card-image}}
-                            {{/withImage}}
-                            {{^withImage}}
-                                {{> list-cards/card-generic}}
-                            {{/withImage}}
-                        {{/isMarketsLive}}
-                    {{/each}}
-                {{else}}
-                    {{#if message}}
-                        <p>{{message}}</p>
-                    {{else}}
-                        <p>No search results were found.</p>
-                    {{/if}}
-                {{/if}}
-            </div>
+						{{#isBlog}}
+							{{> list-cards/card-generic}}
+						{{/isBlog}}
 
-            <div class="o-grid-row">
-                <div data-o-grid-colspan="12">
-                    {{#pagination}}
-                        {{> pagination}}
-                    {{/pagination}}
-                </div>
-            </div>
-        </div>
-        <div data-o-grid-colspan="hide L4">
-            {{> alphaville-ui/twitter-widget/main}}
-            {{> alphaville-ui/ads/templates/dmpu_desktop}}
-        </div>
-    </div>
+						{{#isFirstFT}}
+							{{> list-cards/card-firstft}}
+						{{/isFirstFT}}
+					{{/each}}
+				{{else}}
+					{{#if message}}
+						<p>{{message}}</p>
+					{{else}}
+						<p>No search results were found.</p>
+					{{/if}}
+				{{/if}}
+			</div>
+
+			<div class="o-grid-row">
+				<div data-o-grid-colspan="12">
+					{{#pagination}}
+						{{> pagination}}
+					{{/pagination}}
+				</div>
+			</div>
+		</div>
+		<div data-o-grid-colspan="hide L4">
+			{{> alphaville-ui/twitter-widget/main}}
+			{{> alphaville-ui/ads/templates/dmpu_desktop}}
+		</div>
+	</div>
 </div>
