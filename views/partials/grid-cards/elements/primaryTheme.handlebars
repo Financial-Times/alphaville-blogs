@@ -5,31 +5,23 @@
 		</div>
 	{{/_source.primaryTheme}}
 {{else}}
-	{{#if isFurtherReading}}
+	{{#if isGuestPost}}
 		{{#_source.primaryTheme}}
 			<div class="alphaville-card__theme">
 				<a href="/search?q={{.}}" class="alphaville-card__tag">{{.}}</a>
 			</div>
 		{{/_source.primaryTheme}}
 	{{else}}
-		{{#if isGuestPost}}
+		{{#if _source.authors}}
+			<div class="alphaville-card__theme">
+				<a href="/author?q={{_source.authors.[0].name}}" class="alphaville-card__tag">{{_source.authors.[0].name}}</a>
+			</div>
+		{{else}}
 			{{#_source.primaryTheme}}
 				<div class="alphaville-card__theme">
 					<a href="/search?q={{.}}" class="alphaville-card__tag">{{.}}</a>
 				</div>
 			{{/_source.primaryTheme}}
-		{{else}}
-			{{#if _source.authors}}
-				<div class="alphaville-card__theme">
-					<a href="/author?q={{_source.authors.[0].name}}" class="alphaville-card__tag">{{_source.authors.[0].name}}</a>
-				</div>
-			{{else}}
-				{{#_source.primaryTheme}}
-					<div class="alphaville-card__theme">
-						<a href="/search?q={{.}}" class="alphaville-card__tag">{{.}}</a>
-					</div>
-				{{/_source.primaryTheme}}
-			{{/if}}
 		{{/if}}
 	{{/if}}
 {{/if}}
