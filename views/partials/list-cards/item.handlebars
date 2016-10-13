@@ -3,14 +3,13 @@
 		{{> list-cards/card-marketslive}}
 	{{/isMarketsLive}}
 
-	{{^isMarketsLive}}
-		{{#withImage}}
-			{{> list-cards/card-image}}
-		{{/withImage}}
-		{{^withImage}}
-			{{> list-cards/card-generic}}
-		{{/withImage}}
-	{{/isMarketsLive}}
+	{{#isBlog}}
+		{{> list-cards/card-generic}}
+	{{/isBlog}}
+
+	{{#isFirstFT}}
+		{{> list-cards/card-firstft}}
+	{{/isFirstFT}}
 
 	{{#withInlineRead}}
 	<div data-o-component="o-expander" class="o-expander o--if-js clearfix"
