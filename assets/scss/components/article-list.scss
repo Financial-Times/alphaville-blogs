@@ -4,7 +4,7 @@
 		border-bottom: 1px solid oColorsGetPaletteColor('pink-tint3');
 		padding-bottom: 15px;
 
-		@include oGridRespondTo(L) {
+		@include oGridRespondTo(M) {
 			text-align: right;
 			border-bottom: 0;
 			padding-bottom: 0;
