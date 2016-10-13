@@ -11,7 +11,7 @@ $o-card-is-silent: false;
 		border-bottom: 1px solid oColorsGetPaletteColor('pink-tint3');
 		padding-bottom: 15px;
 
-		@include oGridRespondTo(M) {
+		@include oGridRespondTo(L) {
 			text-align: right;
 			border-bottom: 0;
 		}
