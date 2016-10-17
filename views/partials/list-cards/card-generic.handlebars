@@ -22,6 +22,10 @@
 			<a href="{{_source.av2WebUrl}}">{{_source.title}}</a>
 		</h3>
 
+        {{#_source.seriesArticles}}
+            {{> series-articles }}
+        {{/_source.seriesArticles}}
+
 		{{#if withImage}}
 			<div class="o-grid-container o-grid-container--bleed">
 				<div class="o-grid-row">

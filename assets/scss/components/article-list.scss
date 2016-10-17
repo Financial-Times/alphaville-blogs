@@ -1,3 +1,5 @@
+@import './article-series';
+
 .alphaville-article-list {
 	.alphaville-list-time {
 		margin-top: 16px;
@@ -85,7 +87,7 @@
 		}
 
 		&[aria-expanded="true"] i {
-			@include oIconsGetIcon('arrow-up', oColorsGetPaletteColor('teal-1'), 17);	
+			@include oIconsGetIcon('arrow-up', oColorsGetPaletteColor('teal-1'), 17);
 		}
 	}
 

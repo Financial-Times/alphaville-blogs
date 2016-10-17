@@ -1,6 +1,6 @@
 {{#contentFor "head"}}
     <link rel="amphtml" href="https://amp.ft.com/content/{{article.id}}" />
-    
+
 	<link rel="stylesheet" href="{{assetsBasePath}}/build/article.css" />
 	<script>
 		(function () {
@@ -34,6 +34,10 @@
                         <time class="article__timestamp o-date" data-o-component="o-date" datetime="{{article.publishedDate}}" data-o-date-js="" title="{{article.publishedDate}}" aria-label="{{article.publishedDate}}">{{article.publishedDate}}</time>
                         <p class="article__byline">by: {{{article.byline}}}</p>
                     </div>
+
+                    {{#article.seriesArticles}}
+                        {{> series-articles }}
+                    {{/article.seriesArticles}}
 
                     <article class="article__body n-content-body">
                         {{#article.attachments}}
