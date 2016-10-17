@@ -3,6 +3,7 @@ require('o-comments');
 require('o-expander');
 require('o-video');
 require('o-share');
+require('./article-series');
 
 const embeddedMedia = require('webchat/src/js/ui/embeddedMedia');
 const oCommentCount = require('o-comment-count');

@@ -1,0 +1,46 @@
+.av-series-wrapper {
+  background-color: #fdf8f2;
+  border-left: 3px solid #2B757A;
+  padding: 10px 16px;
+  margin-bottom: 16px;
+}
+.av-series-title {
+  line-height: 16px;
+  cursor: pointer;
+  &.active {
+    & > span {
+      &:before {
+        background-image: url(//image.webservices.ft.com/v1/images/raw/fticon-v1:arrow-down?source=Alphaville);
+      }
+    }
+  }
+  & > span {
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+    &:before {
+      background-image: url(//image.webservices.ft.com/v1/images/raw/fticon-v1:arrow-right?source=Alphaville);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-color: transparent;
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      vertical-align: middle;
+      position: absolute;
+      top: 0;
+      right: -16px;
+      content: "";
+    }
+  }
+}
+.av-series-articles {
+  display: none;
+  margin: 8px 0;
+  padding-left: 0;
+  list-style-position: inside;
+  &.active {
+    display: block;
+  }
+}
