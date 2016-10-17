@@ -16,7 +16,6 @@
 	};
 
 	document.addEventListener('o.DOMContentLoaded', () => {
-		console.log('gigi');
 		const avSeriesTitle = document.querySelectorAll('.av-series-title');
 		avSeriesTitle.forEach(el => {
 			el.addEventListener('click', (e) => {
