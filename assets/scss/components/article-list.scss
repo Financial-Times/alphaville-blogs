@@ -97,7 +97,6 @@
 		max-height: 9999px;
 
 		&[aria-hidden="true"] {
-			display: block;
 			max-height: 0;
 			transition: 0.2s all ease;
 		}
