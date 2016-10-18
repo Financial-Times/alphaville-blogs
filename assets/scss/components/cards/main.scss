@@ -255,7 +255,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 .alphaville-card--hero {
 	background-color: $alphaville-card__color--pink-tint1;
 	position: relative;
-	padding: 20px;
+	padding: 10px;
 
 	.alphaville-card__heading {
 		@include oTypographySansBold('l');
@@ -290,7 +290,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 			height: 8px;
 			content: '';
 			background: $alphaville-card__color--yellow-tint2;
-			margin-top: -20px;
+			margin-top: -10px;
 		}
 	}
 
