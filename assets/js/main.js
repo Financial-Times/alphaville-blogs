@@ -13,6 +13,15 @@ const alphavilleUi = require('alphaville-ui');
 const InfiniteScroll = alphavilleUi.InfiniteScroll;
 
 
+function checkIfBarrier(html) {
+	const tmpDiv = document.createElement('div');
+	tmpDiv.innerHTML = html;
+	const barrier = tmpDiv.querySelector('.barrier-wrapper');
+	if (barrier) {
+		return barrier.innerHTML;
+	}
+	return html;
+}
 
 document.addEventListener('o.DOMContentLoaded', function () {
 	if (document.querySelector('.alphaville-infinite-scroll-container')) {
@@ -38,7 +47,8 @@ document.addEventListener('o.DOMContentLoaded', function () {
 					ajax: true
 				}
 			}).then((html) => {
-				content.innerHTML = html;
+
+				content.innerHTML = checkIfBarrier(html);
 
 				const closedContentContainer = content.querySelector('.webchat-closed-content');
 
