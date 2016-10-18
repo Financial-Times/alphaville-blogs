@@ -36,13 +36,13 @@ document.addEventListener('o.DOMContentLoaded', function () {
 	}
 
 	document.addEventListener('oExpander.expand', (evt) => {
-		const content = evt.srcElement.querySelector('.o-expander__content');
+		const content = evt.target.querySelector('.o-expander__content');
 		if (!content.innerHTML) {
 			content.innerHTML = `
 				<div class="alphaville-spinner"></div>
 			`;
 			alphavilleUi.utils.httpRequest.get({
-				url: evt.srcElement.getAttribute('data-article-url'),
+				url: evt.target.getAttribute('data-article-url'),
 				query: {
 					ajax: true
 				}
