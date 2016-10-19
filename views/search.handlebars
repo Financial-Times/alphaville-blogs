@@ -17,17 +17,7 @@
 				<h1 class="o-typography-heading1">Search results{{#if searchTerm}}: {{searchTerm}}{{/if}}</h1>
 				{{#if searchResults}}
 					{{#each searchResults}}
-						{{#isMarketsLive}}
-							{{> list-cards/card-marketslive}}
-						{{/isMarketsLive}}
-
-						{{#isBlog}}
-							{{> list-cards/card-generic}}
-						{{/isBlog}}
-
-						{{#isFirstFT}}
-							{{> list-cards/card-firstft}}
-						{{/isFirstFT}}
+						{{> list-cards/item withInlineRead=false}}
 					{{/each}}
 				{{else}}
 					{{#if message}}
