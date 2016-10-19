@@ -224,6 +224,16 @@
 		}
 	}
 
+	&.sysmsg > div {
+		padding-left: 30px;
+		background-position: 0 2px;
+		background-image: url(oAssetsResolve("src/images/icons/loudhailer.png", webchat));
+
+		@include oGridRespondTo(M) {
+			padding-left: 50px;
+		}
+	}
+
 	&.separator {
 		font-weight: bold;
 		border-top: 1px solid #f4cec1;
