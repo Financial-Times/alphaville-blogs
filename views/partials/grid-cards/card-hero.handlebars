@@ -2,33 +2,16 @@
 	<div class="alphaville-card alphaville-card--fill-space alphaville-card--hero o-card" data-o-component="o-card" data-article-id="{{_id}}">
 		<div class="alphaville-card__content">
 			{{#if withImage}}
-				<div class="o-grid-row">
-					<div data-o-grid-colspan="7 XL8">
-						<div class="alphaville-card__content">
-							{{> grid-cards/elements/primaryTheme}}
-
-							{{> grid-cards/elements/heading}}
-
-							{{> grid-cards/elements/standfirst}}
-						</div>
-					</div>
-					<div data-o-grid-colspan="5 XL4">
-						<a href="{{_source.av2WebUrl}}">
-							<img class="alphaville-card__image" src="{{image _source.mainImage.url 250 'low'}}" alt="{{_source.mainImage.title}}">
-						</a>
-					</div>
-				</div>
-			{{else}}
-				{{> grid-cards/elements/primaryTheme}}
-
-				<h2 class="alphaville-card__heading alphaville-card__heading-truncate">
-					<a href="{{_source.av2WebUrl}}">{{_source.title}}</a>
-				</h2>
-
-				<div class="alphaville-card__standfirst alphaville-card__standfirst-truncate">
-					{{{_source.summaries.[0]}}}
-				</div>
+				<a href="{{_source.av2WebUrl}}">
+					<img class="alphaville-card__image" src="{{image _source.mainImage.url 250 'low'}}" alt="{{_source.mainImage.title}}">
+				</a>
 			{{/if}}
+
+			{{> grid-cards/elements/primaryTheme}}
+
+			{{> grid-cards/elements/heading}}
+
+			{{> grid-cards/elements/standfirst}}
 
 			<div class="alphaville-card__footer">
 				{{> comment-counter}}

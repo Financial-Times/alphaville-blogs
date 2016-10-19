@@ -295,10 +295,12 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	}
 
 	.alphaville-card__image {
-		max-width: 100%;
-		max-height: 70%;
-		margin: 0 auto;
 		display: block;
+		float: right;
+		max-width: 40%;
+		max-height: 70%;
+		padding-left: 10px;
+		padding-bottom: 10px;
 	}
 
 	.alphaville-card__heading-truncate {
