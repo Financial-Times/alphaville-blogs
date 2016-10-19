@@ -17,18 +17,20 @@
 
 	document.addEventListener('o.DOMContentLoaded', () => {
 		const avSeriesTitle = document.querySelectorAll('.av-series-title');
-		avSeriesTitle.forEach(el => {
-			el.addEventListener('click', (e) => {
-				let titleEl;
-				if (e.target.className) {
-					titleEl = e.target;
-				} else {
-					titleEl = e.target.parentNode;
-				}
-				let articlesEl = titleEl.nextElementSibling;
-				toggleClass(titleEl, 'active');
-				toggleClass(articlesEl, 'active');
+		if (avSeriesTitle && avSeriesTitle.length) {
+			avSeriesTitle.forEach(el => {
+				el.addEventListener('click', (e) => {
+					let titleEl;
+					if (e.target.className) {
+						titleEl = e.target;
+					} else {
+						titleEl = e.target.parentNode;
+					}
+					let articlesEl = titleEl.nextElementSibling;
+					toggleClass(titleEl, 'active');
+					toggleClass(articlesEl, 'active');
+				});
 			});
-		});
+		}
 	});
 }
