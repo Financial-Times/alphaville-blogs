@@ -14,7 +14,12 @@
 	<div class="o-grid-row">
 		<div class="main" data-o-grid-colspan="L8">
 			<div class="article-list">
-				<h1 class="o-typography-heading1">Search results{{#if searchTerm}}: {{searchTerm}}{{/if}}</h1>
+				{{#if isSearch}}
+					<h1 class="o-typography-heading1">Search results{{#if searchTerm}}: {{searchTerm}}{{/if}}</h1>
+				{{else}}
+					<h1 class="o-typography-heading1">{{searchTerm}}</h1>
+				{{/if}}
+
 				{{#if searchResults}}
 					{{#each searchResults}}
 						{{> list-cards/item withInlineRead=false}}
