@@ -1,16 +1,16 @@
 @import './common';
 
 $separator_color: #cec6b9;
-$contact_color: #27757B;
+$contact_color: #27757b;
 
 .title {
-  	margin: 16px 0 0 16px;
+	margin: 16px 0 0 16px;
 	font-size: 34px;
 	font-weight: 400;
-    @include oGridRespondTo(M) {
+	@include oGridRespondTo(M) {
 		margin: 32px 0 0 112px;
 		font-size: 44px;
-    }
+	}
 }
 
 .team__member {
@@ -18,7 +18,7 @@ $contact_color: #27757B;
 	margin-left: 16px;
 	border-top: 1px solid $separator_color;
 	font: 16px/1.2 Georgia, serif;
-  	&:first-child {
+	&:first-child {
 		border: 0;
 	}
 	@include oGridRespondTo(M) {
@@ -29,7 +29,7 @@ $contact_color: #27757B;
 }
 
 .team__member__name {
-    font-size: 24px;
+	font-size: 24px;
 	font-weight: 400;
 	@include oGridRespondTo(M) {
 		font-size: 34px;
@@ -39,16 +39,16 @@ $contact_color: #27757B;
 .team__member__thumb {
 	width: 40px;
 	height: 40px;
-    margin-right: 16px;
+	margin-right: 16px;
 	float: left;
 	img {
-      	width: 100%;
-        height: 100%;
+		width: 100%;
+		height: 100%;
 		border-radius: 50%;
-        background-size: 100% 0;
+		background-size: 100% 0;
 		background-color: white;
-        overflow: hidden;
-        background-position: 50% 50%;
+		overflow: hidden;
+		background-position: 50% 50%;
 	}
 	@include oGridRespondTo(M) {
 		width: 80px;
@@ -59,7 +59,7 @@ $contact_color: #27757B;
 
 .team__member__info {
 	p {
-		margin: 16px 0 0 0;
+		margin: 16px 0 0;
 	}
 	@include oGridRespondTo(M) {
 		overflow: hidden;
