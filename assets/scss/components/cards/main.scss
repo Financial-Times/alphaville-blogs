@@ -237,6 +237,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	}
 
 	.alphaville-card__subheading {
+		@include oCardHeading;
 		@include oTypographySansBold('s');
 
 		&,
