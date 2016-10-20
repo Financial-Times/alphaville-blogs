@@ -78,25 +78,4 @@ $contact_color: #27757B;
 			color: $contact_color;
 		}
 	}
-	@include oGridRespondTo(M) {
-		margin: 0 0 16px 0;
-		&:after {
-			content: "";
-			display: table;
-			clear: both;
-		}
-		& > li {
-			width: 33.3%;
-            word-wrap: break-word;
-			margin-top: 16px;
-            float: left;
-			display: inline-block;
-            &.twitter {
-				text-align: center;
-			}
-			&.posts {
-				text-align: right;
-			}
-		}
-	}
 }
