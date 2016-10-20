@@ -20,7 +20,7 @@
 {{/contentFor}}
 
 
-<div class="o-grid-container">
+<div class="o-grid-container" data-trackable="ml-index">
 	<div class="o-grid-row">
 		<div data-o-grid-colspan="12 L8">
 			<div class="o-grid-row">
@@ -44,12 +44,12 @@
 								</div>
 							</div>
 							<div data-o-grid-colspan="12 M9">
-								<div class="marketslive-list-items {{#mpu}}alphaville-list-item--with-ad-after{{/mpu}}">
+								<div class="marketslive-list-items {{#mpu}}alphaville-list-item--with-ad-after{{/mpu}}" data-trackable="ml-list">
 									{{#items}}
 										{{#_source}}
 											<div class="o-card o-card--landscape o-card--image-" data-o-component="o-card">
 												<div class="o-card__content">
-													<h2 class="o-card__heading"><a href="{{av2WebUrl}}">{{title}}</a></h2>
+													<h2 class="o-card__heading"><a href="{{av2WebUrl}}" data-trackable="heading">{{title}}</a></h2>
 													<div class="o-card__standfirst">{{summaries}}</div>
 												</div>
 											</div>

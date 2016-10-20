@@ -1,11 +1,11 @@
-<div class="post-header">
+<div class="post-header" data-trackable="article">
 	<h2 class="post-title">
-	{{#indexPage}}<a href="{{webUrl}}">{{/indexPage}}
+	{{#indexPage}}<a href="{{webUrl}}" data-trackable="heading">{{/indexPage}}
 	{{title}}
 	{{#indexPage}}</a>{{/indexPage}}
 	</h2>
 	<div class="post-meta">
-		<strong class="byline"><a href="#">{{byline}}</a></strong>
+		<strong class="byline"><a href="#" data-trackable="byline">{{byline}}</a></strong>
 		<div class="o-author-alerts o-author-alerts--theme" data-o-component="o-author-alerts" data-o-author-alerts-article-id="{{id}}"></div>
 		<span class="meta-divider"> | </span>
 		<time data-o-component="o-date" class="o-date" datetime="{{publishedDate}}">{{publishedDate}} </time>

@@ -10,7 +10,7 @@
     </script>
 {{/contentFor}}
 
-<div class="article__wrapper">
+<div class="article__wrapper" data-trackable="article">
     <div class="o-grid-container">
         <div class="article__main o-grid-row">
             <div data-o-grid-colspan="12 L8 XL7 XLoffset1">
@@ -27,7 +27,7 @@
                 <div class="article__main">
                     {{> shareComponent position='top'}}
 
-                    <article class="article__body n-content-body">
+                    <article class="article__body n-content-body" data-trackable="body">
                         {{{article.body}}}
 
                         <div class="alphaville-in-article-ad">

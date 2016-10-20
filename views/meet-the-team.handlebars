@@ -10,7 +10,7 @@
     </script>
 {{/contentFor}}
 
-<div class="o-grid-container">
+<div class="o-grid-container" data-trackable="meet-the-team">
     <div class="o-grid-row">
         <div data-o-grid-colspan="12 L8">
             <h1 class="o-typography-heading1 title">Meet the Alphaville Team</h1>
@@ -25,13 +25,13 @@
                             {{{content}}}
                             <ul class="team__member__links">
                                 <li class="email">
-                                    <a href="mailto:{{email}}?subject=ftalphaville">{{email}}</a>
+                                    <a href="mailto:{{email}}?subject=ftalphaville" data-trackable="author-email">{{email}}</a>
                                 </li>
                                 <li class="twitter">
-                                    <a target="_blank" href="https://twitter.com/{{twitter}}">twitter: {{twitter}}</a>
+                                    <a target="_blank" href="https://twitter.com/{{twitter}}" data-trackable="author-twitter">twitter: {{twitter}}</a>
                                 </li>
                                 <li class="posts">
-                                    <a href="/author?q={{title}}">see all posts</a>
+                                    <a href="/author?q={{title}}" data-trackable="author-post">see all posts</a>
                                 </li>
                             </ul>
                         </div>
