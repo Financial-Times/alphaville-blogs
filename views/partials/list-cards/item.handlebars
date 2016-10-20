@@ -16,8 +16,9 @@
 			data-o-expander-shrink-to="hidden"
 			data-o-expander-expanded-toggle-text="read less"
 			data-o-expander-collapsed-toggle-text="read more"
-			data-article-url="{{_source.av2WebUrl}}">
-		<button class="o-expander__toggle o--if-js"></button>
+			data-article-url="{{_source.av2WebUrl}}"
+			data-trackable="read-more">
+		<button class="o-expander__toggle o--if-js" data-trackable="toggle"></button>
 		<div class="o-expander__content"></div>
 	</div>
     {{#_source.seriesArticles}}

@@ -1,11 +1,11 @@
-<div class="alphaville-card o-card o-card--landscape o-card--image-" data-o-component="o-card">
+<div class="alphaville-card o-card o-card--landscape o-card--image-" data-o-component="o-card" data-trackable="card">
 	<div class="o-card__content">
 		{{#if _source.authors}}
 			<div class="o-card__meta">
 				<ul class="alphaville-card--inline-list">
 					{{#_source.authors}}
 						<li>
-							<a href="/author?q={{name}}" class="o-card__tag">{{name}}</a>
+							<a href="/author?q={{name}}" class="o-card__tag" data-trackable="author">{{name}}</a>
 						</li>
 					{{/_source.authors}}
 				</ul>
@@ -13,13 +13,13 @@
 		{{else}}
 			{{#_source.primaryTheme}}
 				<div class="o-card__meta">
-					<a href="/search?q={{.}}" class="o-card__tag">{{.}}</a>
+					<a href="/search?q={{.}}" class="o-card__tag" data-trackable="theme">{{.}}</a>
 				</div>
 			{{/_source.primaryTheme}}
 		{{/if}}
 
 		<h3 class="o-card__heading">
-			<a href="{{_source.av2WebUrl}}">First FT: {{_source.title}}</a>
+			<a href="{{_source.av2WebUrl}}" data-trackable="heading">First FT: {{_source.title}}</a>
 		</h3>
 
 		{{#if withImage}}
@@ -27,7 +27,7 @@
 				<div class="o-grid-row">
 					<div data-o-grid-colspan="6 S4 M3 L5">
 						<div class="o-card__image">
-							<a href="{{_source.av2WebUrl}}"><img src="{{image _source.mainImage.url 250 'low'}}" alt="{{_source.mainImage.title}}" /></a>
+							<a href="{{_source.av2WebUrl}}" data-trackable="image"><img src="{{image _source.mainImage.url 250 'low'}}" alt="{{_source.mainImage.title}}" /></a>
 						</div>
 					</div>
 					<div data-o-grid-colspan="6 S8 M9 L7">
