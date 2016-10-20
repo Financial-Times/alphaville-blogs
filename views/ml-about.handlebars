@@ -1,0 +1,104 @@
+{{#contentFor "head"}}
+	<link rel="stylesheet" href="{{assetsBasePath}}/build/article.css" />
+	<script>
+		(function () {
+			ctmLoadScript({
+				src: "{{assetsBasePath}}/build/article.js",
+				async: true
+			});
+		}());
+	</script>
+{{/contentFor}}
+
+<div class="article__wrapper">
+	<div class="o-grid-container">
+		<div class="o-grid-row">
+			<div data-o-grid-colspan="12 L8 XL7 XLoffset1">
+				<div class="article__header">
+					<div class="article__header-inner">
+						<header class="article__header--wrapper ">
+							<div class="article__header-primary">
+								<h1 class="article__title">Markets Live</h1>
+							</div>
+						</header>
+					</div>
+				</div>
+
+				<div class="article__main">
+					{{> shareComponent position='top'}}
+
+					<article class="article__body n-content-body">
+						<em>About Markets Live:</em>
+
+						<p>FT Alphaville’s <strong>Markets Live</strong> is a real-time service in which our commentators offer their views on moves and news in the markets in a live streaming-media format.</p>
+
+						<p>The daily chat with FT Alphaville Editor Paul Murphy and Bryce Elder from the FT’s London markets team, begins at 11am, London time.</p>
+
+						<p>Paul and Bryce offer insight into share price moves and other financial asset news, dissect analysts’ research notes and highlight market-moving events. They also break price-moving news.</p>
+
+						<p>Readers who wish to post comments or questions should ensure that they are logged in. If you’ve never logged in, register for free by following <a title="Register for free" href="https://registration.ft.com/signup/register" target="_blank">this link</a>. We welcome suggestions on what topics warrant discussion each day.</p>
+
+						<em>The Markets Live lexicon:</em>
+
+						<p>
+							<span class="webchat-emoticon webchat-emoticon--bandit10" data-code="bandit10">Bandit10</span>
+							<span class="webchat-emoticon webchat-emoticon--bandit7" data-code="bandit7">Bandit7</span>
+							<span class="webchat-emoticon webchat-emoticon--bandit2" data-code="bandit2">Bandit2</span>
+							– The numbered bandits – Our commentators constantly have their ear to the ground – but some sources are better than others. A tip from a source with a rating of “1” is gold dust, while a source ranked “10” comes with a health warning.
+						</p>
+
+						<p>
+							<span class="webchat-emoticon webchat-emoticon--feltcollaredsource" data-code="feltcollaredsource">Feltcollaredsource</span>
+							– A “felt collared source” – a professional from the PR industry. A more mainstream source of information than the bandits above (who might have their collars felt), but that does not necessarily mean they add much value.
+						</p>
+
+						<p>
+							<span class="webchat-emoticon webchat-emoticon--sell" data-code="sell">Sell</span>
+							<span class="webchat-emoticon webchat-emoticon--buy" data-code="buy">Buy</span>
+							– “Buy” or “Sell,” often used with liberal amounts of sarcasm.
+						</p>
+
+						<p>
+							<span class="webchat-emoticon webchat-emoticon--danger" data-code="danger">Danger</span>
+							– Heads up, there’s big news ahead, or possibly a large hole to fall into.
+						</p>
+
+						<p>
+							<span class="webchat-emoticon webchat-emoticon--scorchedfingers" data-code="scorchedfingers">Scorchedfingers</span>
+							– Burnt fingers – what might happen to you if you follow a tip from bandit number 10.
+						</p>
+
+						<p>
+							<span class="webchat-emoticon webchat-emoticon--tinhat" data-code="tinhat">Tinhat</span>
+							– Tin hat – useful when you’re about to take a tumble
+						</p>
+
+						<p>
+							<span class="webchat-emoticon webchat-emoticon--rocket" data-code="rocket">Rocket</span>
+							– An FT Alphaville favourite for a stock that has taken off in a big way, or looks likely to.
+						</p>
+
+						<p><strong>And remember, shares and other financial assets can go up and down at frightening speed. Don’t dabble unless you know what you are doing and can afford to lose the money.</strong></p>
+
+						<div class="alphaville-in-article-ad">
+							{{> alphaville-ui/ads/templates/mpu_mobile}}
+						</div>
+
+						<footer class="n-content-copyright">
+							<small>
+								<a href="http://www.ft.com/servicestools/help/copyright" data-trackable="link-copyright">Copyright</a> The Financial Times Limited 2016. All rights reserved. You may share using our article tools. Please don't cut articles from FT.com and redistribute by email or post to the web.
+							</small>
+						</footer>
+					</article>
+
+					{{> shareComponent position='bottom'}}
+					<div data-n-article-email-bottom-container=""></div>
+				</div>
+			</div>
+			<div class="article__aside o-grid-remove-gutters--XL" data-o-grid-colspan="0 L4 XL3 XLoffset1">
+				{{> alphaville-ui/twitter-widget/main}}
+				{{> alphaville-ui/ads/templates/dmpu_desktop}}
+			</div>
+		</div>
+	</div>
+</div>

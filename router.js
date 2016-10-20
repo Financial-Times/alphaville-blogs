@@ -12,7 +12,7 @@ router.use('/about', require('./routes/about'));
 router.use('/meet-the-team', require('./routes/meet'));
 router.use('/author', require('./routes/author'));
 
-router.use('/', require('./routes/marketslive'));
+router.use('/marketslive', require('./routes/marketslive'));
 router.use('/', require('./routes/article'));
 router.use('/curation', auth(), restrictedAccess, require('./routes/curation'));
 
