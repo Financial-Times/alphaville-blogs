@@ -161,43 +161,14 @@
 
 	.messageheader {
 		float: left;
-		margin-right: 10px;
-		margin-bottom: 5px;
 
-		.participant {
-			padding: 5px 4px;
-			border-radius: 30px;
-			font-family: Georgia, sans-serif;
-			font-weight: normal;
-			color: oColorsGetPaletteColor('white');
-			background-color: oColorsGetPaletteColor('claret');
-			font-size: 11px;
-
-			@include oGridRespondTo(M) {
-				font-weight: bold;
-				padding: 6px 5px;
-				font-size: 13px;
-			}
+		.participant,
+		&.par {
+			font-weight: bold;
 		}
 
 		.timestamp {
 			display: none;
-		}
-
-		&.par {
-			padding: 1px 4px;
-			border-radius: 30px;
-			font-family: Georgia, sans-serif;
-			font-weight: normal;
-			color: oColorsGetPaletteColor('white');
-			background-color: oColorsGetPaletteColor('claret');
-			font-size: 11px;
-
-			@include oGridRespondTo(M) {
-				font-weight: bold;
-				padding: 4px 5px 3px;
-				font-size: 13px;
-			}
 		}
 	}
 
@@ -278,6 +249,55 @@
 		margin: 0 0 0 2px;
 		padding: 0 0 0 4px;
 		border-left: 1px solid #a7a59b;
+	}
+
+
+	.color-0 {
+		color: oColorsGetPaletteColor('claret-1');
+	}
+
+	.color-1 {
+		color: oColorsGetPaletteColor('teal-1');
+	}
+
+	.color-2 {
+		color: oColorsGetPaletteColor('claret-2');
+	}
+
+	.color-3 {
+		color: #f4a208;
+	}
+
+	.color-4 {
+		color: oColorsGetPaletteColor('purple-1');
+	}
+
+	.color-5 {
+		color: oColorsGetPaletteColor('section-red');
+	}
+
+	.color-6 {
+		color: oColorsGetPaletteColor('dark-blue');
+	}
+
+	.color-7 {
+		color: oColorsGetPaletteColor('section-green');
+	}
+
+	.color-8 {
+		color: oColorsGetPaletteColor('teal-2');
+	}
+
+	.color-9 {
+		color: oColorsGetPaletteColor('org-b2c');
+	}
+
+	.color-10 {
+		color: oColorsGetPaletteColor('section-light-green');
+	}
+
+	.color-11 {
+		color: oColorsGetPaletteColor('purple-tint2');
 	}
 }
 
