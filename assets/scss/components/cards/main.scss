@@ -48,6 +48,11 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	overflow: hidden;
 }
 
+.alphaville-card__standfirst-truncate-2lines {
+	max-height: 38px;
+	overflow: hidden;
+}
+
 .alphaville-card__standfirst-truncate-4lines {
 	max-height: 75px;
 	overflow: hidden;
@@ -231,23 +236,13 @@ $alphaville-card__color--yellow-tint3: #b35400;
 		.alphaville-card__tag-part2 {}
 	}
 
-	.alphaville-card__heading {
+	.alphaville-card__subheading {
 		@include oTypographySansBold('s');
 
 		&,
 		a {
 			color: oColorsGetPaletteColor('grey-tint1');
 		}
-	}
-
-	.alphaville-card__heading-truncate {
-		max-height: 34px;
-		overflow: hidden;
-	}
-
-	.alphaville-card__heading-truncate--3lines {
-		max-height: 51px;
-		overflow: hidden;
 	}
 }
 
