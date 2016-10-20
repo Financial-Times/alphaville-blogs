@@ -20,5 +20,8 @@
 		<button class="o-expander__toggle o--if-js"></button>
 		<div class="o-expander__content"></div>
 	</div>
+    {{#_source.seriesArticles}}
+        {{> series-articles }}
+    {{/_source.seriesArticles}}
 	{{/withInlineRead}}
 </div>

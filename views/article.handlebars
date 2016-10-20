@@ -63,6 +63,10 @@
                         </footer>
                     </article>
 
+                    {{#article.seriesArticles}}
+                        {{> series-articles }}
+                    {{/article.seriesArticles}}
+
                     {{> shareComponent position='bottom'}}
                     <div data-n-article-email-bottom-container=""></div>
                 </div>
