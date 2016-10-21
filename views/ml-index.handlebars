@@ -25,32 +25,39 @@
 		<div data-o-grid-colspan="12 L8">
 			<div class="o-grid-row">
 				<div data-o-grid-colspan="12 M9 Moffset3">
-					<h1 class="o-typography-heading1">Real-time  views on moves and news in the markets</h1>
+					<div class="alphaville-ml-description">
+						<h1 class="o-typography-heading1">Real-time  views on moves and news in the markets</h1>
 
-					<p>The daily chat with FT Alphaville Editor Paul Murphy and Bryce Elder from the FT’s London markets team, begins at 11am, London time.</p>
+						<p>The daily chat with FT Alphaville Editor Paul Murphy and Bryce Elder from the FT’s London markets team, begins at 11am, London time.</p>
 
-					<p>Paul and Bryce offer insight into share price moves and other financial asset news, dissect analysts’ research notes and highlight market-moving events. They also break price-moving news.</p>
+						<p>Paul and Bryce offer insight into share price moves and other financial asset news, dissect analysts’ research notes and highlight market-moving events. They also break price-moving news.</p>
+					</div>
 				</div>
 
-				<div class="marketslive-list" data-o-grid-colspan="12">
+				<div class="alphaville-article-list" data-o-grid-colspan="12">
 					{{#transcripts}}
-						<div class="o-grid-row">
+						<div class="alphaville-list-category o-grid-row">
 							<div data-o-grid-colspan="12 M3">
-								<div class="marketslive-list-time">
-									<div class="marketslive-list-time-label">{{label}}</div>
+								<div class="alphaville-list-time">
+									<div class="alphaville-list-time-label">{{label}}</div>
 									{{#date}}
-										<time class="o-date marketslive-list-time-date" data-o-component="o-date" data-o-date-format="date-only" datetime="{{.}}"></time>
+										<time class="o-date alphaville-list-time-date" data-o-component="o-date" data-o-date-format="date-only" datetime="{{.}}"></time>
 									{{/date}}
 								</div>
 							</div>
 							<div data-o-grid-colspan="12 M9">
-								<div class="marketslive-list-items {{#mpu}}alphaville-list-item--with-ad-after{{/mpu}}">
+								<div class="alphaville-list-items {{#mpu}}alphaville-list-item--with-ad-after{{/mpu}}">
 									{{#items}}
 										{{#_source}}
-											<div class="o-card o-card--landscape o-card--image-" data-o-component="o-card">
-												<div class="o-card__content">
-													<h2 class="o-card__heading"><a href="{{av2WebUrl}}">{{title}}</a></h2>
-													<div class="o-card__standfirst">{{summaries}}</div>
+											<div class="alphaville-card-container">
+												<div class="alphaville-card o-card o-card--landscape" data-o-component="o-card">
+													<div class="o-card__content">													
+														<h2 class="o-card__heading">
+															<a href="{{av2WebUrl}}">{{title}}</a>
+														</h2>
+
+														<p class="o-card__standfirst">{{{summaries.[0]}}}</p>
+													</div>
 												</div>
 											</div>
 										{{/_source}}

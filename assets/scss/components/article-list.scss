@@ -2,15 +2,7 @@
 
 .alphaville-article-list {
 	.alphaville-list-time {
-		margin-top: 16px;
-		border-bottom: 1px solid oColorsGetPaletteColor('pink-tint3');
-		padding-bottom: 15px;
-
-		@include oGridRespondTo(M) {
-			text-align: right;
-			border-bottom: 0;
-			padding-bottom: 0;
-		}
+		margin-top: 20px;
 
 		.alphaville-list-time-label {
 			font-size: 16px;
@@ -35,13 +27,9 @@
 
 	.alphaville-card-container {
 		border-bottom: 1px solid oColorsGetPaletteColor('pink-tint3');
-		padding: 6px 0;
+		padding: 10px 0 20px;
 
 		a {
-			border-bottom: 0;
-		}
-
-		&:last-child {
 			border-bottom: 0;
 		}
 	}
@@ -58,19 +46,6 @@
 			@include marketslive-lozenge-icon(16);
 			margin-bottom: -3px;
 		}
-	}
-
-	.o-card__heading,
-	.o-card__tag {
-		margin-bottom: 8px;
-	}
-
-	.o-card__timestamp {
-		padding-top: 8px;
-	}
-
-	.o-expander {
-		margin-bottom: 8px;
 	}
 
 	.o-expander__toggle {
@@ -104,5 +79,9 @@
 		.alphaville-spinner {
 			margin: 30px auto;
 		}
+	}
+
+	.alphaville-ad-mpu-mobile {
+		margin: 20px 0;
 	}
 }

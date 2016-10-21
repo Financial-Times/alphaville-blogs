@@ -1,51 +1,12 @@
 @import './common';
 
-$o-card-is-silent: false;
-@import 'o-card/main';
+@import './components/cards/main';
+@import './components/article-list';
 
-.marketslive-list {
-	margin-top: 15px;
+.alphaville-article-list .alphaville-list-time {
+	margin-top: 24px;
+}
 
-	.marketslive-list-time {
-		margin-top: 15px;
-		border-bottom: 1px solid oColorsGetPaletteColor('pink-tint3');
-		padding-bottom: 15px;
-
-		@include oGridRespondTo(M) {
-			text-align: right;
-			border-bottom: 0;
-		}
-
-		.marketslive-list-time-label {
-			font-size: 16px;
-			line-height: 18px;
-			font-weight: 600;
-		}
-
-		.marketslive-list-time-date {
-			font-size: 16px;
-			line-height: 22px;
-			color: oColorsGetPaletteColor('warm-6');
-			font-weight: 600;
-			text-transform: uppercase;
-		}
-	}
-
-	.marketslive-list-items {
-		margin-top: 5px;
-
-		@include oGridRespondTo(M) {
-			border-top: 1px solid oColorsGetPaletteColor('pink-tint3');
-		}
-
-		.o-card {
-			background: none;
-			border-bottom: 1px solid oColorsGetPaletteColor('pink-tint3');
-			padding: 5px 0 10px;
-
-			&:last-child {
-				border-bottom: 0;
-			}
-		}
-	}
+.alphaville-ml-description {
+	border-top: 1px solid oColorsGetPaletteColor('pink-tint3');
 }
