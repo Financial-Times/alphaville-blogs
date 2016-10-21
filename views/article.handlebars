@@ -14,7 +14,7 @@
 
 
 
-<div class="article__wrapper">
+<div class="article__wrapper" data-trackable="article">
     <div class="o-grid-container">
         <div class="o-grid-row">
             <div data-o-grid-colspan="12 L8 XL7 XLoffset1">
@@ -41,10 +41,10 @@
 
                     <article class="article__body n-content-body">
                         {{#article.attachments}}
-                            <audio controls>
+                            <audio controls data-trackable="audio">
                                 <source src="{{url}}" type="{{mediaType}}">
                                 <p>
-                                    Your browser does not support playing this file but you can still <a href="{{url}}">download the MP3 file</a> to play locally.
+                                    Your browser does not support playing this file but you can still <a href="{{url}}" data-trackable="download-audio">download the MP3 file</a> to play locally.
                                 </p>
                             </audio>
                         {{/article.attachments}}

@@ -1,10 +1,10 @@
-<div class="alphaville-card-container" data-o-grid-colspan="12 S6 M4">
-	<div class="alphaville-card alphaville-card--fill-space alphaville-card--marketslive {{#isLive}}alphaville-card--marketslive-live{{/isLive}} o-card" data-o-component="o-card" data-article-id="{{_id}}">
+<div class="alphaville-card-container" data-o-grid-colspan="12 S6 M4" data-trackable="card">
+	<div class="alphaville-card alphaville-card--fill-space alphaville-card--marketslive {{#isLive}}alphaville-card--marketslive-live{{/isLive}} o-card" data-o-component="o-card" data-article-id="{{_id}}" data-trackable="marketlive{{#isLive}}:live{{/isLive}}">
 		<div class="alphaville-card--marketslive-live--lozenge"></div>
 		
 		<div class="alphaville-card__content">
 			<div class="alphaville-card__theme">
-				<a href="/marketslive">
+				<a href="/marketslive" data-trackable="link" data-trackable="theme">
 					<span class="alphaville-card__theme-part1">Markets</span>
 					<span class="alphaville-card__theme-part2">Live</span>
 					{{#isLive}}
@@ -14,7 +14,7 @@
 			</div>
 
 			<h2 class="alphaville-card__heading alphaville-card__heading-truncate">
-				<a href="{{_source.av2WebUrl}}">{{{_source.title}}}</a>
+				<a href="{{_source.av2WebUrl}}" data-trackable="headline">{{{_source.title}}}</a>
 			</h2>
 
 			{{> grid-cards/elements/standfirst}}
