@@ -16,4 +16,6 @@ router.use('/marketslive', require('./routes/marketslive'));
 router.use('/', require('./routes/article'));
 router.use('/curation', auth(), restrictedAccess, require('./routes/curation'));
 
+router.use('/uc_longroom', require('./routes/longroom'));
+
 module.exports = router;
