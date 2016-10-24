@@ -26,3 +26,7 @@
     {{/_source.seriesArticles}}
 	{{/withInlineRead}}
 </div>
+
+{{^ ../withoutAds}}
+	{{> list-cards/adBetweenCards}}
+{{/ ../withoutAds}}

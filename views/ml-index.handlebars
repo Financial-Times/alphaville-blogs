@@ -46,7 +46,7 @@
 								</div>
 							</div>
 							<div data-o-grid-colspan="12 M9">
-								<div class="alphaville-list-items {{#mpu}}alphaville-list-item--with-ad-after{{/mpu}}">
+								<div class="alphaville-list-items">
 									{{#items}}
 										{{#_source}}
 											<div class="alphaville-card-container">
@@ -61,12 +61,12 @@
 												</div>
 											</div>
 										{{/_source}}
+
+										{{^ ../withoutAds}}
+											{{> list-cards/adBetweenCards}}
+										{{/ ../withoutAds}}
 									{{/items}}
 								</div>
-
-								{{#mpu}}
-									{{> alphaville-ui/ads/templates/mpu_mobile mpu_mobile_index=.}}
-								{{/mpu}}
 							</div>
 						</div>
 					{{/transcripts}}
