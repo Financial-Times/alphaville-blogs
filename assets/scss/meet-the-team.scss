@@ -82,23 +82,25 @@ $contact_color: #27757b;
 	}
 
 	.twitter {
-		&:before {
+		a:before {
 			content: '';
-			background: url(http://image.webservices.ft.com/v1/images/raw/ftsocial:twitter?source=o-share&format=png&width=15) no-repeat;
+			background: url(http://image.webservices.ft.com/v1/images/raw/ftsocial:twitter?source=alphaville&format=png&width=15) no-repeat;
 			width: 15px;
 			height: 15px;
 			display: inline-block;
+			margin-right: 10px;
 		}
 	}
 
 	.email {
-		&:before {
+		a:before {
 			@include oIconsGetIcon('mail', $contact_color, 25, $iconset-version: 1);
 			content: '';
 			position: relative;
 			top: 8px;
 			margin-left: -10px;
 			left: 5px;
+			margin-right: 10px;
 		}
 	}
 }
