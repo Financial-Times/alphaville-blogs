@@ -1,7 +1,6 @@
 const alphavilleExpress = require('alphaville-express');
 const fingerprint = require('./build_config/js/fingerprint');
 const _ = require('lodash');
-const articleService = require('./lib/services/article');
 
 const WpApi = require('alphaville-marketslive-wordpress-api');
 WpApi.setBaseUrl(process.env.WP_URL);
@@ -15,8 +14,6 @@ const app = alphavilleExpress({
 	fingerprint: fingerprint,
 	env: env
 });
-
-app.set('s3o-cookie-ttl', 86400000); // one day (in ms)
 
 
 app.use(function (req, res, next ) {
