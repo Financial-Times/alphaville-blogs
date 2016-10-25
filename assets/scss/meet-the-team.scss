@@ -70,12 +70,35 @@ $contact_color: #27757b;
 	width: 100%;
 	padding: 0;
 	list-style-type: none;
+
 	& > li {
 		display: block;
 		width: auto;
 		margin-top: 8px;
+
 		a {
 			color: $contact_color;
+		}
+	}
+
+	.twitter {
+		&:before {
+			content: '';
+			background: url(http://image.webservices.ft.com/v1/images/raw/ftsocial:twitter?source=o-share&format=png&width=15) no-repeat;
+			width: 15px;
+			height: 15px;
+			display: inline-block;
+		}
+	}
+
+	.email {
+		&:before {
+			@include oIconsGetIcon('mail', $contact_color, 25, $iconset-version: 1);
+			content: '';
+			position: relative;
+			top: 8px;
+			margin-left: -10px;
+			left: 5px;
 		}
 	}
 }
