@@ -65,16 +65,13 @@
 			position: relative;
 			top: 5px;
 		}
-
-		&[aria-expanded="true"] i {
-			@include oIconsGetIcon('arrow-up', oColorsGetPaletteColor('teal-1'), 17);
-		}
 	}
 
 	.o-expander__content {
 		clear: both;
 		transition: 2s all ease;
 		max-height: 9999px;
+		padding-top: 20px;
 
 		&[aria-hidden="true"] {
 			max-height: 0;
