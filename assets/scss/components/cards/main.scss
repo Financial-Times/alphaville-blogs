@@ -310,6 +310,12 @@ $alphaville-card__color--yellow-tint3: #b35400;
 		max-height: 81px;
 		overflow: hidden;
 	}
+
+	&.alphaville-card--with-image .alphaville-card__standfirst {
+		@include oGridRespondTo($until: S) {
+			max-height: 38px;
+		}
+	}
 }
 
 .alphaville-card--opinion {
