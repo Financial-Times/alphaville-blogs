@@ -112,6 +112,18 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	}
 }
 
+.alphaville-card--series {
+	.alphaville-card__theme,
+	.o-card__meta {
+		a:after {
+			@include oIconsGetIcon('series', oColorsGetPaletteColor('grey-tint3'), 40, $iconset-version: 1);
+			content: '';
+			float: right;
+			margin: -10px -9px 0 0;
+		}
+	}
+}
+
 
 .alphaville-card {
 	overflow: hidden;
