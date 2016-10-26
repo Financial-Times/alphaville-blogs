@@ -14,6 +14,14 @@ $o-tabs-is-silent: false;
 	margin: 0;
 	text-align: center;
 
+	&.ml-tabs-container--sticky {
+		position: fixed;
+		z-index: 100;
+		background: #fff1e0;
+		padding-left: 0;
+		left: 0;
+	}
+
 	.o-tabs[data-o-tabs--js][role=tablist] {
 		display: table;
 		width: 100%;
