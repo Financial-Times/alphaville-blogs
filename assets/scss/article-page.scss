@@ -10,5 +10,17 @@ $o-video-is-silent: false;
 	margin-top: 0;
 }
 
+.alphaville-in-article-ad2 {
+	display: none;
+}
+
+.alphaville-in-article-ad--mobile-only {
+	display: block;
+
+	@include oGridRespondTo(M) {
+		display: none;		
+	}
+}
+
 @import 'components/article-page';
 @import 'components/marketslive-transcript';

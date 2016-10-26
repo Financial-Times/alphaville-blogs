@@ -16,7 +16,8 @@ document.addEventListener('o.DOMContentLoaded', function () {
 		embeddedMedia.convert(closedContentContainer);
 	}
 
-	const inArticleAd = document.querySelector('.alphaville-in-article-ad');
+	const inArticleAd1 = document.querySelector('.alphaville-in-article-ad1');
+	const inArticleAd2 = document.querySelector('.alphaville-in-article-ad2');
 	const isMlTranscript = !!document.querySelector('.webchat-closed-content');
 
 	let linesNumber;
@@ -31,10 +32,21 @@ document.addEventListener('o.DOMContentLoaded', function () {
 				if (beforeEl.previousSibling.classList.contains('marketslive-timestamp')) {
 					beforeEl = beforeEl.previousSibling;
 				}
-				fourthLine.parentNode.insertBefore(inArticleAd, beforeEl);
+				fourthLine.parentNode.insertBefore(inArticleAd1, beforeEl);
+
+				if (linesNumber.length > 8) {
+					const ninthLine = linesNumber[9];
+					let beforeEl = ninthLine;
+					if (beforeEl.previousSibling.classList.contains('marketslive-timestamp')) {
+						beforeEl = beforeEl.previousSibling;
+					}
+					ninthLine.parentNode.insertBefore(inArticleAd2, beforeEl);
+					inArticleAd2.classList.add('alphaville-in-article-ad--mobile-only');
+					oAds.init(inArticleAd2);
+				}
 			} else {
 				const lastLine = linesNumber[linesNumber.length - 1];
-				lastLine.parentNode.insertBefore(inArticleAd, lastLine.nextSibling);
+				lastLine.parentNode.insertBefore(inArticleAd1, lastLine.nextSibling);
 			}
 		}
 	} else {
@@ -43,15 +55,22 @@ document.addEventListener('o.DOMContentLoaded', function () {
 		if (linesNumber.length > 0) {
 			if (linesNumber.length > 2) {
 				const thirdLine = linesNumber[2];
-				thirdLine.parentNode.insertBefore(inArticleAd, thirdLine.nextSibling);
+				thirdLine.parentNode.insertBefore(inArticleAd1, thirdLine.nextSibling);
+
+				if (linesNumber.length > 8) {
+					const eighthLine = linesNumber[8];
+					eighthLine.parentNode.insertBefore(inArticleAd2, eighthLine.nextSibling);
+					inArticleAd2.classList.add('alphaville-in-article-ad--mobile-only');
+					oAds.init(inArticleAd2);
+				}
 			} else {
 				const lastLine = linesNumber[linesNumber.length - 1];
-				lastLine.parentNode.insertBefore(inArticleAd, lastLine.nextSibling);
+				lastLine.parentNode.insertBefore(inArticleAd1, lastLine.nextSibling);
 			}
 		}
 	}
 
-	oAds.init(inArticleAd);
+	oAds.init(inArticleAd1);
 });
 
 require('o-autoinit');
