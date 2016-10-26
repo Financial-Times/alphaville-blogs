@@ -117,11 +117,7 @@
 
 	.messagebody {
 		background-repeat: no-repeat;
-		padding: 0;
-
-		@include oGridRespondTo(M) {
-			padding-left: 50px;
-		}
+		padding-left: 50px;
 	}
 
 	p {

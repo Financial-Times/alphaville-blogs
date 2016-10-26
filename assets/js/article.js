@@ -24,34 +24,11 @@ document.addEventListener('o.DOMContentLoaded', function () {
 
 	if (isMlTranscript) {
 		linesNumber = document.querySelectorAll('.webchat-closed-content > div.msg');
-
-		if (linesNumber.length > 0) {
-			if (linesNumber.length > 3) {
-				const fourthLine = linesNumber[3];
-				let beforeEl = fourthLine;
-				if (beforeEl.previousSibling.classList.contains('marketslive-timestamp')) {
-					beforeEl = beforeEl.previousSibling;
-				}
-				fourthLine.parentNode.insertBefore(inArticleAd1, beforeEl);
-
-				if (linesNumber.length > 8) {
-					const ninthLine = linesNumber[9];
-					let beforeEl = ninthLine;
-					if (beforeEl.previousSibling.classList.contains('marketslive-timestamp')) {
-						beforeEl = beforeEl.previousSibling;
-					}
-					ninthLine.parentNode.insertBefore(inArticleAd2, beforeEl);
-					inArticleAd2.classList.add('alphaville-in-article-ad--mobile-only');
-					oAds.init(inArticleAd2);
-				}
-			} else {
-				const lastLine = linesNumber[linesNumber.length - 1];
-				lastLine.parentNode.insertBefore(inArticleAd1, lastLine.nextSibling);
-			}
-		}
 	} else {
 		linesNumber = document.querySelectorAll('.article__body > p');
+	}
 
+	if (linesNumber) {
 		if (linesNumber.length > 0) {
 			if (linesNumber.length > 2) {
 				const thirdLine = linesNumber[2];
