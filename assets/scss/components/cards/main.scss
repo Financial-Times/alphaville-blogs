@@ -144,7 +144,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	position: relative;
 	padding: 10px;
 
-	.alphaville-card--marketslive--lozenge {
+	.alphaville-card--marketslive-live--lozenge {
 		@include marketslive-lozenge-icon(
 			$size: 120,
 			$color: $alphaville-card__color--grey-tint2);
@@ -202,8 +202,10 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	}
 
 	&.alphaville-card--marketslive-live {
-		color: oColorsGetPaletteColor('white');
-		font-weight: 600;
+		.alphaville-card__theme-part2 {
+			color: oColorsGetPaletteColor('white');
+			font-weight: 600;
+		}
 	}
 
 	.alphaville-card__standfirst {
