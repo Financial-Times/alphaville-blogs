@@ -3,7 +3,7 @@
 		{{#if isSeriesArticle}}
 			{{#_source.primaryTheme}}
 				<div class="o-card__meta">
-					<a href="/search?q={{.}}" class="o-card__tag" data-trackable="theme">{{.}}</a>
+					<a href="/search?q={{.}}" class="o-card__tag" data-trackable="theme">Part of the {{.}} series</a>
 				</div>
 			{{/_source.primaryTheme}}
 		{{else}}
