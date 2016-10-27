@@ -1,4 +1,6 @@
 .av-series-wrapper {
+  font-family: MetricWeb, sans-serif;
+  font-size: 16px;
   background-color: #fdf8f2;
   border-left: 3px solid #2B757A;
   padding: 10px 16px;
@@ -42,5 +44,10 @@
   list-style-position: inside;
   &.active {
     display: block;
+  }
+  a, a:hover {
+    color: #2e6e9e;
+    text-decoration: none;
+    border-bottom: none;
   }
 }
