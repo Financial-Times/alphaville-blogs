@@ -35,7 +35,6 @@ ftwebservice(app, {
 	},
 	healthCheck: function() {
 		return healthcheck.getChecks().then(checks => {
-			console.log('checks', checks);
 			return checks;
 		}).catch((err) => {
 			console.log(err);
