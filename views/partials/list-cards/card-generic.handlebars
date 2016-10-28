@@ -1,28 +1,36 @@
-<div class="alphaville-card o-card o-card--landscape{{#if _source.seriesArticles}} alphaville-card--series{{/if}}" data-o-component="o-card">
+<div class="alphaville-card o-card o-card--landscape{{#if isSeriesArticle}} alphaville-card--series{{/if}}{{#if isAlphachat}} alphaville-card--alphachat{{/if}}" data-o-component="o-card">
 	<div class="o-card__content">
-		{{#if isSeriesArticle}}
+		{{#if isAlphachat}}
 			{{#_source.primaryTheme}}
 				<div class="o-card__meta">
-					<a href="/search?q={{.}}" class="o-card__tag" data-trackable="theme">Part of the {{.}} series</a>
+					<a href="/search?q={{.}}" class="o-card__tag" data-trackable="theme">{{.}}</a>
 				</div>
 			{{/_source.primaryTheme}}
 		{{else}}
-			{{#if _source.authors}}
-				<div class="o-card__meta">
-					<ul class="alphaville-card--inline-list">
-						{{#_source.authors}}
-							<li>
-								<a href="/author?q={{name}}" class="o-card__tag" data-trackable="author">{{name}}</a>
-							</li>
-						{{/_source.authors}}
-					</ul>
-				</div>
-			{{else}}
+			{{#if isSeriesArticle}}
 				{{#_source.primaryTheme}}
 					<div class="o-card__meta">
-						<a href="/search?q={{.}}" class="o-card__tag" data-trackable="theme">{{.}}</a>
+						<a href="/search?q={{.}}" class="o-card__tag" data-trackable="theme">Part of the {{.}} series</a>
 					</div>
 				{{/_source.primaryTheme}}
+			{{else}}
+				{{#if _source.authors}}
+					<div class="o-card__meta">
+						<ul class="alphaville-card--inline-list">
+							{{#_source.authors}}
+								<li>
+									<a href="/author?q={{name}}" class="o-card__tag" data-trackable="author">{{name}}</a>
+								</li>
+							{{/_source.authors}}
+						</ul>
+					</div>
+				{{else}}
+					{{#_source.primaryTheme}}
+						<div class="o-card__meta">
+							<a href="/search?q={{.}}" class="o-card__tag" data-trackable="theme">{{.}}</a>
+						</div>
+					{{/_source.primaryTheme}}
+				{{/if}}
 			{{/if}}
 		{{/if}}
 

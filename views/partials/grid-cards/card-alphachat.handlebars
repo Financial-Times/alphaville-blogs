@@ -1,0 +1,20 @@
+<div class="alphaville-card-container" data-o-grid-colspan="12 S6 M4" data-trackable="card">
+	<div class="alphaville-card alphaville-card--fill-space o-card alphaville-card alphaville-card--series alphaville-card--alphachat" data-o-component="o-card" data-article-id="{{_id}}" data-card-type="blog" data-trackable="blog">
+		<div class="alphaville-card__content">
+			{{> grid-cards/elements/primaryTheme}}
+
+			{{> grid-cards/elements/heading}}
+
+			{{#if withImage}}
+				<a href="{{_source.av2WebUrl}}">
+					<img class="alphaville-card__image" src="{{image _source.mainImage.url 80 'low'}}" alt="{{_source.mainImage.title}}">
+				</a>
+			{{/if}}
+
+			<div class="alphaville-card__footer">
+				{{> comment-counter}}
+				<time data-o-component="o-date" class="o-date alphaville-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
+			</div>
+		</div>
+	</div>
+</div>

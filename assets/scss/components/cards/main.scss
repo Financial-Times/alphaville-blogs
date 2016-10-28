@@ -131,6 +131,25 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	}
 }
 
+.alphaville-card--alphachat {
+	.alphaville-card__theme,
+	.o-card__meta {
+		a {
+			position: relative;
+			padding-right: 50px;
+
+			&:before {
+				@include oIconsGetIcon('podcast', oColorsGetPaletteColor('grey-tint3'), 40, $iconset-version: 1);
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 25px;
+				margin: -10px -9px 0 0;
+			}
+		}
+	}
+}
+
 
 .alphaville-card {
 	overflow: hidden;
