@@ -30,7 +30,18 @@ ftwebservice(app, {
 	},
 	goodToGoTest: function() {
 		return new Promise(function(resolve) {
-			resolve(true);
+			healthcheck.getChecks().then(checks => {
+				let ok = true;
+				checks.forEach(check => {
+					if (check.ok !== true) {
+						ok = false;
+					}
+				});
+
+				resolve(ok);
+			}).catch(() => {
+				resolve(false);
+			});
 		});
 	},
 	healthCheck: function() {
