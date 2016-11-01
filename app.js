@@ -1,3 +1,5 @@
+'use strict';
+
 const alphavilleExpress = require('alphaville-express');
 const fingerprint = require('./build_config/js/fingerprint');
 const _ = require('lodash');
