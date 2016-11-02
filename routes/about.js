@@ -1,7 +1,7 @@
 'use strict';
 
 const router = require('express').Router();
-const aboutCtrl = require('../lib/controllers/wpStaticCtrl')('about', 'http://ftalphaville.ft.com/about-alphaville-2/?json=1');
+const aboutCtrl = require('../lib/controllers/wpStaticCtrl')('about', 'about-alphaville-2');
 
 router.use('/', aboutCtrl);
 
