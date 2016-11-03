@@ -11,7 +11,7 @@
     "alphaville-auth-middleware": "Financial-Times/alphaville-auth-middleware#0.5.2",
     "alphaville-build-tools": "Financial-Times/alphaville-build-tools#0.1.6",
     "alphaville-express": "Financial-Times/alphaville-express#0.7.9",
-    "alphaville-header-config": "Financial-Times/alphaville-header-config#0.7.9",
+    "alphaville-header-config": "Financial-Times/alphaville-header-config#0.7.10",
     "alphaville-marketslive-wordpress-api": "Financial-Times/alphaville-marketslive-wordpress-api#0.4.0",
     "alphaville-team-members": "Financial-Times/alphaville-team-members#0.3.0",
     "express-ftwebservice": "Financial-Times/express-web-service#v2.2.0",
