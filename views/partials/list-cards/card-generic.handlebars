@@ -10,7 +10,7 @@
 			{{#if isSeriesArticle}}
 				{{#_source.primaryTheme}}
 					<div class="o-card__meta">
-						<a href="/search?q={{.}}" class="o-card__tag" data-trackable="theme">Part of the {{.}} series</a>
+						<a href="/search?q={{.}}" class="o-card__tag" data-trackable="theme">{{.}}</a>
 					</div>
 				{{/_source.primaryTheme}}
 			{{else}}
@@ -37,6 +37,11 @@
 		<h3 class="o-card__heading">
 			<a href="{{_source.av2WebUrl}}" data-trackable="heading">{{_source.title}}</a>
 		</h3>
+
+        {{#_source.seriesArticles}}
+            {{> series-articles }}
+        {{/_source.seriesArticles}}
+
 
 		{{#if withImage}}
 			<div class="o-grid-container o-grid-container--bleed">
