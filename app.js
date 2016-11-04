@@ -32,20 +32,7 @@ ftwebservice(app, {
 		"serviceTier": "gold"
 	},
 	goodToGoTest: function() {
-		return new Promise(function(resolve) {
-			healthcheck.getChecks().then(checks => {
-				let ok = true;
-				checks.forEach(check => {
-					if (check.ok !== true) {
-						ok = false;
-					}
-				});
-
-				resolve(ok);
-			}).catch(() => {
-				resolve(false);
-			});
-		});
+		return true;
 	},
 	healthCheck: function() {
 		return healthcheck.getChecks().then(checks => {
@@ -83,7 +70,6 @@ app.use(function (req, res, next ) {
 	next();
 });
 
-app.use('/', require('./routes/__gtg'));
 app.use('/', require('./routes/__access_metadata'));
 app.use('/', require('./router'));
 
