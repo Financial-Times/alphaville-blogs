@@ -6,6 +6,7 @@ const _ = require('lodash');
 const ftwebservice = require('express-ftwebservice');
 const path = require('path');
 const healthcheck = require('./lib/health/healthchecks');
+const cacheHeaders = require('./lib/utils/cacheHeaders');
 
 const WpApi = require('alphaville-marketslive-wordpress-api');
 WpApi.setBaseUrl(process.env.WP_URL);
@@ -89,6 +90,7 @@ app.use('/', require('./router'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
+	cacheHeaders.setNoCache(res);
 	const err = new Error('Not Found');
 	err.status = 404;
 	next(err);
@@ -96,6 +98,8 @@ app.use(function(req, res, next) {
 
 // error handlers
 const errorHandler = (err, req, res, next) => {
+	cacheHeaders.setNoCache(res);
+
 	const isNotProdEnv = app.get('env') === 'development' ||
 		process.env.ENVIRONMENT !== 'prod';
 
