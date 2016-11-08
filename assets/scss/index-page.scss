@@ -7,18 +7,7 @@ $o-expander-is-silent: false;
 $o-video-is-silent: false;
 @import 'o-video/main';
 
-.alphaville-article-grid {
-	.alphaville-card-container {
-		margin-top: 10px;
-		margin-bottom: 10px;
-		height: 210px;
-
-		a {
-			border-bottom: 0;
-		}
-	}
-}
-
+@import './components/article-grid';
 @import './components/article-list';
 @import './components/article-content-body/main';
 @import './components/marketslive-transcript';

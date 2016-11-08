@@ -4,17 +4,7 @@
 $o-forms-is-silent: false;
 @import 'o-forms/main';
 
-.alphaville-article-grid {
-	.alphaville-card-container {
-		margin-top: 10px;
-		margin-bottom: 10px;
-		height: 210px;
-
-		a {
-			border-bottom: 0;
-		}
-	}
-}
+@import './components/article-grid';
 
 .alphaville-card-curation {
 	position: absolute;
