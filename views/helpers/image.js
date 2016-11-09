@@ -13,6 +13,10 @@ module.exports = (imgUrl, width, quality) => {
 	if (parsedImgUrl.host !== 'image.webservices.ft.com') {
 		return `https://www.ft.com/__origami/service/image/v2/images/raw/${encodeURIComponent(imgUrl)}?source=Alphaville&width=${width}&quality=${quality}`;
 	}
+	if (parsedImgUrl.host === 'image.webservices.ft.com') {
+		let pathname = parsedImgUrl.pathname.replace('v1', 'v2');
+		return `https://www.ft.com/__origami/service/image${pathname}?source=Alphaville&width=${width}&quality=${quality}`;
+	}
 	parsedImgUrl.query = _.extend({}, parsedImgUrl.query, {source:'Alphaville', width, quality});
 	parsedImgUrl.search = undefined;
 	return url.format(parsedImgUrl);
