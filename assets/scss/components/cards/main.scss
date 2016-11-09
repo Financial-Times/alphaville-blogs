@@ -418,6 +418,13 @@ $alphaville-card__color--yellow-tint3: #b35400;
 		}
 	}
 
+	.alphaville-card__headshot--spacer {
+		display: block;
+		float: right;
+		width: 90px;
+		height: 70px;
+	}
+
 	.alphaville-card__headshot {
 		position: absolute;
 		width: 100px;
@@ -446,6 +453,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 .alphaville-card--image-lead {
 	background-color: $alphaville-card__color--grey-tint3;
 	position: relative;
+	min-height: 170px;
 
 	.alphaville-card__heading {
 		@include oTypographySansBold('xl');
