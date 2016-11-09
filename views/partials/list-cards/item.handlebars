@@ -1,32 +1,20 @@
-<div class="alphaville-card-container">
-	{{#isMarketsLive}}
-		{{> list-cards/card-marketslive}}
-	{{/isMarketsLive}}
+{{#isMarketsLive}}
+	{{> list-cards/card-marketslive}}
+{{/isMarketsLive}}
 
-	{{#isBlog}}
-		{{> list-cards/card-generic}}
-	{{/isBlog}}
+{{#isBlog}}
+	{{> list-cards/card-generic}}
+{{/isBlog}}
 
-	{{#isAlphachat}}
-		{{> list-cards/card-generic}}
-	{{/isAlphachat}}
+{{#isAlphachat}}
+	{{> list-cards/card-generic}}
+{{/isAlphachat}}
 
-	{{#isFirstFT}}
-		{{> list-cards/card-firstft}}
-	{{/isFirstFT}}
+{{#isFirstFT}}
+	{{> list-cards/card-firstft}}
+{{/isFirstFT}}
 
-	{{#withInlineRead}}
-		<div data-o-component="o-expander" class="o-expander o--if-js clearfix"
-				data-o-expander-shrink-to="hidden"
-				data-o-expander-expanded-toggle-text="read less"
-				data-o-expander-collapsed-toggle-text="read more"
-				data-article-url="{{_source.av2WebUrl}}"
-				data-trackable="read-more">
-			<button class="o-expander__toggle o--if-js" data-trackable="toggle"></button>
-			<div class="o-expander__content"></div>
-		</div>
-	{{/withInlineRead}}
-</div>
+
 
 {{^ ../withoutAds}}
 	{{> list-cards/adBetweenCards}}

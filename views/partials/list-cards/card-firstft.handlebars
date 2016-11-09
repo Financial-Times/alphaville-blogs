@@ -1,45 +1,47 @@
-<div class="alphaville-card o-card o-card--landscape o-card--image-" data-o-component="o-card" data-trackable="card">
-	<div class="o-card__content">
-		{{#if _source.authors}}
-			<div class="o-card__meta alphaville-card__theme">
-				<ul class="alphaville-card--inline-list">
-					{{#_source.authors}}
-						<li>
-							<a href="/author?q={{name}}" class="o-card__tag" data-trackable="author">{{name}}</a>
-						</li>
-					{{/_source.authors}}
-				</ul>
-			</div>
-		{{else}}
-			{{#_source.primaryTheme}}
-				<div class="o-card__meta">
-					<a href="/search?q={{.}}" class="o-card__tag" data-trackable="theme">{{.}}</a>
+<div class="alphaville-card-container">
+	<div class="alphaville-card alphaville-card--list" data-o-component="o-card" data-trackable="card">
+		<div class="alphaville-card__content">
+			{{#if _source.authors}}
+				<div class="alphaville-card__theme">
+					<ul class="alphaville-card--inline-list">
+						{{#_source.authors}}
+							<li>
+								<a href="/author?q={{name}}" class="alphaville-card__tag" data-trackable="author">{{name}}</a>
+							</li>
+						{{/_source.authors}}
+					</ul>
 				</div>
-			{{/_source.primaryTheme}}
-		{{/if}}
+			{{else}}
+				{{#_source.primaryTheme}}
+					<div class="alphaville-card__meta">
+						<a href="/search?q={{.}}" class="alphaville-card__tag" data-trackable="theme">{{.}}</a>
+					</div>
+				{{/_source.primaryTheme}}
+			{{/if}}
 
-		<h3 class="o-card__heading">
-			<a href="{{_source.av2WebUrl}}" data-trackable="heading">First FT: {{_source.title}}</a>
-		</h3>
+			<h3 class="alphaville-card__heading">
+				<a href="{{_source.av2WebUrl}}" data-trackable="heading">First FT: {{_source.title}}</a>
+			</h3>
 
-		{{#if withImage}}
-			<div class="o-grid-container o-grid-container--bleed">
-				<div class="o-grid-row">
-					<div data-o-grid-colspan="6 S4 M3 L5">
-						<div class="o-card__image">
-							<a href="{{_source.av2WebUrl}}" data-trackable="image"><img src="{{image _source.mainImage.url 250 'medium'}}" alt="{{_source.mainImage.title}}" /></a>
+			{{#if withImage}}
+				<div class="o-grid-container o-grid-container--bleed">
+					<div class="o-grid-row">
+						<div data-o-grid-colspan="6 S4 M3 L5">
+							<div class="alphaville-card__image">
+								<a href="{{_source.av2WebUrl}}" data-trackable="image"><img src="{{image _source.mainImage.url 250 'medium'}}" alt="{{_source.mainImage.title}}" /></a>
+							</div>
+						</div>
+						<div data-o-grid-colspan="6 S8 M9 L7">
+							<p class="alphaville-card__standfirst">{{{_source.summaries.[0]}}}</p>
+
+							<time data-o-component="o-date" class="o-date alphaville-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
 						</div>
 					</div>
-					<div data-o-grid-colspan="6 S8 M9 L7">
-						<p class="o-card__standfirst">{{{_source.summaries.[0]}}}</p>
-
-						<time data-o-component="o-date" class="o-date alphaville-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
-					</div>
 				</div>
-			</div>
-		{{else}}
-			<p class="o-card__standfirst">{{{_source.summaries.[0]}}}</p>
-			<time data-o-component="o-date" class="o-date alphaville-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
-		{{/if}}
+			{{else}}
+				<p class="alphaville-card__standfirst">{{{_source.summaries.[0]}}}</p>
+				<time data-o-component="o-date" class="o-date alphaville-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
+			{{/if}}
+		</div>
 	</div>
 </div>

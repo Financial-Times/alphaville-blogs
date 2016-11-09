@@ -23,14 +23,8 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	}
 }
 
-.alphaville-card--fill-space {
-	height: 100%;
-	padding-bottom: 10px;
-}
-
 .alphaville-card__heading {
 	@include oCardHeading;
-	line-height: 28px;
 }
 
 .alphaville-card__heading--invert {
@@ -48,7 +42,6 @@ $alphaville-card__color--yellow-tint3: #b35400;
 
 .alphaville-card__tag {
 	@include oCardTag;
-	margin-bottom: 5px;
 }
 
 .alphaville-card__standfirst {
@@ -77,8 +70,58 @@ $alphaville-card__color--yellow-tint3: #b35400;
 
 .alphaville-card__timestamp {
 	@include oCardTimestamp;
-	padding: 10px 0 0;
 }
+
+
+.alphaville-card {
+	@include oCard;
+
+	$comment-counter-color: #22757c;
+	.alphaville-card--comment-counter {
+		@include oTypographySansSize(s);
+		font-size: 14px;
+		color: $comment-counter-color;
+		float: right;
+		padding: 9px 0 0 5px;
+
+		&:after {
+			@include oIconsGetIcon('comment', $comment-counter-color, 14);
+			content: '';
+			position: relative;
+			margin-left: 5px;
+			vertical-align: middle;
+		}
+	}
+
+	&.alphaville-card--grid {
+		overflow: hidden;
+		background-color: oColorsGetPaletteColor('warm-5');
+		margin-bottom: 26px;
+
+		p {
+			margin: 0;
+		}
+
+		.alphaville-card__tag {
+			margin-bottom: 5px;
+		}
+
+		.alphaville-card__timestamp {
+			padding: 10px 0 0;
+		}
+
+		.alphaville-card__heading {
+			line-height: 28px;
+		}
+	}
+
+	&.alphaville-card--list {
+		.alphaville-card__image {
+			@include oCardImage;
+		}
+	}
+}
+
 
 .alphaville-card__footer {
 	position: absolute;
@@ -89,10 +132,6 @@ $alphaville-card__color--yellow-tint3: #b35400;
 
 .alphaville-card__content {
 	position: relative;
-}
-
-.alphaville-card--fill-space .alphaville-card__content {
-	height: 100%;
 }
 
 .alphaville-card--inline-list {
@@ -122,6 +161,8 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	}
 }
 
+
+
 .alphaville-card--series {
 	.alphaville-card__theme {
 		& > a,
@@ -144,8 +185,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 
 .alphaville-card--alphachat,
 .alphaville-card--podcast {
-	.alphaville-card__theme,
-	.o-card__meta {
+	.alphaville-card__theme {
 		& > a,
 		.alphaville-card--inline-list {
 			position: relative;
@@ -163,8 +203,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	}
 
 	&.alphaville-card--series {
-		.alphaville-card__theme,
-		.o-card__meta {
+		.alphaville-card__theme {
 			& > a,
 			.alphaville-card--inline-list {
 				&:before {
@@ -175,35 +214,16 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	}
 }
 
+.alphaville-card--fill-space {
+	height: 100%;
+	padding-bottom: 10px;
 
-.alphaville-card {
-	overflow: hidden;
-	background-color: oColorsGetPaletteColor('warm-5');
-	margin-bottom: 26px;
-
-	p {
-		margin: 0;
-	}
-
-	$comment-counter-color: #22757c;
-	.alphaville-card--comment-counter {
-		@include oTypographySansSize(s);
-		font-size: 14px;
-		color: $comment-counter-color;
-		float: right;
-		padding: 9px 0 0 5px;
-
-		&:after {
-			@include oIconsGetIcon('comment', $comment-counter-color, 14);
-			content: '';
-			position: relative;
-			margin-left: 5px;
-			vertical-align: middle;
-		}
+	.alphaville-card__content {
+		height: 100%;
 	}
 }
 
-.alphaville-card--marketslive {
+.alphaville-card--marketslive.alphaville-card--grid {
 	background-color: $alphaville-card__color--grey-tint3;
 	position: relative;
 	margin-bottom: 0;
@@ -285,7 +305,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	}
 }
 
-.alphaville-card--firstft {
+.alphaville-card--firstft.alphaville-card--grid {
 	.alphaville-card__tag {
 		@include oTypographySerif('l');
 		color: $alphaville-card__color--yellow-tint3;
@@ -312,7 +332,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 }
 
 
-.alphaville-card--hero {
+.alphaville-card--hero.alphaville-card--grid {
 	background-color: $alphaville-card__color--pink-tint1;
 	position: relative;
 
@@ -377,7 +397,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	}
 }
 
-.alphaville-card--opinion {
+.alphaville-card--opinion.alphaville-card--grid {
 	background-color: $alphaville-card__color--grey-tint3;
 	position: relative;
 
@@ -450,7 +470,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	}
 }
 
-.alphaville-card--image-lead {
+.alphaville-card--image-lead.alphaville-card--grid {
 	background-color: $alphaville-card__color--grey-tint3;
 	position: relative;
 	min-height: 170px;
