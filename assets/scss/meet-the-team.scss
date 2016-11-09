@@ -84,7 +84,7 @@ $contact_color: #27757b;
 	.twitter {
 		a:before {
 			content: '';
-			background: url(http://www.ft.com/__origami/service/image/v2/images/raw/ftsocial:twitter?source=alphaville&format=png&width=15) no-repeat;
+			background: url(http://image.webservices.ft.com/v1/images/raw/ftsocial:twitter?source=alphaville&format=png&width=15) no-repeat;
 			width: 15px;
 			height: 15px;
 			display: inline-block;
