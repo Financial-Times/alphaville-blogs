@@ -118,6 +118,10 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	&.alphaville-card--list {
 		.alphaville-card__image {
 			@include oCardImage;
+
+			float: left;
+			margin: 0 10px 10px 0;
+			max-width: 40%;
 		}
 	}
 }

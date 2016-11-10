@@ -24,20 +24,13 @@
 			</h3>
 
 			{{#if withImage}}
-				<div class="o-grid-container o-grid-container--bleed">
-					<div class="o-grid-row">
-						<div data-o-grid-colspan="6 S4 M3 L5">
-							<div class="alphaville-card__image">
-								<a href="{{_source.av2WebUrl}}" data-trackable="image"><img src="{{image _source.mainImage.url 250 'medium'}}" alt="{{_source.mainImage.title}}" /></a>
-							</div>
-						</div>
-						<div data-o-grid-colspan="6 S8 M9 L7">
-							<p class="alphaville-card__standfirst">{{{_source.standfirst}}}</p>
-
-							<time data-o-component="o-date" class="o-date alphaville-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
-						</div>
-					</div>
+				<div class="alphaville-card__image">
+					<a href="{{_source.av2WebUrl}}" data-trackable="image"><img src="{{image _source.mainImage.url 250 'medium'}}" alt="{{_source.mainImage.title}}" /></a>
 				</div>
+		
+				<p class="alphaville-card__standfirst">{{{_source.standfirst}}}</p>
+
+				<time data-o-component="o-date" class="o-date alphaville-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
 			{{else}}
 				<p class="alphaville-card__standfirst">{{{_source.standfirst}}}</p>
 				<time data-o-component="o-date" class="o-date alphaville-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
