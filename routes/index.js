@@ -1,8 +1,8 @@
 "use strict";
 
 const router = require('express').Router();
-const indexCtrl = require('../lib/controllers/indexCtrl');
+const indexListCtrl = require('../lib/controllers/indexListCtrl');
 
-router.get('/', indexCtrl);
+router.get('/', indexListCtrl);
 
 module.exports = router;
