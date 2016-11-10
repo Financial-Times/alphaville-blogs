@@ -168,8 +168,6 @@ document.addEventListener('o.DOMContentLoaded', () => {
 	const standfirstCharLimitInput = document.querySelector('[name="standfirst-char-limit"]');
 
 	curationDelegate.on('click', '[name="save-standfirst-char-limit"]', () => {
-		console.log(standfirstCharLimitInput.value);
-
 		const cardContainers = document.querySelectorAll('.alphaville-card-container');
 		if (cardContainers && cardContainers.length) {
 			for (let i = 0; i < cardContainers.length; i++) {
