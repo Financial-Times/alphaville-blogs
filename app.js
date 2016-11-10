@@ -29,7 +29,7 @@ ftwebservice(app, {
 		"purpose": "Frontend rendering application for FT Alphaville articles and Markets Live.",
 		"audience": "public",
 		"primaryUrl": "https://ftalphaville.ft.com",
-		"serviceTier": "gold"
+		"serviceTier": "silver"
 	},
 	goodToGoTest: function() {
 		return true;
