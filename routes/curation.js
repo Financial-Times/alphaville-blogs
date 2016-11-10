@@ -8,5 +8,6 @@ router.get('/', curationCtrl.index);
 
 router.get('/save', curationCtrl.save);
 router.get('/delete', curationCtrl.delete);
+router.get('/standfirst-char-limit', curationCtrl.standfirstCharLimit);
 
 module.exports = router;

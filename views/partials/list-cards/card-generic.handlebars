@@ -1,5 +1,5 @@
 <div class="alphaville-card-container">
-	<div class="alphaville-card alphaville-card--list {{#if isSeriesArticle}} alphaville-card--series{{/if}}{{#if isAlphachat}} alphaville-card--alphachat{{/if}}{{#if isPodcast}} alphaville-card--podcast{{/if}}" data-o-component="o-card">
+	<div class="alphaville-card alphaville-card--list {{#if isSeriesArticle}} alphaville-card--series{{/if}}{{#if isAlphachat}} alphaville-card--alphachat{{/if}}{{#if isPodcast}} alphaville-card--podcast{{/if}}" data-o-component="o-card" data-article-id="{{_id}}">
 		<div class="alphaville-card__content">
 			{{#if isAlphachat}}
 				{{#_source.primaryTheme}}
@@ -49,18 +49,18 @@
 					<div class="o-grid-row">
 						<div data-o-grid-colspan="6 S4 M3 L5">
 							<div class="alphaville-card__image">
-	                            <a href="{{_source.av2WebUrl}}" data-trackable="image"><img src="{{image _source.mainImage.url 250 'medium'}}" alt="{{_source.mainImage.title}}" /></a>
+	                            <a href="{{_source.av2WebUrl}}" data-trackable="image"><img src="{{image _source.mainImage.url 380 'medium'}}" alt="{{_source.mainImage.title}}" /></a>
 							</div>
 						</div>
 						<div data-o-grid-colspan="6 S8 M9 L7">
-							<p class="alphaville-card__standfirst">{{{_source.summaries.[0]}}}</p>
+							<p class="alphaville-card__standfirst">{{{_source.standfirst}}}</p>
 
 							<time data-o-component="o-date" class="o-date alphaville-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
 						</div>
 					</div>
 				</div>
 			{{else}}
-				<p class="alphaville-card__standfirst">{{{_source.summaries.[0]}}}</p>
+				<p class="alphaville-card__standfirst">{{{_source.standfirst}}}</p>
 				<time data-o-component="o-date" class="o-date alphaville-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
 			{{/if}}
 		</div>

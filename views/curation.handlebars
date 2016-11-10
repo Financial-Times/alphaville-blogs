@@ -11,6 +11,25 @@
 {{> alphaville-ui/comments-config/main }}
 {{/contentFor}}
 
+<div class="o-grid-container">
+	<div class="o-grid-row">
+		<div data-o-grid-colspan="12">
+			<div class="o-forms-group">
+				<label for="standfirst-char-limit" class="o-forms-label">Standfirst character limit</label>
+
+				<div class="o-grid-row">
+					<div data-o-grid-colspan="6">
+						<input name="standfirst-char-limit" type="text" id="standfirst-char-limit" value="{{standfirstCharLimit}}" class="o-forms-text"></input>
+					</div>
+					<div data-o-grid-colspan="6">
+						<button type="button" class="o-buttons o-buttons--standout o-buttons--big" name="save-standfirst-char-limit">Save</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 <div class="o-grid-container alphaville-article-grid">
 	<div class="o-grid-row">
 		{{> grid-cards/item-list}}

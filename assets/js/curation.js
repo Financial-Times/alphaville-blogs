@@ -164,6 +164,77 @@ document.addEventListener('o.DOMContentLoaded', () => {
 			}
 		}
 	});
+
+	const standfirstCharLimitInput = document.querySelector('[name="standfirst-char-limit"]');
+
+	curationDelegate.on('click', '[name="save-standfirst-char-limit"]', () => {
+		console.log(standfirstCharLimitInput.value);
+
+		const cardContainers = document.querySelectorAll('.alphaville-card-container');
+		if (cardContainers && cardContainers.length) {
+			for (let i = 0; i < cardContainers.length; i++) {
+				const cardContainer = cardContainers[i];
+
+				const card = cardContainer.querySelector('.alphaville-card');
+				if (card) {
+					cardContainer.classList.add('alphaville-curation--save-in-progress');
+					cardContainer.appendChild(alphavilleUi.utils.dom.toDOM(`
+						<div class="alphaville-curation--spinner"></div>
+					`));
+				}
+			}
+
+
+			function onSuccess (data) {
+				if (typeof data === 'string') {
+					data = JSON.parse(data);
+				}
+
+				if (data.status === 'ok') {
+					for (let i = 0; i < cardContainers.length; i++) {
+						const cardContainer = cardContainers[i];
+						cardContainer.classList.remove('alphaville-curation--save-in-progress');
+						cardContainer.removeChild(cardContainer.querySelector('.alphaville-curation--spinner'));
+					}
+
+					if (data.html) {
+						document.querySelector('.alphaville-article-grid .o-grid-row').innerHTML = data.html;
+						oDate.init();
+						oCommentCount.init();
+						oAds.init();
+					} else {
+						new alphavilleUi.AlertOverlay('Warning', `
+							The data has been saved, but for some reason the card could not be updated.<br/>
+							Please refresh the page to see the updated cards.
+						`);
+					}
+				} else {
+					onFail(data);
+				}
+			}
+
+			function onFail (err) {
+				new alphavilleUi.AlertOverlay('Error', err.msg || "An error occured.");
+
+				for (let i = 0; i < cardContainers.length; i++) {
+					const cardContainer = cardContainers[i];
+
+					cardContainer.classList.remove('alphaville-curation--save-in-progress');
+					const spinner = cardContainer.querySelector('.alphaville-curation--spinner');
+					if (spinner) {
+						cardContainer.removeChild(spinner);
+					}
+				}
+			}
+
+			alphavilleUi.utils.httpRequest.get({
+				url: `${curationApiUrl}/standfirst-char-limit`,
+				query: {
+					value: standfirstCharLimitInput.value
+				}
+			}).then(onSuccess).catch(onFail);
+		}
+	});
 });
 
 require('o-autoinit');
