@@ -1,9 +1,9 @@
 const router = require('express').Router();
-const indexListCtrl = require('../lib/controllers/indexListCtrl');
+const indexGridCtrl = require('../lib/controllers/indexGridCtrl');
 
 /**
  * Temporary route to display the index page as a list of items (instead of a grid)
  */
-router.get('/', indexListCtrl);
+router.get('/', indexGridCtrl);
 
 module.exports = router;
