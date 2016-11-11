@@ -46,8 +46,6 @@ $alphaville-card__color--yellow-tint3: #b35400;
 
 .alphaville-card__standfirst {
 	@include oCardStandfirst;
-	font-size: 18px;
-	font-family: Georgia;
 }
 
 .alphaville-card__standfirst-truncate--2lines {
@@ -118,6 +116,14 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	}
 
 	&.alphaville-card--list {
+		
+		.alphaville-card__standfirst {
+			font-size: 18px;
+			font-family: Georgia;
+			line-height: 25.2px;
+		}
+
+
 		.alphaville-card__image {
 			@include oCardImage;
 
