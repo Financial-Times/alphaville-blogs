@@ -1,11 +1,10 @@
 require('./common');
 require('o-comments');
 require('o-expander');
-require('o-video');
+const oVideo = require('o-video');
 require('o-share');
 require('./article-series');
 
-const embeddedMedia = require('webchat/src/js/ui/embeddedMedia');
 const oCommentCount = require('o-comment-count');
 
 const oDate = require('o-date');
@@ -47,13 +46,11 @@ document.addEventListener('o.DOMContentLoaded', function () {
 					ajax: true
 				}
 			}).then((html) => {
-
 				content.innerHTML = checkIfBarrier(html);
 
-				const closedContentContainer = content.querySelector('.webchat-closed-content');
-
-				if (closedContentContainer) {
-					embeddedMedia.convert(closedContentContainer);
+				oVideo.init();
+				if (window.twttr) {
+					window.twttr.widgets.load();
 				}
 			}).catch((e) => {
 				console.log(e);
