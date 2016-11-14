@@ -166,8 +166,12 @@ document.addEventListener('o.DOMContentLoaded', () => {
 	});
 
 	const standfirstCharLimitInput = document.querySelector('[name="standfirst-char-limit"]');
+	const standfirstCharLimitForm = document.querySelector('form[name="standfirst-char-limit-form"]');
+	const standfirstCharLimitSave = document.querySelector('button[name="save-standfirst-char-limit"]');
 
-	curationDelegate.on('click', '[name="save-standfirst-char-limit"]', () => {
+	standfirstCharLimitForm.addEventListener('submit', (e) => {
+		e.preventDefault();
+
 		const cardContainers = document.querySelectorAll('.alphaville-card-container');
 		if (cardContainers && cardContainers.length) {
 			for (let i = 0; i < cardContainers.length; i++) {
@@ -182,8 +186,14 @@ document.addEventListener('o.DOMContentLoaded', () => {
 				}
 			}
 
+			standfirstCharLimitInput.setAttribute('disabled', 'disabled');
+			standfirstCharLimitSave.setAttribute('disabled', 'disabled');
+
 
 			function onSuccess (data) {
+				standfirstCharLimitInput.removeAttribute('disabled', 'disabled');
+				standfirstCharLimitSave.removeAttribute('disabled', 'disabled');
+
 				if (typeof data === 'string') {
 					data = JSON.parse(data);
 				}
@@ -212,6 +222,9 @@ document.addEventListener('o.DOMContentLoaded', () => {
 			}
 
 			function onFail (err) {
+				standfirstCharLimitInput.removeAttribute('disabled', 'disabled');
+				standfirstCharLimitSave.removeAttribute('disabled', 'disabled');
+
 				new alphavilleUi.AlertOverlay('Error', err.msg || "An error occured.");
 
 				for (let i = 0; i < cardContainers.length; i++) {
