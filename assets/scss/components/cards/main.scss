@@ -96,7 +96,6 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	&.alphaville-card--grid {
 		overflow: hidden;
 		background-color: oColorsGetPaletteColor('warm-5');
-		margin-bottom: 26px;
 
 		p {
 			margin: 0;
@@ -112,6 +111,10 @@ $alphaville-card__color--yellow-tint3: #b35400;
 
 		.alphaville-card__heading {
 			line-height: 28px;
+		}
+
+		.alphaville-card__content {
+			padding-bottom: 26px;
 		}
 	}
 
@@ -149,7 +152,6 @@ $alphaville-card__color--yellow-tint3: #b35400;
 
 .alphaville-card__content {
 	position: relative;
-	overflow: hidden;
 }
 
 .alphaville-card--inline-list {
@@ -183,10 +185,13 @@ $alphaville-card__color--yellow-tint3: #b35400;
 
 .alphaville-card--series {
 	.alphaville-card__theme {
+		overflow: hidden;
+
 		& > a,
 		.alphaville-card--inline-list {
 			position: relative;
 			padding-right: 25px;
+			overflow: hidden;
 
 			&:after {
 				@include oIconsGetIcon('series', oColorsGetPaletteColor('grey-tint3'), 40, $iconset-version: 1);
@@ -320,6 +325,10 @@ $alphaville-card__color--yellow-tint3: #b35400;
 
 	.alphaville-card__heading-truncate--3lines {
 		@include truncate(27px, 3, false);
+	}
+
+	.alphaville-card__content {
+		padding-bottom: 0;
 	}
 }
 
