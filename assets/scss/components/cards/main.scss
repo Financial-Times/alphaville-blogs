@@ -416,12 +416,6 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	.alphaville-card__heading-truncate--3lines {
 		@include truncate(27px, 3, false);
 	}
-
-	&.alphaville-card--with-image .alphaville-card__standfirst {
-		@include oGridRespondTo($until: S) {
-			max-height: 38px;
-		}
-	}
 }
 
 .alphaville-card--opinion.alphaville-card--grid {
