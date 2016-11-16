@@ -191,7 +191,6 @@ $alphaville-card__color--yellow-tint3: #b35400;
 		.alphaville-card--inline-list {
 			position: relative;
 			padding-right: 25px;
-			overflow: hidden;
 
 			&:after {
 				@include oIconsGetIcon('series', oColorsGetPaletteColor('grey-tint3'), 40, $iconset-version: 1);
