@@ -50,13 +50,13 @@
 									{{#items}}
 										{{#_source}}
 											<div class="alphaville-card-container">
-												<div class="alphaville-card o-card o-card--landscape" data-o-component="o-card">
-													<div class="o-card__content">													
-														<h2 class="o-card__heading">
-															<a href="{{av2WebUrl}}">{{title}}</a>
-														</h2>
+												<div class="alphaville-card alphaville-card--list alphaville-card--marketslive" data-o-component="o-card" data-article-id="{{_id}}">
+													<div class="alphaville-card__content">					
+														<h3 class="alphaville-card__heading">
+															<a href="{{av2WebUrl}}" data-trackable="heading">{{title}}</a>
+														</h3>
 
-														<p class="o-card__standfirst">{{{summaries.[0]}}}</p>
+														<p class="alphaville-card__standfirst">{{standfirst}}</p>
 													</div>
 												</div>
 											</div>
