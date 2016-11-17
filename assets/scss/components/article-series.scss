@@ -1,53 +1,74 @@
-.av-series-wrapper {
-  font-family: MetricWeb, sans-serif;
-  font-size: 16px;
-  background-color: #fdf8f2;
-  border-left: 3px solid #2B757A;
-  padding: 10px 16px;
-  margin-bottom: 16px;
+.alphaville-series__wrapper {
+	background-color: #fdf8f2;
+	border-left: 3px solid #2B757A;
+	padding: 10px 16px;
+	margin-bottom: 16px;
 }
-.av-series-title {
-  line-height: 16px;
-  cursor: pointer;
-  &.active {
-    & > span {
-      &:before {
-        background-image: url(//image.webservices.ft.com/v1/images/raw/fticon-v1:arrow-down?source=Alphaville);
-      }
-    }
-  }
-  & > span {
-    text-transform: uppercase;
-    font-weight: bold;
-    display: inline-block;
-    position: relative;
-    &:before {
-      background-image: url(//image.webservices.ft.com/v1/images/raw/fticon-v1:arrow-right?source=Alphaville);
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-color: transparent;
-      width: 16px;
-      height: 16px;
-      display: inline-block;
-      vertical-align: middle;
-      position: absolute;
-      top: 0;
-      right: -16px;
-      content: "";
-    }
-  }
+
+.alphaville-series__toggle {
+	@include oTypographySans(s);
+	font-size: 16px;
+	cursor: pointer;
+	outline: 0;
+
+	i {
+		display: none;
+	}
+
+	& > span {
+		@include oTypographySansBold(s);
+		font-weight: bold;
+		font-size: 16px;
+		text-transform: uppercase;
+		display: inline-block;
+		position: relative;
+
+		&:before {
+			background-image: url(https://image.webservices.ft.com/v1/images/raw/fticon-v1:arrow-right?source=Alphaville);
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-color: transparent;
+			width: 16px;
+			height: 16px;
+			display: inline-block;
+			vertical-align: middle;
+			position: absolute;
+			top: 0;
+			right: -16px;
+			content: "";
+		}
+	}
+
+	&[aria-expanded="true"] {
+		& > span {
+			&:before {
+				background-image: url(https://image.webservices.ft.com/v1/images/raw/fticon-v1:arrow-down?source=Alphaville);
+			}
+		}
+	}
 }
-.av-series-articles {
-  display: none;
-  margin: 8px 0;
-  padding-left: 0;
-  list-style-position: inside;
-  &.active {
-    display: block;
-  }
-  a, a:hover {
-    color: #2e6e9e;
-    text-decoration: none;
-    border-bottom: none;
-  }
+
+.alphaville-series__articles {
+	margin: 8px 0;
+	padding-left: 0;
+	list-style-position: inside;
+
+	&.active {
+		display: block;
+	}
+
+	a,
+	a:hover {
+		color: #2e6e9e;
+		text-decoration: none;
+		border-bottom: 0;
+	}
+}
+
+.alphaville-series__content {
+	display: none;
+
+	&[aria-hidden="false"] {
+		display: block;
+	}
 }

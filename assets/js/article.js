@@ -3,7 +3,7 @@ require('o-comments');
 require('o-comment-count');
 require('o-video');
 require('o-share');
-require('./article-series');
+require('o-expander');
 
 const oAds = require('alphaville-ui')['o-ads'];
 

@@ -3,7 +3,6 @@ require('o-comments');
 require('o-expander');
 const oVideo = require('o-video');
 require('o-share');
-require('./article-series');
 
 const oCommentCount = require('o-comment-count');
 
@@ -36,7 +35,7 @@ document.addEventListener('o.DOMContentLoaded', function () {
 
 	document.addEventListener('oExpander.expand', (evt) => {
 		const content = evt.target.querySelector('.o-expander__content');
-		if (!content.innerHTML) {
+		if (content.classList.contains('alphaville--read-more__content') && !content.innerHTML) {
 			content.innerHTML = `
 				<div class="alphaville-spinner"></div>
 			`;

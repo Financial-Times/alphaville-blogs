@@ -53,7 +53,7 @@
 		}
 	}
 
-	.o-expander__toggle {
+	.alphaville--read-more__toggle {
 		float: right;
 		color: oColorsGetPaletteColor('teal-1');
 		font-weight: bold;
@@ -67,7 +67,7 @@
 		}
 	}
 
-	.o-expander__content {
+	.alphaville--read-more__content {
 		clear: both;
 		transition: 2s all ease;
 		max-height: 9999px;
