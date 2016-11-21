@@ -361,6 +361,19 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	}
 }
 
+.alphaville-card--list {
+		.alphaville-card__tag-part1, .alphaville-card__tag-part2 {
+			@include oTypographySerif('l');
+			color: $alphaville-card__color--yellow-tint3;
+			font-size: 26px;
+			line-height: 31px;
+		}
+
+		.alphaville-card__tag-part1 {
+			font-style: italic;
+		}
+}
+
 
 .alphaville-card--hero.alphaville-card--grid {
 	background-color: $alphaville-card__color--pink-tint1;
