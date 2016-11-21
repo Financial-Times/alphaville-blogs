@@ -7,6 +7,8 @@ const restrictedAccess = require('./lib/middlewares/restrictedAccess');
 
 router.use('/', require('./routes/index'));
 router.use('/home', require('./routes/home'));
+router.use('/indexViewToggler', require('./routes/indexViewToggler'));
+
 router.use('/search', require('./routes/search'));
 router.use('/about', require('./routes/about'));
 router.use('/meet-the-team', require('./routes/meet'));
