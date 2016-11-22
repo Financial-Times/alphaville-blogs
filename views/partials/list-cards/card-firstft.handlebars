@@ -32,14 +32,14 @@
 
 				<div class="alphaville-card__footer">
 					{{> comment-counter}}
-					<time data-o-component="o-date" class="o-date alphaville-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
+					{{> timestamp}}
 				</div>
 			{{else}}
 				<p class="alphaville-card__standfirst">{{{_source.standfirst}}}</p>
 
 				<div class="alphaville-card__footer">
 					{{> comment-counter}}
-					<time data-o-component="o-date" class="o-date alphaville-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
+					{{> timestamp}}
 				</div>
 			{{/if}}
 		</div>
