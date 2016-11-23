@@ -14,13 +14,13 @@
 			{{else}}
 				{{#_source.primaryTheme}}
 					<div class="alphaville-card__meta">
-						<a href="/search?q={{.}}" class="alphaville-card__tag" data-trackable="theme">{{.}}</a>
+						<a href="{{url}}" class="alphaville-card__tag" data-trackable="theme">{{label}}</a>
 					</div>
 				{{/_source.primaryTheme}}
 			{{/if}}
 
 			<h3 class="alphaville-card__heading">
-				<a href="{{_source.av2WebUrl}}" data-trackable="heading">First FT: {{_source.title}}</a>
+				<a href="{{_source.av2WebUrl}}" data-trackable="heading"><span class="alphaville-card__tag-part1">First</span> <span class="alphaville-card__tag-part2">FT</span>&nbsp; {{_source.title}}</a>
 			</h3>
 
 			{{#if withImage}}
@@ -32,14 +32,14 @@
 
 				<div class="alphaville-card__footer">
 					{{> comment-counter}}
-					<time data-o-component="o-date" class="o-date alphaville-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
+					{{> timestamp}}
 				</div>
 			{{else}}
 				<p class="alphaville-card__standfirst">{{{_source.standfirst}}}</p>
 
 				<div class="alphaville-card__footer">
 					{{> comment-counter}}
-					<time data-o-component="o-date" class="o-date alphaville-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
+					{{> timestamp}}
 				</div>
 			{{/if}}
 		</div>

@@ -3,6 +3,7 @@
 	border-left: 3px solid #2B757A;
 	padding: 10px 16px;
 	margin-bottom: 16px;
+
 }
 
 .alphaville-series__toggle {
@@ -53,12 +54,19 @@
 	padding-left: 0;
 	list-style-position: inside;
 
+	li {
+		@include oTypographySans(s);
+		font-size: 16px;
+	}
+
 	&.active {
 		display: block;
 	}
 
 	a,
 	a:hover {
+		@include oTypographySans(s);
+		font-size: 16px;
 		color: #2e6e9e;
 		text-decoration: none;
 		border-bottom: 0;

@@ -1,39 +1,16 @@
 <div class="alphaville-card-container">
 	<div class="alphaville-card alphaville-card--list {{#if isSeriesArticle}} alphaville-card--series{{/if}}{{#if isAlphachat}} alphaville-card--alphachat{{/if}}{{#if isPodcast}} alphaville-card--podcast{{/if}}" data-o-component="o-card" data-article-id="{{_id}}">
 		<div class="alphaville-card__content">
-			{{#if isAlphachat}}
-				{{#_source.primaryTheme}}
-					<div class="alphaville-card__theme">
-						<a href="/alphachat" class="alphaville-card__tag" data-trackable="theme">{{.}}</a>
-					</div>
-				{{/_source.primaryTheme}}
-			{{else}}
-				{{#if isSeriesArticle}}
+
+			<div class="alphaville-card__theme">
+				<ul class="alphaville-card--inline-list">
 					{{#_source.primaryTheme}}
-						<div class="alphaville-card__theme">
-							<a href="/search?q={{.}}" class="alphaville-card__tag" data-trackable="theme">{{.}}</a>
-						</div>
+						<li>
+							<a href="{{url}}" class="alphaville-card__tag" data-trackable="theme">{{label}}</a>
+						</li>
 					{{/_source.primaryTheme}}
-				{{else}}
-					{{#if _source.authors}}
-						<div class="alphaville-card__meta">
-							<ul class="alphaville-card--inline-list">
-								{{#_source.authors}}
-									<li>
-										<a href="/author?q={{name}}" class="alphaville-card__tag" data-trackable="author">{{name}}</a>
-									</li>
-								{{/_source.authors}}
-							</ul>
-						</div>
-					{{else}}
-						{{#_source.primaryTheme}}
-							<div class="alphaville-card__meta">
-								<a href="/search?q={{.}}" class="alphaville-card__tag" data-trackable="theme">{{.}}</a>
-							</div>
-						{{/_source.primaryTheme}}
-					{{/if}}
-				{{/if}}
-			{{/if}}
+				</ul>
+			</div>
 
 			<h3 class="alphaville-card__heading">
 				<a href="{{_source.av2WebUrl}}" data-trackable="heading">{{_source.title}}</a>
@@ -53,14 +30,14 @@
 
 				<div class="alphaville-card__footer">
 					{{> comment-counter}}
-					<time data-o-component="o-date" class="o-date alphaville-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
+					{{> timestamp}}
 				</div>
 			{{else}}
 				<p class="alphaville-card__standfirst">{{{_source.standfirst}}}</p>
 
 				<div class="alphaville-card__footer">
 					{{> comment-counter}}
-					<time data-o-component="o-date" class="o-date alphaville-card__timestamp" datetime="{{_source.publishedDate}}">{{_source.publishedDate}}</time>
+					{{> timestamp}}
 				</div>
 			{{/if}}
 		</div>
