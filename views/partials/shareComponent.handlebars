@@ -27,12 +27,11 @@
 		<!-- form class="n-myft-ui n-myft-ui--save" method="POST" data-content-id="ce9e7eb0-cfe5-3442-a38d-97ca7351e200" data-myft-ui="saved" action="/__myft/api/core/saved/content/ce9e7eb0-cfe5-3442-a38d-97ca7351e200?method=put">
 			<button type="submit" class="n-myft-ui__button" data-trackable="save-for-later" data-alternate-label="Saved to myFT" data-alternate-text="Saved" data-content-id="ce9e7eb0-cfe5-3442-a38d-97ca7351e200" aria-label="Save to myFT" title="Save to myFT">Save</button>
 		</form -->
-		
-		{{#_source.comments.enabled}}
-			{{^hideCommentCount}}
-			<a href="#comments" class="article__share__comments article__share-item" data-o-component="o-comment-count" data-o-comment-count-config-article-id="{{article.id}}" data-o-comment-count-config-template="{count}" data-trackable="comment-count"></a>
-			{{/hideCommentCount}}
-		{{/_source.comments.enabled}}
+
+		{{^hideCommentCount}}
+		<a href="#comments" class="article__share__comments article__share-item" data-o-component="o-comment-count" data-o-comment-count-config-article-id="{{article.id}}" data-o-comment-count-config-template="{count}" data-trackable="comment-count"></a>
+		{{/hideCommentCount}}
+
 	</div>
 	<div data-n-article-email-{{position}}-container=""></div>
 	<div class="article__share-bottom-gutter--{{position}}"></div>
