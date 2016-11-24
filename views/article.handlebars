@@ -39,7 +39,7 @@
                         {{> series-articles }}
                     {{/article.seriesArticles}}
 
-                    <article class="article__body n-content-body">
+                    <article class="article__body n-content-body" data-content-id="{{article.id}}" data-content-sources="v1 v2">
                         {{#article.attachments}}
                             <audio controls data-trackable="audio">
                                 <source src="{{url}}" type="{{mediaType}}">
