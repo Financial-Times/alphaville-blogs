@@ -23,17 +23,16 @@
 
 			{{#if withImage}}
 				<div class="alphaville-card__image">
-                    <a href="{{_source.av2WebUrl}}" data-trackable="image"><img src="{{image _source.mainImage.url 740 'medium'}}" alt="{{_source.mainImage.title}}" /></a>
+        	<a href="{{_source.av2WebUrl}}" data-trackable="image"><img src="{{image _source.mainImage.url 740 'medium'}}" alt="{{_source.mainImage.title}}" /></a>
 				</div>
-
-				<p class="alphaville-card__standfirst">{{{_source.standfirst}}}</p>
+				{{> grid-cards/elements/standfirst}}
 
 				<div class="alphaville-card__footer">
 					{{> comment-counter}}
 					{{> timestamp}}
 				</div>
 			{{else}}
-				<p class="alphaville-card__standfirst">{{{_source.standfirst}}}</p>
+				{{> grid-cards/elements/standfirst}}
 
 				<div class="alphaville-card__footer">
 					{{> comment-counter}}
