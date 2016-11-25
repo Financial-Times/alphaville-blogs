@@ -17,6 +17,7 @@ router.use('/', require('./routes/sectionPages'));
 router.use('/most-popular-livefyre', require('./routes/mostPopular'));
 router.use('/most-popular', require('./routes/mostRead'));
 router.use('/most-commented', require('./routes/mostCommented'));
+router.use('/topic', require('./routes/topic'));
 
 router.use('/marketslive', require('./routes/marketslive'));
 router.use('/', require('./routes/article'));
