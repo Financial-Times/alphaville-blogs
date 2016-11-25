@@ -7,14 +7,12 @@
 
 			{{#if isPodcast}} 
 				{{#if withImage}}
-					<a href="{{_source.av2WebUrl}}">
+					<a href="{{_source.av2WebUrl}}" data-trackable="image">
 						<img class="alphaville-card__image" src="{{image _source.mainImage.url 80 'low'}}" alt="{{_source.mainImage.title}}">
 					</a>
 				{{/if}}
 			{{else}}
-
 				{{> grid-cards/elements/standfirst}}
-
 			{{/if}}
 
 			<div class="alphaville-card__footer">
