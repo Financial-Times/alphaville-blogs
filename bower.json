@@ -1,41 +1,41 @@
 {
-  "name": "alphaville-blogs",
-  "description": "",
-  "main": "",
-  "authors": [
-    "Dragos Digulescu <dragos.digulescu@ft.com>",
-    "Roland Vachter <roland.vachter@ft.com>"
-  ],
-  "homepage": "https://github.com/Financial-Times/alphaville-blogs",
-  "moduleType": [
-    "globals"
-  ],
-  "private": true,
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "alphaville-ui": "Financial-Times/alphaville-ui#^1.0.0",
-    "alphaville-marketslive-chat": "Financial-Times/alphaville-marketslive-chat#^0.1.0",
-    "webchat": "Financial-Times/webchat#^0.5.0",
-    "o-autoinit": "^1.2.0",
-    "o-comments": "^3.4.0",
-    "o-comment-count": "^0.3.0",
-    "o-card": "^2.1.1",
-    "o-tabs": "^2.3.3",
-    "o-share": "^2.1.4",
-    "o-video": "^1.0.0",
-    "o-expander": "^4.0.0",
-    "dom-delegate": "ftdomdelegate#^2.0.4",
-    "o-forms": "^2.0.5"
-  },
-  "resolutions": {
-    "o-hoverable": ">=0.1.1 <4",
-    "o-buttons": "^4.0.1",
-    "o-viewport": "^3.0.0"
-  }
+	"name": "alphaville-blogs",
+	"description": "",
+	"main": "",
+	"authors": [
+		"Dragos Digulescu <dragos.digulescu@ft.com>",
+		"Roland Vachter <roland.vachter@ft.com>"
+	],
+	"homepage": "https://github.com/Financial-Times/alphaville-blogs",
+	"moduleType": [
+		"globals"
+	],
+	"private": true,
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
+	"dependencies": {
+		"alphaville-ui": "Financial-Times/alphaville-ui#^1.0.0",
+		"alphaville-marketslive-chat": "Financial-Times/alphaville-marketslive-chat#^0.1.0",
+		"webchat": "Financial-Times/webchat#^0.5.0",
+		"o-autoinit": "^1.2.0",
+		"o-comments": "^4.0.0",
+		"o-comment-count": "^0.3.0",
+		"o-card": "^2.1.1",
+		"o-tabs": "^2.3.3",
+		"o-share": "^2.1.4",
+		"o-video": "^1.0.0",
+		"o-expander": "^4.0.0",
+		"dom-delegate": "ftdomdelegate#^2.0.4",
+		"o-forms": "^2.0.5"
+	},
+	"resolutions": {
+		"o-hoverable": ">=0.1.1 <4",
+		"o-buttons": "^4.0.1",
+		"o-viewport": "^3.0.0"
+	}
 }
