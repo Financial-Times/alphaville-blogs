@@ -6,6 +6,10 @@
 
 .alphaville-content {
 	margin-top: 0;
+
+	&.alphaville-alternative-bg {
+		background-color: #fdf8f2;
+	}
 }
 
 .alphaville-footer {
@@ -52,8 +56,12 @@
 	}
 }
 
-.alphaville-content {
-	&.alphaville-alternative-bg {
-		background-color: #fdf8f2;
-	}
+.alphaville-header {
+	display: none;
+}
+
+.alphaville-header--sticky {
+	display: block;
+	position: static;
+	transform: translateY(0);
 }
