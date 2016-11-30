@@ -2,6 +2,8 @@
 	<div class="alphaville-card alphaville-card--list {{#if isSeriesArticle}} alphaville-card--series{{/if}}{{#if isAlphachat}} alphaville-card--alphachat{{/if}}{{#if isPodcast}} alphaville-card--podcast{{/if}}" data-o-component="o-card" data-article-id="{{_id}}">
 		<div class="alphaville-card__content">
 
+
+			{{#unless @root.streamFlag}}
 			<div class="alphaville-card__theme">
 				<ul class="alphaville-card--inline-list">
 					{{#_source.primaryTheme}}
@@ -11,14 +13,16 @@
 					{{/_source.primaryTheme}}
 				</ul>
 			</div>
-
+			{{/unless}}
 			<h3 class="alphaville-card__heading">
 				<a href="{{_source.av2WebUrl}}" data-trackable="heading">{{_source.title}}</a>
 			</h3>
 
-	        {{#_source.seriesArticles}}
-	            {{> series-articles }}
-	        {{/_source.seriesArticles}}
+			{{#unless @root.streamFlag}}
+				{{#_source.seriesArticles}}
+					{{> series-articles }}
+				{{/_source.seriesArticles}}
+			{{/unless}}
 
 
 			{{#if withImage}}
