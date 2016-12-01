@@ -1,26 +1,15 @@
 <div class="alphaville-card-container">
 	<div class="alphaville-card alphaville-card--list" data-o-component="o-card" data-trackable="card" data-article-id="{{_id}}">
 		<div class="alphaville-card__content">
-			{{#if _source.authors}}
-				<div class="alphaville-card__theme">
-					<ul class="alphaville-card--inline-list">
-						{{#_source.authors}}
-							<li>
-								<a href="{{url}}" class="alphaville-card__tag" data-trackable="author">{{name}}</a>
-							</li>
-						{{/_source.authors}}
-					</ul>
+
+			{{#_source.primaryTheme}}
+				<div class="alphaville-card__meta">
+					<a href="{{url}}" class="alphaville-card__tag" data-trackable="theme"><span class="alphaville-card__tag-part1">First</span> <span class="alphaville-card__tag-part2">FT</span></a>
 				</div>
-			{{else}}
-				{{#_source.primaryTheme}}
-					<div class="alphaville-card__meta">
-						<a href="{{url}}" class="alphaville-card__tag" data-trackable="theme">{{label}}</a>
-					</div>
-				{{/_source.primaryTheme}}
-			{{/if}}
+			{{/_source.primaryTheme}}
 
 			<h3 class="alphaville-card__heading">
-				<a href="{{_source.av2WebUrl}}" data-trackable="heading"><span class="alphaville-card__tag-part1">First</span> <span class="alphaville-card__tag-part2">FT</span>&nbsp; {{_source.title}}</a>
+				<a href="{{_source.av2WebUrl}}" data-trackable="heading">{{_source.title}}</a>
 			</h3>
 
 			{{#if withImage}}
