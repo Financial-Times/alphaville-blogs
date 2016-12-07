@@ -19,6 +19,9 @@ router.use('/most-commented', require('./routes/mostCommented'));
 router.use('/topic', require('./routes/topic'));
 router.use('/type', require('./routes/type'));
 router.use('/series', require('./routes/series'));
+router.use('/alphachat', (req, res, next) => {
+  res.redirect('/series/Alphachat');
+})
 
 router.use('/marketslive', require('./routes/marketslive'));
 router.use('/', require('./routes/article'));
