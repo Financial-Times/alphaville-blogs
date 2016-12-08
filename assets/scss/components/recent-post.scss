@@ -1,0 +1,25 @@
+$border-color: #cec6b9;
+$bg-color: #fff1e0;
+$timestamp-color: #8b572a;
+
+.alphaville-recent-post {
+  .alphaville-card__theme {
+    .alphaville-card__tag {
+      margin:5px 0 5px;
+    }
+  }
+  .recent-post__link {
+    text-decoration: none;
+    border: 0;
+    line-height: 29px;
+    font-family: FinancierDisplayWeb,serif;
+    color: #333;
+    font-size: 26px;
+    font-weight: 400;
+  }
+  .alphaville-card__timestamp {
+    padding-top: 15px;
+    padding-bottom: 0px;
+  }
+}
+

@@ -91,8 +91,16 @@
 
             </div>
             <div class="article__aside o-grid-remove-gutters--XL" data-o-grid-colspan="0 L4 XL3 XLoffset1">
-                {{> alphaville-ui/twitter-widget/main}}
-                {{> alphaville-ui/ads/templates/dmpu_desktop}}
+                {{#mostRecentPost}}
+                    {{> recent-post-widget }}
+                    {{> alphaville-ui/ads/templates/dmpu_desktop}}
+                    {{> alphaville-ui/twitter-widget/main}}
+                {{/mostRecentPost}}
+                {{^mostRecentPost}}
+                    {{> alphaville-ui/twitter-widget/main}}
+                    {{> alphaville-ui/ads/templates/dmpu_desktop}}
+                {{/mostRecentPost}}
+
             </div>
         </div>
     </div>
