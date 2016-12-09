@@ -82,6 +82,10 @@
 
                     {{> shareComponent position='bottom'}}
                     <div data-n-article-email-bottom-container=""></div>
+
+                    {{#mostRecentPost}}
+                        {{> recent-post-widget}}
+                    {{/mostRecentPost}}
                 </div>
 
                 {{#article.comments.enabled}}
@@ -92,7 +96,7 @@
             </div>
             <div class="article__aside o-grid-remove-gutters--XL" data-o-grid-colspan="0 L4 XL3 XLoffset1">
                 {{#mostRecentPost}}
-                    {{> recent-post-widget }}
+                    {{> recent-post-widget rhr='rhr'}}
                     {{> alphaville-ui/ads/templates/dmpu_desktop}}
                     {{> alphaville-ui/twitter-widget/main}}
                 {{/mostRecentPost}}
@@ -100,7 +104,6 @@
                     {{> alphaville-ui/twitter-widget/main}}
                     {{> alphaville-ui/ads/templates/dmpu_desktop}}
                 {{/mostRecentPost}}
-
             </div>
         </div>
     </div>
