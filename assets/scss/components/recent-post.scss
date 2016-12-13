@@ -1,9 +1,10 @@
 
-.alphaville-recent-post {
-  padding-bottom: 10px;
-}
 
 .alphaville-recent-post {
+  padding-bottom: 10px;
+  .alphaville-card {
+    padding: 0;
+  }
   .alphaville-card__heading {
     margin-bottom: 0;
   }
