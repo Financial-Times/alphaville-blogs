@@ -2,7 +2,6 @@ require('./common');
 require('o-comments');
 require('o-expander');
 const oVideo = require('o-video');
-require('o-share');
 
 const oCommentCount = require('o-comment-count');
 
