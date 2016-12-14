@@ -17,7 +17,23 @@
 				{{#if isSearch}}
 					<h1 class="o-typography-heading1">Search results{{#if searchTerm}}: {{searchTerm}}{{/if}}</h1>
 				{{else}}
-					<h1 class="o-typography-heading1">{{searchTerm}}</h1>
+					{{#if teamMember}}
+						<div class="alphaville-team__member clearfix">
+							<div class="team__member__title">
+								<h1 class="o-typography-heading1">{{searchTerm}}</h1>
+								<a href="/meet-the-team#{{teamMember.slug}}">Read Biography</a>
+							</div>
+
+							<div class="team__member__thumb">
+								<img src="{{image teamMember.headshotUrl 200 'medium'}}" />
+							</div>
+
+						</div>
+
+					{{else}}
+						<h1 class="o-typography-heading1">{{searchTerm}}</h1>
+
+					{{/if}}
 				{{/if}}
 
 				{{#if searchResults}}
