@@ -14,7 +14,22 @@ const av2AccessMetadata = [{
 	path_regex: "/\\d{4}/\\d{2}/\\d{2}/\\d{1,}/.+",
 	classification: "conditional_registered"
 }, {
+	path_regex: "/longroom/home",
+	classification: "conditional_alphaville_longroom"
+}, {
 	path_regex: "/longroom/content/.*",
+	classification: "conditional_alphaville_longroom"
+}, {
+	path_regex: "/longroom/files/.*",
+	classification: "conditional_alphaville_longroom"
+}, {
+	path_regex: "/longroom/topic/.*",
+	classification: "conditional_alphaville_longroom"
+}, {
+	path_regex: "/longroom/author/.*",
+	classification: "conditional_alphaville_longroom"
+}, {
+	path_regex: "/longroom/myposts/.*",
 	classification: "conditional_alphaville_longroom"
 }, {
 	path_regex: "/longroom/.*",
