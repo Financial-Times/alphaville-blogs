@@ -21,12 +21,12 @@ router.use('/type', require('./routes/type'));
 router.use('/series', require('./routes/series'));
 router.use('/alphachat', (req, res, next) => {
   res.redirect('/series/Alphachat');
-})
+});
 
 router.use('/marketslive', require('./routes/marketslive'));
 router.use('/', require('./routes/article'));
 router.use('/curation', auth(), restrictedAccess, require('./routes/curation'));
 
-router.use('/uc_longroom', require('./routes/longroom'));
+router.use('/uc_longroom', auth(), require('./routes/longroom'));
 
 module.exports = router;
