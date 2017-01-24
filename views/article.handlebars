@@ -1,4 +1,10 @@
 {{#contentFor "head"}}
+    <meta property="og:title" content="{{{article.title}}}" />
+    <meta property="og:url" content="{{{article.webUrl}}}" />
+    {{#article.mainImage}}
+    <meta property="og:image" content="{{{url}}}" />
+    {{/article.mainImage}}
+
     <link rel="amphtml" href="https://amp.ft.com/content/{{article.id}}" />
 
 	<link rel="stylesheet" href="{{assetsBasePath}}/build/article.css" />
