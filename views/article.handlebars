@@ -1,8 +1,23 @@
 {{#contentFor "head"}}
-    <meta property="og:title" content="{{{article.title}}}" />
+    <meta property="og:title" content="{{{article.title}}}">
+    <meta property="og:url" content="{{{article.webUrl}}}">
+    <meta property="og:description" content="{{{article.standfirst}}}">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Financial Times">
+
+    <meta property="twitter:site" content="@FTAlphaville">
+    <meta property="twitter:title" content="{{{article.title}}}">
+    <meta property="twitter:description" content="{{{article.standfirst}}}">
     <meta property="og:url" content="{{{article.webUrl}}}" />
+    
     {{#article.mainImage}}
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="{{{url}}}">
     <meta property="og:image" content="{{{url}}}" />
+    {{/article.mainImage}}
+
+    {{^article.mainImage}}
+    <meta property="twitter:card" content="summary">
     {{/article.mainImage}}
 
     <link rel="amphtml" href="https://amp.ft.com/content/{{article.id}}" />
