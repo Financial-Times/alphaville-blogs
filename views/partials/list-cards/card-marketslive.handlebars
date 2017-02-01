@@ -20,6 +20,9 @@
 			<div class="alphaville-card__footer">
 				{{> comment-counter}}
 				{{> timestamp}}
+				{{#_source.byline}}
+					{{> byline}}
+				{{/_source.byline}}
 			</div>
 		</div>
 	</div>

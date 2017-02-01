@@ -35,6 +35,9 @@
 					<div class="alphaville-card__footer">
 						{{> comment-counter}}
 						{{> timestamp}}
+						{{#_source.byline}}
+							{{> byline}}
+						{{/_source.byline}}
 					</div>
 				{{else}}
 					{{^rhr}}
@@ -44,6 +47,9 @@
 					<div class="alphaville-card__footer">
 						{{> comment-counter}}
 						{{> timestamp}}
+						{{#_source.byline}}
+							{{> byline}}
+						{{/_source.byline}}
 					</div>
 				{{/if}}
 
