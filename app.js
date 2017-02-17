@@ -93,6 +93,7 @@ const errorHandler = (err, req, res, next) => {
 		res.status(404);
 		res.render('error_404');
 	} else {
+		console.log('ERROR =>', err);
 		res.status(err.status || 503);
 		res.render('error', {
 			message: err.errMsg || err.message,
