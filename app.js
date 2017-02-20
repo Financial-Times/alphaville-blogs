@@ -76,7 +76,10 @@ app.use('/', require('./router'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-	cacheHeaders.setNoCache(res);
+	if (!res.get('Cache-Control')) {
+		cacheHeaders.setCache(res, 60);
+	}
+
 	const err = new Error('Not Found');
 	err.status = 404;
 	next(err);
@@ -84,8 +87,6 @@ app.use(function(req, res, next) {
 
 // error handlers
 const errorHandler = (err, req, res, next) => {
-	cacheHeaders.setNoCache(res);
-
 	const isNotProdEnv = app.get('env') === 'development' ||
 		process.env.ENVIRONMENT !== 'prod';
 
@@ -93,6 +94,8 @@ const errorHandler = (err, req, res, next) => {
 		res.status(404);
 		res.render('error_404');
 	} else {
+		cacheHeaders.setNoCache(res);
+
 		console.log('ERROR =>', err);
 		res.status(err.status || 503);
 		res.render('error', {
