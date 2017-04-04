@@ -25,7 +25,7 @@
 		position: relative;
 
 		&:before {
-			background-image: url(https://image.webservices.ft.com/v1/images/raw/fticon-v1:arrow-right?source=Alphaville);
+			background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/fticon-v1:arrow-right?source=Alphaville);
 			background-repeat: no-repeat;
 			background-size: contain;
 			background-color: transparent;
@@ -43,7 +43,7 @@
 	&[aria-expanded="true"] {
 		& > span {
 			&:before {
-				background-image: url(https://image.webservices.ft.com/v1/images/raw/fticon-v1:arrow-down?source=Alphaville);
+				background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/fticon-v1:arrow-down?source=Alphaville);
 			}
 		}
 	}
