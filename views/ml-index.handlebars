@@ -47,19 +47,17 @@
 							<div data-o-grid-colspan="12 M9">
 								<div class="alphaville-list-items">
 									{{#items}}
-										{{#_source}}
-											<div class="alphaville-card-container">
-												<div class="alphaville-card alphaville-card--list alphaville-card--marketslive" data-o-component="o-card" data-article-id="{{_id}}">
-													<div class="alphaville-card__content">					
-														<h3 class="alphaville-card__heading">
-															<a href="{{av2WebUrl}}" data-trackable="heading">{{title}}</a>
-														</h3>
+										<div class="alphaville-card-container">
+											<div class="alphaville-card alphaville-card--list alphaville-card--marketslive" data-o-component="o-card" data-article-id="{{id}}">
+												<div class="alphaville-card__content">					
+													<h3 class="alphaville-card__heading">
+														<a href="{{av2WebUrl}}" data-trackable="heading">{{title}}</a>
+													</h3>
 
-														<p class="alphaville-card__standfirst">{{standfirst}}</p>
-													</div>
+													<p class="alphaville-card__standfirst">{{standfirst}}</p>
 												</div>
 											</div>
-										{{/_source}}
+										</div>
 
 										{{^ ../withoutAds}}
 											{{> list-cards/adBetweenCards}}

@@ -1,5 +1,5 @@
 <div class="alphaville-card-container" data-o-grid-colspan="12 S6 M4" data-trackable="card">
-	<div class="alphaville-card alphaville-card--grid alphaville-card--fill-space {{#if _source.seriesArticles}} alphaville-card--series{{/if}}{{#if isPodcast}} alphaville-card--podcast{{/if}}" data-o-component="o-card" data-article-id="{{_id}}" data-card-type="blog" data-trackable="blog">
+	<div class="alphaville-card alphaville-card--grid alphaville-card--fill-space {{#if seriesArticles}} alphaville-card--series{{/if}}{{#if isPodcast}} alphaville-card--podcast{{/if}}" data-o-component="o-card" data-article-id="{{id}}" data-card-type="blog" data-trackable="blog">
 		<div class="alphaville-card__content">
 			{{> grid-cards/elements/primaryTheme}}
 
@@ -7,8 +7,8 @@
 
 			{{#if isPodcast}} 
 				{{#if withImage}}
-					<a href="{{_source.av2WebUrl}}" data-trackable="image">
-						<img class="alphaville-card__image" src="{{image _source.mainImage.url 80 'low'}}" alt="{{_source.mainImage.title}}">
+					<a href="{{av2WebUrl}}" data-trackable="image">
+						<img class="alphaville-card__image" src="{{image mainImage.url 80 'low'}}" alt="{{mainImage.title}}">
 					</a>
 				{{/if}}
 			{{else}}

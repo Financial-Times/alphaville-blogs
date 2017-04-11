@@ -1,12 +1,12 @@
 <div class="alphaville-card-container" data-o-grid-colspan="12 S6 M4" data-trackable="card">
-	<div class="alphaville-card alphaville-card--grid alphaville-card--fill-space alphaville-card--opinion" data-o-component="o-card" data-article-id="{{_id}}" data-card-type="opinion" data-trackable="opinion">
+	<div class="alphaville-card alphaville-card--grid alphaville-card--fill-space alphaville-card--opinion" data-o-component="o-card" data-article-id="{{id}}" data-card-type="opinion" data-trackable="opinion">
 		<div class="alphaville-card__content">
 			<div class="alphaville-card__theme">
-				<a href="/authors/{{_source.authors.[0].name}}" class="alphaville-card__tag" data-trackable="theme">{{_source.authors.[0].name}}</a>
+				<a href="/authors/{{authors.[0].name}}" class="alphaville-card__tag" data-trackable="theme">{{authors.[0].name}}</a>
 			</div>
 
 			<h2 class="alphaville-card__heading">
-				<a href="{{_source.av2WebUrl}}" data-trackable="headline">{{_source.title}}</a>
+				<a href="{{av2WebUrl}}" data-trackable="headline">{{title}}</a>
 				<span class="alphaville-card__headshot--spacer"></span>
 			</h2>
 
@@ -19,9 +19,9 @@
 				</div>
 			</div>
 
-			{{#if _source.authors}}
+			{{#if authors}}
 				<div class="alphaville-card__headshot">
-					<img src="{{image _source.authors.[0].headshotUrl 200 'medium'}}" />
+					<img src="{{image authors.[0].headshotUrl 200 'medium'}}" />
 				</div>
 			{{/if}}
 		</div>

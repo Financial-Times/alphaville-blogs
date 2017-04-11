@@ -1,9 +1,9 @@
 <div class="alphaville-card-container" data-o-grid-colspan="12 S12 M8" data-trackable="card">
-	<div class="alphaville-card alphaville-card--grid alphaville-card--fill-space alphaville-card--hero {{#if withImage}}alphaville-card--with-image{{/if}}" data-o-component="o-card" data-article-id="{{_id}}" data-trackable="hero">
+	<div class="alphaville-card alphaville-card--grid alphaville-card--fill-space alphaville-card--hero {{#if withImage}}alphaville-card--with-image{{/if}}" data-o-component="o-card" data-article-id="{{id}}" data-trackable="hero">
 		<div class="alphaville-card__content">
 			{{#if withImage}}
-				<a href="{{_source.av2WebUrl}}">
-					<img class="alphaville-card__image" src="{{image _source.mainImage.url 250 'medium'}}" alt="{{_source.mainImage.title}}">
+				<a href="{{av2WebUrl}}">
+					<img class="alphaville-card__image" src="{{image mainImage.url 250 'medium'}}" alt="{{mainImage.title}}">
 				</a>
 			{{/if}}
 
