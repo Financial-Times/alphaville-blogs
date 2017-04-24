@@ -26,7 +26,7 @@
     "o-comments": "^3.4.3",
     "o-comment-count": "^0.3.0",
     "o-tabs": "^2.3.3",
-    "o-video": "^1.0.0",
+    "o-video": "^2.0.0",
     "o-expander": "^4.0.0",
     "dom-delegate": "ftdomdelegate#^2.0.4",
     "o-forms": "^2.0.5"
