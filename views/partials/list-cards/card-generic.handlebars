@@ -1,33 +1,33 @@
 <div class="alphaville-card-container">
-	<div class="alphaville-card alphaville-card--list {{#if isSeriesArticle}} alphaville-card--series{{/if}}{{#if isAlphachat}} alphaville-card--alphachat{{/if}}{{#if isPodcast}} alphaville-card--podcast{{/if}}" data-o-component="o-card" data-article-id="{{_id}}">
+	<div class="alphaville-card alphaville-card--list {{#if isSeriesArticle}} alphaville-card--series{{/if}}{{#if isAlphachat}} alphaville-card--alphachat{{/if}}{{#if isPodcast}} alphaville-card--podcast{{/if}}" data-o-component="o-card" data-article-id="{{id}}">
 		<div class="alphaville-card__content">
 
 
 			{{#unless @root.streamFlag}}
 			<div class="alphaville-card__theme">
 				<ul class="alphaville-card--inline-list">
-					{{#_source.primaryTheme}}
+					{{#primaryTheme}}
 						<li>
 							<a href="{{url}}" class="alphaville-card__tag" data-trackable="theme">{{label}}</a>
 						</li>
-					{{/_source.primaryTheme}}
+					{{/primaryTheme}}
 				</ul>
 			</div>
 			{{/unless}}
 			<h3 class="alphaville-card__heading">
-				<a href="{{_source.av2WebUrl}}" data-trackable="heading">{{_source.title}}</a>
+				<a href="{{av2WebUrl}}" data-trackable="heading">{{title}}</a>
 			</h3>
 
 			{{#unless @root.streamFlag}}
-				{{#_source.seriesArticles}}
+				{{#seriesArticles}}
 					{{> series-articles }}
-				{{/_source.seriesArticles}}
+				{{/seriesArticles}}
 			{{/unless}}
 
 				{{#if withImage}}
 					{{^rhr}}
 						<div class="alphaville-card__image">
-		        	<a href="{{_source.av2WebUrl}}" data-trackable="image"><img src="{{image _source.mainImage.url 740 'medium'}}" alt="{{_source.mainImage.title}}" /></a>
+		        	<a href="{{av2WebUrl}}" data-trackable="image"><img src="{{image mainImage.url 740 'medium'}}" alt="{{mainImage.title}}" /></a>
 						</div>
 						{{> grid-cards/elements/standfirst}}
 					{{/rhr}}
@@ -35,9 +35,9 @@
 					<div class="alphaville-card__footer">
 						{{> comment-counter}}
 						{{> timestamp}}
-						{{#_source.byline}}
+						{{#byline}}
 							{{> byline}}
-						{{/_source.byline}}
+						{{/byline}}
 					</div>
 				{{else}}
 					{{^rhr}}
@@ -47,9 +47,9 @@
 					<div class="alphaville-card__footer">
 						{{> comment-counter}}
 						{{> timestamp}}
-						{{#_source.byline}}
+						{{#byline}}
 							{{> byline}}
-						{{/_source.byline}}
+						{{/byline}}
 					</div>
 				{{/if}}
 

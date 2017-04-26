@@ -1,20 +1,20 @@
 <div class="alphaville-card-container">
-	<div class="alphaville-card alphaville-card--list" data-o-component="o-card" data-trackable="card" data-article-id="{{_id}}">
+	<div class="alphaville-card alphaville-card--list" data-o-component="o-card" data-trackable="card" data-article-id="{{id}}">
 		<div class="alphaville-card__content">
 
-			{{#_source.primaryTheme}}
+			{{#primaryTheme}}
 				<div class="alphaville-card__meta">
 					<a href="{{url}}" class="alphaville-card__tag" data-trackable="theme"><span class="alphaville-card__tag-part1">First</span> <span class="alphaville-card__tag-part2">FT</span></a>
 				</div>
-			{{/_source.primaryTheme}}
+			{{/primaryTheme}}
 
 			<h3 class="alphaville-card__heading">
-				<a href="{{_source.av2WebUrl}}" data-trackable="heading">{{_source.title}}</a>
+				<a href="{{av2WebUrl}}" data-trackable="heading">{{title}}</a>
 			</h3>
 
 			{{#if withImage}}
 				<div class="alphaville-card__image">
-					<a href="{{_source.av2WebUrl}}" data-trackable="image"><img src="{{image _source.mainImage.url 740 'medium'}}" alt="{{_source.mainImage.title}}" /></a>
+					<a href="{{av2WebUrl}}" data-trackable="image"><img src="{{image mainImage.url 740 'medium'}}" alt="{{mainImage.title}}" /></a>
 				</div>
 		
 				{{> grid-cards/elements/standfirst}}
