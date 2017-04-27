@@ -21,7 +21,7 @@
   "dependencies": {
     "alphaville-ui": "Financial-Times/alphaville-ui#^1.2.5",
     "alphaville-marketslive-chat": "Financial-Times/alphaville-marketslive-chat#^0.2.3",
-    "webchat": "Financial-Times/webchat#^1.0.0",
+    "webchat": "Financial-Times/webchat#^1.1.0-beta.2",
     "o-autoinit": "^1.2.0",
     "o-comments": "^3.4.3",
     "o-comment-count": "^0.3.0",
