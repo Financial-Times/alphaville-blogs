@@ -21,12 +21,12 @@
   "dependencies": {
     "alphaville-ui": "Financial-Times/alphaville-ui#^1.2.5",
     "alphaville-marketslive-chat": "Financial-Times/alphaville-marketslive-chat#^0.2.3",
-    "webchat": "Financial-Times/webchat#^1.1.0-beta.4",
+    "webchat": "Financial-Times/webchat#^1.1.0",
     "o-autoinit": "^1.2.0",
     "o-comments": "^3.4.3",
     "o-comment-count": "^0.3.0",
     "o-tabs": "^2.3.3",
-    "o-video": "#media-api",
+    "o-video": "^3.0.0",
     "o-expander": "^4.0.0",
     "dom-delegate": "ftdomdelegate#^2.0.4",
     "o-forms": "^2.0.5"
