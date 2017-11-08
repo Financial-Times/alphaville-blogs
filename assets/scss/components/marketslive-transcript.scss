@@ -297,11 +297,11 @@
 	}
 }
 
-&.show-participant-options .msg:hover .participant-options {
+.show-participant-options .msg:hover .participant-options {
 	display: block;
 }
 
-&.show-participant-options .msg.prepub:hover .participant-options {
+.show-participant-options .msg.prepub:hover .participant-options {
 	display: none;
 }
 
