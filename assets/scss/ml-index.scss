@@ -7,3 +7,11 @@
 .alphaville-ml-description {
 	border-bottom: 1px solid oColorsGetPaletteColor('pink-tint3');
 }
+
+.ml-visible-editors {
+	display: none;
+}
+
+.ml-editor .ml-visible-editors {
+	display: inline-block;
+}

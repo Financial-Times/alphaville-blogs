@@ -11,7 +11,7 @@
     "alphaville-auth-middleware": "Financial-Times/alphaville-auth-middleware#1.4.0",
     "alphaville-express": "Financial-Times/alphaville-express#1.1.1",
     "alphaville-header-config": "Financial-Times/alphaville-header-config#1.1.0",
-    "alphaville-marketslive-wordpress-api": "Financial-Times/alphaville-marketslive-wordpress-api#0.4.0",
+    "alphaville-marketslive-api-client": "Financial-Times/alphaville-marketslive-api-client#0.2.0",
     "alphaville-team-members": "Financial-Times/alphaville-team-members#1.0.0",
     "alphaville-build-tools": "Financial-Times/alphaville-build-tools#1.0.0",
     "bluebird": "^3.4.1",
@@ -29,6 +29,6 @@
     "throng": "^4.0.0"
   },
   "engines": {
-    "node": "^6"
+    "node": "^7"
   }
 }

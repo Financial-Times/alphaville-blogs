@@ -5,6 +5,7 @@
 		document.addEventListener('o.DOMContentLoaded', function () {
 			document.addEventListener('mlIndexBundle.loaded', function () {
 				mlIndexBundle.liveSessionRedirecter.init();
+				mlIndexBundle.mlEditor.init('{{mlApiUrl}}');
 			});
 		})
 
@@ -23,6 +24,11 @@
 <div class="o-grid-container">
 	<div class="o-grid-row">
 		<div data-o-grid-colspan="12 L8">
+			<div class="o-grid-row">
+				<div data-o-grid-colspan="12">
+					<button class="o-buttons o-buttons--big ml-create-new-session-btn ml-visible-editors">Create new session</button>
+				</div>
+			</div>
 			<div class="o-grid-row">
 				<div data-o-grid-colspan="12 M9 Moffset3">
 					<div class="alphaville-ml-description">
