@@ -4,8 +4,7 @@
 	<script>
 		document.addEventListener('o.DOMContentLoaded', function () {
 			document.addEventListener('mlIndexBundle.loaded', function () {
-				mlIndexBundle.liveSessionRedirecter.init();
-				mlIndexBundle.mlEditor.init('{{mlApiUrl}}');
+				mlIndexBundle.init('{{mlApiUrl}}', '{{appUrl}}');
 			});
 		})
 
@@ -29,13 +28,22 @@
 					<button class="o-buttons o-buttons--big ml-create-new-session-btn ml-visible-editors">Create new session</button>
 				</div>
 			</div>
+			<br />
+			
+			<div class="o-grid-row">
+				<div data-o-grid-colspan="12">
+					<button class="o-buttons ml-invite-editor-btn ml-visible-editors">Invite an editor</button>
+					<button class="o-buttons ml-invite-contributor-btn ml-visible-editors">Invite a contributor</button>
+				</div>
+			</div>
+			<br />
+
 			<div class="o-grid-row">
 				<div data-o-grid-colspan="12 M9 Moffset3">
 					<div class="alphaville-ml-description">
 						<h1 class="o-typography-heading1">Real-time markets discussion</h1>
 
 						<p>Daily session streamed at 11am London time, with monthly FOMC specials in New York.</p>
-
 					</div>
 				</div>
 
