@@ -46,7 +46,7 @@ function onJoin (options) {
 					}
 
 					new FormOverlay({
-						title: 'User details',
+						title: 'Joining ML - missing details',
 						submitLabel: 'Save',
 						fields: fields
 					}).then(formData => {
@@ -64,9 +64,8 @@ function onJoin (options) {
 								new AlertOverlay('Failed to update the user details.');
 							}
 						}).then(updateJson => {
-							console.log(updateJson);
 							if (updateJson && updateJson.success === true) {
-								new AlertOverlay("User details successfully updated");
+								new AlertOverlay('Success', 'User details successfully updated. You now have joined MarketsLive.');
 							} else {
 								new AlertOverlay(updateJson && updateJson.reason ? updateJson.reason : 'The action has failed with unknown reason.');
 							}
@@ -77,7 +76,7 @@ function onJoin (options) {
 						});
 					});
 				} else {
-					new AlertOverlay('Joined successfully.');
+					new AlertOverlay('Success', 'You now have joined MarketsLive successfully.');
 					window.location.hash = '';
 				}
 			} else {
