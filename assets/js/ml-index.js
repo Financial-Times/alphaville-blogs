@@ -8,7 +8,11 @@ const joinMLEditorWithToken = require('./lib/joinMLEditorWithToken');
 exports.init = function (mlApiUrl, appUrl) {
 	liveSessionRedirecter();
 	mlEditor(mlApiUrl, appUrl);
-	joinMLEditorWithToken(mlApiUrl);
+	joinMLEditorWithToken(mlApiUrl).then(joined => {
+		if (joined === true) {
+			mlEditor(mlApiUrl, appUrl);
+		}
+	});
 };
 
 
