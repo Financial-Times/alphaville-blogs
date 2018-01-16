@@ -138,8 +138,10 @@ function mlEditor (mlApiUrl, appUrl) {
 				}
 			})
 			.then(json => {
-				if (json && json.data && (json.data.isparticipant === true || json.data.iseditor === true)) {
-					document.documentElement.classList.add('ml-editor');
+				if (json && json.data && json.data.iseditor === true) {
+					if (json.data.iseditor === true) {
+						document.documentElement.classList.add('ml-editor');
+					}
 
 					document.querySelector('.ml-create-new-session-btn').addEventListener('click', () => {
 						onCreateSession({
@@ -154,6 +156,7 @@ function mlEditor (mlApiUrl, appUrl) {
 							type: 'editor'
 						});
 					});
+
 					document.querySelector('.ml-invite-contributor-btn').addEventListener('click', () => {
 						onInviteRequest({
 							mlApiUrl,

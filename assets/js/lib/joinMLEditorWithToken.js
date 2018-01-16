@@ -93,7 +93,7 @@ function onJoin (options) {
 function joinMLEditorWithToken (mlApiUrl) {
 	const urlParams = getUrlParams();
 
-	if (urlParams['invitation-token']) {
+	if (urlParams['invitation-token'] && window.location.hash.substring(1)) {
 		onJoin({
 			mlApiUrl,
 			token: window.location.hash.substring(1)
