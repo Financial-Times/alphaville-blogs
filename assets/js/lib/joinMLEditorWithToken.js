@@ -17,13 +17,7 @@ function onJoin (options) {
 			},
 			body: `token=${token}`
 		})
-			.then(res => {
-				if (res.ok) {
-					return res.json();
-				} else {
-					throw new Error("Failed to join. Please try again later.");
-				}
-			})
+			.then(res => res.json())
 			.then(json => {
 				if (json && json.success === true) {
 					if (!json.data.display_name || !json.data.initials) {
