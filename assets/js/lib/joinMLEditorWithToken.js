@@ -20,23 +20,30 @@ function onJoin (options) {
 			.then(res => res.json())
 			.then(json => {
 				if (json && json.success === true) {
-					if (!json.data.display_name || !json.data.initials) {
+					if (!json.data.first_name || !json.data.last_name || !json.data.initials) {
 						const fields = [];
 
-						if (!json.data.display_name) {
+						if (!json.data.first_name) {
 							fields.push({
 								type: 'text',
 								label: 'Display name',
-								name: 'display_name',
-								value: json.data.display_name
+								name: 'display_name'
 							});
 						}
+
+						if (!json.data.last_name) {
+							fields.push({
+								type: 'text',
+								label: 'Display name',
+								name: 'display_name'
+							});
+						}
+
 						if (!json.data.initials) {
 							fields.push({
 								type: 'text',
 								label: 'Initials',
-								name: 'initials',
-								value: json.data.display_name
+								name: 'initials'
 							});
 						}
 
