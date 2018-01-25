@@ -1,7 +1,9 @@
 const alphavilleUi = require('alphaville-ui');
 const AlertOverlay = alphavilleUi['AlertOverlay'];
+const ConfirmOverlay = alphavilleUi['ConfirmOverlay'];
 const FormOverlay = alphavilleUi['FormOverlay'];
 const objectToQuery = require('../utils/objectToQuery');
+const Delegate = require('dom-delegate');
 
 const DAYS = [
 	'Sunday',
@@ -126,6 +128,114 @@ function onInviteRequest (options) {
 		});
 }
 
+function onDeleteSession (options) {
+	const mlApiUrl = options.mlApiUrl;
+	const uuid = options.uuid;
+	const sessionPath = options.sessionPath;
+
+	new ConfirmOverlay('Delete session', 'Are you sure you want to delete this session?')
+		.then(answer => {
+			if (answer === true) {
+				fetch(`${mlApiUrl}/${sessionPath}/?action=deleteSession`, {
+					credentials: 'include',
+					method: 'POST'
+				})
+					.then(res => {
+						if (res.ok) {
+							return res.json();
+						} else {
+							new AlertOverlay('Cannot connect to the MarketsLive service.');
+						}
+					})
+					.then(json => {
+						if (json && json.success === true) {
+							const articleComponent = document.querySelector(`.alphaville-card[data-article-id="${uuid}"]`);
+							if (articleComponent) {
+								articleComponent.parentNode.parentNode.removeChild(articleComponent.parentNode);
+							}
+
+							new AlertOverlay('Session deleted successfully. Due to caching it might disappear from the page with some delay.');
+						} else {
+							new AlertOverlay(json.reason ? json.reason : 'The action has failed with unknown reason.');
+						}
+					})
+					.catch(e => {
+						console.log(e);
+
+						new AlertOverlay(e && e.message ? e.message : 'The action has failed due to an error.');
+					});
+			} else {
+				return false;
+			}
+		});
+}
+
+function onEditSession (options) {
+	const mlApiUrl = options.mlApiUrl;
+	const uuid = options.uuid;
+	const sessionPath = options.sessionPath;
+
+	const articleComponent = document.querySelector(`.alphaville-card[data-article-id="${uuid}"]`);
+	if (articleComponent) {
+		new FormOverlay({
+			title: 'Edit session',
+			submitLabel: 'Save',
+			fields: [
+				{
+					type: 'text',
+					label: 'Title',
+					name: 'title',
+					value: articleComponent.querySelector('.alphaville-card__heading a').innerHTML
+				},
+				{
+					type: 'text',
+					label: 'Excerpt',
+					name: 'excerpt',
+					value: articleComponent.querySelector('.alphaville-card__standfirst').innerHTML
+				}
+			]
+		}).then(result => {
+			if (result) {
+				fetch(`${mlApiUrl}/${sessionPath}/?action=editSession`, {
+					credentials: 'include',
+					method: 'POST',
+					body: objectToQuery(result),
+					headers: {
+						'Content-Type': 'application/x-www-form-urlencoded'
+					},
+				}).then(res => {
+					if (res && res.ok) {
+						return res.json();
+					} else {
+						new AlertOverlay('Cannot connect to the MarketsLive service.');
+					}
+				}).then(json => {
+					if (json.success === true && json.data && json.data.path) {
+						articleComponent.querySelector('.alphaville-card__heading a').innerHTML = result.title;
+						articleComponent.querySelector('.alphaville-card__standfirst').innerHTML = result.excerpt;
+
+						new AlertOverlay('Session edited successfully. Due to caching it might take some time to update it.');
+					} else {
+						new AlertOverlay(json.reason ? json.reason : 'The action has failed with unknown reason.');
+					}
+				}).catch(e => {
+					console.log(e);
+
+					new AlertOverlay('The action has failed due to an error.');
+				});
+			} else {
+				return false;
+			}
+		}).catch(e => {
+			console.log(e);
+
+			new AlertOverlay('The action has failed due to an error.');
+		});
+	} else {
+		new AlertOverlay('Something went wrong.');
+	}
+}
+
 function mlEditor (mlApiUrl, appUrl) {
 	fetch(`${mlApiUrl}?action=access`, {
 			credentials: 'include'
@@ -160,6 +270,29 @@ function mlEditor (mlApiUrl, appUrl) {
 							mlApiUrl,
 							appUrl,
 							type: 'participant'
+						});
+					});
+
+					const mlEditorDelegate = new Delegate(document.body);
+					mlEditorDelegate.on('click', '.ml-delete-session', (evt) => {
+						const deleteButton = evt.target;
+
+						onDeleteSession({
+							mlApiUrl,
+							uuid: deleteButton.getAttribute('data-session-uuid'),
+							sessionPath: deleteButton.getAttribute('data-session-path'),
+							eventTarget: evt.target
+						});
+					});
+
+					mlEditorDelegate.on('click', '.ml-edit-session', (evt) => {
+						const deleteButton = evt.target;
+
+						onEditSession({
+							mlApiUrl,
+							uuid: deleteButton.getAttribute('data-session-uuid'),
+							sessionPath: deleteButton.getAttribute('data-session-path'),
+							eventTarget: evt.target
 						});
 					});
 				}
