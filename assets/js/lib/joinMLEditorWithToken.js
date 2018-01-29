@@ -5,9 +5,18 @@ const objectToQuery = require('../utils/objectToQuery');
 const getUrlParams = require('../utils/getUrlParams');
 
 function onJoin (options) {
-	return new Promise(resolve => {
+	return new Promise(() => {
 		const mlApiUrl = options.mlApiUrl;
-		const token = options.token;
+
+		const body = {
+			token: options.token
+		};
+		if (options.first_name) {
+			body.first_name = options.first_name;
+		}
+		if (options.last_name) {
+			body.last_name = options.last_name;
+		}
 
 		fetch(`${mlApiUrl}?action=joinWithToken`, {
 			credentials: 'include',
@@ -15,76 +24,65 @@ function onJoin (options) {
 			headers: {
 				'Content-Type':'application/x-www-form-urlencoded'
 			},
-			body: `token=${token}`
+			body: objectToQuery(body)
 		})
 			.then(res => res.json())
 			.then(json => {
-				if (json && json.success === true) {
-					if (!json.data.first_name || !json.data.last_name || !json.data.initials) {
-						const fields = [];
+				if (json) {
+					if (json.success === false) {
+						if (!json.reason && json.data && (!json.data.first_name || !json.data.last_name)) {
+							const fields = [{
+								type: 'static-text',
+								label: 'You have some missing fields. Please complete them to finish your join request.'
+							}];
 
-						if (!json.data.first_name) {
-							fields.push({
-								type: 'text',
-								label: 'Display name',
-								name: 'display_name'
-							});
-						}
+							const firstName = json.data.first_name || options.first_name || '';
+							const lastName = json.data.last_name || options.last_name || '';
 
-						if (!json.data.last_name) {
-							fields.push({
-								type: 'text',
-								label: 'Display name',
-								name: 'display_name'
-							});
-						}
+							if (!json.data.first_name) {
+								fields.push({
+									type: 'text',
+									label: 'First name',
+									name: 'first_name',
+									value: firstName,
+									attributes: {
+										required: 'required'
+									}
+								});
+							}
 
-						if (!json.data.initials) {
-							fields.push({
-								type: 'text',
-								label: 'Initials',
-								name: 'initials'
-							});
-						}
+							if (!json.data.last_name) {
+								fields.push({
+									type: 'text',
+									label: 'Last name',
+									name: 'last_name',
+									value: lastName,
+									attributes: {
+										required: 'required'
+									}
+								});
+							}
 
-						new FormOverlay({
-							title: 'Joining ML - missing details',
-							submitLabel: 'Save',
-							fields: fields
-						}).then(formData => {
-							fetch(`${mlApiUrl}?action=updateUser`, {
-								credentials: 'include',
-								method: 'POST',
-								body: objectToQuery(formData),
-								headers: {
-									'Content-Type': 'application/x-www-form-urlencoded'
-								},
-							}).then(updateRes => {
-								if (updateRes && updateRes.ok) {
-									return updateRes.json();
-								} else {
-									new AlertOverlay('Failed to update the user details.');
+							new FormOverlay({
+								title: 'Joining ML - missing details',
+								submitLabel: 'Save',
+								fields: fields
+							}).then(formData => {
+								if (formData === false) {
+									window.location.hash = '';
+								} else if (formData) {
+									onJoin(Object.assign({}, options, formData));
 								}
-							}).then(updateJson => {
-								if (updateJson && updateJson.success === true) {
-									new AlertOverlay('Success', 'User details successfully updated. You now have joined MarketsLive.');
-									resolve(true);
-								} else {
-									new AlertOverlay(updateJson && updateJson.reason ? updateJson.reason : 'The action has failed with unknown reason.');
-								}
-							}).catch(updateErr => {
-								console.log(updateErr);
-
-								new AlertOverlay('The action has failed due to an error.');
 							});
-						});
+						} else {
+							new AlertOverlay(json && json.reason ? json.reason : 'Failed to join. Please try again later.');
+						}
 					} else {
-						new AlertOverlay('Success', 'You now have joined MarketsLive successfully.');
+						new AlertOverlay('Success', 'You have joined MarketsLive successfully.');
 						window.location.hash = '';
-						resolve(true);
 					}
 				} else {
-					new AlertOverlay(json && json.reason ? json.reason : 'Failed to join. Please try again later.');
+					new AlertOverlay('Something went wrong. Please try again later or contact an administrator.');
 				}
 			})
 			.catch(e => {
