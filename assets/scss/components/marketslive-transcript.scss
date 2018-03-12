@@ -231,22 +231,6 @@
 		display: block;
 	}
 
-	.participant-options {
-		display: none;
-		position: absolute;
-		right: 1px;
-		font-family: Arial, Helvetica, sans-serif;
-		font-size: 12px;
-		background: #eeeeee;
-		padding: 0px 5px;
-	}
-
-	.participant-option-delete {
-		margin: 0 0 0 2px;
-		padding: 0 0 0 4px;
-		border-left: 1px solid #a7a59b;
-	}
-
 
 	.color-0 {
 		color: oColorsGetPaletteColor('claret-1');
@@ -295,25 +279,36 @@
 	.color-11 {
 		color: oColorsGetPaletteColor('purple-tint2');
 	}
-}
 
-.show-participant-options .msg:hover .participant-options {
-	display: block;
-}
 
-.show-participant-options .msg.prepub:hover .participant-options {
-	display: none;
-}
+	.msg-action-container {
+		display: none;
+		position: absolute;
+		right: 0;
+		top: 2px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 12px;
+		padding: 0px 5px;
+	}
 
-.blocknotice {
-	position: absolute;
-	top: 10px;
-	right: 20px;
+	.msg-action-button {
+		margin: 0 5px;
+	}
 
-	text-transform: uppercase;
-	font-weight: bold;
-	font-size: 10px;
-	color: oColorsGetPaletteColor('red');
+	.ml-editor &:hover .msg-action-container {
+		display: block;
+	}
+
+	.ml-editor & {
+		border-top: 1px solid transparent;
+		border-bottom: 1px solid transparent;
+	}
+
+	.ml-editor &:hover {
+		border-top: 1px solid oColorsGetPaletteColor('grey-tint1');
+		border-bottom: 1px solid oColorsGetPaletteColor('grey-tint1');
+		box-sizing: border-box;
+	}
 }
 
 .video-container {

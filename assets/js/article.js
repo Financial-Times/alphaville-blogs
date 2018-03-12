@@ -7,6 +7,7 @@ require('o-expander');
 const oAds = require('alphaville-ui')['o-ads'];
 
 const embeddedMedia = require('webchat/src/js/ui/embeddedMedia');
+const mlTranscriptEditor = require('./lib/mlTranscriptEditor');
 
 document.addEventListener('o.DOMContentLoaded', function () {
 	const closedContentContainer = document.querySelector('.webchat-closed-content');
@@ -48,5 +49,9 @@ document.addEventListener('o.DOMContentLoaded', function () {
 
 	oAds.init(inArticleAd1);
 });
+
+exports.init = function (mlApiUrl) {
+	mlTranscriptEditor(mlApiUrl);
+};
 
 require('o-autoinit');
