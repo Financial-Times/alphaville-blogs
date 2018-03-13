@@ -143,7 +143,7 @@ function onDeleteMessage (mlApiUrl, messageEl) {
 
 
 function mlTranscriptEditor (mlApiUrl) {
-	let matchDate = window.location.pathname.match(/[0-9]{4}-[0-9]{2}-[0-9]{2}-?[0-9]+?/);
+	let matchDate = window.location.pathname.match(/[0-9]{4}-[0-9]{2}-[0-9]{2}(-[0-9]+)?/);
 	if (matchDate && matchDate.length) {
 		matchDate = matchDate[0];
 	} else {
