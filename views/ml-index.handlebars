@@ -23,22 +23,7 @@
 <div class="o-grid-container">
 	<div class="o-grid-row">
 		<div data-o-grid-colspan="12 L8">
-			<div class="ml-visible-editors">
-				<div class="o-grid-row">
-					<div data-o-grid-colspan="12">
-						<button class="o-buttons o-buttons--big ml-create-new-session-btn">Create new session</button>
-					</div>
-				</div>
-				<br />
-				
-				<div class="o-grid-row">
-					<div data-o-grid-colspan="12">
-						<button class="o-buttons ml-invite-editor-btn">Invite an editor</button>
-						<button class="o-buttons ml-invite-contributor-btn">Invite a contributor</button>
-					</div>
-				</div>
-				<br />
-			</div>
+			{{>ml-editor noCreateNewSession=false}}
 
 			<div class="o-grid-row">
 				<div data-o-grid-colspan="12 M9 Moffset3">

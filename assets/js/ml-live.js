@@ -3,6 +3,7 @@ require('alphaville-marketslive-chat');
 require('./ml-pageBackground');
 require('o-tabs');
 const Scroller = require('./utils/Scroller');
+const mlEditor = require('./lib/mlEditor');
 
 exports.Webchat = require('webchat');
 
@@ -26,5 +27,9 @@ document.addEventListener('o.DOMContentLoaded', () => {
 	});
 	scroller.start();
 });
+
+exports.init = function (mlApiUrl, appUrl) {
+	mlEditor(mlApiUrl, appUrl);
+};
 
 require('o-autoinit');

@@ -251,27 +251,38 @@ function mlEditor (mlApiUrl, appUrl) {
 				if (json && json.data && json.data.iseditor === true) {
 					document.documentElement.classList.add('ml-editor');
 
-					document.querySelector('.ml-create-new-session-btn').addEventListener('click', () => {
-						onCreateSession({
-							mlApiUrl,
-							appUrl
-						});
-					});
-					document.querySelector('.ml-invite-editor-btn').addEventListener('click', () => {
-						onInviteRequest({
-							mlApiUrl,
-							appUrl,
-							type: 'editor'
-						});
-					});
+					const createButton = document.querySelector('.ml-create-new-session-btn');
+					const inviteEditorButton = document.querySelector('.ml-invite-editor-btn');
+					const inviteContributorButton = document.querySelector('.ml-invite-contributor-btn');
 
-					document.querySelector('.ml-invite-contributor-btn').addEventListener('click', () => {
-						onInviteRequest({
-							mlApiUrl,
-							appUrl,
-							type: 'participant'
+					if (createButton) {
+						createButton.addEventListener('click', () => {
+							onCreateSession({
+								mlApiUrl,
+								appUrl
+							});
 						});
-					});
+					}
+
+					if (inviteEditorButton) {
+						inviteEditorButton.addEventListener('click', () => {
+							onInviteRequest({
+								mlApiUrl,
+								appUrl,
+								type: 'editor'
+							});
+						});
+					}
+
+					if (inviteContributorButton) {
+						inviteContributorButton.addEventListener('click', () => {
+							onInviteRequest({
+								mlApiUrl,
+								appUrl,
+								type: 'participant'
+							});
+						});
+					}
 
 					const mlEditorDelegate = new Delegate(document.body);
 					mlEditorDelegate.on('click', '.ml-delete-session', (evt) => {

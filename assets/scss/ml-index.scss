@@ -1,4 +1,5 @@
 @import './common';
+@import './components/ml-editor';
 
 .alphaville-article-list .alphaville-list-time {
 	margin-top: 24px;
@@ -6,12 +7,4 @@
 
 .alphaville-ml-description {
 	border-bottom: 1px solid oColorsGetPaletteColor('pink-tint3');
-}
-
-.ml-visible-editors {
-	display: none;
-}
-
-.ml-editor .ml-visible-editors {
-	display: inline-block;
 }
