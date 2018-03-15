@@ -16,8 +16,6 @@
 						} else {
 							return;
 						}
-
-						mlLiveBundle.init('{{mlApiUrl}}', '{{appUrl}}');
 						
 						var webChat = new mlLiveBundle.Webchat(document.querySelector('.chat'), {
 							articleId: '{{articleId}}',
@@ -48,8 +46,6 @@
 				<div class="chat-panel">
 					<div class="chat" data-trackable="marketslive-chat"></div>
 				</div>
-
-				{{>ml-editor noCreateNewSession=true}}
 			</div>
 		</div>
 	</div>

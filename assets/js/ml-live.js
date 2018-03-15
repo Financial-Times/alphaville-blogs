@@ -28,8 +28,4 @@ document.addEventListener('o.DOMContentLoaded', () => {
 	scroller.start();
 });
 
-exports.init = function (mlApiUrl, appUrl) {
-	mlEditor(mlApiUrl, appUrl);
-};
-
 require('o-autoinit');

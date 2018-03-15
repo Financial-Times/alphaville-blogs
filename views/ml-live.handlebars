@@ -17,8 +17,6 @@
 					document.addEventListener('mlLiveBundle.loaded', function () {
 						mlLiveBundle.marketsLiveSessionNotification.sessionSeen('{{articleId}}');
 
-						mlLiveBundle.init('{{mlApiUrl}}', '{{appUrl}}');
-
 						let matchDate = window.location.pathname.match(/[0-9]{4}-[0-9]{2}-[0-9]{2}(-[0-9]+)?/);
 						if (matchDate && matchDate.length) {
 							matchDate = matchDate[0];
@@ -77,8 +75,6 @@
 				<div class="chat-panel">
 					<div class="chat" data-trackable="marketslive-chat"></div>
 				</div>
-
-				{{>ml-editor noCreateNewSession=true}}
 			</div>
 			<div data-o-grid-colspan="12 M5" id="ml-user-comments" class="o-tabs__tabpanel ml-tab-content">
 				<div id="ft-article-comments" class="comments-panel">

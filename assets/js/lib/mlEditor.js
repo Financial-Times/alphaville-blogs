@@ -89,45 +89,6 @@ function onCreateSession (options) {
 	});
 }
 
-function onInviteRequest (options) {
-	const mlApiUrl = options.mlApiUrl;
-	const appUrl = options.appUrl;
-	const invitationType = options.type;
-
-	fetch(`${mlApiUrl}?action=getInviteToken&type=${invitationType}`, {
-		credentials: 'include'
-	})
-		.then(res => {
-			if (res.ok) {
-				return res.json();
-			} else {
-				throw new Error("Invitation code failed to obtain");
-			}
-		})
-		.then(json => {
-			if (json && json.data && json.data.token) {
-				new FormOverlay({
-					title: 'Invitation',
-					fields: [
-						{
-							type: 'text',
-							label: 'Copy this URL and send to the invited person',
-							name: 'invitation-url',
-							value: `${appUrl}/marketslive?invitation-token=true#${json.data.token}`
-						}
-					]
-				});
-			} else {
-				throw new Error("Invalid response");
-			}
-		})
-		.catch(e => {
-			console.log(e);
-
-			new AlertOverlay('The action has failed due to an error.');
-		});
-}
-
 function onDeleteSession (options) {
 	const mlApiUrl = options.mlApiUrl;
 	const uuid = options.uuid;
@@ -252,34 +213,12 @@ function mlEditor (mlApiUrl, appUrl) {
 					document.documentElement.classList.add('ml-editor');
 
 					const createButton = document.querySelector('.ml-create-new-session-btn');
-					const inviteEditorButton = document.querySelector('.ml-invite-editor-btn');
-					const inviteContributorButton = document.querySelector('.ml-invite-contributor-btn');
 
 					if (createButton) {
 						createButton.addEventListener('click', () => {
 							onCreateSession({
 								mlApiUrl,
 								appUrl
-							});
-						});
-					}
-
-					if (inviteEditorButton) {
-						inviteEditorButton.addEventListener('click', () => {
-							onInviteRequest({
-								mlApiUrl,
-								appUrl,
-								type: 'editor'
-							});
-						});
-					}
-
-					if (inviteContributorButton) {
-						inviteContributorButton.addEventListener('click', () => {
-							onInviteRequest({
-								mlApiUrl,
-								appUrl,
-								type: 'participant'
 							});
 						});
 					}
