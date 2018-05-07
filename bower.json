@@ -23,7 +23,7 @@
     "alphaville-marketslive-chat": "Financial-Times/alphaville-marketslive-chat#^0.2.3",
     "webchat": "Financial-Times/webchat#^2.0.0",
     "o-autoinit": "^1.2.0",
-    "o-comments": "^3.4.3",
+    "o-comments": "^3.5.0-beta.1",
     "o-comment-count": "^0.3.0",
     "o-tabs": "^2.3.3",
     "o-video": "^3.0.0",
