@@ -42,7 +42,7 @@
 
 
 .marketslive-timestamp {
-	@include oTypographySans($scale: -2);
+	@include oTypographySans($scale: -1);
 	color: oColorsGetPaletteColor('claret');
 	margin-top: 16px;
 
@@ -58,22 +58,22 @@
 	color: oColorsGetPaletteColor('black-70');
 	text-align: right;
 	padding: 8px 0;
-	border-top: 1px solid oColorsGetPaletteColor('black-50');
-	border-bottom: 1px solid oColorsGetPaletteColor('black-50');
+	border-top: 1px solid oColorsGetPaletteColor('black-20');
+	border-bottom: 1px solid oColorsGetPaletteColor('black-20');
 
 	@include oGridRespondTo(M) {
 		margin-left: 50px;
 	}
 
 	&:before {
-		@include oIconsGetIcon('speech', oColorsGetPaletteColor('black-50'), 15);
+		@include oIconsGetIcon('speech', oColorsGetPaletteColor('black-50'), 25);
 		content: '';
 		vertical-align: middle;
 		margin-right: 5px;
 	}
 
 	.marketslive-user-comment-pseudonym {
-		@include oTypographySerifItalic($scale: 0);
+		@include oTypographySerifItalic($scale: -1);
 		font-weight: bold;
 		color: oColorsGetPaletteColor('black-80');
 		display: inline-block;

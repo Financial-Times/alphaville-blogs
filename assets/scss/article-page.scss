@@ -1,6 +1,5 @@
 @import './common';
 
-@import 'components/share/main';
 @import 'o-comments/main';
 
 $o-video-is-silent: false;
@@ -25,6 +24,9 @@ $o-expander-is-silent: false;
 	}
 }
 
+$article-body-spacing-unit: 16px;
+@import 'components/article-content-body/main';
+@import 'components/article-series';
 @import 'components/article-page';
 @import 'components/marketslive-transcript';
 @import 'components/recent-post';

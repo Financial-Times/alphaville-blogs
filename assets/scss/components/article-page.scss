@@ -1,8 +1,3 @@
-$article-body-spacing-unit: 16px;
-@import './article-content-body/main';
-
-@import './article-series';
-
 //ARTICLE HEADER
 .article__header {
 	position: relative;
@@ -39,11 +34,8 @@ $article-body-spacing-unit: 16px;
 
 //ARTICLE META ELEMENTS
 .article__title {
-	@include oTypographyDisplay($scale: 3);
+	@include oTypographyHeadline();
 	margin: 0;
-	@include oGridRespondTo(L) {
-		@include oTypographyDisplay($scale: 6);
-	}
 }
 .article__stand-first {
 	@include oTypographySans($scale: 2);
@@ -72,7 +64,7 @@ $article-body-spacing-unit: 16px;
 	margin: 0;
 }
 .article__byline-tag {
-	@include oColorsGetPaletteColor('claret');
+	color: oColorsGetPaletteColor('claret');
 	@include oTypographySansBold($scale: 0);
 	display: inline;
 	margin: 0 0 10px;
@@ -80,7 +72,7 @@ $article-body-spacing-unit: 16px;
 	text-decoration: none;
 
 	&:hover {
-		@include oColorsGetPaletteColor('black-70');
+		color: oColorsGetPaletteColor('black-70');
 	}
 }
 .article__timestamp {
