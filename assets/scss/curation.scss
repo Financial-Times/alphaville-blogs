@@ -13,7 +13,7 @@ $o-forms-is-silent: false;
 	padding: 5px;
 	white-space: nowrap;
 
-	.o-forms-select {
+	.o-forms__select {
 		width: auto;
 	}
 }
@@ -26,7 +26,7 @@ $o-forms-is-silent: false;
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background: oColorsGetPaletteColor('pink');
+		background: oColorsGetPaletteColor('paper');
 	}
 }
 

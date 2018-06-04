@@ -10,26 +10,26 @@
 	width: 100%;
 
 	.o-expander__toggle {
-		@include oTypographySans(m);
+		@include oTypographySans($scale: -1);
 		margin-top: 12px;
 		i {
-			@include oIconsGetIcon('arrow-down', oColorsGetPaletteColor('teal-1'), 12);
+			@include oIconsGetIcon('arrow-down', oColorsGetPaletteColor('teal-40'), 12);
 			@include oIconsBaseStyles();
 			display: inline-block;
 			padding: 0 12px;
 			box-sizing: border-box;
 			&:hover {
-				@include oIconsGetIcon('arrow-down', oColorsGetPaletteColor('cold-2'), 12);
+				@include oIconsGetIcon('arrow-down', oColorsGetPaletteColor('black-80'), 12);
 			}
 		}
 		&:hover {
-			color: oColorsGetPaletteColor('cold-2');
+			color: oColorsGetPaletteColor('black-80');
 			text-decoration: none;
 		}
 		&[aria-expanded="true"] i {
-			@include oIconsGetIcon('arrow-up', oColorsGetPaletteColor('teal-1'), 12);
+			@include oIconsGetIcon('arrow-up', oColorsGetPaletteColor('teal-40'), 12);
 			&:hover {
-				@include oIconsGetIcon('arrow-up', oColorsGetPaletteColor('cold-2'), 12);
+				@include oIconsGetIcon('arrow-up', oColorsGetPaletteColor('black-80'), 12);
 			}
 		}
 	}
@@ -48,8 +48,8 @@
 }
 
 @mixin articleContentBoxTitleText() {
-	@include oTypographySerifDisplay(m);
-	color: oColorsGetPaletteColor('cold-1');
+	@include oTypographyDisplay($scale: 2);
+	color: oColorsGetPaletteColor('black-70');
 	display: inline-block;
 	padding: 10px;
 	padding-bottom: 0;
@@ -57,7 +57,7 @@
 	font-weight: 900;
 	background-color: inherit;
 	a {
-		color: oColorsGetPaletteColor('cold-1');
+		color: oColorsGetPaletteColor('black-70');
 		border-bottom: 0;
 		text-decoration: none;
 	}
@@ -127,7 +127,7 @@
 	} @else {
 		@include oColorsFor(topic, text);
 	}
-	@include oTypographySansBold(s);
+	@include oTypographySansBold($scale: -2);
 	border-bottom-color: transparent;
 	text-decoration: none;
 
@@ -164,11 +164,11 @@
 		@include articleLinksTopic($inversed: true);
 	} @else if ($use-case == article-lists-links-inversed) {
 		@include articleLinksBody($inversed: true);
-		@include oTypographySansBold(s);
+		@include oTypographySansBold($scale: -2);
 		text-transform: uppercase;
 	} @else if ($use-case == article-lists-links) {
 		@include articleLinksBody();
-		@include oTypographySansBold(s);
+		@include oTypographySansBold($scale: -2);
 		text-transform: uppercase;
 	} @else {
 		@include articleLinksTopic();

@@ -27,13 +27,13 @@
 		}
 
 		a {
-			@include oTypographySerif('m');
+			@include oTypographySerif($scale: 2);
 			line-height: 30px;
 			color: oColorsGetPaletteColor('claret');
 			text-decoration: none;
 
 			&:hover {
-				color: oColorsGetPaletteColor('cold-2');
+				color: oColorsGetPaletteColor('black-80');
 				text-decoration: none;
 			}
 		}
@@ -42,7 +42,7 @@
 
 
 .marketslive-timestamp {
-	@include oTypographySans(s);
+	@include oTypographySans($scale: -2);
 	color: oColorsGetPaletteColor('claret');
 	margin-top: 16px;
 
@@ -53,29 +53,29 @@
 
 
 .marketslive-user-comment {
-	@include oTypographySans(s);
+	@include oTypographySans($scale: -2);
 	font-size: 15px;
-	color: oColorsGetPaletteColor('grey-tint4');
+	color: oColorsGetPaletteColor('black-70');
 	text-align: right;
 	padding: 8px 0;
-	border-top: 1px solid oColorsGetPaletteColor('pink-tint3');
-	border-bottom: 1px solid oColorsGetPaletteColor('pink-tint3');
+	border-top: 1px solid oColorsGetPaletteColor('black-50');
+	border-bottom: 1px solid oColorsGetPaletteColor('black-50');
 
 	@include oGridRespondTo(M) {
 		margin-left: 50px;
 	}
 
 	&:before {
-		@include oIconsGetIcon('comment', oColorsGetPaletteColor('pink-tint3'), 15);
+		@include oIconsGetIcon('speech', oColorsGetPaletteColor('black-50'), 15);
 		content: '';
 		vertical-align: middle;
 		margin-right: 5px;
 	}
 
 	.marketslive-user-comment-pseudonym {
-		@include oTypographySerifItalic(s);
+		@include oTypographySerifItalic($scale: 0);
 		font-weight: bold;
-		color: oColorsGetPaletteColor('grey-tint5');
+		color: oColorsGetPaletteColor('black-80');
 		display: inline-block;
 	}
 
@@ -249,15 +249,15 @@
 
 
 	.color-0 {
-		color: oColorsGetPaletteColor('claret-1');
+		color: oColorsGetPaletteColor('claret');
 	}
 
 	.color-1 {
-		color: oColorsGetPaletteColor('teal-1');
+		color: oColorsGetPaletteColor('teal-40');
 	}
 
 	.color-2 {
-		color: oColorsGetPaletteColor('claret-2');
+		color: oColorsGetPaletteColor('candy');
 	}
 
 	.color-3 {
@@ -265,23 +265,23 @@
 	}
 
 	.color-4 {
-		color: oColorsGetPaletteColor('purple-1');
+		color: oColorsGetPaletteColor('velvet');
 	}
 
 	.color-5 {
-		color: oColorsGetPaletteColor('section-red');
+		color: oColorsGetPaletteColor('crimson');
 	}
 
 	.color-6 {
-		color: oColorsGetPaletteColor('dark-blue');
+		color: oColorsGetPaletteColor('oxford-60');
 	}
 
 	.color-7 {
-		color: oColorsGetPaletteColor('section-green');
+		color: oColorsGetTint('jade', 65);
 	}
 
 	.color-8 {
-		color: oColorsGetPaletteColor('teal-2');
+		color: oColorsGetPaletteColor('teal-80');
 	}
 
 	.color-9 {
@@ -289,11 +289,11 @@
 	}
 
 	.color-10 {
-		color: oColorsGetPaletteColor('section-light-green');
+		color: oColorsGetPaletteColor('sky');
 	}
 
 	.color-11 {
-		color: oColorsGetPaletteColor('purple-tint2');
+		color: oColorsGetPaletteColor('black-50');
 	}
 }
 
@@ -313,7 +313,7 @@
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 10px;
-	color: oColorsGetPaletteColor('red');
+	color: oColorsGetPaletteColor('crimson');
 }
 
 .video-container {

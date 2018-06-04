@@ -1,22 +1,22 @@
 .n-content-big-number {
 	@include articleContentBox;
 	@include articleContentBoxInline;
-	border: 1px solid oColorsGetPaletteColor('warm-3');
+	border: 1px solid oColorsGetPaletteColor('black-20');
 	padding-left: 16px;
 	padding-right: 16px;
-	color: oColorsGetPaletteColor('cold-1');
+	color: oColorsGetPaletteColor('black-70');
 	p {
 		margin: 5px 0 0;
 	}
 }
 
 .n-content-big-number__title {
-	@include oTypographySerifDisplayBold(xl);
+	@include oTypographyDisplayBold($scale: 6);
 	font-size: 3em;
 	line-height: 1em;
 }
 
 .n-content-big-number__content {
-	@include oTypographySansData(m);
+	@include oTypographySans($scale: -1);
 	font-size: 16px;
 }

@@ -13,7 +13,7 @@
 }
 
 .n-content-tags__title {
-	@include oTypographySans(xs);
+	@include oTypographySans($scale: -2);
 	margin: 0;
 	text-transform: uppercase;
 }
@@ -21,7 +21,7 @@
 .n-content-tags__intro {
 	padding: 16px 0;
 	margin: 0 10px;
-	border-bottom: 1px solid oColorsGetPaletteColor('warm-3');
+	border-bottom: 1px solid oColorsGetPaletteColor('black-20');
 	p {
 		margin: 0;
 	}
@@ -56,20 +56,20 @@
 }
 
 .n-content-tags__product-tour-link {
-	@include oTypographySansData(m);
+	@include oTypographySans($scale: -1);
 	font-size: 16px;
 	position: relative;
 	&:after {
-		@include oIconsGetIcon('arrow-right', oColorsGetPaletteColor('teal-1'), 10);
+		@include oIconsGetIcon('arrow-right', oColorsGetPaletteColor('teal-40'), 10);
 		content: '';
 		position: absolute;
 		top: 5px;
 	}
 	&:hover {
-		color: oColorsGetPaletteColor('cold-2');
+		color: oColorsGetPaletteColor('black-80');
 
 		&:after {
-			@include oIconsGetIcon('arrow-right', oColorsGetPaletteColor('cold-2'), 10);
+			@include oIconsGetIcon('arrow-right', oColorsGetPaletteColor('black-80'), 10);
 		}
 	}
 }
@@ -87,7 +87,7 @@
 	position: relative;
 	padding: 10px 80px 10px 0;
 	margin: 0 10px;
-	border-bottom: 1px solid oColorsGetPaletteColor('warm-3');
+	border-bottom: 1px solid oColorsGetPaletteColor('black-20');
 	min-height: 26px;
 
 	.n-myft-ui {
@@ -104,7 +104,7 @@
 }
 
 .n-content-tag--medium {
-	@include oTypographySansBoldSize(m);
+	@include oTypographySansBold($scale: -1);
 }
 
 

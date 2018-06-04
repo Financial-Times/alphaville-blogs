@@ -17,15 +17,14 @@
 
 	.alphaville--read-more__toggle {
 		float: right;
-		color: oColorsGetPaletteColor('teal-1');
+		color: oColorsGetPaletteColor('teal-40');
 		font-weight: bold;
 		outline: 0;
 		overflow: hidden;
 
 		i {
-			@include oIconsGetIcon('arrow-down', oColorsGetPaletteColor('teal-1'), 17);
-			position: relative;
-			top: 5px;
+			@include oIconsGetIcon('arrow-down', oColorsGetPaletteColor('teal-40'), 24);
+			vertical-align: middle;
 		}
 	}
 
