@@ -13,7 +13,7 @@
     "alphaville-header-config": "Financial-Times/alphaville-header-config#1.2.0",
     "alphaville-marketslive-api-client": "Financial-Times/alphaville-marketslive-api-client#0.2.0",
     "alphaville-team-members": "Financial-Times/alphaville-team-members#1.0.0",
-    "alphaville-build-tools": "Financial-Times/alphaville-build-tools#1.0.0",
+    "alphaville-build-tools": "Financial-Times/alphaville-build-tools#2.0.0-beta.3",
     "bluebird": "^3.4.1",
     "bower": "^1.7.7",
     "cheerio": "^0.20.0",
@@ -29,6 +29,6 @@
     "throng": "^4.0.0"
   },
   "engines": {
-    "node": "^7"
+    "node": "^8"
   }
 }

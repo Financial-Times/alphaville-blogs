@@ -43,8 +43,8 @@
 }
 
 .n-content-image__caption {
-	@include oTypographySans(s);
+	@include oTypographySans($scale: -2);
 	font-style: italic;
-	color: oColorsGetPaletteColor('cold-1');
+	color: oColorsGetPaletteColor('black-70');
 	margin-top: 0.5em;
 }

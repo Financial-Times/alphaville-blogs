@@ -7,7 +7,7 @@
 }
 
 .alphaville-series__toggle {
-	@include oTypographySans(s);
+	@include oTypographySans($scale: -2);
 	font-size: 16px;
 	cursor: pointer;
 	outline: 0;
@@ -17,7 +17,7 @@
 	}
 
 	& > span {
-		@include oTypographySansBold(s);
+		@include oTypographySansBold($scale: -2);
 		font-weight: bold;
 		font-size: 16px;
 		text-transform: uppercase;
@@ -55,7 +55,7 @@
 	list-style-position: inside;
 
 	li {
-		@include oTypographySans(s);
+		@include oTypographySans($scale: -2);
 		font-size: 16px;
 	}
 
@@ -65,7 +65,7 @@
 
 	a,
 	a:hover {
-		@include oTypographySans(s);
+		@include oTypographySans($scale: -2);
 		font-size: 16px;
 		color: #2e6e9e;
 		text-decoration: none;

@@ -6,7 +6,7 @@
 	margin-bottom: 40px;
 
 	&--serif {
-		@include oTypographySerif(m);
+		@include oTypographySerif($scale: 2);
 	}
 
 	> p {
@@ -49,12 +49,8 @@
 
 	// BLOCKQUOTES
 	blockquote {
-		color: oColorsGetPaletteColor('cold-1');
+		color: oColorsGetPaletteColor('black-70');
 		position: relative;
-
-		p {
-			// @include oTypographySerifDisplay(m);
-		}
 	}
 
 	// DATA TABLES
@@ -79,7 +75,7 @@
 			}
 		}
 		tbody tr:nth-child(odd) {
-			background-color: oColorsGetPaletteColor('pink-tint2');
+			background-color: oColorsGetPaletteColor('black-10');
 		}
 		th,
 		td {
@@ -96,7 +92,7 @@
 	// SUBHEADS
 
 	.subhead {
-		@include oTypographySansBold(l);
+		@include oTypographySansBold($scale: 2);
 		margin-top: 50px;
 		margin-bottom: 20px;
 	}
@@ -104,7 +100,7 @@
 		border-bottom: 1px solid black;
 	}
 	.subhead--standard {
-		@include oTypographySansBold(m);
+		@include oTypographySansBold($scale: -1);
 	}
 
 }

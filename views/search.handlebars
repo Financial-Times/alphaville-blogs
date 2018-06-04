@@ -15,12 +15,12 @@
 		<div class="main" data-o-grid-colspan="L8">
 			<div class="article-list">
 				{{#if isSearch}}
-					<h1 class="o-typography-heading1">Search results{{#if searchTerm}}: {{searchTerm}}{{/if}}</h1>
+					<h1 class="o-typography-heading-level-1">Search results{{#if searchTerm}}: {{searchTerm}}{{/if}}</h1>
 				{{else}}
 					{{#if teamMember}}
 						<div class="alphaville-team__member clearfix">
 							<div class="team__member__title">
-								<h1 class="o-typography-heading1">{{searchTerm}}</h1>
+								<h1 class="o-typography-heading-level-1">{{searchTerm}}</h1>
 								<a href="/meet-the-team#{{teamMember.slug}}">Read Biography</a>
 							</div>
 
@@ -31,7 +31,7 @@
 						</div>
 
 					{{else}}
-						<h1 class="o-typography-heading1">{{searchTerm}}</h1>
+						<h1 class="o-typography-heading-level-1">{{searchTerm}}</h1>
 
 					{{/if}}
 				{{/if}}
