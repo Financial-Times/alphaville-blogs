@@ -28,9 +28,18 @@
     "o-tabs": "^4.0.0",
     "o-video": "^4.0.0",
     "o-expander": "^4.0.0",
-    "dom-delegate": "ftdomdelegate#^2.0.4",
     "o-forms": "^5.0.0",
     "o-colors": "^4.0.0",
-    "o-buttons": "^5.0.0"
+    "o-buttons": "^5.0.0",
+    "dom-delegate": "^2.1.0"
+  },
+  "resolutions": {
+    "o-colors": "^4.0.0",
+    "o-buttons": "^5.0.0",
+    "o-icons": "^5.0.0",
+    "o-typography": "^5.0.1",
+    "o-fonts": "^3.0.0",
+    "o-viewport": "^3.0.1",
+    "o-visual-effects": "^2.0.0"
   }
 }
