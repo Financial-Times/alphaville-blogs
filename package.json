@@ -8,17 +8,17 @@
   },
   "cacheDirectories": [],
   "dependencies": {
-    "alphaville-auth-middleware": "Financial-Times/alphaville-auth-middleware#1.4.0",
-    "alphaville-express": "Financial-Times/alphaville-express#1.1.1",
-    "alphaville-header-config": "Financial-Times/alphaville-header-config#1.2.0",
-    "alphaville-marketslive-api-client": "Financial-Times/alphaville-marketslive-api-client#0.2.0",
-    "alphaville-team-members": "Financial-Times/alphaville-team-members#1.0.0",
+    "alphaville-auth-middleware": "github:Financial-Times/alphaville-auth-middleware#1.4.0",
     "alphaville-build-tools": "Financial-Times/alphaville-build-tools#2.0.0",
+    "alphaville-express": "Financial-Times/alphaville-express#1.1.1",
+    "alphaville-header-config": "Financial-Times/alphaville-header-config#1.2.4",
+    "alphaville-marketslive-api-client": "Financial-Times/alphaville-marketslive-api-client#0.2.0",
+    "alphaville-team-members": "github:Financial-Times/alphaville-team-members#1.0.0",
     "bluebird": "^3.4.1",
     "bower": "^1.7.7",
     "cheerio": "^0.20.0",
     "debug": "~2.2.0",
-    "express-ftwebservice": "Financial-Times/express-web-service#v2.2.0",
+    "express-ftwebservice": "github:Financial-Times/express-web-service#v2.2.0",
     "gulp": "^3.9.1",
     "memory-cache": "^0.1.6",
     "moment-timezone": "^0.5.5",
@@ -27,6 +27,9 @@
     "pg-promise": "^4.3.2",
     "pusher-client": "^1.1.0",
     "throng": "^4.0.0"
+  },
+  "devDependencies": {
+    "origami-build-tools": "^7.0.0"
   },
   "engines": {
     "node": "^8"
