@@ -26,7 +26,8 @@
 						
 						var webChat = new mlLiveBundle.Webchat(document.querySelector('.chat'), {
 							articleId: '{{articleId}}',
-							apiUrl: '{{mlApiUrl}}/' + matchDate
+							apiUrl: '{{mlApiUrl}}/' + matchDate,
+							tagmeUrl: '{{tagmeUrl}}'
 						});
 
 						var mlTabContainer = document.querySelector('.ml-tabs-container');
