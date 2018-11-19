@@ -1,4 +1,4 @@
-#alphaville-blogs
+# alphaville-blogs
 
 Renders the pages of alphaville blogs: Homepage, article page.
 
