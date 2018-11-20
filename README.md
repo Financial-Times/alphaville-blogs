@@ -23,6 +23,11 @@ Origami build tools https://github.com/Financial-Times/origami-build-tools#usage
 
 ```
 npm install -g origami-build-tools
+```
+
+Install prerequisites of origami build tools:
+
+```
 obt install
 ```
 
@@ -67,3 +72,10 @@ Run the following:
 ```
 heroku local
 ```
+
+### Article access
+
+In order you to be able to access articles without getting the barrier, you will need 2 things:
+
+1. Set up a URL in the hosts file that points `local.ft.com` to the localhost
+2. Add `SKIP_AUTH=true` environment variable (this is needed because running the app locally there's no fastly service in front of the app to set the Decision header from the Access service).
