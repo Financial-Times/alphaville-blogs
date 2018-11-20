@@ -67,9 +67,3 @@ Run the following:
 ```
 heroku local
 ```
-
-or
-
-```
-foreman start
-```
