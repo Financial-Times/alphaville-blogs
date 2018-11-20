@@ -21,7 +21,16 @@ mongod
 
 Origami build tools https://github.com/Financial-Times/origami-build-tools#usage
 
+```
 npm install -g origami-build-tools
+obt install
+```
+
+Install gulp globally:
+
+```
+npm install -g gulp
+```
 
 ## Install
 Run the following:
