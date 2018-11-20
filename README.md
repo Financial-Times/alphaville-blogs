@@ -79,3 +79,10 @@ In order you to be able to access articles without getting the barrier, you will
 
 1. Set up a URL in the hosts file that points `local.ft.com` to the localhost
 2. Add `SKIP_AUTH=true` environment variable (this is needed because running the app locally there's no fastly service in front of the app to set the Decision header from the Access service).
+
+### Using alpavhille services together
+
+If you'd like to use other alphaville services locally with the blogs app (alphaville-es-interface-service, alphaville-marketslive-service), then you'll need to change their relevant environment variable, and change the URL and the relevant key to point to the local app you've set up:
+
+- `AV_ES_SERVICE_KEY` and `AV_ES_SERVICE_URL` for *alphaville-es-interface-service*
+- `ML_API_URL` for *alphaville-marketslive-service*
