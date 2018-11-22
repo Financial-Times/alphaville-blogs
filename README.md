@@ -2,22 +2,32 @@
 
 Renders the pages of alphaville blogs: Homepage, article page.
 
-## prerequiste
-mongodb http://treehouse.github.io/installation-guides/mac/mongo-mac.html
-mongod will start the db on the default port.
+## Prerequisite
+In order to run the service locally, you will either need to connect to the TEST mongodb on heroku MLab, or set up the database locally.
+If you have to make changes that affects the database as well, you should follow the below steps to set up the database locally.
+
+### Install MongoDB (optional)
+First install mongodb as described here: https://docs.mongodb.com/manual/installation/.
+
+You should import the data from the TEST database.
+MongoDB URI has the following structure:
 
 ```
-brew update 
+mongodb://{user}:{password}@{primaryHost}:{port},{secondaryHost}:{port}/{databaseName}?replicaSet=rs-{replicaSetName}
+```
 
-brew install mongodb
-
-mkdir -p /data/db
-
-sudo chown -R `id -un` /data/db
-
-mongod
+In order to import the database, run the following commands:
 
 ```
+mongodump -h {primaryHost}:{port} -d {databaseName} -u {user} -p {password} -o {fileLocation}
+```
+
+```
+mongorestore -h localhost:27017 -d session-user-data -u {localUsername} -p {localPassword} --file {localFile}
+```
+If you are in trouble, check out the official documentation https://docs.mongodb.com/manual/reference/program/mongorestore/.
+
+### Install Origami build tools and its dependencies
 
 Origami build tools https://github.com/Financial-Times/origami-build-tools#usage
 
@@ -30,6 +40,8 @@ Install prerequisites of origami build tools:
 ```
 obt install
 ```
+
+### Install gulp
 
 Install gulp globally:
 
