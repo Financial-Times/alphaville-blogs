@@ -14,8 +14,12 @@ router.use('/about', require('./routes/about'));
 router.use('/meet-the-team', require('./routes/meet'));
 router.use('/author', require('./routes/author'));
 router.use('/most-popular-livefyre', require('./routes/mostPopular'));
-router.use('/most-popular', require('./routes/mostRead'));
-router.use('/most-commented', require('./routes/mostCommented'));
+router.use('/most-popular', function(req, res) {
+	res.redirect('/');
+});
+router.use('/most-commented', function(req, res) {
+	res.redirect('/');
+});
 router.use('/topic', require('./routes/topic'));
 router.use('/type', require('./routes/type'));
 router.use('/series', require('./routes/series'));
