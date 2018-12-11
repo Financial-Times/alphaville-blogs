@@ -9,26 +9,26 @@
   "cacheDirectories": [],
   "dependencies": {
     "alphaville-auth-middleware": "Financial-Times/alphaville-auth-middleware#1.4.0",
+    "alphaville-build-tools": "Financial-Times/alphaville-build-tools#2.4.0",
     "alphaville-express": "Financial-Times/alphaville-express#1.1.1",
     "alphaville-header-config": "Financial-Times/alphaville-header-config#1.2.0",
     "alphaville-marketslive-wordpress-api": "Financial-Times/alphaville-marketslive-wordpress-api#0.4.0",
     "alphaville-team-members": "Financial-Times/alphaville-team-members#1.0.0",
-    "alphaville-build-tools": "Financial-Times/alphaville-build-tools#2.4.0",
     "bluebird": "^3.4.1",
     "bower": "^1.7.7",
     "cheerio": "^0.20.0",
-    "debug": "~2.2.0",
+    "debug": "^4.1.0",
     "express-ftwebservice": "Financial-Times/express-web-service#v2.2.0",
-    "gulp": "^3.9.1",
     "memory-cache": "^0.1.6",
     "moment-timezone": "^0.5.5",
     "mongoose": "^4.6.0",
     "node-fetch": "^1.5.2",
-    "pg-promise": "^4.3.2",
+    "pg-promise": "^8.5.3",
     "pusher-client": "^1.1.0",
     "throng": "^4.0.0"
   },
   "engines": {
     "node": "^8"
-  }
+  },
+  "devDependencies": {}
 }
