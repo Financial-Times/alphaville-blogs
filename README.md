@@ -98,3 +98,10 @@ If you'd like to use other alphaville services locally with the blogs app (alpha
 
 - `AV_ES_SERVICE_KEY` and `AV_ES_SERVICE_URL` for *alphaville-es-interface-service*
 - `ML_API_URL` for *alphaville-marketslive-service*
+
+## Deployment instruction
+
+1. merge in `alphaville-es-interface-service` on master => check if `ftalphaville-es-interface-service-test.ft.com` it’s ok
+2. merge in `alphaville-blogs` branch `migration_off_wordpress` => check if `https://ftalphaville2-test.ft.com/` is ok
+3. deploy `alphaville-es-interface-service` master to `https://dashboard.heroku.com/apps/av2-es-interface-prod/deploy/github`
+4. merge changes on `alphaville-blogs` master and deploy to `https://dashboard.heroku.com/apps/av2-blogs-prod/deploy/github`
