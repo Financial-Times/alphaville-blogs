@@ -1,5 +1,5 @@
 require('./common');
-if (window.commentsTalkReplacement || window.useCoralTalk) {
+if (window.commentsTalkReplacement || window.commentsUseCoralTalk) {
 	// Temporary addition until the comments are replaced
 	require('o-comments-beta');
 } else {
