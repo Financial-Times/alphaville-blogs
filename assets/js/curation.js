@@ -1,6 +1,6 @@
 require('./common');
 const oDate = require('o-date');
-const oCommentCount = require('o-comment-count');
+const { oCommentCount } = require('o-comments');
 const oAds = require('o-ads');
 
 const alphavilleUi = require('alphaville-ui');

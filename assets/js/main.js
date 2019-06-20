@@ -1,14 +1,11 @@
 require('./common');
-require('o-comments');
 require('o-expander');
+
+const { oCommentCount } = require('o-comments');
 const oVideo = require('o-video');
-
-const oCommentCount = require('o-comment-count');
-
 const oDate = require('o-date');
 const alphavilleUi = require('alphaville-ui');
 const InfiniteScroll = alphavilleUi.InfiniteScroll;
-
 
 function checkIfBarrier(html) {
 	const tmpDiv = document.createElement('div');

@@ -5,7 +5,6 @@ if (window.commentsTalkReplacement || window.commentsUseCoralTalk) {
 } else {
 	require('o-comments');
 }
-require('o-comment-count');
 require('o-video');
 require('o-expander');
 
