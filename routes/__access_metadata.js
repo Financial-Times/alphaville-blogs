@@ -5,6 +5,9 @@ const fetch = require('node-fetch');
 
 
 const av2AccessMetadata = [{
+	path_regex: "/2019/07/17/1563366942000/Cryptokitties-get-duplicated-at-Vaudeville-with-Simon-Denny.*",
+	classification: "unconditional" //AG: hack to make this one article free because Alphaville uses Wordpress for Access
+}, {
 	path_regex: "/curation.*",
 	classification: "conditional_registered"
 }, {
