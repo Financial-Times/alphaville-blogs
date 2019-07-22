@@ -1,7 +1,7 @@
 require('./common');
 require('o-expander');
 
-const { oCommentCount } = require('o-comments');
+const oComments = require('o-comments');
 const oVideo = require('o-video');
 const oDate = require('o-date');
 const alphavilleUi = require('alphaville-ui');
@@ -24,7 +24,7 @@ document.addEventListener('o.DOMContentLoaded', function () {
 			container: '.alphaville-infinite-scroll-container',
 			onNewPage: () => {
 				oDate.init();
-				oCommentCount.init();
+				oComments.init();
 			}
 		});
 	}
