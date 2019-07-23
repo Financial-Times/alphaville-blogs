@@ -23,17 +23,8 @@
     <link rel="amphtml" href="https://amp.ft.com/content/{{article.id}}" />
 
 	<link rel="stylesheet" href="{{assetsBasePath}}/build/article.css" />
-	{{#commentsTalkReplacement}}
-	<script>
-		// Temporary addition until the comments are replaced
-		window.commentsTalkReplacement = true;
-	</script>
-	{{/commentsTalkReplacement}}
-	{{#useCoralTalk}}
-	<script>
-		window.commentsUseCoralTalk = true;
-	</script>
-	{{/useCoralTalk}}
+
+	<link rel="canonical" href="{{article.webUrl}}" />
 	<script>
 		(function () {
 			ctmLoadScript({
@@ -120,7 +111,7 @@
 
                 {{#article.comments.enabled}}
                     <a name="comments"></a>
-                    <div data-o-component="o-comments" data-o-comments-config-title="{{article.originalTitle}}" data-o-comments-config-url="{{@root.appUrl}}{{article.av2WebUrl}}" data-o-comments-config-articleId="{{article.id}}"></div>
+                    <div id="comments" data-o-component="o-comments" data-o-comments-config-title="{{article.originalTitle}}" data-o-comments-config-url="{{@root.appUrl}}{{article.av2WebUrl}}" data-o-comments-config-articleId="{{article.id}}"></div>
                 {{/article.comments.enabled}}
 
             </div>
