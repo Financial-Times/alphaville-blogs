@@ -19,12 +19,12 @@
     "tests"
   ],
   "dependencies": {
-    "alphaville-ui": "Financial-Times/alphaville-ui#^2.1.7",
+    "alphaville-ui": "Financial-Times/alphaville-ui#^2.2.3",
     "alphaville-marketslive-chat": "Financial-Times/alphaville-marketslive-chat#^1.0.0",
     "webchat": "Financial-Times/webchat#^2.1.0",
     "o-autoinit": "^1.2.0",
-    "o-comments": "^4.0.0",
-		"o-comment-count": "^0.3.0",
+    "o-comments": "^5.1.1",
+    "o-comments-beta": "https://github.com/Financial-Times/o-comments.git#v6.0.0-beta.9",
     "o-tabs": "^4.0.0",
     "o-video": "^4.0.0",
     "o-expander": "^4.0.0",

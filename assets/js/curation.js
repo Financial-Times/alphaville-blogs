@@ -1,6 +1,6 @@
 require('./common');
 const oDate = require('o-date');
-const oCommentCount = require('o-comment-count');
+const oComments = require('o-comments');
 const oAds = require('o-ads');
 
 const alphavilleUi = require('alphaville-ui');
@@ -49,7 +49,7 @@ document.addEventListener('o.DOMContentLoaded', () => {
 						if (data.html) {
 							document.querySelector('.alphaville-article-grid .o-grid-row').innerHTML = data.html;
 							oDate.init();
-							oCommentCount.init();
+							oComments.init();
 							oAds.init();
 						} else {
 							new alphavilleUi.AlertOverlay('Warning', `
@@ -123,7 +123,7 @@ document.addEventListener('o.DOMContentLoaded', () => {
 						if (data.html) {
 							document.querySelector('.alphaville-article-grid .o-grid-row').innerHTML = data.html;
 							oDate.init();
-							oCommentCount.init();
+							oComments.init();
 							oAds.init();
 						} else {
 							new alphavilleUi.AlertOverlay('Warning', `
@@ -208,7 +208,7 @@ document.addEventListener('o.DOMContentLoaded', () => {
 					if (data.html) {
 						document.querySelector('.alphaville-article-grid .o-grid-row').innerHTML = data.html;
 						oDate.init();
-						oCommentCount.init();
+						oComments.init();
 						oAds.init();
 					} else {
 						new alphavilleUi.AlertOverlay('Warning', `

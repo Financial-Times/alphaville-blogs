@@ -1,14 +1,11 @@
 require('./common');
-require('o-comments');
 require('o-expander');
+
+const oComments = require('o-comments');
 const oVideo = require('o-video');
-
-const oCommentCount = require('o-comment-count');
-
 const oDate = require('o-date');
 const alphavilleUi = require('alphaville-ui');
 const InfiniteScroll = alphavilleUi.InfiniteScroll;
-
 
 function checkIfBarrier(html) {
 	const tmpDiv = document.createElement('div');
@@ -27,7 +24,7 @@ document.addEventListener('o.DOMContentLoaded', function () {
 			container: '.alphaville-infinite-scroll-container',
 			onNewPage: () => {
 				oDate.init();
-				oCommentCount.init();
+				oComments.init();
 			}
 		});
 	}
