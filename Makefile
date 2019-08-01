@@ -22,4 +22,4 @@ clean:
 
 run-dev: install
 	export SKIP_AUTH=true; \
-	heroku local
+	npx nodemon --exec "heroku local" --signal SIGTERM
