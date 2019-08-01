@@ -8,13 +8,13 @@ if (window.commentsTalkReplacement || window.commentsUseCoralTalk) {
 require('o-video');
 require('o-expander');
 
-const Permutive = require('./permutive');
 const oAds = require('alphaville-ui')['o-ads'];
 
 const embeddedMedia = require('webchat/src/js/ui/embeddedMedia');
 
+const Permutive = require('./permutive');
 const contentId = document.documentElement.dataset.contentId;
-Permutive.setUserAndPage(contentId);
+Permutive.setUserAndContent(contentId);
 
 document.addEventListener('o.DOMContentLoaded', function async() {
 	const closedContentContainer = document.querySelector('.webchat-closed-content');

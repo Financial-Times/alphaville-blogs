@@ -59,15 +59,23 @@ const setPageMetaData = (content, user) => {
 	oPermutive.setPageMetaData(pageMetaData);
 };
 
-const setUserAndPage = (contentId) => {
+const setUser = () =>
 	getUser()
-		.then(identifyUser)
+		.then(identifyUser);
+
+const setContent = (contentId, user) =>
+	getContent(contentId)
+		.then((content) => setPageMetaData(content, user));
+
+const setUserAndContent = (contentId) => {
+	setUser()
 		.then((user) => {
-			getContent(contentId)
-				.then((content) => setPageMetaData(content, user));
+			setContent(contentId, user)
 		});
 }
 
 module.exports = {
-	setUserAndPage,
+	setUser,
+	setContent,
+	setUserAndContent,
 };
