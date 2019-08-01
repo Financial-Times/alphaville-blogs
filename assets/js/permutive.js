@@ -7,7 +7,7 @@ const oAds = require('o-ads');
 const PERMUTIVE_PUBKEYS = {
 	projectId: 'e1c3fd73-dd41-4abd-b80b-4278d52bf7aa',
 	publicApiKey: 'b2b3b748-e1f6-4bd5-b2f2-26debc8075a3',
-	consentFtCookie : true,
+	consentFtCookie: true,
 };
 
 /*
@@ -24,7 +24,7 @@ const adsApiEndpoints = {
 export const initPermutive = () => {
 	try {
 		return oPermutive.init(PERMUTIVE_PUBKEYS);
-	} catch (e){
+	} catch (e) {
 		console.warn('Permutive could not be initialised:' + ' ' + e);
 	}
 };
@@ -85,9 +85,9 @@ const setPageMetaData = (content, user) => {
 
 	if (user) {
 		pageMetaData.user = {
-			industry: user.industry.code,
-			responsibility: user.responsibility.code,
-			position: user.position.code,
+			industry: user.industry && user.industry.code,
+			responsibility: user.responsibility && user.responsibility.code,
+			position: user.position && user.position.code,
 		};
 	}
 
@@ -102,16 +102,22 @@ const setContent = (contentId, user) =>
 	getContent(contentId)
 		.then((content) => setPageMetaData(content, user));
 
-const setUserAndContent = (contentId) => {
+const setUserAndContent = (contentId) =>
 	setUser()
-		.then((user) => {
-			setContent(contentId, user)
-		});
+		.then((user) => setContent(contentId, user));
+
+const getPermutiveSegments = () => {
+	let segs = window.localStorage.getItem('_pdfps');
+	return (segs) ? JSON.parse(segs) : [];
 };
+
+const setPermutiveSegments = () =>
+	oAds.targeting.add({ permutive: getPermutiveSegments() });
 
 module.exports = {
 	initPermutive,
 	setUser,
 	setContent,
 	setUserAndContent,
+	setPermutiveSegments,
 };
