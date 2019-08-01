@@ -1,11 +1,37 @@
 const oPermutive = require('o-permutive');
 const oAds = require('o-ads');
 
+/*
+ * Permutive's project ID and API Key
+ */
+const PERMUTIVE_PUBKEYS = {
+	projectId: 'e1c3fd73-dd41-4abd-b80b-4278d52bf7aa',
+	publicApiKey: 'b2b3b748-e1f6-4bd5-b2f2-26debc8075a3',
+	consentFtCookie : true,
+};
+
+/*
+ * Ads API v2 endpoints
+ */
 const adsApiEndpoints = {
 	user: () => 'https://ads-api.ft.com/v2/user',
 	content: (contentId) => `https://ads-api.ft.com/v2/content/${contentId}`,
-}
+};
 
+/*
+ * Initialise an o-permutive component
+ */
+export const initPermutive = () => {
+	try {
+		return oPermutive.init(PERMUTIVE_PUBKEYS);
+	} catch (e){
+		console.warn('Permutive could not be initialised:' + ' ' + e);
+	}
+};
+
+/*
+ * Retrieve user from Ads v2
+ */
 const getUser = () => {
 	return oAds.api.getUserData(adsApiEndpoints.user(), 250)
 		.catch((error) => {
@@ -14,13 +40,19 @@ const getUser = () => {
 		})
 };
 
+/*
+ * Retrieve content from Ads v2
+ */
 const getContent = (contentId) => {
 	return oAds.api.getPageData(adsApiEndpoints.content(contentId), 250)
 		.catch((error) => {
 			console.warn('oPermutive: Could not set page metadata', error);
 		});
-}
+};
 
+/*
+ * Identify the User
+ */
 const identifyUser = (user) => {
 	if (user) {
 		oPermutive.identifyUser({
@@ -31,6 +63,9 @@ const identifyUser = (user) => {
 	}
 };
 
+/*
+ * Set page metadata
+ */
 const setPageMetaData = (content, user) => {
 	const pageMetaData = { type: 'article' };
 
@@ -72,9 +107,10 @@ const setUserAndContent = (contentId) => {
 		.then((user) => {
 			setContent(contentId, user)
 		});
-}
+};
 
 module.exports = {
+	initPermutive,
 	setUser,
 	setContent,
 	setUserAndContent,
