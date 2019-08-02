@@ -8,7 +8,7 @@ if (window.commentsTalkReplacement || window.commentsUseCoralTalk) {
 require('o-video');
 require('o-expander');
 
-const Permutive = require('./permutive');
+const Permutive = require('alphaville-ui')['permutive'];
 const contentId = document.documentElement.dataset.contentId;
 Permutive.setUserAndContent(contentId);
 Permutive.setPermutiveSegments();

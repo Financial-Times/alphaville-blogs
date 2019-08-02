@@ -1,7 +1,7 @@
 require('./assets');
 require('alphaville-ui');
 
-const Permutive = require('./permutive');
+const Permutive = require('alphaville-ui')['permutive'];
 Permutive.initPermutive();
 Permutive.setUser();
 Permutive.setPermutiveSegments();
