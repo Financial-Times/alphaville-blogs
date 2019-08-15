@@ -13,7 +13,7 @@ const contentId = document.documentElement.dataset.contentId;
 Permutive.setUserAndContent(contentId);
 Permutive.setPermutiveSegments();
 
-const oAds = require('alphaville-ui')['o-ads'];
+import { oAds } from 'alphaville-ui';
 
 const embeddedMedia = require('webchat/src/js/ui/embeddedMedia');
 
