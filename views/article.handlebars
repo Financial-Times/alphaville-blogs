@@ -110,8 +110,23 @@
                 </div>
 
                 {{#article.comments.enabled}}
-                    <a name="comments"></a>
-                    <div id="comments" data-o-component="o-comments" data-o-comments-config-title="{{article.originalTitle}}" data-o-comments-config-url="{{@root.appUrl}}{{article.av2WebUrl}}" data-o-comments-config-articleId="{{article.id}}"></div>
+                    {{#if useCoralTalk}}
+                        <a name="comments"></a>
+                        <div class="o-comments"
+                            id="comments"
+                            data-o-component="o-comments"
+                            data-o-comments-article-id="{{article.id}}"
+                            data-o-comments-story-url="{{@root.appUrl}}{{article.av2WebUrl}}">
+                        </div>
+                    {{else}}
+                        <a name="comments"></a>
+                        <div id="comments"
+                            data-o-component="o-comments"
+                            data-o-comments-config-title="{{article.originalTitle}}"
+                            data-o-comments-config-url="{{@root.appUrl}}{{article.av2WebUrl}}"
+                            data-o-comments-config-articleId="{{article.id}}">
+                        </div>
+                    {{/if}}
                 {{/article.comments.enabled}}
 
             </div>
