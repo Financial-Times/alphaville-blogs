@@ -25,6 +25,11 @@
 	<link rel="stylesheet" href="{{assetsBasePath}}/build/article.css" />
 
 	<link rel="canonical" href="{{article.webUrl}}" />
+	{{#if useCoralTalk}}
+		<script>
+			window.commentsUseCoralTalk = true;
+		</script>
+	{{/if}}
 	<script>
 		(function () {
 			ctmLoadScript({

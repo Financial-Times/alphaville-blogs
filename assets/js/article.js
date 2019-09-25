@@ -1,6 +1,6 @@
 require('./common');
 // Temporary addition until comments are replaced
-if (document.querySelector('.o-comments')) {
+if (window.commentsUseCoralTalk) {
 	require('o-comments-beta');
 } else {
 	require('o-comments');
