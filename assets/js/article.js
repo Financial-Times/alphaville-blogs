@@ -1,7 +1,16 @@
 require('./common');
 // Temporary addition until comments are replaced
+
 if (window.commentsUseCoralTalk) {
 	require('o-comments-beta');
+
+	document.addEventListener('oComments.loginPrompt', () => {
+		const currentPath = new URL(location.href).pathname;
+		const commentsJumpAnchor = '#comments';
+
+		location.href = `https://accounts.ft.com/login?location=${encodeURIComponent(currentPath)}${encodeURIComponent(commentsJumpAnchor)}`;
+	});
+
 } else {
 	require('o-comments');
 }
