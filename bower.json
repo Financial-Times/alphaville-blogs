@@ -24,7 +24,7 @@
     "webchat": "Financial-Times/webchat#^2.1.0",
     "o-autoinit": "^1.2.0",
     "o-comments": "^5.1.1",
-    "o-comments-beta": "https://github.com/Financial-Times/o-comments.git#v6.0.0-beta.38",
+    "o-comments-beta": "https://github.com/Financial-Times/o-comments.git#v6.0.0-beta.46",
     "o-tabs": "^4.0.0",
     "o-video": "^4.0.0",
     "o-expander": "^4.0.0",
