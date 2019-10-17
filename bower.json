@@ -19,7 +19,7 @@
     "tests"
   ],
   "dependencies": {
-    "alphaville-ui": "Financial-Times/alphaville-ui#^2.5.0",
+    "alphaville-ui": "git@github.com:Financial-Times/alphaville-ui.git#ADSDEV-226_Alphaville_Pageview_event_not_passed_to_Permutive",
     "alphaville-marketslive-chat": "Financial-Times/alphaville-marketslive-chat#^1.0.0",
     "webchat": "Financial-Times/webchat#^2.1.0",
     "o-autoinit": "^1.2.0",
