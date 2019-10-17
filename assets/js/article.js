@@ -17,11 +17,6 @@ if (window.commentsUseCoralTalk) {
 require('o-video');
 require('o-expander');
 
-const Permutive = require('alphaville-ui')['permutive'];
-const contentId = document.documentElement.dataset.contentId;
-Permutive.setUserAndContent(contentId);
-Permutive.setPermutiveSegments();
-
 import { oAds } from 'alphaville-ui';
 
 const embeddedMedia = require('webchat/src/js/ui/embeddedMedia');
