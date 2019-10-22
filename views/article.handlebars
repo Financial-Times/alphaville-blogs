@@ -25,11 +25,6 @@
 	<link rel="stylesheet" href="{{assetsBasePath}}/build/article.css" />
 
 	<link rel="canonical" href="{{article.webUrl}}" />
-	{{#if useCoralTalk}}
-		<script>
-			window.commentsUseCoralTalk = true;
-		</script>
-	{{/if}}
 	<script>
 		(function () {
 			ctmLoadScript({
@@ -116,6 +111,9 @@
 
                 {{#article.comments.enabled}}
                     {{#if useCoralTalk}}
+                        <script>
+                            window.commentsUseCoralTalk = true;
+                        </script>
                         <a name="comments"></a>
                         <div class="o-comments"
                             id="comments"
