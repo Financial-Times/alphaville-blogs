@@ -1,7 +1,7 @@
 require('./common');
 require('o-expander');
 
-const oComments = require('o-comments');
+const oComments = require('o-comments-beta');
 const oVideo = require('o-video');
 const oDate = require('o-date');
 const alphavilleUi = require('alphaville-ui');
