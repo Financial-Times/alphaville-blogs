@@ -16,18 +16,20 @@
 				<div class="alphaville-card__image">
 					<a href="{{av2WebUrl}}" data-trackable="image"><img src="{{image mainImage.url 740 'medium'}}" alt="{{mainImage.title}}" /></a>
 				</div>
-		
+
 				{{> grid-cards/elements/standfirst}}
 
 				<div class="alphaville-card__footer">
-					{{> comment-counter}}
+					{{!-- Comment count will be reintroduced once migration is complete --}}
+					{{!-- {{> comment-counter}} --}}
 					{{> timestamp}}
 				</div>
 			{{else}}
 				{{> grid-cards/elements/standfirst}}
 
 				<div class="alphaville-card__footer">
-					{{> comment-counter}}
+					{{!-- Comment count will be reintroduced once migration is complete --}}
+					{{!-- {{> comment-counter}} --}}
 					{{> timestamp}}
 				</div>
 			{{/if}}
