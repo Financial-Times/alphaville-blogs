@@ -21,7 +21,7 @@
     "gulp": "^4.0.0",
     "memory-cache": "^0.1.6",
     "moment-timezone": "^0.5.5",
-    "mongoose": "^4.6.0",
+    "mongoose": "^5.7.7",
     "node-fetch": "^1.5.2",
     "pg-promise": "^8.5.3",
     "pusher-client": "^1.1.0",
