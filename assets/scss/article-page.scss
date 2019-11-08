@@ -1,8 +1,7 @@
 @import './common';
 
-@import 'o-comments/main';
 $o-comments-is-silent: false;
-@import 'o-comments-beta/main';
+@import 'o-comments/main';
 
 $o-video-is-silent: false;
 @import 'o-video/main';
@@ -22,7 +21,7 @@ $o-expander-is-silent: false;
 	display: block;
 
 	@include oGridRespondTo(M) {
-		display: none;		
+		display: none;
 	}
 }
 
