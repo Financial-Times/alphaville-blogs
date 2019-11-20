@@ -17,7 +17,7 @@ if (window.commentsUseCoralTalk) {
 require('o-video');
 require('o-expander');
 
-import { oAds } from 'alphaville-ui';
+const oAds = require('alphaville-ui')['o-ads'];
 
 const embeddedMedia = require('webchat/src/js/ui/embeddedMedia');
 
