@@ -1,19 +1,19 @@
 .n-content-pullquote {
 	@include articleContentBox;
 	@include articleContentBoxInline;
-	border: 1px solid oColorsGetPaletteColor('black-20');
+	border: 1px solid oColorsByName('black-20');
 
 	p {
 		margin: 5px 0 0;
 	}
 
 	&:before {
-		@include oIconsGetIcon('speech-left', oColorsGetPaletteColor('black-70'), 26);
+		@include oIconsContent('speech-left', oColorsByName('black-70'), 26);
 		content: "";
 		position: absolute;
 		top: -16px;
 		left: 20px;
-		background-color: oColorsGetPaletteColor('paper');
+		background-color: oColorsByName('paper');
 	}
 }
 
@@ -30,6 +30,6 @@
 }
 
 .n-content-pullquote__footer {
-	@include oTypographySansBold($scale: -1);
+	@include oTypographySans($scale: -1, $weight: 'semibold');
 	font-style: normal;
 }

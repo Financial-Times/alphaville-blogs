@@ -1,13 +1,13 @@
 .n-content-blockquote {
 	@include articleContentBox;
-	border-left: 1px solid oColorsGetPaletteColor('black-20');
+	border-left: 1px solid oColorsByName('black-20');
 	padding: 32px 16px 0;
 	p {
 		margin: 5px 0 0;
 	}
 
 	&:before {
-		@include oIconsGetIcon('speech-left', oColorsGetPaletteColor('black-70'), 26);
+		@include oIconsContent('speech-left', oColorsByName('black-70'), 26);
 		position: absolute;
 		top: 0;
 		left: 16px;

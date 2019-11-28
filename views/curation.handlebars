@@ -12,21 +12,22 @@
 
 <div class="o-grid-container">
 	<div class="o-grid-row">
-		<div data-o-grid-colspan="12">
-			<form name="standfirst-char-limit-form">
-				<div class="o-forms">
-					<label for="standfirst-char-limit" class="o-forms__label">Standfirst character limit</label>
+		<div data-o-grid-colspan="12 M6 L3">
 
-					<div class="o-grid-row">
-						<div data-o-grid-colspan="6">
-							<input name="standfirst-char-limit" type="text" id="standfirst-char-limit" value="{{standfirstCharLimit}}" class="o-forms__text"></input>
-						</div>
-						<div data-o-grid-colspan="6">
-							<button type="submit" class="alphaville-curation-char-limit-save o-buttons o-buttons--primary o-buttons--big" name="save-standfirst-char-limit">Save</button>
-						</div>
-					</div>
-				</div>
+			<form name="standfirst-char-limit-form">
+				<label class="o-forms-field">
+					<span class="o-forms-title">
+						<span class="o-forms-title__main">Standfirst character limit</span>
+					</span>
+
+					<span class="o-forms-input o-forms-input--text o-forms-input--suffix">
+						<input type="text" id="standfirst-char-limit" name="standfirst-char-limit" value="{{standfirstCharLimit}}">
+						<button type="submit" class="o-buttons o-buttons--primary o-buttons--big"
+							name="save-standfirst-char-limit">Save</button>
+					</span>
+				</label>
 			</form>
+
 		</div>
 	</div>
 </div>

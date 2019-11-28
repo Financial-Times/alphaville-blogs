@@ -1,4 +1,4 @@
-$brand-color: oColorsGetPaletteColor('wheat');
+$brand-color: oColorsByName('wheat');
 
 .article--brand {
 
@@ -16,7 +16,7 @@ $brand-color: oColorsGetPaletteColor('wheat');
 	}
 
 	.article__header--wrapper--main-image {
-		border-bottom: 1px solid oColorsGetPaletteColor('black-20');
+		border-bottom: 1px solid oColorsByName('black-20');
 	}
 
 	&--headshot {
@@ -42,7 +42,7 @@ $brand-color: oColorsGetPaletteColor('wheat');
 	margin-top: 8px;
 	@media screen {
 		&:before {
-			@include oIconsGetIcon('speech-left', oColorsGetPaletteColor('claret'), 26);
+			@include oIconsContent('speech-left', oColorsByName('claret'), 26);
 			position: absolute;
 			top: 3px;
 			left: 0;
@@ -55,7 +55,7 @@ $brand-color: oColorsGetPaletteColor('wheat');
 }
 
 .article__brand--title {
-	@include oTypographyDisplay($scale: 3);
+	@include oTypographyDisplay($scale: 3, $weight: 'bold');
 	margin-left: 30px;
 }
 

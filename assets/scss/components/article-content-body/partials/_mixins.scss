@@ -13,23 +13,22 @@
 		@include oTypographySans($scale: -1);
 		margin-top: 12px;
 		i {
-			@include oIconsGetIcon('arrow-down', oColorsGetPaletteColor('teal-40'), 12);
-			@include oIconsBaseStyles();
+			@include oIconsContent('arrow-down', oColorsByName('teal-40'), 12);
 			display: inline-block;
 			padding: 0 12px;
 			box-sizing: border-box;
 			&:hover {
-				@include oIconsGetIcon('arrow-down', oColorsGetPaletteColor('black-80'), 12);
+				@include oIconsContent('arrow-down', oColorsByName('black-80'), 12);
 			}
 		}
 		&:hover {
-			color: oColorsGetPaletteColor('black-80');
+			color: oColorsByName('black-80');
 			text-decoration: none;
 		}
 		&[aria-expanded="true"] i {
-			@include oIconsGetIcon('arrow-up', oColorsGetPaletteColor('teal-40'), 12);
+			@include oIconsContent('arrow-up', oColorsByName('teal-40'), 12);
 			&:hover {
-				@include oIconsGetIcon('arrow-up', oColorsGetPaletteColor('black-80'), 12);
+				@include oIconsContent('arrow-up', oColorsByName('black-80'), 12);
 			}
 		}
 	}
@@ -49,7 +48,7 @@
 
 @mixin articleContentBoxTitleText() {
 	@include oTypographyDisplay($scale: 2);
-	color: oColorsGetPaletteColor('black-70');
+	color: oColorsByName('black-70');
 	display: inline-block;
 	padding: 10px;
 	padding-bottom: 0;
@@ -57,7 +56,7 @@
 	font-weight: 900;
 	background-color: inherit;
 	a {
-		color: oColorsGetPaletteColor('black-70');
+		color: oColorsByName('black-70');
 		border-bottom: 0;
 		text-decoration: none;
 	}
@@ -86,100 +85,42 @@
 	}
 }
 
-
-@mixin articleLinksBody($inversed: false) {
-	@if ($inversed) {
-		@include oColorsFor(link-inversed, text);
-	} @else {
-		@include oColorsFor(link, text);
-	}
-	border-bottom: 1px dotted oColorsGetColorFor(link, text);
-	text-decoration: none;
-
-	&:hover,
-	&:focus {
-		@if ($inversed) {
-			color: lighten(oColorsGetColorFor(link-inversed, text), 5%);
-		} @else {
-			color: oColorsGetColorFor(link-hover, text);
-		}
-		border-bottom-color: transparent;
-	}
-}
-
-
-@mixin articleLinksHeadline($article-type: article-standard) {
-	@include oColorsFor($article-type, text);
+@mixin articleLinksTopic() {
+	color: oColorsByUsecase('tag-link', 'text');
+	@include oTypographySans($scale: -2, $weight: 'semibold');
 	border-bottom-color: transparent;
 	text-decoration: none;
 
 	&:hover,
 	&:focus {
-		@include oColorsFor($article-type, border);
+		border-bottom-color: oColorsByUsecase('tag-link-hover', 'text');
+		color: oColorsByUsecase('tag-link-hover', 'text');
 		border-bottom-style: dotted;
 		border-bottom-width: 1px;
 	}
 }
 
-@mixin articleLinksTopic($inversed: false) {
-	@if ($inversed) {
-		@include oColorsFor(topic-inversed, text);
-	} @else {
-		@include oColorsFor(topic, text);
-	}
-	@include oTypographySansBold($scale: -2);
-	border-bottom-color: transparent;
-	text-decoration: none;
-
-	&:hover,
-	&:focus {
-		@if ($inversed) {
-			border-bottom-color: lighten(oColorsGetColorFor(topic-inversed, text), 5%);
-			color: lighten(oColorsGetColorFor(topic-inversed, text), 5%);
-		} @else {
-			border-bottom-color: darken(oColorsGetColorFor(topic, text), 20%);
-			color: darken(oColorsGetColorFor(topic, text), 20%);
-		}
-		border-bottom-style: dotted;
-		border-bottom-width: 1px;
-	}
-}
-
-
-
-@mixin articleListsItem($use-case: article-lists) {
-	@include oColorsFor($use-case, background);
-	border: 1px solid rgba(oColorsGetColorFor($use-case, border), 0.25);
+@mixin articleListsItem() {
+	background: transparent;
+	border: 1px solid rgba(oColorsByName('black'), 0.25);
 	border-width: 0 0 1px;
 	min-width: 200px;
 	vertical-align: top;
 
 	> a {
-		@include articleListsItemLink($use-case);
+		@include articleListsItemLink();
 	}
 }
 
-@mixin articleListsItemLink($use-case: article-lists) {
-	@if($use-case == article-lists-inversed) {
-		@include articleLinksTopic($inversed: true);
-	} @else if ($use-case == article-lists-links-inversed) {
-		@include articleLinksBody($inversed: true);
-		@include oTypographySansBold($scale: -2);
-		text-transform: uppercase;
-	} @else if ($use-case == article-lists-links) {
-		@include articleLinksBody();
-		@include oTypographySansBold($scale: -2);
-		text-transform: uppercase;
-	} @else {
-		@include articleLinksTopic();
-	}
+@mixin articleListsItemLink() {
+	@include articleLinksTopic();
 	display: block;
 	padding: 2px 15px 2px $article-body-spacing-unit/2;
 	position: relative;
 	text-decoration: none;
 	border-bottom-width: 0;
 	&:after {
-		@include oIconsGetIcon('arrow-right', oColorsGetColorFor($use-case, border), 10);
+		@include oIconsContent('arrow-right', oColorsByName('black'), 10);
 		content: '';
 		opacity: 0.25;
 		position: absolute;
@@ -188,10 +129,10 @@
 	}
 	&:hover,
 	&:focus {
-		background: rgba(oColorsGetColorFor(#{$use-case}-hover, background), 0.1);
+		background: rgba(oColorsByName('black-20'), 0.1);
 		border-bottom-width: 0;
 		&:after {
-			@include oIconsGetIcon('arrow-right', oColorsGetColorFor(#{$use-case}-hover, border), 10);
+			@include oIconsContent('arrow-right', oColorsByName('black-80'), 10);
 		}
 	}
 }

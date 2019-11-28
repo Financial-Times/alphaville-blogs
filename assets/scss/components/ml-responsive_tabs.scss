@@ -1,5 +1,6 @@
-$o-tabs-is-silent: false;
 @import 'o-tabs/main';
+
+@include oTabs();
 
 #ml-main-content,
 #ml-user-comments {

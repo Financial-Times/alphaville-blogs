@@ -45,6 +45,6 @@
 .n-content-image__caption {
 	@include oTypographySans($scale: -2);
 	font-style: italic;
-	color: oColorsGetPaletteColor('black-70');
+	color: oColorsByName('black-70');
 	margin-top: 0.5em;
 }

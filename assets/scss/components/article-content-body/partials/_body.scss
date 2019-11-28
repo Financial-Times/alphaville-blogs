@@ -49,7 +49,7 @@
 
 	// BLOCKQUOTES
 	blockquote {
-		color: oColorsGetPaletteColor('black-70');
+		color: oColorsByName('black-70');
 		position: relative;
 	}
 
@@ -75,7 +75,7 @@
 			}
 		}
 		tbody tr:nth-child(odd) {
-			background-color: oColorsGetPaletteColor('black-10');
+			background-color: oColorsByName('black-10');
 		}
 		th,
 		td {
@@ -92,7 +92,7 @@
 	// SUBHEADS
 
 	.subhead {
-		@include oTypographySansBold($scale: 2);
+		@include oTypographySans($scale: 2, $weight: 'semibold');
 		margin-top: 50px;
 		margin-bottom: 20px;
 	}
@@ -100,7 +100,7 @@
 		border-bottom: 1px solid black;
 	}
 	.subhead--standard {
-		@include oTypographySansBold($scale: -1);
+		@include oTypographySans($scale: -1, $weight: 'semibold');
 	}
 
 }

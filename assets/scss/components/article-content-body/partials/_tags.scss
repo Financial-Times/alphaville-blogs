@@ -21,7 +21,7 @@
 .n-content-tags__intro {
 	padding: 16px 0;
 	margin: 0 10px;
-	border-bottom: 1px solid oColorsGetPaletteColor('black-20');
+	border-bottom: 1px solid oColorsByName('black-20');
 	p {
 		margin: 0;
 	}
@@ -60,16 +60,16 @@
 	font-size: 16px;
 	position: relative;
 	&:after {
-		@include oIconsGetIcon('arrow-right', oColorsGetPaletteColor('teal-40'), 10);
+		@include oIconsContent('arrow-right', oColorsByName('teal-40'), 10);
 		content: '';
 		position: absolute;
 		top: 5px;
 	}
 	&:hover {
-		color: oColorsGetPaletteColor('black-80');
+		color: oColorsByName('black-80');
 
 		&:after {
-			@include oIconsGetIcon('arrow-right', oColorsGetPaletteColor('black-80'), 10);
+			@include oIconsContent('arrow-right', oColorsByName('black-80'), 10);
 		}
 	}
 }
@@ -77,7 +77,7 @@
 // TAG - ie. styling a singular tag
 
 .n-content-tag__list-item--vertical {
-	@include articleListsItem($use-case: article-lists);
+	@include articleListsItem();
 	&:first-child {
 		border-top: 1px solid rgba(0, 0, 0, 0.25);
 	}
@@ -87,7 +87,7 @@
 	position: relative;
 	padding: 10px 80px 10px 0;
 	margin: 0 10px;
-	border-bottom: 1px solid oColorsGetPaletteColor('black-20');
+	border-bottom: 1px solid oColorsByName('black-20');
 	min-height: 26px;
 
 	.n-myft-ui {
@@ -104,7 +104,7 @@
 }
 
 .n-content-tag--medium {
-	@include oTypographySansBold($scale: -1);
+	@include oTypographySans($scale: -1, $weight: 'semibold');
 }
 
 
