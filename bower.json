@@ -19,7 +19,7 @@
     "tests"
   ],
   "dependencies": {
-    "alphaville-ui": "#c5d9bb6",
+    "alphaville-ui": "^4.0.0",
     "alphaville-marketslive-chat": "^2.0.0",
     "webchat": "^3.0.0",
     "o-autoinit": "^1.2.0",
