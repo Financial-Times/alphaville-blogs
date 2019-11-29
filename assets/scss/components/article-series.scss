@@ -17,7 +17,7 @@
 	}
 
 	& > span {
-		@include oTypographySansBold($scale: -2);
+		@include oTypographySans($scale: -2, $weight: 'semibold');
 		font-weight: bold;
 		font-size: 16px;
 		text-transform: uppercase;

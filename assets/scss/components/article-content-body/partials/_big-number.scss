@@ -1,17 +1,17 @@
 .n-content-big-number {
 	@include articleContentBox;
 	@include articleContentBoxInline;
-	border: 1px solid oColorsGetPaletteColor('black-20');
+	border: 1px solid oColorsByName('black-20');
 	padding-left: 16px;
 	padding-right: 16px;
-	color: oColorsGetPaletteColor('black-70');
+	color: oColorsByName('black-70');
 	p {
 		margin: 5px 0 0;
 	}
 }
 
 .n-content-big-number__title {
-	@include oTypographyDisplayBold($scale: 6);
+	@include oTypographyDisplay($scale: 6, $weight: 'bold');
 	font-size: 3em;
 	line-height: 1em;
 }

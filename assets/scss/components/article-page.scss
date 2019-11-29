@@ -33,10 +33,6 @@
 }
 
 //ARTICLE META ELEMENTS
-.article__title {
-	@include oTypographyHeadline();
-	margin: 0;
-}
 .article__stand-first {
 	@include oTypographySans($scale: 2);
 	line-height: 24px;
@@ -64,20 +60,20 @@
 	margin: 0;
 }
 .article__byline-tag {
-	color: oColorsGetPaletteColor('claret');
-	@include oTypographySansBold($scale: 0);
+	color: oColorsByName('claret');
+	@include oTypographySans($scale: 0, $weight: 'semibold');
 	display: inline;
 	margin: 0 0 10px;
 	// If the tag is used as a link
 	text-decoration: none;
 
 	&:hover {
-		color: oColorsGetPaletteColor('black-70');
+		color: oColorsByName('black-70');
 	}
 }
 .article__timestamp {
 	@include oTypographySans($scale: -2);
-	color: oColorsGetPaletteColor('black-80');
+	color: oColorsByName('black-80');
 	text-transform: uppercase;
 	@media print {
 		text-indent: -9999px;
@@ -128,20 +124,20 @@
 	margin-top: -30px;
 }
 .o-gallery__control--prev:before {
-	@include oIconsGetIcon('arrow-left', oColorsGetPaletteColor('white'), 60);
+	@include oIconsContent('arrow-left', oColorsByName('white'), 60);
 	left: -5px;
 	content: '';
 }
 .o-gallery__control--prev:hover:before {
-	@include oIconsGetIcon('arrow-left', oColorsGetPaletteColor('black-30'), 60);
+	@include oIconsContent('arrow-left', oColorsByName('black-30'), 60);
 }
 .o-gallery__control--next:before {
-	@include oIconsGetIcon('arrow-right', oColorsGetPaletteColor('white'), 60);
+	@include oIconsContent('arrow-right', oColorsByName('white'), 60);
 	left: -3px;
 	content: '';
 }
 .o-gallery__control--next:hover:before {
-	@include oIconsGetIcon('arrow-right', oColorsGetPaletteColor('black-30'), 60);
+	@include oIconsContent('arrow-right', oColorsByName('black-30'), 60);
 }
 
 .article__aside {
@@ -154,7 +150,7 @@
 }
 
 .article__warning {
-	background-color: oColorsGetPaletteColor('black-5');
+	background-color: oColorsByName('black-5');
 	padding: 14px;
 	display: block;
 	margin: 0.3em 0 0.8em;
@@ -163,7 +159,7 @@
 		margin: 0;
 	}
 	&__link {
-		@include oTypographySansBold($scale: -1);
+		@include oTypographySans($scale: -1, $weight: 'semibold');
 	}
 }
 

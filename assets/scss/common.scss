@@ -1,3 +1,11 @@
 @import './assets';
 
 @import 'alphaville-ui/main';
+@import 'o-editorial-typography/main';
+@import 'o-normalise/main';
+
+@include oNormalise();
+
+@include oEditorialTypography($opts: (
+	'headings': (1,)
+));

@@ -1,20 +1,25 @@
 @import './common';
-
-$o-forms-is-silent: false;
 @import 'o-forms/main';
-
 @import './components/article-grid';
+
+@include oForms($opts: (
+	'elements': ('text', 'checkbox'),
+	'features': ('disabled', 'small', 'suffix')
+));
 
 .alphaville-card-curation {
 	position: absolute;
+	display: flex;
 	top: 0;
 	right: 0;
 	background: rgba(255, 255, 255, 0.5);
 	padding: 5px;
-	white-space: nowrap;
+}
 
-	.o-forms__select {
-		width: auto;
+.alphaville-card-curation__field {
+	margin-bottom: 0;
+	&:not(:last-child) {
+		margin-right: 1rem;
 	}
 }
 
@@ -26,7 +31,7 @@ $o-forms-is-silent: false;
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background: oColorsGetPaletteColor('paper');
+		background: oColorsByName('paper');
 	}
 }
 
@@ -38,10 +43,6 @@ $o-forms-is-silent: false;
 	margin-left: -30px;
 	margin-top: -30px;
 	z-index: 5;
-}
-
-.alphaville-curation-char-limit-save {
-	margin-top: 12px;
 }
 
 @import './components/article-list';

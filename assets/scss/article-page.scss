@@ -4,11 +4,11 @@
 $o-comments-is-silent: false;
 @import 'o-comments-beta/main';
 
-$o-video-is-silent: false;
 @import 'o-video/main';
-
-$o-expander-is-silent: false;
 @import 'o-expander/main';
+
+@include oVideo();
+@include oExpander();
 
 .o-footer {
 	margin-top: 0;
@@ -22,7 +22,7 @@ $o-expander-is-silent: false;
 	display: block;
 
 	@include oGridRespondTo(M) {
-		display: none;		
+		display: none;
 	}
 }
 

@@ -4,7 +4,7 @@ const oComments = require('o-comments');
 const oAds = require('o-ads');
 
 const alphavilleUi = require('alphaville-ui');
-const Delegate = require('dom-delegate');
+const Delegate = require('ftdomdelegate');
 
 const cardTypes = {
 	blog: 'Simple',

@@ -1,14 +1,24 @@
 {{#curationOptions}}
 	<div class="alphaville-card-curation">
 		{{#hero}}
-			<input type="checkbox" id="alphaville-card-curation-hero-{{../../id}}" name="alphaville-card-curation-hero" value="{{value}}" class="o-forms__checkbox o-forms__checkbox--small" {{#selected}}checked="checked"{{/selected}} />
-			<label class="o-forms__label" for="alphaville-card-curation-hero-{{../../id}}">{{label}}</label>
+			<span class="alphaville-card-curation__field o-forms-field o-forms-field--inline">
+				<span class="o-forms-input o-forms-input--checkbox">
+					<label>
+						<input type="checkbox" id="alphaville-card-curation-hero-{{../../id}}" name="alphaville-card-curation-hero" value="{{value}}" {{#selected}}checked="checked"{{/selected}}>
+						<span class="o-forms-input__label" for="alphaville-card-curation-hero-{{../../id}}">{{label}}</span>
+					</label>
+				</span>
+			</span>
 		{{/hero}}
-		
-		<select class="o-forms__select o-forms__select--small" name="alphaville-card-curation-type" data-last-selected="{{selected}}" {{#disabled}}disabled="disabled"{{/disabled}}>
-			{{#options}}
-				<option value="{{value}}" {{#selected}}selected="selected"{{/selected}} {{#disabled}}disabled="disabled"{{/disabled}}>{{label}}</option>
-			{{/options}}
-		</select>
+
+		<span class="alphaville-card-curation__field o-forms-field o-forms-field--inline">
+			<span class="o-forms-input o-forms-input--select o-forms-input--small">
+				<select name="alphaville-card-curation-type" data-last-selected="{{selected}}" {{#disabled}}disabled="disabled"{{/disabled}}>
+					{{#options}}
+						<option value="{{value}}" {{#selected}}selected="selected"{{/selected}} {{#disabled}}disabled="disabled"{{/disabled}}>{{label}}</option>
+					{{/options}}
+				</select>
+			</span>
+		</span>
 	</div>
 {{/curationOptions}}

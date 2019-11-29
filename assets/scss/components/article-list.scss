@@ -17,13 +17,13 @@
 
 	.alphaville--read-more__toggle {
 		float: right;
-		color: oColorsGetPaletteColor('teal-40');
+		color: oColorsByName('teal-40');
 		font-weight: bold;
 		outline: 0;
 		overflow: hidden;
 
 		i {
-			@include oIconsGetIcon('arrow-down', oColorsGetPaletteColor('teal-40'), 24);
+			@include oIconsContent('arrow-down', oColorsByName('teal-40'), 24);
 			vertical-align: middle;
 		}
 	}

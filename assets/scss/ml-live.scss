@@ -17,13 +17,13 @@
 }
 
 .marketslive-terms-conditions {
-	border-top: 5px solid oColorsGetPaletteColor('black-20');
-	color: oColorsGetPaletteColor('black-50');
+	border-top: 5px solid oColorsByName('black-20');
+	color: oColorsByName('black-50');
 	padding: 15px 10px;
 	text-align: center;
 
 	a {
-		color: oColorsGetPaletteColor('oxford');
+		color: oColorsByName('oxford');
 		-webkit-font-smoothing: antialiased;
 		text-decoration: none;
 
