@@ -178,4 +178,11 @@
 	margin-bottom: $article-body-spacing-unit * 2;
 }
 
+.comments__maintenance-mode-message {
+	@include oTypographySans(0);
+
+	margin-top: $article-body-spacing-unit * 2;
+	margin-bottom: $article-body-spacing-unit * 2;
+}
+
 @import 'genre-styles';

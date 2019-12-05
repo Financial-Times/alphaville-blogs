@@ -115,22 +115,28 @@
                 </div>
 
                 {{#article.comments.enabled}}
-                    {{#if useCoralTalk}}
-                        <a name="comments"></a>
-                        <div class="o-comments o-comments-stream"
-                            id="comments"
-                            data-o-component="o-comments"
-                            data-o-comments-article-id="{{article.id}}"
-                            data-o-comments-article-url="https://www.ft.com/content/{{article.id}}">
+                    {{#if commentsMaintenanceMode}}
+                        <div class="comments__maintenance-mode-message">
+                            There is a problem with reader comments. Our team is working on it. Please try again soon.
                         </div>
                     {{else}}
-                        <a name="comments"></a>
-                        <div id="comments"
-                            data-o-component="o-comments"
-                            data-o-comments-config-title="{{article.originalTitle}}"
-                            data-o-comments-config-url="{{@root.appUrl}}{{article.av2WebUrl}}"
-                            data-o-comments-config-articleId="{{article.id}}">
-                        </div>
+                        {{#if useCoralTalk}}
+                            <a name="comments"></a>
+                            <div class="o-comments o-comments-stream"
+                                id="comments"
+                                data-o-component="o-comments"
+                                data-o-comments-article-id="{{article.id}}"
+                                data-o-comments-article-url="https://www.ft.com/content/{{article.id}}">
+                            </div>
+                        {{else}}
+                            <a name="comments"></a>
+                            <div id="comments"
+                                data-o-component="o-comments"
+                                data-o-comments-config-title="{{article.originalTitle}}"
+                                data-o-comments-config-url="{{@root.appUrl}}{{article.av2WebUrl}}"
+                                data-o-comments-config-articleId="{{article.id}}">
+                            </div>
+                        {{/if}}
                     {{/if}}
                 {{/article.comments.enabled}}
 
