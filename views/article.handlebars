@@ -129,13 +129,19 @@
                                 data-o-comments-article-url="https://www.ft.com/content/{{article.id}}">
                             </div>
                         {{else}}
-                            <a name="comments"></a>
-                            <div id="comments"
-                                data-o-component="o-comments"
-                                data-o-comments-config-title="{{article.originalTitle}}"
-                                data-o-comments-config-url="{{@root.appUrl}}{{article.av2WebUrl}}"
-                                data-o-comments-config-articleId="{{article.id}}">
-                            </div>
+                            {{#if commentsMigrationMessage}}
+                                <div class="comments__maintenance-mode-message">
+                                    We are migrating reader comments to our new system. It will be back soon.
+                                </div>
+                            {{else}}
+                                <a name="comments"></a>
+                                <div id="comments"
+                                    data-o-component="o-comments"
+                                    data-o-comments-config-title="{{article.originalTitle}}"
+                                    data-o-comments-config-url="{{@root.appUrl}}{{article.av2WebUrl}}"
+                                    data-o-comments-config-articleId="{{article.id}}">
+                                </div>
+                            {{/if}}
                         {{/if}}
                     {{/if}}
                 {{/article.comments.enabled}}
