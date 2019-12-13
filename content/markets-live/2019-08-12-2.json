@@ -1,0 +1,191 @@
+{
+  "id": "b1b9c924-3e1d-3130-b972-2459b18e97ed",
+  "webUrl": "http://ftalphaville.ft.com/marketslive/2019-08-12-2/",
+  "title": "Markets Live is on holiday",
+  "alternativeTitles": {},
+  "provenance": [
+    "https://api.ft.com/internalcontent/b1b9c924-3e1d-3130-b972-2459b18e97ed"
+  ],
+  "byline": "Bryce Elder",
+  "publishedDate": "2019-08-12T09:55:19.000Z",
+  "firstPublishedDate": "2019-08-12T09:55:19.000Z",
+  "publishReference": "tid_ipbq71s8cf",
+  "curatedRelatedContent": [],
+  "containedIn": [],
+  "canBeDistributed": "yes",
+  "canBeSyndicated": "verify",
+  "comments": {
+    "enabled": false
+  },
+  "standout": {
+    "editorsChoice": false,
+    "exclusive": false,
+    "scoop": false
+  },
+  "realtime": true,
+  "originatingParty": "FT",
+  "_lastUpdatedDateTime": "2019-12-12T13:27:15.127Z",
+  "_lastUpdatedVersion": "7e31a715ef987f4138810700061579e58b572501",
+  "type": "article",
+  "accessLevel": "registered",
+  "topper": {},
+  "url": "http://ftalphaville.ft.com/marketslive/2019-08-12-2/",
+  "relativeUrl": "http://ftalphaville.ft.com/marketslive/2019-08-12-2/",
+  "_editorialComponents": [],
+  "openingHTML": "<p>Back September 3</p>",
+  "annotations": [
+    {
+      "predicate": "http://www.ft.com/ontology/classification/isClassifiedBy",
+      "id": "89d15f70-640d-11e4-9803-0800200c9a66",
+      "apiUrl": "http://api.ft.com/brands/89d15f70-640d-11e4-9803-0800200c9a66",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/classification/Classification",
+        "http://www.ft.com/ontology/product/Brand"
+      ],
+      "prefLabel": "FT Alphaville",
+      "type": "BRAND",
+      "directType": "http://www.ft.com/ontology/product/Brand",
+      "url": "https://www.ft.com/stream/89d15f70-640d-11e4-9803-0800200c9a66",
+      "relativeUrl": "/stream/89d15f70-640d-11e4-9803-0800200c9a66",
+      "preposition": "from"
+    },
+    {
+      "predicate": "http://www.ft.com/ontology/classification/isPrimarilyClassifiedBy",
+      "id": "c91b1fad-1097-468b-be82-9a8ff717d54c",
+      "apiUrl": "http://api.ft.com/things/c91b1fad-1097-468b-be82-9a8ff717d54c",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/Topic"
+      ],
+      "prefLabel": "Markets",
+      "type": "TOPIC",
+      "directType": "http://www.ft.com/ontology/Topic",
+      "url": "https://www.ft.com/markets",
+      "preposition": "on",
+      "relativeUrl": "/markets"
+    }
+  ],
+  "brandConcept": {
+    "predicate": "http://www.ft.com/ontology/classification/isClassifiedBy",
+    "id": "89d15f70-640d-11e4-9803-0800200c9a66",
+    "apiUrl": "http://api.ft.com/brands/89d15f70-640d-11e4-9803-0800200c9a66",
+    "types": [
+      "http://www.ft.com/ontology/core/Thing",
+      "http://www.ft.com/ontology/concept/Concept",
+      "http://www.ft.com/ontology/classification/Classification",
+      "http://www.ft.com/ontology/product/Brand"
+    ],
+    "prefLabel": "FT Alphaville",
+    "type": "BRAND",
+    "directType": "http://www.ft.com/ontology/product/Brand",
+    "url": "https://www.ft.com/stream/89d15f70-640d-11e4-9803-0800200c9a66",
+    "relativeUrl": "/stream/89d15f70-640d-11e4-9803-0800200c9a66",
+    "preposition": "from"
+  },
+  "authorConcepts": [],
+  "design": {
+    "theme": "basic",
+    "layout": "default"
+  },
+  "displayConcept": {
+    "predicate": "http://www.ft.com/ontology/classification/isPrimarilyClassifiedBy",
+    "id": "c91b1fad-1097-468b-be82-9a8ff717d54c",
+    "apiUrl": "http://api.ft.com/things/c91b1fad-1097-468b-be82-9a8ff717d54c",
+    "types": [
+      "http://www.ft.com/ontology/core/Thing",
+      "http://www.ft.com/ontology/concept/Concept",
+      "http://www.ft.com/ontology/Topic"
+    ],
+    "prefLabel": "Markets",
+    "type": "TOPIC",
+    "directType": "http://www.ft.com/ontology/Topic",
+    "url": "https://www.ft.com/markets",
+    "preposition": "on",
+    "relativeUrl": "/markets",
+    "isDisplayTag": false
+  },
+  "teaser": {
+    "id": "b1b9c924-3e1d-3130-b972-2459b18e97ed",
+    "url": "http://ftalphaville.ft.com/marketslive/2019-08-12-2/",
+    "relativeUrl": "http://ftalphaville.ft.com/marketslive/2019-08-12-2/",
+    "type": "article",
+    "indicators": {
+      "isColumn": false,
+      "isOpinion": false,
+      "isScoop": false,
+      "isExclusive": false,
+      "isEditorsChoice": false,
+      "accessLevel": "registered"
+    },
+    "metaPrefixText": null,
+    "metaSuffixText": null,
+    "metaLink": {
+      "predicate": "http://www.ft.com/ontology/classification/isPrimarilyClassifiedBy",
+      "id": "c91b1fad-1097-468b-be82-9a8ff717d54c",
+      "prefLabel": "Markets",
+      "type": "TOPIC",
+      "url": "https://www.ft.com/markets",
+      "relativeUrl": "/markets"
+    },
+    "metaAltLink": null,
+    "title": "Markets Live is on holiday",
+    "altStandfirst": null,
+    "publishedDate": "2019-08-12T09:55:19.000Z",
+    "firstPublishedDate": "2019-08-12T09:55:19.000Z",
+    "image": {},
+    "headshot": null,
+    "parentTheme": null
+  },
+  "contentStats": {
+    "wordCount": 1,
+    "paragraphs": 0,
+    "relatedBoxes": 0,
+    "pullQuotes": 0,
+    "pullQuotesWithImages": 0,
+    "bigNumbers": 0,
+    "images": 0,
+    "responsiveImages": 0,
+    "graphics": 0,
+    "audio": 0,
+    "videos": 0,
+    "internalVideos": 0,
+    "externalVideos": 0,
+    "subheadings": 0,
+    "curatedRecommended": 0,
+    "layouts": 0,
+    "layoutSlots": 0,
+    "infoBox": 0,
+    "tables": 0,
+    "timelines": 0,
+    "singleArticleRecommendations": 0,
+    "sentiment": 0,
+    "scoreGraphicVolume": 0,
+    "scoreGraphicDensity": 0,
+    "scorePictureVolume": 0,
+    "scorePictureDensity": 0
+  },
+  "isMarketsLive": true,
+  "av2WebUrl": "/marketslive/2019-08-12-2/",
+  "bodyHTML": "<div class=\"webchat-closed-content\"><time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2019-08-12T09:55:56.000Z\" title=\"Mon Aug 12 2019 09:55:56 GMT+0000 (UTC)\" aria-label=\"Mon Aug 12 2019 09:55:56 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t10:55 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1565603771\" data-mid=\"1452350\" data-rawmessage=\"FT Alphaville&apos;s Markets Live is having its annual break to allow for essential server downtime.\" id=\"webchat-msg-1452350\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">BE</span><span class=\"timestamp\">10:56am</span></span><div class=\"messagebody\"><p>FT Alphaville&apos;s Markets Live is having its annual break to allow for essential server downtime.</p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1565603780\" data-mid=\"1452351\" data-rawmessage=\"https://i.imgur.com/HIFIuOt.gif\" id=\"webchat-msg-1452351\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">BE</span><span class=\"timestamp\">10:56am</span></span><div class=\"messagebody\"><p><img class=\"picture\" src=\"https://www.ft.com/__origami/service/image/v2/images/raw/%2F%2Fwww.ft.com%2F__origami%2Fservice%2Fimage%2Fv2%2Fimages%2Fraw%2Fhttps%253A%252F%252Fi.imgur.com%252FHIFIuOt.gif%3Fsource%3DAlphaville%26width%3D675%26fit%3Dscale-down?source=Alphaville\"></p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1565603791\" data-mid=\"1452352\" data-rawmessage=\"We&apos;ll power it up again on September 3, or earlier if something properly interesting happens.\" id=\"webchat-msg-1452352\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">BE</span><span class=\"timestamp\">10:56am</span></span><div class=\"messagebody\"><p>We&apos;ll power it up again on September 3, or earlier if something properly interesting happens.</p>\n</div></div></div>",
+  "authors": [
+    {
+      "name": "Bryce Elder",
+      "headshotUrl": "https://www.ft.com/__origami/service/image/v2/images/raw/fthead:bryce-elder?source=alphaville",
+      "isAlphavilleEditor": true,
+      "url": "/author/Bryce%20Elder"
+    }
+  ],
+  "primaryTheme": [
+    {
+      "label": "Markets Live",
+      "url": "/marketslive"
+    }
+  ],
+  "originalTitle": "Markets Live is on holiday",
+  "isLive": false,
+  "subheading": "Back September 3",
+  "standfirst": "Back September 3"
+}

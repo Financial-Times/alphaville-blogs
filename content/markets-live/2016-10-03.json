@@ -1,0 +1,397 @@
+{
+  "id": "a89297b8-78b6-3af4-aefa-141a8153d89b",
+  "webUrl": "http://ftalphaville.ft.com/marketslive/2016-10-03/",
+  "title": "Monday, 3rd October, 2016",
+  "alternativeTitles": {},
+  "provenance": [
+    "https://api.ft.com/internalcontent/a89297b8-78b6-3af4-aefa-141a8153d89b"
+  ],
+  "byline": "Paul Murphy",
+  "publishedDate": "2016-10-03T10:01:15.000Z",
+  "firstPublishedDate": "2016-10-03T10:01:15.000Z",
+  "publishReference": "republish_-be3efc1f-ed55-4536-97fb-2b0efea9e6dc_carousel_1558479950",
+  "curatedRelatedContent": [],
+  "containedIn": [],
+  "canBeDistributed": "yes",
+  "canBeSyndicated": "verify",
+  "comments": {
+    "enabled": true
+  },
+  "standout": {
+    "editorsChoice": false,
+    "exclusive": false,
+    "scoop": false
+  },
+  "realtime": true,
+  "originatingParty": "FT",
+  "_lastUpdatedDateTime": "2019-12-11T12:36:00.942Z",
+  "_lastUpdatedVersion": "7e31a715ef987f4138810700061579e58b572501",
+  "type": "article",
+  "accessLevel": "subscribed",
+  "topper": {},
+  "url": "http://ftalphaville.ft.com/marketslive/2016-10-03/",
+  "relativeUrl": "http://ftalphaville.ft.com/marketslive/2016-10-03/",
+  "_editorialComponents": [],
+  "openingHTML": "<p>Live markets commentary from FT.com</p>",
+  "annotations": [
+    {
+      "apiUrl": "http://api.ft.com/things/c91b1fad-1097-468b-be82-9a8ff717d54c",
+      "directType": "http://www.ft.com/ontology/Topic",
+      "id": "c91b1fad-1097-468b-be82-9a8ff717d54c",
+      "predicate": "http://www.ft.com/ontology/classification/isPrimarilyClassifiedBy",
+      "prefLabel": "Markets",
+      "type": "TOPIC",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/Topic"
+      ],
+      "preposition": "on",
+      "url": "https://www.ft.com/markets",
+      "relativeUrl": "/markets"
+    },
+    {
+      "apiUrl": "http://api.ft.com/people/dbca0aaa-ff62-4a87-a813-e0817d66b048",
+      "directType": "http://www.ft.com/ontology/person/Person",
+      "id": "dbca0aaa-ff62-4a87-a813-e0817d66b048",
+      "predicate": "http://www.ft.com/ontology/annotation/majorMentions",
+      "prefLabel": "Paul Murphy",
+      "type": "PERSON",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/person/Person"
+      ],
+      "preposition": "on",
+      "url": "https://www.ft.com/topics/people/Paul_Murphy",
+      "relativeUrl": "/topics/people/Paul_Murphy"
+    },
+    {
+      "apiUrl": "http://api.ft.com/things/b7ea3c33-ea8c-432e-bb7e-e3bbc8fdc2bb",
+      "directType": "http://www.ft.com/ontology/Topic",
+      "id": "b7ea3c33-ea8c-432e-bb7e-e3bbc8fdc2bb",
+      "predicate": "http://www.ft.com/ontology/classification/isClassifiedBy",
+      "prefLabel": "Equities",
+      "type": "TOPIC",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/Topic"
+      ],
+      "preposition": "on",
+      "url": "https://www.ft.com/equities",
+      "relativeUrl": "/equities"
+    },
+    {
+      "apiUrl": "http://api.ft.com/things/6da31a37-691f-4908-896f-2829ebe2309e",
+      "directType": "http://www.ft.com/ontology/Genre",
+      "id": "6da31a37-691f-4908-896f-2829ebe2309e",
+      "predicate": "http://www.ft.com/ontology/classification/isClassifiedBy",
+      "prefLabel": "Opinion",
+      "type": "GENRE",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/classification/Classification",
+        "http://www.ft.com/ontology/Genre"
+      ],
+      "preposition": "",
+      "url": "https://www.ft.com/opinion",
+      "relativeUrl": "/opinion"
+    },
+    {
+      "FIGI": "BBG000H6HNW3",
+      "apiUrl": "http://api.ft.com/organisations/a54ba68e-4aa3-4aa0-8a11-61456f4dfaa1",
+      "directType": "http://www.ft.com/ontology/company/PublicCompany",
+      "id": "a54ba68e-4aa3-4aa0-8a11-61456f4dfaa1",
+      "predicate": "http://www.ft.com/ontology/annotation/majorMentions",
+      "prefLabel": "Twitter Inc",
+      "type": "ORGANISATION",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/organisation/Organisation",
+        "http://www.ft.com/ontology/company/Company",
+        "http://www.ft.com/ontology/company/PublicCompany"
+      ],
+      "preposition": "on",
+      "url": "https://www.ft.com/stream/a54ba68e-4aa3-4aa0-8a11-61456f4dfaa1",
+      "relativeUrl": "/stream/a54ba68e-4aa3-4aa0-8a11-61456f4dfaa1"
+    },
+    {
+      "apiUrl": "http://api.ft.com/things/738ba631-9a48-4b3f-9c5f-02a7cb9639d8",
+      "directType": "http://www.ft.com/ontology/Topic",
+      "id": "738ba631-9a48-4b3f-9c5f-02a7cb9639d8",
+      "predicate": "http://www.ft.com/ontology/annotation/majorMentions",
+      "prefLabel": "European banks",
+      "type": "TOPIC",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/Topic"
+      ],
+      "preposition": "on",
+      "url": "https://www.ft.com/reports/cee-banking-finance",
+      "relativeUrl": "/reports/cee-banking-finance"
+    },
+    {
+      "FIGI": "BBG000C04CZ6",
+      "apiUrl": "http://api.ft.com/organisations/d3d4ba02-485f-467a-87f5-52536f70a57c",
+      "directType": "http://www.ft.com/ontology/company/PublicCompany",
+      "id": "d3d4ba02-485f-467a-87f5-52536f70a57c",
+      "predicate": "http://www.ft.com/ontology/annotation/majorMentions",
+      "prefLabel": "Barclays PLC",
+      "type": "ORGANISATION",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/organisation/Organisation",
+        "http://www.ft.com/ontology/company/Company",
+        "http://www.ft.com/ontology/company/PublicCompany"
+      ],
+      "preposition": "on",
+      "url": "https://www.ft.com/stream/d3d4ba02-485f-467a-87f5-52536f70a57c",
+      "relativeUrl": "/stream/d3d4ba02-485f-467a-87f5-52536f70a57c"
+    },
+    {
+      "apiUrl": "http://api.ft.com/brands/89d15f70-640d-11e4-9803-0800200c9a66",
+      "directType": "http://www.ft.com/ontology/product/Brand",
+      "id": "89d15f70-640d-11e4-9803-0800200c9a66",
+      "predicate": "http://www.ft.com/ontology/classification/isClassifiedBy",
+      "prefLabel": "FT Alphaville",
+      "type": "BRAND",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/classification/Classification",
+        "http://www.ft.com/ontology/product/Brand"
+      ],
+      "preposition": "from",
+      "url": "https://www.ft.com/stream/89d15f70-640d-11e4-9803-0800200c9a66",
+      "relativeUrl": "/stream/89d15f70-640d-11e4-9803-0800200c9a66"
+    },
+    {
+      "apiUrl": "http://api.ft.com/people/02ce4d45-7721-42ad-a083-3930ae3b3e6d",
+      "directType": "http://www.ft.com/ontology/person/Person",
+      "id": "02ce4d45-7721-42ad-a083-3930ae3b3e6d",
+      "predicate": "http://www.ft.com/ontology/annotation/majorMentions",
+      "prefLabel": "John Pierpont Morgan",
+      "type": "PERSON",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/person/Person"
+      ],
+      "preposition": "on",
+      "url": "https://www.ft.com/topics/people/John_Pierpont_Morgan",
+      "relativeUrl": "/topics/people/John_Pierpont_Morgan"
+    },
+    {
+      "FIGI": "BBG000B9XRY4",
+      "apiUrl": "http://api.ft.com/organisations/a39a4558-f562-4dca-8774-000246e6eebe",
+      "directType": "http://www.ft.com/ontology/company/PublicCompany",
+      "id": "a39a4558-f562-4dca-8774-000246e6eebe",
+      "predicate": "http://www.ft.com/ontology/annotation/majorMentions",
+      "prefLabel": "Apple Inc",
+      "type": "ORGANISATION",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/organisation/Organisation",
+        "http://www.ft.com/ontology/company/Company",
+        "http://www.ft.com/ontology/company/PublicCompany"
+      ],
+      "preposition": "on",
+      "url": "https://www.ft.com/stream/a39a4558-f562-4dca-8774-000246e6eebe",
+      "relativeUrl": "/stream/a39a4558-f562-4dca-8774-000246e6eebe"
+    },
+    {
+      "FIGI": "BBG000BBZTH2",
+      "apiUrl": "http://api.ft.com/organisations/155f69d8-9bdd-4354-935a-6a0647a92f90",
+      "directType": "http://www.ft.com/ontology/company/PublicCompany",
+      "id": "155f69d8-9bdd-4354-935a-6a0647a92f90",
+      "predicate": "http://www.ft.com/ontology/annotation/majorMentions",
+      "prefLabel": "Deutsche Bank AG",
+      "type": "ORGANISATION",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/organisation/Organisation",
+        "http://www.ft.com/ontology/company/Company",
+        "http://www.ft.com/ontology/company/PublicCompany"
+      ],
+      "preposition": "on",
+      "url": "https://www.ft.com/stream/155f69d8-9bdd-4354-935a-6a0647a92f90",
+      "relativeUrl": "/stream/155f69d8-9bdd-4354-935a-6a0647a92f90"
+    },
+    {
+      "apiUrl": "http://api.ft.com/organisations/4b482c87-a11b-4dd1-aa61-af78711d6c6a",
+      "directType": "http://www.ft.com/ontology/organisation/Organisation",
+      "id": "4b482c87-a11b-4dd1-aa61-af78711d6c6a",
+      "predicate": "http://www.ft.com/ontology/annotation/majorMentions",
+      "prefLabel": "Agence France Presse",
+      "type": "ORGANISATION",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/organisation/Organisation"
+      ],
+      "preposition": "on",
+      "url": "https://www.ft.com/stream/4b482c87-a11b-4dd1-aa61-af78711d6c6a",
+      "relativeUrl": "/stream/4b482c87-a11b-4dd1-aa61-af78711d6c6a"
+    },
+    {
+      "apiUrl": "http://api.ft.com/things/9d13b836-df76-4445-b599-10ae378680f0",
+      "directType": "http://www.ft.com/ontology/Topic",
+      "id": "9d13b836-df76-4445-b599-10ae378680f0",
+      "predicate": "http://www.ft.com/ontology/annotation/majorMentions",
+      "prefLabel": "Mergers & Acquisitions",
+      "type": "TOPIC",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/Topic"
+      ],
+      "preposition": "on",
+      "url": "https://www.ft.com/mergers-acquisitions",
+      "relativeUrl": "/mergers-acquisitions"
+    }
+  ],
+  "genreConcept": {
+    "apiUrl": "http://api.ft.com/things/6da31a37-691f-4908-896f-2829ebe2309e",
+    "directType": "http://www.ft.com/ontology/Genre",
+    "id": "6da31a37-691f-4908-896f-2829ebe2309e",
+    "predicate": "http://www.ft.com/ontology/classification/isClassifiedBy",
+    "prefLabel": "Opinion",
+    "type": "GENRE",
+    "types": [
+      "http://www.ft.com/ontology/core/Thing",
+      "http://www.ft.com/ontology/concept/Concept",
+      "http://www.ft.com/ontology/classification/Classification",
+      "http://www.ft.com/ontology/Genre"
+    ],
+    "preposition": "",
+    "url": "https://www.ft.com/opinion",
+    "relativeUrl": "/opinion"
+  },
+  "brandConcept": {
+    "apiUrl": "http://api.ft.com/brands/89d15f70-640d-11e4-9803-0800200c9a66",
+    "directType": "http://www.ft.com/ontology/product/Brand",
+    "id": "89d15f70-640d-11e4-9803-0800200c9a66",
+    "predicate": "http://www.ft.com/ontology/classification/isClassifiedBy",
+    "prefLabel": "FT Alphaville",
+    "type": "BRAND",
+    "types": [
+      "http://www.ft.com/ontology/core/Thing",
+      "http://www.ft.com/ontology/concept/Concept",
+      "http://www.ft.com/ontology/classification/Classification",
+      "http://www.ft.com/ontology/product/Brand"
+    ],
+    "preposition": "from",
+    "url": "https://www.ft.com/stream/89d15f70-640d-11e4-9803-0800200c9a66",
+    "relativeUrl": "/stream/89d15f70-640d-11e4-9803-0800200c9a66"
+  },
+  "authorConcepts": [],
+  "design": {
+    "theme": "basic",
+    "layout": "default"
+  },
+  "displayConcept": {
+    "apiUrl": "http://api.ft.com/things/c91b1fad-1097-468b-be82-9a8ff717d54c",
+    "directType": "http://www.ft.com/ontology/Topic",
+    "id": "c91b1fad-1097-468b-be82-9a8ff717d54c",
+    "predicate": "http://www.ft.com/ontology/classification/isPrimarilyClassifiedBy",
+    "prefLabel": "Markets",
+    "type": "TOPIC",
+    "types": [
+      "http://www.ft.com/ontology/core/Thing",
+      "http://www.ft.com/ontology/concept/Concept",
+      "http://www.ft.com/ontology/Topic"
+    ],
+    "preposition": "on",
+    "url": "https://www.ft.com/markets",
+    "relativeUrl": "/markets",
+    "isDisplayTag": false
+  },
+  "teaser": {
+    "id": "a89297b8-78b6-3af4-aefa-141a8153d89b",
+    "url": "http://ftalphaville.ft.com/marketslive/2016-10-03/",
+    "relativeUrl": "http://ftalphaville.ft.com/marketslive/2016-10-03/",
+    "type": "article",
+    "indicators": {
+      "isColumn": false,
+      "isOpinion": true,
+      "isScoop": false,
+      "isExclusive": false,
+      "isEditorsChoice": false,
+      "accessLevel": "subscribed"
+    },
+    "metaPrefixText": "FT Alphaville",
+    "metaSuffixText": null,
+    "metaLink": {
+      "id": "c91b1fad-1097-468b-be82-9a8ff717d54c",
+      "predicate": "http://www.ft.com/ontology/classification/isPrimarilyClassifiedBy",
+      "prefLabel": "Markets",
+      "type": "TOPIC",
+      "url": "https://www.ft.com/markets",
+      "relativeUrl": "/markets"
+    },
+    "metaAltLink": null,
+    "title": "Markets Live: Monday, 3rd October, 2016",
+    "altStandfirst": null,
+    "publishedDate": "2016-10-03T10:01:15.000Z",
+    "firstPublishedDate": "2016-10-03T10:01:15.000Z",
+    "image": {},
+    "headshot": null,
+    "parentTheme": null
+  },
+  "contentStats": {
+    "wordCount": 1,
+    "paragraphs": 0,
+    "relatedBoxes": 0,
+    "pullQuotes": 0,
+    "pullQuotesWithImages": 0,
+    "bigNumbers": 0,
+    "images": 0,
+    "responsiveImages": 0,
+    "graphics": 0,
+    "audio": 0,
+    "videos": 0,
+    "internalVideos": 0,
+    "externalVideos": 0,
+    "subheadings": 0,
+    "curatedRecommended": 0,
+    "layouts": 0,
+    "layoutSlots": 0,
+    "infoBox": 0,
+    "tables": 0,
+    "timelines": 0,
+    "singleArticleRecommendations": 0,
+    "sentiment": 0,
+    "scoreGraphicVolume": 0,
+    "scoreGraphicDensity": 0,
+    "scorePictureVolume": 0,
+    "scorePictureDensity": 0
+  },
+  "isMarketsLive": true,
+  "av2WebUrl": "/marketslive/2016-10-03/",
+  "bodyHTML": "<div class=\"webchat-closed-content\"><time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T10:01:31.000Z\" title=\"Mon Oct 03 2016 10:01:31 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 10:01:31 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:01 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1475488906\" data-mid=\"1347123\" data-rawmessage=\"Morning\" id=\"webchat-msg-1347123\"><span class=\"messageheader par color-1\" title=\"11:01\">PM</span><div class=\"messagebody\"><p>Morning</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475488947\" data-mid=\"1347125\" data-rawmessage=\"Difficult to know where to start today, in the wake of Friday&apos;s historical call on Deutsche Bank\" id=\"webchat-msg-1347125\"><span class=\"messageheader par color-1\" title=\"11:02\">PM</span><div class=\"messagebody\"><p>Difficult to know where to start today, in the wake of Friday&apos;s historical call on Deutsche Bank</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475488964\" data-mid=\"1347126\" data-rawmessage=\"Germany shut today, so we can&apos;t see the follow-thru impact there\" id=\"webchat-msg-1347126\"><span class=\"messageheader par color-1\" title=\"11:02\">PM</span><div class=\"messagebody\"><p>Germany shut today, so we can&apos;t see the follow-thru impact there</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T10:03:14.000Z\" title=\"Mon Oct 03 2016 10:03:14 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 10:03:14 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:03 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1475489009\" data-mid=\"1347127\" data-rawmessage=\"But all it took was the Elder Plan and some spurious &apos;news&apos; on the possibility of a lower settlement with the DoJ, helpfully propagated by AFP\" id=\"webchat-msg-1347127\"><span class=\"messageheader par color-1\" title=\"11:03\">PM</span><div class=\"messagebody\"><p>But all it took was the Elder Plan and some spurious &apos;news&apos; on the possibility of a lower settlement with the DoJ, helpfully propagated by AFP</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489035\" data-mid=\"1347128\" data-rawmessage=\"The regulatory stuff is just a Chuck Rhoades gambit (spell?)\" id=\"webchat-msg-1347128\"><span class=\"messageheader par color-1\" title=\"11:03\">PM</span><div class=\"messagebody\"><p>The regulatory stuff is just a Chuck Rhoades gambit (spell?)</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489049\" data-mid=\"1347129\" data-rawmessage=\"The $14bn fig was just PR -- cos of the Apple tax thing\" id=\"webchat-msg-1347129\"><span class=\"messageheader par color-1\" title=\"11:04\">PM</span><div class=\"messagebody\"><p>The $14bn fig was just PR -- cos of the Apple tax thing</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T10:03:57.000Z\" title=\"Mon Oct 03 2016 10:03:57 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 10:03:57 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:03 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1475489052\" data-mid=\"1347130\" data-rawmessage=\"Nothing more\" id=\"webchat-msg-1347130\"><span class=\"messageheader par color-1\" title=\"11:04\">PM</span><div class=\"messagebody\"><p>Nothing more</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489070\" data-mid=\"1347131\" data-rawmessage=\"The DoJ settlement will be with multiple banks -- including Barclays\" id=\"webchat-msg-1347131\"><span class=\"messageheader par color-1\" title=\"11:04\">PM</span><div class=\"messagebody\"><p>The DoJ settlement will be with multiple banks -- including Barclays</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489079\" data-mid=\"1347132\" data-rawmessage=\"And it will be low single figure billions\" id=\"webchat-msg-1347132\"><span class=\"messageheader par color-1\" title=\"11:04\">PM</span><div class=\"messagebody\"><p>And it will be low single figure billions</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T10:04:26.000Z\" title=\"Mon Oct 03 2016 10:04:26 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 10:04:26 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:04 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1475489081\" data-mid=\"1347133\" data-rawmessage=\"You watch\" id=\"webchat-msg-1347133\"><span class=\"messageheader par color-1\" title=\"11:04\">PM</span><div class=\"messagebody\"><p>You watch</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489089\" data-mid=\"1347134\" data-rawmessage=\"Anyway, well done Bryce\" id=\"webchat-msg-1347134\"><span class=\"messageheader par color-1\" title=\"11:04\">PM</span><div class=\"messagebody\"><p>Anyway, well done Bryce</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489093\" data-mid=\"1347135\" data-rawmessage=\"An historic call\" id=\"webchat-msg-1347135\"><span class=\"messageheader par color-1\" title=\"11:04\">PM</span><div class=\"messagebody\"><p>An historic call</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T10:04:44.000Z\" title=\"Mon Oct 03 2016 10:04:44 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 10:04:44 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:04 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1475489099\" data-mid=\"1347136\" data-rawmessage=\"Okay. I don&apos;t think we can underemphasise how stupid Friday afternoon was.\" id=\"webchat-msg-1347136\"><span class=\"messageheader par color-2\" title=\"11:04\">BE</span><div class=\"messagebody\"><p>Okay. I don&apos;t think we can underemphasise how stupid Friday afternoon was.</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489121\" data-mid=\"1347137\" data-rawmessage=\"Yeah, thoroughly stupid, but the price action was supportive\" id=\"webchat-msg-1347137\"><span class=\"messageheader par color-1\" title=\"11:05\">PM</span><div class=\"messagebody\"><p>Yeah, thoroughly stupid, but the price action was supportive</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489152\" data-mid=\"1347138\" data-rawmessage=\"So this $5.4bln figure seems to have popped up in a JP Morgan report\" id=\"webchat-msg-1347138\"><span class=\"messageheader par color-2\" title=\"11:05\">BE</span><div class=\"messagebody\"><p>So this $5.4bln figure seems to have popped up in a JP Morgan report</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T10:06:33.000Z\" title=\"Mon Oct 03 2016 10:06:33 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 10:06:33 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:06 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1475489208\" data-mid=\"1347139\" data-rawmessage=\"And was picked up by some fifth-rate Twitter account, which was retweeted by four-rate Twitter accounts, whose retweets were picked up by Bloomberg&apos;s automated Twitter velocity noise-to-signal generator.\" id=\"webchat-msg-1347139\"><span class=\"messageheader par color-2\" title=\"11:06\">BE</span><div class=\"messagebody\"><p>And was picked up by some fifth-rate Twitter account, which was retweeted by four-rate Twitter accounts, whose retweets were picked up by Bloomberg&apos;s automated Twitter velocity noise-to-signal generator.</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489224\" data-mid=\"1347140\" data-rawmessage=\"Which seemed to bleed somehow onto AFP\" id=\"webchat-msg-1347140\"><span class=\"messageheader par color-2\" title=\"11:07\">BE</span><div class=\"messagebody\"><p>Which seemed to bleed somehow onto AFP</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489236\" data-mid=\"1347141\" data-rawmessage=\"&quot;Sources&apos; Bryce, &quot;sources&quot;\" id=\"webchat-msg-1347141\"><span class=\"messageheader par color-1\" title=\"11:07\">PM</span><div class=\"messagebody\"><p>&quot;Sources&apos; Bryce, &quot;sources&quot;</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T10:07:18.000Z\" title=\"Mon Oct 03 2016 10:07:18 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 10:07:18 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:07 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1475489253\" data-mid=\"1347142\" data-rawmessage=\"... Now, I&apos;m not connecting that to it being a French newswire on a Friday afternoon ....... But, well, I&apos;ve worked for them in the past and ......\" id=\"webchat-msg-1347142\"><span class=\"messageheader par color-2\" title=\"11:07\">BE</span><div class=\"messagebody\"><p>... Now, I&apos;m not connecting that to it being a French newswire on a Friday afternoon ....... But, well, I&apos;ve worked for them in the past and ......</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489267\" data-mid=\"1347143\" data-rawmessage=\"and....\" id=\"webchat-msg-1347143\"><span class=\"messageheader par color-1\" title=\"11:07\">PM</span><div class=\"messagebody\"><p>and....</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489288\" data-mid=\"1347144\" data-rawmessage=\".... Anyway, the $5.4bn JPM report /wasn&apos;t even referring to the DOJ fine/.\" id=\"webchat-msg-1347144\"><span class=\"messageheader par color-2\" title=\"11:08\">BE</span><div class=\"messagebody\"><p>.... Anyway, the $5.4bn JPM report <em>wasn&apos;t even referring to the DOJ fine</em>.</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T10:07:59.000Z\" title=\"Mon Oct 03 2016 10:07:59 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 10:07:59 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:07 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1475489294\" data-mid=\"1347145\" data-rawmessage=\"hehehehe\" id=\"webchat-msg-1347145\"><span class=\"messageheader par color-1\" title=\"11:08\">PM</span><div class=\"messagebody\"><p>hehehehe</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489298\" data-mid=\"1347146\" data-rawmessage=\"It&apos;s an absolute clownshow.\" id=\"webchat-msg-1347146\"><span class=\"messageheader par color-2\" title=\"11:08\">BE</span><div class=\"messagebody\"><p>It&apos;s an absolute clownshow.</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489305\" data-mid=\"1347147\" data-rawmessage=\"{thumbs_up}\" id=\"webchat-msg-1347147\"><span class=\"messageheader par color-1\" title=\"11:08\">PM</span><div class=\"messagebody\"><p>\n\t\t\t\t\t\t\t\t<span class=\"webchat-emoticon webchat-emoticon--thumbs_up\" data-code=\"thumbs_up\">\n\t\t\t\t\t\t\t\t\tthumbs up\n\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T10:08:23.000Z\" title=\"Mon Oct 03 2016 10:08:23 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 10:08:23 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:08 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1475489318\" data-mid=\"1347148\" data-rawmessage=\"We need a clown emoji\" id=\"webchat-msg-1347148\"><span class=\"messageheader par color-1\" title=\"11:08\">PM</span><div class=\"messagebody\"><p>We need a clown emoji</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489353\" data-mid=\"1347149\" data-rawmessage=\"We do. Whatever, we have a day without Deutsche and we should probably make the most of it. We&apos;ll be back in the circus tomorrow.\" id=\"webchat-msg-1347149\"><span class=\"messageheader par color-2\" title=\"11:09\">BE</span><div class=\"messagebody\"><p>We do. Whatever, we have a day without Deutsche and we should probably make the most of it. We&apos;ll be back in the circus tomorrow.</p>\n</div></div>\n\n<div class=\"msg separator has-headshot\" data-timestamp=\"1475489358\" data-mid=\"1347150\" data-rawmessage=\"11:09AM\" id=\"webchat-msg-1347150\"><div class=\"messagebody\"><time class=\"o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T10:09:18.000Z\" title=\"Mon Oct 03 2016 10:09:18 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 10:09:18 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\tundefined\n\t\t\t\t\t\t\t\t</time></div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T10:09:19.000Z\" title=\"Mon Oct 03 2016 10:09:19 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 10:09:19 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:09 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1475489374\" data-mid=\"1347151\" data-rawmessage=\"So Brexit means leaving the european union\" id=\"webchat-msg-1347151\"><span class=\"messageheader par color-1\" title=\"11:09\">PM</span><div class=\"messagebody\"><p>So Brexit means leaving the european union</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489375\" data-mid=\"1347152\" data-rawmessage=\"Cripes! Really?\" id=\"webchat-msg-1347152\"><span class=\"messageheader par color-2\" title=\"11:09\">BE</span><div class=\"messagebody\"><p>Cripes! Really?</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489380\" data-mid=\"1347153\" data-rawmessage=\"That&apos;s today&apos;s big news\" id=\"webchat-msg-1347153\"><span class=\"messageheader par color-1\" title=\"11:09\">PM</span><div class=\"messagebody\"><p>That&apos;s today&apos;s big news</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T10:09:30.000Z\" title=\"Mon Oct 03 2016 10:09:30 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 10:09:30 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:09 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1475489385\" data-mid=\"1347154\" data-rawmessage=\"Who&apos;d have thought?\" id=\"webchat-msg-1347154\"><span class=\"messageheader par color-1\" title=\"11:09\">PM</span><div class=\"messagebody\"><p>Who&apos;d have thought?</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489408\" data-mid=\"1347155\" data-rawmessage=\"Do we lead the FT reverse ferret on this?\" id=\"webchat-msg-1347155\"><span class=\"messageheader par color-1\" title=\"11:10\">PM</span><div class=\"messagebody\"><p>Do we lead the FT reverse ferret on this?</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489424\" data-mid=\"1347156\" data-rawmessage=\"Terrific news, good for stocks, so long as you are valuing those stocks in GBK\" id=\"webchat-msg-1347156\"><span class=\"messageheader par color-1\" title=\"11:10\">PM</span><div class=\"messagebody\"><p>Terrific news, good for stocks, so long as you are valuing those stocks in GBK</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T10:10:26.000Z\" title=\"Mon Oct 03 2016 10:10:26 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 10:10:26 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:10 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1475489441\" data-mid=\"1347157\" data-rawmessage=\"Okay ....... Well ......\" id=\"webchat-msg-1347157\"><span class=\"messageheader par color-2\" title=\"11:10\">BE</span><div class=\"messagebody\"><p>Okay ....... Well ......</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489445\" data-mid=\"1347158\" data-rawmessage=\"Krona at 1.287 on my screen\" id=\"webchat-msg-1347158\"><span class=\"messageheader par color-1\" title=\"11:10\">PM</span><div class=\"messagebody\"><p>Krona at 1.287 on my screen</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489476\" data-mid=\"1347159\" data-rawmessage=\"And the FTSE absolutely soaring, of course. Up 1.2%, nudging back to 7k.\" id=\"webchat-msg-1347159\"><span class=\"messageheader par color-2\" title=\"11:11\">BE</span><div class=\"messagebody\"><p>And the FTSE absolutely soaring, of course. Up 1.2%, nudging back to 7k.</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T10:11:14.000Z\" title=\"Mon Oct 03 2016 10:11:14 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 10:11:14 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:11 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1475489489\" data-mid=\"1347160\" data-rawmessage=\"It&apos;s a bull market\" id=\"webchat-msg-1347160\"><span class=\"messageheader par color-1\" title=\"11:11\">PM</span><div class=\"messagebody\"><p>It&apos;s a bull market</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489490\" data-mid=\"1347161\" data-rawmessage=\"Want to see some charts?\" id=\"webchat-msg-1347161\"><span class=\"messageheader par color-2\" title=\"11:11\">BE</span><div class=\"messagebody\"><p>Want to see some charts?</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489494\" data-mid=\"1347162\" data-rawmessage=\"Yeah!\" id=\"webchat-msg-1347162\"><span class=\"messageheader par color-1\" title=\"11:11\">PM</span><div class=\"messagebody\"><p>Yeah!</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T10:11:27.000Z\" title=\"Mon Oct 03 2016 10:11:27 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 10:11:27 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:11 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1475489502\" data-mid=\"1347163\" data-rawmessage=\"This is FTSE 100 since end 2011.\" id=\"webchat-msg-1347163\"><span class=\"messageheader par color-2\" title=\"11:11\">BE</span><div class=\"messagebody\"><p>This is FTSE 100 since end 2011.</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489504\" data-mid=\"1347164\" data-rawmessage=\"http://i.imgur.com/i75OePO.png\" id=\"webchat-msg-1347164\"><span class=\"messageheader par color-2\" title=\"11:11\">BE</span><div class=\"messagebody\"><p><img class=\"picture\" src=\"https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fi.imgur.com%2Fi75OePO.png?source=Alphaville\"></p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489520\" data-mid=\"1347165\" data-rawmessage=\"And here&apos;s the exact same chart priced in dollars.\" id=\"webchat-msg-1347165\"><span class=\"messageheader par color-2\" title=\"11:12\">BE</span><div class=\"messagebody\"><p>And here&apos;s the exact same chart priced in dollars.</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T10:11:50.000Z\" title=\"Mon Oct 03 2016 10:11:50 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 10:11:50 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:11 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1475489525\" data-mid=\"1347166\" data-rawmessage=\"http://i.imgur.com/PJ1GgWc.png\" id=\"webchat-msg-1347166\"><span class=\"messageheader par color-2\" title=\"11:12\">BE</span><div class=\"messagebody\"><p><img class=\"picture\" src=\"https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fi.imgur.com%2FPJ1GgWc.png?source=Alphaville\"></p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489534\" data-mid=\"1347167\" data-rawmessage=\"oh {omg_smile}\" id=\"webchat-msg-1347167\"><span class=\"messageheader par color-1\" title=\"11:12\">PM</span><div class=\"messagebody\"><p>oh \n\t\t\t\t\t\t\t\t<span class=\"webchat-emoticon webchat-emoticon--omg_smile\" data-code=\"omg_smile\">\n\t\t\t\t\t\t\t\t\tomg smile\n\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489546\" data-mid=\"1347168\" data-rawmessage=\"You&apos;ll note, when using the more relevant currency, FTSE&apos;s down about 6% in 12 months\" id=\"webchat-msg-1347168\"><span class=\"messageheader par color-2\" title=\"11:12\">BE</span><div class=\"messagebody\"><p>You&apos;ll note, when using the more relevant currency, FTSE&apos;s down about 6% in 12 months</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T10:12:17.000Z\" title=\"Mon Oct 03 2016 10:12:17 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 10:12:17 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:12 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1475489552\" data-mid=\"1347169\" data-rawmessage=\"And underperforming the MSCI World in $ terms\" id=\"webchat-msg-1347169\"><span class=\"messageheader par color-2\" title=\"11:12\">BE</span><div class=\"messagebody\"><p>And underperforming the MSCI World in $ terms</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489557\" data-mid=\"1347170\" data-rawmessage=\"http://i.imgur.com/LODo6GQ.png\" id=\"webchat-msg-1347170\"><span class=\"messageheader par color-2\" title=\"11:12\">BE</span><div class=\"messagebody\"><p><img class=\"picture\" src=\"https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fi.imgur.com%2FLODo6GQ.png?source=Alphaville\"></p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489567\" data-mid=\"1347171\" data-rawmessage=\"(12m normalised 12 month performance)\" id=\"webchat-msg-1347171\"><span class=\"messageheader par color-2\" title=\"11:12\">BE</span><div class=\"messagebody\"><p>(12m normalised 12 month performance)</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T10:12:41.000Z\" title=\"Mon Oct 03 2016 10:12:41 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 10:12:41 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:12 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1475489576\" data-mid=\"1347172\" data-rawmessage=\"FTSE also down nearly 5% since the day before the Brexit vote, in $\" id=\"webchat-msg-1347172\"><span class=\"messageheader par color-2\" title=\"11:12\">BE</span><div class=\"messagebody\"><p>FTSE also down nearly 5% since the day before the Brexit vote, in $</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489581\" data-mid=\"1347173\" data-rawmessage=\"And down 2.3% YTD.\" id=\"webchat-msg-1347173\"><span class=\"messageheader par color-2\" title=\"11:13\">BE</span><div class=\"messagebody\"><p>And down 2.3% YTD.</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489587\" data-mid=\"1347174\" data-rawmessage=\"I fear you are stuck off-message Bryce\" id=\"webchat-msg-1347174\"><span class=\"messageheader par color-1\" title=\"11:13\">PM</span><div class=\"messagebody\"><p>I fear you are stuck off-message Bryce</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T10:13:14.000Z\" title=\"Mon Oct 03 2016 10:13:14 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 10:13:14 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:13 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1475489609\" data-mid=\"1347175\" data-rawmessage=\"Not at all! I&apos;m very much on message that it&apos;s better than many indices.\" id=\"webchat-msg-1347175\"><span class=\"messageheader par color-2\" title=\"11:13\">BE</span><div class=\"messagebody\"><p>Not at all! I&apos;m very much on message that it&apos;s better than many indices.</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489618\" data-mid=\"1347176\" data-rawmessage=\"Such as the FTSE 250, which is down 9.4% YTD in $\" id=\"webchat-msg-1347176\"><span class=\"messageheader par color-2\" title=\"11:13\">BE</span><div class=\"messagebody\"><p>Such as the FTSE 250, which is down 9.4% YTD in $</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489627\" data-mid=\"1347177\" data-rawmessage=\"oh {omg_smile}\" id=\"webchat-msg-1347177\"><span class=\"messageheader par color-1\" title=\"11:13\">PM</span><div class=\"messagebody\"><p>oh \n\t\t\t\t\t\t\t\t<span class=\"webchat-emoticon webchat-emoticon--omg_smile\" data-code=\"omg_smile\">\n\t\t\t\t\t\t\t\t\tomg smile\n\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T10:13:40.000Z\" title=\"Mon Oct 03 2016 10:13:40 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 10:13:40 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:13 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1475489635\" data-mid=\"1347178\" data-rawmessage=\"It&apos;s also better than Italy! MIB&apos;s down YTD by 21% in $\" id=\"webchat-msg-1347178\"><span class=\"messageheader par color-2\" title=\"11:13\">BE</span><div class=\"messagebody\"><p>It&apos;s also better than Italy! MIB&apos;s down YTD by 21% in $</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489655\" data-mid=\"1347179\" data-rawmessage=\"Otherwise in Europe, you&apos;re questing a bit to find much we&apos;re outperforming.\" id=\"webchat-msg-1347179\"><span class=\"messageheader par color-2\" title=\"11:14\">BE</span><div class=\"messagebody\"><p>Otherwise in Europe, you&apos;re questing a bit to find much we&apos;re outperforming.</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489662\" data-mid=\"1347180\" data-rawmessage=\"There&apos;s ..... um .......... Bosnia &amp; Herzegovina?\" id=\"webchat-msg-1347180\"><span class=\"messageheader par color-2\" title=\"11:14\">BE</span><div class=\"messagebody\"><p>There&apos;s ..... um .......... Bosnia &amp; Herzegovina?</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T10:14:12.000Z\" title=\"Mon Oct 03 2016 10:14:12 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 10:14:12 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:14 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1475489667\" data-mid=\"1347181\" data-rawmessage=\"The BRIS is down 12% in $\" id=\"webchat-msg-1347181\"><span class=\"messageheader par color-2\" title=\"11:14\">BE</span><div class=\"messagebody\"><p>The BRIS is down 12% in $</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475488915\" data-mid=\"1347124\" data-rawmessage=\"Welcome to Markets Live\" id=\"webchat-msg-1347124\"><span class=\"messageheader par color-1\" title=\"11:01\">PM</span><div class=\"messagebody\"><p>Welcome to Markets Live</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489688\" data-mid=\"1347183\" data-rawmessage=\"After that you have to look at Nigeria, Venezuela, Kenya ..... all of which are down by serious %\" id=\"webchat-msg-1347183\"><span class=\"messageheader par color-2\" title=\"11:14\">BE</span><div class=\"messagebody\"><p>After that you have to look at Nigeria, Venezuela, Kenya ..... all of which are down by serious %</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T10:14:51.000Z\" title=\"Mon Oct 03 2016 10:14:51 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 10:14:51 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:14 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1475489706\" data-mid=\"1347184\" data-rawmessage=\"Still! Sunlit uplands.\" id=\"webchat-msg-1347184\"><span class=\"messageheader par color-2\" title=\"11:15\">BE</span><div class=\"messagebody\"><p>Still! Sunlit uplands.</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489722\" data-mid=\"1347185\" data-rawmessage=\"( Flaneur -- deep deep value hiding in plain sight)\" id=\"webchat-msg-1347185\"><span class=\"messageheader par color-1\" title=\"11:15\">PM</span><div class=\"messagebody\"><p>( Flaneur -- deep deep value hiding in plain sight)</p>\n</div></div>\n\n<div class=\"msg separator has-headshot\" data-timestamp=\"1475489729\" data-mid=\"1347186\" data-rawmessage=\"11:15AM\" id=\"webchat-msg-1347186\"><div class=\"messagebody\"><time class=\"o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T10:15:29.000Z\" title=\"Mon Oct 03 2016 10:15:29 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 10:15:29 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\tundefined\n\t\t\t\t\t\t\t\t</time></div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T10:15:30.000Z\" title=\"Mon Oct 03 2016 10:15:30 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 10:15:30 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:15 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1475489745\" data-mid=\"1347187\" data-rawmessage=\"Forgot to put the pic up earlier\" id=\"webchat-msg-1347187\"><span class=\"messageheader par color-1\" title=\"11:15\">PM</span><div class=\"messagebody\"><p>Forgot to put the pic up earlier</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489747\" data-mid=\"1347188\" data-rawmessage=\"http://yeast2015.eu/var/ezflow_site/storage/images/yeast2015/program/invited-speakers/yoshinori-ohsumi/44932-2-eng-GB/Yoshinori-Ohsumi_popup.jpg\" id=\"webchat-msg-1347188\"><span class=\"messageheader par color-1\" title=\"11:15\">PM</span><div class=\"messagebody\"><p><img class=\"picture\" src=\"https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fyeast2015.eu%2Fvar%2Fezflow_site%2Fstorage%2Fimages%2Fyeast2015%2Fprogram%2Finvited-speakers%2Fyoshinori-ohsumi%2F44932-2-eng-GB%2FYoshinori-Ohsumi_popup.jpg?source=Alphaville\"></p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489757\" data-mid=\"1347189\" data-rawmessage=\"Yoshinori Ohsumi of Japan\" id=\"webchat-msg-1347189\"><span class=\"messageheader par color-1\" title=\"11:15\">PM</span><div class=\"messagebody\"><p>Yoshinori Ohsumi of Japan</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T10:16:00.000Z\" title=\"Mon Oct 03 2016 10:16:00 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 10:16:00 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:16 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1475489775\" data-mid=\"1347191\" data-rawmessage=\"Guy who invented Mario?\" id=\"webchat-msg-1347191\"><span class=\"messageheader par color-2\" title=\"11:16\">BE</span><div class=\"messagebody\"><p>Guy who invented Mario?</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489776\" data-mid=\"1347192\" data-rawmessage=\"Won the Nobel for medicine for something i don&apos;t understand\" id=\"webchat-msg-1347192\"><span class=\"messageheader par color-1\" title=\"11:16\">PM</span><div class=\"messagebody\"><p>Won the Nobel for medicine for something i don&apos;t understand</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489779\" data-mid=\"1347193\" data-rawmessage=\"Oh.\" id=\"webchat-msg-1347193\"><span class=\"messageheader par color-2\" title=\"11:16\">BE</span><div class=\"messagebody\"><p>Oh.</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T10:16:09.000Z\" title=\"Mon Oct 03 2016 10:16:09 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 10:16:09 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:16 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1475489784\" data-mid=\"1347194\" data-rawmessage=\"Apologies to both.\" id=\"webchat-msg-1347194\"><span class=\"messageheader par color-2\" title=\"11:16\">BE</span><div class=\"messagebody\"><p>Apologies to both.</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489793\" data-mid=\"1347195\" data-rawmessage=\"Yeah, well done Yoshinori\" id=\"webchat-msg-1347195\"><span class=\"messageheader par color-1\" title=\"11:16\">PM</span><div class=\"messagebody\"><p>Yeah, well done Yoshinori</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489804\" data-mid=\"1347196\" data-rawmessage=\"He actually /looks/ like a Nobel winner\" id=\"webchat-msg-1347196\"><span class=\"messageheader par color-1\" title=\"11:16\">PM</span><div class=\"messagebody\"><p>He actually <em>looks</em> like a Nobel winner</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T10:16:39.000Z\" title=\"Mon Oct 03 2016 10:16:39 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 10:16:39 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:16 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg separator has-headshot\" data-timestamp=\"1475489814\" data-mid=\"1347197\" data-rawmessage=\"11:16AM\" id=\"webchat-msg-1347197\"><div class=\"messagebody\"><time class=\"o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T10:16:54.000Z\" title=\"Mon Oct 03 2016 10:16:54 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 10:16:54 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\tundefined\n\t\t\t\t\t\t\t\t</time></div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489824\" data-mid=\"1347198\" data-rawmessage=\"And so to Henderson Group\" id=\"webchat-msg-1347198\"><span class=\"messageheader par color-1\" title=\"11:17\">PM</span><div class=\"messagebody\"><p>And so to Henderson Group</p>\n</div></div>\n\n<div class=\"msg price has-headshot\" data-timestamp=\"1475489842\" data-mid=\"1347199\" data-rawmessage=\"&lt;strong&gt;Henderson Group PLC (HGG:LSE):&lt;/strong&gt; Last: 260.20, up 28.2 (+12.16%), High: 278.80, Low: 259.40, Volume: 3.91m\" id=\"webchat-msg-1347199\"><div class=\"messagebody\"><strong>Henderson Group PLC (HGG:LSE):</strong> Last: 260.20, up 28.2 (+12.16%), High: 278.80, Low: 259.40, Volume: 3.91m</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T10:17:27.000Z\" title=\"Mon Oct 03 2016 10:17:27 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 10:17:27 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:17 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1475489862\" data-mid=\"1347200\" data-rawmessage=\"A merger of equals\" id=\"webchat-msg-1347200\"><span class=\"messageheader par color-1\" title=\"11:17\">PM</span><div class=\"messagebody\"><p>A merger of equals</p>\n</div></div>\n\n<div class=\"msg price has-headshot\" data-timestamp=\"1475489863\" data-mid=\"1347201\" data-rawmessage=\"&lt;strong&gt;Jupiter Fund Management PLC (JUP:LSE):&lt;/strong&gt; Last: 444.16, up 18.76 (+4.41%), High: 446.70, Low: 426.20, Volume: 401.64k\" id=\"webchat-msg-1347201\"><div class=\"messagebody\"><strong>Jupiter Fund Management PLC (JUP:LSE):</strong> Last: 444.16, up 18.76 (+4.41%), High: 446.70, Low: 426.20, Volume: 401.64k</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489870\" data-mid=\"1347202\" data-rawmessage=\"Heh. No it&apos;s not.\" id=\"webchat-msg-1347202\"><span class=\"messageheader par color-2\" title=\"11:17\">BE</span><div class=\"messagebody\"><p>Heh. No it&apos;s not.</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T10:17:54.000Z\" title=\"Mon Oct 03 2016 10:17:54 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 10:17:54 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:17 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1475489889\" data-mid=\"1347203\" data-rawmessage=\"The prices tell you that.\" id=\"webchat-msg-1347203\"><span class=\"messageheader par color-2\" title=\"11:18\">BE</span><div class=\"messagebody\"><p>The prices tell you that.</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489933\" data-mid=\"1347204\" data-rawmessage=\"What kind of merger of equals works by giving one side 57% of the combined company?\" id=\"webchat-msg-1347204\"><span class=\"messageheader par color-2\" title=\"11:18\">BE</span><div class=\"messagebody\"><p>What kind of merger of equals works by giving one side 57% of the combined company?</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489959\" data-mid=\"1347205\" data-rawmessage=\"For 40% of the total assets.\" id=\"webchat-msg-1347205\"><span class=\"messageheader par color-2\" title=\"11:19\">BE</span><div class=\"messagebody\"><p>For 40% of the total assets.</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T10:19:16.000Z\" title=\"Mon Oct 03 2016 10:19:16 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 10:19:16 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:19 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1475489971\" data-mid=\"1347206\" data-rawmessage=\"It&apos;s that what&apos;s happening with Janus?\" id=\"webchat-msg-1347206\"><span class=\"messageheader par color-1\" title=\"11:19\">PM</span><div class=\"messagebody\"><p>It&apos;s that what&apos;s happening with Janus?</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489989\" data-mid=\"1347207\" data-rawmessage=\"Janus is being shut down in a way that doesn&apos;t embarrass its management\" id=\"webchat-msg-1347207\"><span class=\"messageheader par color-2\" title=\"11:19\">BE</span><div class=\"messagebody\"><p>Janus is being shut down in a way that doesn&apos;t embarrass its management</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475490000\" data-mid=\"1347208\" data-rawmessage=\"And they&apos;re giving away a bunch of value to save face.\" id=\"webchat-msg-1347208\"><span class=\"messageheader par color-2\" title=\"11:20\">BE</span><div class=\"messagebody\"><p>And they&apos;re giving away a bunch of value to save face.</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T10:19:50.000Z\" title=\"Mon Oct 03 2016 10:19:50 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 10:19:50 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:19 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1475490005\" data-mid=\"1347209\" data-rawmessage=\"It&apos;s a triumph.\" id=\"webchat-msg-1347209\"><span class=\"messageheader par color-2\" title=\"11:20\">BE</span><div class=\"messagebody\"><p>It&apos;s a triumph.</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475490017\" data-mid=\"1347210\" data-rawmessage=\"Bill Gross directly involved in this?\" id=\"webchat-msg-1347210\"><span class=\"messageheader par color-1\" title=\"11:20\">PM</span><div class=\"messagebody\"><p>Bill Gross directly involved in this?</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475490037\" data-mid=\"1347211\" data-rawmessage=\"Well, it&apos;s a bad deal but I don&apos;t think it&apos;s /that/ bad.\" id=\"webchat-msg-1347211\"><span class=\"messageheader par color-2\" title=\"11:20\">BE</span><div class=\"messagebody\"><p>Well, it&apos;s a bad deal but I don&apos;t think it&apos;s <em>that</em> bad.</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T10:20:36.000Z\" title=\"Mon Oct 03 2016 10:20:36 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 10:20:36 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:20 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1475490051\" data-mid=\"1347212\" data-rawmessage=\"Want some Barclays to summarise?\" id=\"webchat-msg-1347212\"><span class=\"messageheader par color-2\" title=\"11:20\">BE</span><div class=\"messagebody\"><p>Want some Barclays to summarise?</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475490056\" data-mid=\"1347213\" data-rawmessage=\"Sure\" id=\"webchat-msg-1347213\"><span class=\"messageheader par color-1\" title=\"11:20\">PM</span><div class=\"messagebody\"><p>Sure</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475490067\" data-mid=\"1347214\" data-rawmessage=\"But I&apos;m just noting the greek god Janus\" id=\"webchat-msg-1347214\"><span class=\"messageheader par color-1\" title=\"11:21\">PM</span><div class=\"messagebody\"><p>But I&apos;m just noting the greek god Janus</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T10:20:56.000Z\" title=\"Mon Oct 03 2016 10:20:56 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 10:20:56 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:20 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg blockquote has-headshot\" data-timestamp=\"1475490071\" data-mid=\"1347215\" data-rawmessage=\"Janus presided over the beginning and ending of conflict, and hence war and peace. The doors of his temple were open in time of war, and closed to mark the peace. As a god of transitions, he had functions pertaining to birth and to journeys and exchange, and in his association with Portunus, a similar harbor and gateway god, he was concerned with travelling, trading and shipping.\" id=\"webchat-msg-1347215\"><span class=\"messageheader par color-1\" title=\"11:21\">PM</span><div class=\"messagebody\"><blockquote><p>Janus presided over the beginning and ending of conflict, and hence war and peace. The doors of his temple were open in time of war, and closed to mark the peace. As a god of transitions, he had functions pertaining to birth and to journeys and exchange, and in his association with Portunus, a similar harbor and gateway god, he was concerned with travelling, trading and shipping.</p></blockquote>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475490118\" data-mid=\"1347217\" data-rawmessage=\"........................... Uh, okay. I&apos;m a half-educated tenement Scot. I didn&apos;t do classics.\" id=\"webchat-msg-1347217\"><span class=\"messageheader par color-2\" title=\"11:21\">BE</span><div class=\"messagebody\"><p>........................... Uh, okay. I&apos;m a half-educated tenement Scot. I didn&apos;t do classics.</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475490123\" data-mid=\"1347218\" data-rawmessage=\"Here&apos;s Barclays.\" id=\"webchat-msg-1347218\"><span class=\"messageheader par color-2\" title=\"11:22\">BE</span><div class=\"messagebody\"><p>Here&apos;s Barclays.</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T10:21:51.000Z\" title=\"Mon Oct 03 2016 10:21:51 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 10:21:51 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:21 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg blockquote has-headshot\" data-timestamp=\"1475490126\" data-mid=\"1347219\" data-rawmessage=\"The deal initially seems better value from the HGG side since HGG only contributes 40% of the combined AUM (at $127bn of $322bn total) and is contributing only 48% of the combined EBITDA (at $337m for HGG of $698m total) yet is ending up with 57% of the combined company. This likely reflects HGG paper having a higher multiple and Janus&#x2019; more troubled outflow history. The rationale behind the deal is to enhance distribution reach for these complementary businesses, improve economies of scale and realise at least $110m of net cost synergies. The HGG shares are to be delisted from UK and only listed in the US and Australia.  Accretion is detailed as double-digit in year 1, but synergies seem quite conservative set at only 7% of combined cost base ($110m to -$1.5bn).  The transaction has been recommended by both boards and supported by Janus largest shareholder, Dai-Ichi Life, who propose to increase their stake. HGG has had poor flow momentum so far in 2016 with -&#xA3;2bn of outflows, Janus has suffered large outflows in the period 2010-14, but recently has shown some evidence of turning these around.\" id=\"webchat-msg-1347219\"><span class=\"messageheader par color-2\" title=\"11:22\">BE</span><div class=\"messagebody\"><blockquote><p>The deal initially seems better value from the HGG side since HGG only contributes 40% of the combined AUM (at $127bn of $322bn total) and is contributing only 48% of the combined EBITDA (at $337m for HGG of $698m total) yet is ending up with 57% of the combined company. This likely reflects HGG paper having a higher multiple and Janus&#x2019; more troubled outflow history. The rationale behind the deal is to enhance distribution reach for these complementary businesses, improve economies of scale and realise at least $110m of net cost synergies. The HGG shares are to be delisted from UK and only listed in the US and Australia.  Accretion is detailed as double-digit in year 1, but synergies seem quite conservative set at only 7% of combined cost base ($110m to -$1.5bn).  The transaction has been recommended by both boards and supported by Janus largest shareholder, Dai-Ichi Life, who propose to increase their stake. HGG has had poor flow momentum so far in 2016 with -&#xA3;2bn of outflows, Janus has suffered large outflows in the period 2010-14, but recently has shown some evidence of turning these around.</p></blockquote>\n</div></div>\n\n<div class=\"msg blockquote has-headshot\" data-timestamp=\"1475490153\" data-mid=\"1347220\" data-rawmessage=\"Rationale for merger - complementary investment strategies and geographical footprint\n\nThe management teams indicate several client-focused and structural drivers underpinning the rationale behind the transaction. The businesses complement one another in terms of investment capabilities and geographical footprint. Henderson&#x2019;s strength in Europe and Global equities combined with Janus&#x2019; US Equity and Fixed income offering results in a well diversified entity offering a wider range of investment propositions. The expansion of client-facing teams will deepen relationships and distribution strategies. Structurally, the deal will offer economies of scale in an industry that is seeing rising costs and fee pressure. Overall the deal is viewed as a combination of two businesses with similar corporate strategies and complementary product offerings to serve an increasingly global client base.\" id=\"webchat-msg-1347220\"><span class=\"messageheader par color-2\" title=\"11:22\">BE</span><div class=\"messagebody\"><blockquote><p>Rationale for merger - complementary investment strategies and geographical footprint</p>\n<p>The management teams indicate several client-focused and structural drivers underpinning the rationale behind the transaction. The businesses complement one another in terms of investment capabilities and geographical footprint. Henderson&#x2019;s strength in Europe and Global equities combined with Janus&#x2019; US Equity and Fixed income offering results in a well diversified entity offering a wider range of investment propositions. The expansion of client-facing teams will deepen relationships and distribution strategies. Structurally, the deal will offer economies of scale in an industry that is seeing rising costs and fee pressure. Overall the deal is viewed as a combination of two businesses with similar corporate strategies and complementary product offerings to serve an increasingly global client base.</p></blockquote>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475490194\" data-mid=\"1347221\" data-rawmessage=\"I hadn&apos;t realised how much Janus was bleeding.\" id=\"webchat-msg-1347221\"><span class=\"messageheader par color-2\" title=\"11:23\">BE</span><div class=\"messagebody\"><p>I hadn&apos;t realised how much Janus was bleeding.</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T10:23:01.000Z\" title=\"Mon Oct 03 2016 10:23:01 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 10:23:01 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:23 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1475490196\" data-mid=\"1347222\" data-rawmessage=\"http://i.imgur.com/ajdCXLX.png\" id=\"webchat-msg-1347222\"><span class=\"messageheader par color-2\" title=\"11:23\">BE</span><div class=\"messagebody\"><p><img class=\"picture\" src=\"https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fi.imgur.com%2FajdCXLX.png?source=Alphaville\"></p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475490275\" data-mid=\"1347223\" data-rawmessage=\"Also note, savings of $110m. 16% of combined underlying EBITDA.\" id=\"webchat-msg-1347223\"><span class=\"messageheader par color-2\" title=\"11:24\">BE</span><div class=\"messagebody\"><p>Also note, savings of $110m. 16% of combined underlying EBITDA.</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475490283\" data-mid=\"1347224\" data-rawmessage=\"How much is Bill Gross paid?\" id=\"webchat-msg-1347224\"><span class=\"messageheader par color-2\" title=\"11:24\">BE</span><div class=\"messagebody\"><p>How much is Bill Gross paid?</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T10:24:37.000Z\" title=\"Mon Oct 03 2016 10:24:37 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 10:24:37 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:24 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1475490292\" data-mid=\"1347225\" data-rawmessage=\"I think it&apos;s around $110m\" id=\"webchat-msg-1347225\"><span class=\"messageheader par color-1\" title=\"11:24\">PM</span><div class=\"messagebody\"><p>I think it&apos;s around $110m</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475490309\" data-mid=\"1347226\" data-rawmessage=\"Well, there&apos;s a quick fix.\" id=\"webchat-msg-1347226\"><span class=\"messageheader par color-2\" title=\"11:25\">BE</span><div class=\"messagebody\"><p>Well, there&apos;s a quick fix.</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475490320\" data-mid=\"1347227\" data-rawmessage=\"These US fund managers get clown-grade salaries\" id=\"webchat-msg-1347227\"><span class=\"messageheader par color-1\" title=\"11:25\">PM</span><div class=\"messagebody\"><p>These US fund managers get clown-grade salaries</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T10:25:25.000Z\" title=\"Mon Oct 03 2016 10:25:25 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 10:25:25 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:25 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1475490340\" data-mid=\"1347228\" data-rawmessage=\"Ive never understood why\" id=\"webchat-msg-1347228\"><span class=\"messageheader par color-1\" title=\"11:25\">PM</span><div class=\"messagebody\"><p>Ive never understood why</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475490371\" data-mid=\"1347229\" data-rawmessage=\"Note also the rather bulky management .....\" id=\"webchat-msg-1347229\"><span class=\"messageheader par color-2\" title=\"11:26\">BE</span><div class=\"messagebody\"><p>Note also the rather bulky management .....</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475490385\" data-mid=\"1347230\" data-rawmessage=\"test\" id=\"webchat-msg-1347230\"><span class=\"messageheader par color-1\" title=\"11:26\">PM</span><div class=\"messagebody\"><p>test</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T10:26:28.000Z\" title=\"Mon Oct 03 2016 10:26:28 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 10:26:28 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:26 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1475490403\" data-mid=\"1347231\" data-rawmessage=\"Everyone gets a job, including co-CEOs.\" id=\"webchat-msg-1347231\"><span class=\"messageheader par color-2\" title=\"11:26\">BE</span><div class=\"messagebody\"><p>Everyone gets a job, including co-CEOs.</p>\n</div></div>\n\n<div class=\"msg separator has-headshot\" data-timestamp=\"1475496769\" data-mid=\"1347232\" data-rawmessage=\"1:12PM\" id=\"webchat-msg-1347232\"><div class=\"messagebody\"><time class=\"o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T12:12:49.000Z\" title=\"Mon Oct 03 2016 12:12:49 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 12:12:49 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\tundefined\n\t\t\t\t\t\t\t\t</time></div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475496777\" data-mid=\"1347233\" data-rawmessage=\"So .................. hi!\" id=\"webchat-msg-1347233\"><span class=\"messageheader par color-2\" title=\"13:12\">BE</span><div class=\"messagebody\"><p>So .................. hi!</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T12:13:30.000Z\" title=\"Mon Oct 03 2016 12:13:30 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 12:13:30 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t1:13 pm\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1475496825\" data-mid=\"1347234\" data-rawmessage=\"We had a bit of a bork.\" id=\"webchat-msg-1347234\"><span class=\"messageheader par color-2\" title=\"13:13\">BE</span><div class=\"messagebody\"><p>We had a bit of a bork.</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475496902\" data-mid=\"1347235\" data-rawmessage=\"The FT Alphaville servers all fell over at about 11.30am and have only just been switched back on.\" id=\"webchat-msg-1347235\"><span class=\"messageheader par color-2\" title=\"13:15\">BE</span><div class=\"messagebody\"><p>The FT Alphaville servers all fell over at about 11.30am and have only just been switched back on.</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475496923\" data-mid=\"1347236\" data-rawmessage=\"But there&apos;s no bloody way we&apos;re picking up this session again.\" id=\"webchat-msg-1347236\"><span class=\"messageheader par color-2\" title=\"13:15\">BE</span><div class=\"messagebody\"><p>But there&apos;s no bloody way we&apos;re picking up this session again.</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T12:16:45.000Z\" title=\"Mon Oct 03 2016 12:16:45 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 12:16:45 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t1:16 pm\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1475497020\" data-mid=\"1347237\" data-rawmessage=\"So .... well, see you tomorrow I guess.\" id=\"webchat-msg-1347237\"><span class=\"messageheader par color-2\" title=\"13:17\">BE</span><div class=\"messagebody\"><p>So .... well, see you tomorrow I guess.</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475497095\" data-mid=\"1347238\" data-rawmessage=\"We can only offer our usual apologies for circumstances outside our control, by which I mean the computers not working.\" id=\"webchat-msg-1347238\"><span class=\"messageheader par color-2\" title=\"13:18\">BE</span><div class=\"messagebody\"><p>We can only offer our usual apologies for circumstances outside our control, by which I mean the computers not working.</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475497135\" data-mid=\"1347239\" data-rawmessage=\"To wrap up, here&apos;s that hamster-server picture we use sometimes.\" id=\"webchat-msg-1347239\"><span class=\"messageheader par color-2\" title=\"13:18\">BE</span><div class=\"messagebody\"><p>To wrap up, here&apos;s that hamster-server picture we use sometimes.</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2016-10-03T12:18:43.000Z\" title=\"Mon Oct 03 2016 12:18:43 GMT+0000 (UTC)\" aria-label=\"Mon Oct 03 2016 12:18:43 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t1:18 pm\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1475497138\" data-mid=\"1347240\" data-rawmessage=\"https://ftalphaville-cdn.ft.com/wp-content/uploads/2015/04/Hamstergif.gif\" id=\"webchat-msg-1347240\"><span class=\"messageheader par color-2\" title=\"13:18\">BE</span><div class=\"messagebody\"><p><img class=\"picture\" src=\"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fftalphaville-cdn.ft.com%2Fwp-content%2Fuploads%2F2015%2F04%2FHamstergif.gif?source=Alphaville\"></p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475497151\" data-mid=\"1347241\" data-rawmessage=\"Come back Tuesday. Ta.\" id=\"webchat-msg-1347241\"><span class=\"messageheader par color-2\" title=\"13:19\">BE</span><div class=\"messagebody\"><p>Come back Tuesday. Ta.</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1475489686\" data-mid=\"1347182\" data-rawmessage=\"I&apos;m glad you&apos;ve been keeping an eye on all this\" id=\"webchat-msg-1347182\"><span class=\"messageheader par color-1\" title=\"11:14\">PM</span><div class=\"messagebody\"><p>I&apos;m glad you&apos;ve been keeping an eye on all this</p>\n</div></div>\n\n</div>",
+  "authors": [
+    {
+      "name": "Paul Murphy",
+      "headshotUrl": "https://www.ft.com/__origami/service/image/v2/images/raw/fthead:paul-murphy?source=alphaville",
+      "isAlphavilleEditor": true,
+      "url": "/author/Paul%20Murphy"
+    }
+  ],
+  "primaryTheme": [
+    {
+      "label": "Markets Live",
+      "url": "/marketslive"
+    }
+  ],
+  "originalTitle": "Markets Live: Monday, 3rd October, 2016",
+  "isLive": false,
+  "subheading": "Live markets commentary from FT.com",
+  "standfirst": "Live markets commentary from FT.com"
+}

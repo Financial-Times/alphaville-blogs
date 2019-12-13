@@ -1,0 +1,280 @@
+{
+  "id": "64ddad20-8e53-321b-80e2-cd5dccc84212",
+  "webUrl": "http://ftalphaville.ft.com/marketslive/2018-08-20-2/",
+  "title": "Markets Live is on holiday",
+  "alternativeTitles": {},
+  "provenance": [
+    "https://api.ft.com/internalcontent/64ddad20-8e53-321b-80e2-cd5dccc84212"
+  ],
+  "byline": "Bryce Elder",
+  "publishedDate": "2018-08-20T10:00:23.000Z",
+  "firstPublishedDate": "2018-08-20T10:00:23.000Z",
+  "publishReference": "tid_flpcmhzvw2_carousel_1558331372",
+  "curatedRelatedContent": [],
+  "containedIn": [],
+  "canBeDistributed": "yes",
+  "canBeSyndicated": "verify",
+  "comments": {
+    "enabled": true
+  },
+  "standout": {
+    "editorsChoice": false,
+    "exclusive": false,
+    "scoop": false
+  },
+  "realtime": true,
+  "originatingParty": "FT",
+  "_lastUpdatedDateTime": "2019-12-11T23:05:03.929Z",
+  "_lastUpdatedVersion": "7e31a715ef987f4138810700061579e58b572501",
+  "type": "article",
+  "accessLevel": "registered",
+  "topper": {},
+  "url": "http://ftalphaville.ft.com/marketslive/2018-08-20-2/",
+  "relativeUrl": "http://ftalphaville.ft.com/marketslive/2018-08-20-2/",
+  "_editorialComponents": [],
+  "openingHTML": "<p>Back September 3</p>",
+  "annotations": [
+    {
+      "apiUrl": "http://api.ft.com/things/c91b1fad-1097-468b-be82-9a8ff717d54c",
+      "directType": "http://www.ft.com/ontology/Topic",
+      "id": "c91b1fad-1097-468b-be82-9a8ff717d54c",
+      "predicate": "http://www.ft.com/ontology/classification/isPrimarilyClassifiedBy",
+      "prefLabel": "Markets",
+      "type": "TOPIC",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/Topic"
+      ],
+      "preposition": "on",
+      "url": "https://www.ft.com/markets",
+      "relativeUrl": "/markets"
+    },
+    {
+      "apiUrl": "http://api.ft.com/brands/89d15f70-640d-11e4-9803-0800200c9a66",
+      "directType": "http://www.ft.com/ontology/product/Brand",
+      "id": "89d15f70-640d-11e4-9803-0800200c9a66",
+      "predicate": "http://www.ft.com/ontology/classification/isClassifiedBy",
+      "prefLabel": "FT Alphaville",
+      "type": "BRAND",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/classification/Classification",
+        "http://www.ft.com/ontology/product/Brand"
+      ],
+      "preposition": "from",
+      "url": "https://www.ft.com/stream/89d15f70-640d-11e4-9803-0800200c9a66",
+      "relativeUrl": "/stream/89d15f70-640d-11e4-9803-0800200c9a66"
+    },
+    {
+      "apiUrl": "http://api.ft.com/things/6da31a37-691f-4908-896f-2829ebe2309e",
+      "directType": "http://www.ft.com/ontology/Genre",
+      "id": "6da31a37-691f-4908-896f-2829ebe2309e",
+      "predicate": "http://www.ft.com/ontology/classification/isClassifiedBy",
+      "prefLabel": "Opinion",
+      "type": "GENRE",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/classification/Classification",
+        "http://www.ft.com/ontology/Genre"
+      ],
+      "preposition": "",
+      "url": "https://www.ft.com/opinion",
+      "relativeUrl": "/opinion"
+    },
+    {
+      "apiUrl": "http://api.ft.com/people/602c702b-31fe-4116-a203-747c7c737eb7",
+      "directType": "http://www.ft.com/ontology/person/Person",
+      "id": "602c702b-31fe-4116-a203-747c7c737eb7",
+      "predicate": "http://www.ft.com/ontology/annotation/hasAuthor",
+      "prefLabel": "Bryce Elder",
+      "type": "PERSON",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/person/Person"
+      ],
+      "preposition": "from",
+      "url": "https://www.ft.com/markets/bryce-elder",
+      "relativeUrl": "/markets/bryce-elder"
+    }
+  ],
+  "genreConcept": {
+    "apiUrl": "http://api.ft.com/things/6da31a37-691f-4908-896f-2829ebe2309e",
+    "directType": "http://www.ft.com/ontology/Genre",
+    "id": "6da31a37-691f-4908-896f-2829ebe2309e",
+    "predicate": "http://www.ft.com/ontology/classification/isClassifiedBy",
+    "prefLabel": "Opinion",
+    "type": "GENRE",
+    "types": [
+      "http://www.ft.com/ontology/core/Thing",
+      "http://www.ft.com/ontology/concept/Concept",
+      "http://www.ft.com/ontology/classification/Classification",
+      "http://www.ft.com/ontology/Genre"
+    ],
+    "preposition": "",
+    "url": "https://www.ft.com/opinion",
+    "relativeUrl": "/opinion"
+  },
+  "brandConcept": {
+    "apiUrl": "http://api.ft.com/brands/89d15f70-640d-11e4-9803-0800200c9a66",
+    "directType": "http://www.ft.com/ontology/product/Brand",
+    "id": "89d15f70-640d-11e4-9803-0800200c9a66",
+    "predicate": "http://www.ft.com/ontology/classification/isClassifiedBy",
+    "prefLabel": "FT Alphaville",
+    "type": "BRAND",
+    "types": [
+      "http://www.ft.com/ontology/core/Thing",
+      "http://www.ft.com/ontology/concept/Concept",
+      "http://www.ft.com/ontology/classification/Classification",
+      "http://www.ft.com/ontology/product/Brand"
+    ],
+    "preposition": "from",
+    "url": "https://www.ft.com/stream/89d15f70-640d-11e4-9803-0800200c9a66",
+    "relativeUrl": "/stream/89d15f70-640d-11e4-9803-0800200c9a66"
+  },
+  "authorConcepts": [
+    {
+      "apiUrl": "http://api.ft.com/people/602c702b-31fe-4116-a203-747c7c737eb7",
+      "directType": "http://www.ft.com/ontology/person/Person",
+      "id": "602c702b-31fe-4116-a203-747c7c737eb7",
+      "predicate": "http://www.ft.com/ontology/annotation/hasAuthor",
+      "prefLabel": "Bryce Elder",
+      "type": "PERSON",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/person/Person"
+      ],
+      "preposition": "from",
+      "url": "https://www.ft.com/markets/bryce-elder",
+      "relativeUrl": "/markets/bryce-elder"
+    }
+  ],
+  "design": {
+    "theme": "basic",
+    "layout": "default"
+  },
+  "displayConcept": {
+    "apiUrl": "http://api.ft.com/things/c91b1fad-1097-468b-be82-9a8ff717d54c",
+    "directType": "http://www.ft.com/ontology/Topic",
+    "id": "c91b1fad-1097-468b-be82-9a8ff717d54c",
+    "predicate": "http://www.ft.com/ontology/classification/isPrimarilyClassifiedBy",
+    "prefLabel": "Markets",
+    "type": "TOPIC",
+    "types": [
+      "http://www.ft.com/ontology/core/Thing",
+      "http://www.ft.com/ontology/concept/Concept",
+      "http://www.ft.com/ontology/Topic"
+    ],
+    "preposition": "on",
+    "url": "https://www.ft.com/markets",
+    "relativeUrl": "/markets",
+    "isDisplayTag": false
+  },
+  "teaser": {
+    "id": "64ddad20-8e53-321b-80e2-cd5dccc84212",
+    "url": "http://ftalphaville.ft.com/marketslive/2018-08-20-2/",
+    "relativeUrl": "http://ftalphaville.ft.com/marketslive/2018-08-20-2/",
+    "type": "article",
+    "indicators": {
+      "isColumn": true,
+      "isOpinion": true,
+      "isScoop": false,
+      "isExclusive": false,
+      "isEditorsChoice": false,
+      "accessLevel": "registered"
+    },
+    "metaPrefixText": "FT Alphaville",
+    "metaSuffixText": null,
+    "metaLink": {
+      "id": "602c702b-31fe-4116-a203-747c7c737eb7",
+      "predicate": "http://www.ft.com/ontology/annotation/hasAuthor",
+      "prefLabel": "Bryce Elder",
+      "type": "PERSON",
+      "url": "https://www.ft.com/markets/bryce-elder",
+      "relativeUrl": "/markets/bryce-elder"
+    },
+    "metaAltLink": {
+      "id": "c91b1fad-1097-468b-be82-9a8ff717d54c",
+      "predicate": "http://www.ft.com/ontology/classification/isPrimarilyClassifiedBy",
+      "prefLabel": "Markets",
+      "type": "TOPIC",
+      "url": "https://www.ft.com/markets",
+      "relativeUrl": "/markets"
+    },
+    "title": "Markets Live is on holiday",
+    "altStandfirst": null,
+    "publishedDate": "2018-08-20T10:00:23.000Z",
+    "firstPublishedDate": "2018-08-20T10:00:23.000Z",
+    "image": {},
+    "parentTheme": null
+  },
+  "contentStats": {
+    "wordCount": 1,
+    "paragraphs": 0,
+    "relatedBoxes": 0,
+    "pullQuotes": 0,
+    "pullQuotesWithImages": 0,
+    "bigNumbers": 0,
+    "images": 0,
+    "responsiveImages": 0,
+    "graphics": 0,
+    "audio": 0,
+    "videos": 0,
+    "internalVideos": 0,
+    "externalVideos": 0,
+    "subheadings": 0,
+    "curatedRecommended": 0,
+    "layouts": 0,
+    "layoutSlots": 0,
+    "infoBox": 0,
+    "tables": 0,
+    "timelines": 0,
+    "singleArticleRecommendations": 0,
+    "sentiment": 0,
+    "scoreGraphicVolume": 0,
+    "scoreGraphicDensity": 0,
+    "scorePictureVolume": 0,
+    "scorePictureDensity": 0
+  },
+  "isMarketsLive": true,
+  "av2WebUrl": "/marketslive/2018-08-20-2/",
+  "bodyHTML": "<div class=\"webchat-closed-content\"><time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2018-08-20T10:00:37.000Z\" title=\"Mon Aug 20 2018 10:00:37 GMT+0000 (UTC)\" aria-label=\"Mon Aug 20 2018 10:00:37 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:00 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1534759252\" data-mid=\"1425355\" data-rawmessage=\"FT Alphaville&apos;s Markets Live is offline for essential maintenance to the backup server.\" id=\"webchat-msg-1425355\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">BE</span><span class=\"timestamp\">11:00am</span></span><div class=\"messagebody\"><p>FT Alphaville&apos;s Markets Live is offline for essential maintenance to the backup server.</p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1534759260\" data-mid=\"1425356\" data-rawmessage=\"https://i.imgur.com/fMs9o7d.gif\" id=\"webchat-msg-1425356\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">BE</span><span class=\"timestamp\">11:01am</span></span><div class=\"messagebody\"><p><img class=\"picture\" src=\"https://www.ft.com/__origami/service/image/v2/images/raw/%2F%2Fwww.ft.com%2F__origami%2Fservice%2Fimage%2Fv2%2Fimages%2Fraw%2Fhttps%253A%252F%252Fi.imgur.com%252FfMs9o7d.gif%3Fsource%3DAlphaville%26width%3D675%26fit%3Dscale-down?source=Alphaville\"></p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1534759266\" data-mid=\"1425357\" data-rawmessage=\"We&apos;ll power it up again on Monday, September 3, or earlier if something properly  interesting happens.\" id=\"webchat-msg-1425357\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">BE</span><span class=\"timestamp\">11:01am</span></span><div class=\"messagebody\"><p>We&apos;ll power it up again on Monday, September 3, or earlier if something properly  interesting happens.</p>\n</div></div></div>",
+  "authors": [
+    {
+      "concept": {
+        "apiUrl": "http://api.ft.com/people/602c702b-31fe-4116-a203-747c7c737eb7",
+        "directType": "http://www.ft.com/ontology/person/Person",
+        "id": "602c702b-31fe-4116-a203-747c7c737eb7",
+        "predicate": "http://www.ft.com/ontology/annotation/hasAuthor",
+        "prefLabel": "Bryce Elder",
+        "type": "PERSON",
+        "types": [
+          "http://www.ft.com/ontology/core/Thing",
+          "http://www.ft.com/ontology/concept/Concept",
+          "http://www.ft.com/ontology/person/Person"
+        ],
+        "preposition": "from",
+        "url": "https://www.ft.com/markets/bryce-elder",
+        "relativeUrl": "/markets/bryce-elder"
+      },
+      "name": "Bryce Elder",
+      "headshotUrl": "https://www.ft.com/__origami/service/image/v2/images/raw/fthead:bryce-elder?source=alphaville",
+      "isAlphavilleEditor": true,
+      "url": "/author/Bryce%20Elder"
+    }
+  ],
+  "primaryTheme": [
+    {
+      "label": "Markets Live",
+      "url": "/marketslive"
+    }
+  ],
+  "originalTitle": "Markets Live is on holiday",
+  "isLive": false,
+  "subheading": "Back September 3",
+  "standfirst": "Back September 3"
+}

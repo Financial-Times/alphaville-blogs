@@ -1,0 +1,191 @@
+{
+  "id": "06d20132-1022-3922-982c-6aad92836c35",
+  "webUrl": "http://ftalphaville.ft.com/marketslive/2019-01-25/",
+  "title": "Friday, 25th January 2019",
+  "alternativeTitles": {},
+  "provenance": [
+    "https://api.ft.com/internalcontent/06d20132-1022-3922-982c-6aad92836c35"
+  ],
+  "byline": "Bryce Elder",
+  "publishedDate": "2019-01-25T11:03:36.000Z",
+  "firstPublishedDate": "2019-01-25T11:03:36.000Z",
+  "publishReference": "tid_iqvyckyhx0_carousel_1558325348",
+  "curatedRelatedContent": [],
+  "containedIn": [],
+  "canBeDistributed": "yes",
+  "canBeSyndicated": "verify",
+  "comments": {
+    "enabled": true
+  },
+  "standout": {
+    "editorsChoice": false,
+    "exclusive": false,
+    "scoop": false
+  },
+  "realtime": true,
+  "originatingParty": "FT",
+  "_lastUpdatedDateTime": "2019-12-12T04:15:13.537Z",
+  "_lastUpdatedVersion": "7e31a715ef987f4138810700061579e58b572501",
+  "type": "article",
+  "accessLevel": "registered",
+  "topper": {},
+  "url": "http://ftalphaville.ft.com/marketslive/2019-01-25/",
+  "relativeUrl": "http://ftalphaville.ft.com/marketslive/2019-01-25/",
+  "_editorialComponents": [],
+  "openingHTML": "<p>Live markets commentary from FT.com</p>",
+  "annotations": [
+    {
+      "predicate": "http://www.ft.com/ontology/classification/isClassifiedBy",
+      "id": "89d15f70-640d-11e4-9803-0800200c9a66",
+      "apiUrl": "http://api.ft.com/brands/89d15f70-640d-11e4-9803-0800200c9a66",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/classification/Classification",
+        "http://www.ft.com/ontology/product/Brand"
+      ],
+      "prefLabel": "FT Alphaville",
+      "type": "BRAND",
+      "directType": "http://www.ft.com/ontology/product/Brand",
+      "url": "https://www.ft.com/stream/89d15f70-640d-11e4-9803-0800200c9a66",
+      "relativeUrl": "/stream/89d15f70-640d-11e4-9803-0800200c9a66",
+      "preposition": "from"
+    },
+    {
+      "predicate": "http://www.ft.com/ontology/classification/isPrimarilyClassifiedBy",
+      "id": "c91b1fad-1097-468b-be82-9a8ff717d54c",
+      "apiUrl": "http://api.ft.com/things/c91b1fad-1097-468b-be82-9a8ff717d54c",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/Topic"
+      ],
+      "prefLabel": "Markets",
+      "type": "TOPIC",
+      "directType": "http://www.ft.com/ontology/Topic",
+      "url": "https://www.ft.com/markets",
+      "preposition": "on",
+      "relativeUrl": "/markets"
+    }
+  ],
+  "brandConcept": {
+    "predicate": "http://www.ft.com/ontology/classification/isClassifiedBy",
+    "id": "89d15f70-640d-11e4-9803-0800200c9a66",
+    "apiUrl": "http://api.ft.com/brands/89d15f70-640d-11e4-9803-0800200c9a66",
+    "types": [
+      "http://www.ft.com/ontology/core/Thing",
+      "http://www.ft.com/ontology/concept/Concept",
+      "http://www.ft.com/ontology/classification/Classification",
+      "http://www.ft.com/ontology/product/Brand"
+    ],
+    "prefLabel": "FT Alphaville",
+    "type": "BRAND",
+    "directType": "http://www.ft.com/ontology/product/Brand",
+    "url": "https://www.ft.com/stream/89d15f70-640d-11e4-9803-0800200c9a66",
+    "relativeUrl": "/stream/89d15f70-640d-11e4-9803-0800200c9a66",
+    "preposition": "from"
+  },
+  "authorConcepts": [],
+  "design": {
+    "theme": "basic",
+    "layout": "default"
+  },
+  "displayConcept": {
+    "predicate": "http://www.ft.com/ontology/classification/isPrimarilyClassifiedBy",
+    "id": "c91b1fad-1097-468b-be82-9a8ff717d54c",
+    "apiUrl": "http://api.ft.com/things/c91b1fad-1097-468b-be82-9a8ff717d54c",
+    "types": [
+      "http://www.ft.com/ontology/core/Thing",
+      "http://www.ft.com/ontology/concept/Concept",
+      "http://www.ft.com/ontology/Topic"
+    ],
+    "prefLabel": "Markets",
+    "type": "TOPIC",
+    "directType": "http://www.ft.com/ontology/Topic",
+    "url": "https://www.ft.com/markets",
+    "preposition": "on",
+    "relativeUrl": "/markets",
+    "isDisplayTag": false
+  },
+  "teaser": {
+    "id": "06d20132-1022-3922-982c-6aad92836c35",
+    "url": "http://ftalphaville.ft.com/marketslive/2019-01-25/",
+    "relativeUrl": "http://ftalphaville.ft.com/marketslive/2019-01-25/",
+    "type": "article",
+    "indicators": {
+      "isColumn": false,
+      "isOpinion": false,
+      "isScoop": false,
+      "isExclusive": false,
+      "isEditorsChoice": false,
+      "accessLevel": "registered"
+    },
+    "metaPrefixText": null,
+    "metaSuffixText": null,
+    "metaLink": {
+      "predicate": "http://www.ft.com/ontology/classification/isPrimarilyClassifiedBy",
+      "id": "c91b1fad-1097-468b-be82-9a8ff717d54c",
+      "prefLabel": "Markets",
+      "type": "TOPIC",
+      "url": "https://www.ft.com/markets",
+      "relativeUrl": "/markets"
+    },
+    "metaAltLink": null,
+    "title": "Markets Live: Friday, 25th January 2019",
+    "altStandfirst": null,
+    "publishedDate": "2019-01-25T11:03:36.000Z",
+    "firstPublishedDate": "2019-01-25T11:03:36.000Z",
+    "image": {},
+    "headshot": null,
+    "parentTheme": null
+  },
+  "contentStats": {
+    "wordCount": 1,
+    "paragraphs": 0,
+    "relatedBoxes": 0,
+    "pullQuotes": 0,
+    "pullQuotesWithImages": 0,
+    "bigNumbers": 0,
+    "images": 0,
+    "responsiveImages": 0,
+    "graphics": 0,
+    "audio": 0,
+    "videos": 0,
+    "internalVideos": 0,
+    "externalVideos": 0,
+    "subheadings": 0,
+    "curatedRecommended": 0,
+    "layouts": 0,
+    "layoutSlots": 0,
+    "infoBox": 0,
+    "tables": 0,
+    "timelines": 0,
+    "singleArticleRecommendations": 0,
+    "sentiment": 0,
+    "scoreGraphicVolume": 0,
+    "scoreGraphicDensity": 0,
+    "scorePictureVolume": 0,
+    "scorePictureDensity": 0
+  },
+  "isMarketsLive": true,
+  "av2WebUrl": "/marketslive/2019-01-25/",
+  "bodyHTML": "<div class=\"webchat-closed-content\"><time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2019-01-25T11:03:59.000Z\" title=\"Fri Jan 25 2019 11:03:59 GMT+0000 (UTC)\" aria-label=\"Fri Jan 25 2019 11:03:59 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:03 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1548414254\" data-mid=\"1435014\" data-rawmessage=\"Hello. Hi. Good morning, welcome.\" id=\"webchat-msg-1435014\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">BE</span><span class=\"timestamp\">11:04am</span></span><div class=\"messagebody\"><p>Hello. Hi. Good morning, welcome.</p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1548414270\" data-mid=\"1435015\" data-rawmessage=\"This is Markets Live, FTAlphaville&apos;s daily whatever.\" id=\"webchat-msg-1435015\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">BE</span><span class=\"timestamp\">11:04am</span></span><div class=\"messagebody\"><p>This is Markets Live, FTAlphaville&apos;s daily whatever.</p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1548414292\" data-mid=\"1435016\" data-rawmessage=\"You&apos;ll have seen this, I guess.\" id=\"webchat-msg-1435016\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">BE</span><span class=\"timestamp\">11:04am</span></span><div class=\"messagebody\"><p>You&apos;ll have seen this, I guess.</p>\n</div></div><time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2019-01-25T11:04:39.000Z\" title=\"Fri Jan 25 2019 11:04:39 GMT+0000 (UTC)\" aria-label=\"Fri Jan 25 2019 11:04:39 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:04 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1548414294\" data-mid=\"1435017\" data-rawmessage=\"https://twitter.com/MarkDiStef/status/1088474053076226050\" id=\"webchat-msg-1435017\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">BE</span><span class=\"timestamp\">11:04am</span></span><div class=\"messagebody\"><p class=\"embeddedtweet\"><a href=\"https://twitter.com/MarkDiStef/status/1088474053076226050\">https://twitter.com/MarkDiStef/status/1088474053076226050</a></p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1548414367\" data-mid=\"1435018\" data-rawmessage=\"Which sounds brilliant! Imagine a webcam being on Kleinman&apos;s while he gives the {feltcollaredsource} the old carrot and stick treatment.\" id=\"webchat-msg-1435018\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">BE</span><span class=\"timestamp\">11:06am</span></span><div class=\"messagebody\"><p>Which sounds brilliant! Imagine a webcam being on Kleinman&apos;s while he gives the <span class=\"webchat-emoticon webchat-emoticon--feltcollaredsource\" data-code=\"feltcollaredsource\">Feltcollaredsource</span> the old carrot and stick treatment.</p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1548414387\" data-mid=\"1435019\" data-rawmessage=\"Course, it&apos;s not that at all. It&apos;s just for one day and is some anniversary thing.\" id=\"webchat-msg-1435019\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">BE</span><span class=\"timestamp\">11:06am</span></span><div class=\"messagebody\"><p>Course, it&apos;s not that at all. It&apos;s just for one day and is some anniversary thing.</p>\n</div></div><time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2019-01-25T11:08:39.000Z\" title=\"Fri Jan 25 2019 11:08:39 GMT+0000 (UTC)\" aria-label=\"Fri Jan 25 2019 11:08:39 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:08 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg separator has-headshot\" data-timestamp=\"1548414534\" data-mid=\"1435020\" data-rawmessage=\"11:08AM\" id=\"webchat-msg-1435020\">\n\t<div class=\"messagebody\"><time class=\"o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2019-01-25T11:08:54.000Z\" title=\"Fri Jan 25 2019 11:08:54 GMT+0000 (UTC)\" aria-label=\"Fri Jan 25 2019 11:08:54 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\tundefined\n\t\t\t\t\t\t\t\t</time></div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1548414566\" data-mid=\"1435021\" data-rawmessage=\"Okay, I think we have sign-in problems .....\" id=\"webchat-msg-1435021\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">BE</span><span class=\"timestamp\">11:09am</span></span><div class=\"messagebody\"><p>Okay, I think we have sign-in problems .....</p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1548414590\" data-mid=\"1435022\" data-rawmessage=\"I&apos;m getting this when I try to join on the right.\" id=\"webchat-msg-1435022\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">BE</span><span class=\"timestamp\">11:09am</span></span><div class=\"messagebody\"><p>I&apos;m getting this when I try to join on the right.</p>\n</div></div><time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2019-01-25T11:09:39.000Z\" title=\"Fri Jan 25 2019 11:09:39 GMT+0000 (UTC)\" aria-label=\"Fri Jan 25 2019 11:09:39 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:09 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1548414594\" data-mid=\"1435023\" data-rawmessage=\"https://i.imgur.com/LMyjzqb.png\" id=\"webchat-msg-1435023\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">BE</span><span class=\"timestamp\">11:09am</span></span><div class=\"messagebody\"><p><img class=\"picture\" src=\"https://www.ft.com/__origami/service/image/v2/images/raw/%2F%2Fwww.ft.com%2F__origami%2Fservice%2Fimage%2Fv2%2Fimages%2Fraw%2Fhttps%253A%252F%252Fi.imgur.com%252FLMyjzqb.png%3Fsource%3DAlphaville%26width%3D675%26fit%3Dscale-down?source=Alphaville\"></p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1548414723\" data-mid=\"1435024\" data-rawmessage=\"So I&apos;m going to close the session. No point without commentership.\" id=\"webchat-msg-1435024\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">BE</span><span class=\"timestamp\">11:12am</span></span><div class=\"messagebody\"><p>So I&apos;m going to close the session. No point without commentership.</p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1548414762\" data-mid=\"1435025\" data-rawmessage=\"Thanks for the ......... nothing. Back Monday. Afternoon all.\" id=\"webchat-msg-1435025\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">BE</span><span class=\"timestamp\">11:12am</span></span><div class=\"messagebody\"><p>Thanks for the ......... nothing. Back Monday. Afternoon all.</p>\n</div></div></div>",
+  "authors": [
+    {
+      "name": "Bryce Elder",
+      "headshotUrl": "https://www.ft.com/__origami/service/image/v2/images/raw/fthead:bryce-elder?source=alphaville",
+      "isAlphavilleEditor": true,
+      "url": "/author/Bryce%20Elder"
+    }
+  ],
+  "primaryTheme": [
+    {
+      "label": "Markets Live",
+      "url": "/marketslive"
+    }
+  ],
+  "originalTitle": "Markets Live: Friday, 25th January 2019",
+  "isLive": false,
+  "subheading": "Live markets commentary from FT.com",
+  "standfirst": "Live markets commentary from FT.com"
+}
