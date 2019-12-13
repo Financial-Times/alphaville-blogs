@@ -32,19 +32,9 @@ alphavilleBuildTools(gulp, {
 			'build-css': 'meet-the-team.css'
 		},
 		{
-			id: 'ml-live',
-			standalone: 'mlLiveBundle',
-			js: './assets/js/ml-live.js',
-			sass: './assets/scss/ml-live.scss',
-			'build-js': 'ml-live.js',
-			'build-css': 'ml-live.css'
-		},
-		{
 			id: 'ml-index',
 			standalone: 'mlIndexBundle',
-			js: './assets/js/ml-index.js',
 			sass: './assets/scss/ml-index.scss',
-			'build-js': 'ml-index.js',
 			'build-css': 'ml-index.css'
 		},
 		{
