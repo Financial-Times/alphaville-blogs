@@ -19,15 +19,7 @@ require('o-expander');
 
 const oAds = require('alphaville-ui')['o-ads'];
 
-const embeddedMedia = require('webchat/src/js/ui/embeddedMedia');
-
 document.addEventListener('o.DOMContentLoaded', function async() {
-	const closedContentContainer = document.querySelector('.webchat-closed-content');
-
-	if (closedContentContainer) {
-		embeddedMedia.convert(closedContentContainer);
-	}
-
 	const inArticleAd1 = document.querySelector('.alphaville-in-article-ad1');
 	const inArticleAd2 = document.querySelector('.alphaville-in-article-ad2');
 	const isMlTranscript = !!document.querySelector('.webchat-closed-content');

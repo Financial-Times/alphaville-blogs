@@ -1,0 +1,225 @@
+{
+  "id": "3d96f5fe-762d-39bd-9ae6-9cf8612de701",
+  "webUrl": "http://ftalphaville.ft.com/marketslive/2017-05-04/",
+  "title": "Thursday, 4th May, 2017",
+  "alternativeTitles": {},
+  "provenance": [
+    "https://api.ft.com/internalcontent/3d96f5fe-762d-39bd-9ae6-9cf8612de701"
+  ],
+  "byline": "Paul Murphy",
+  "publishedDate": "2017-05-04T10:02:29.000Z",
+  "firstPublishedDate": "2017-05-04T10:02:29.000Z",
+  "publishReference": "republish_-a1195377-36fc-4af7-85f5-d60b36c240e1_carousel_1558479134",
+  "curatedRelatedContent": [],
+  "containedIn": [],
+  "canBeDistributed": "yes",
+  "canBeSyndicated": "verify",
+  "comments": {
+    "enabled": true
+  },
+  "standout": {
+    "editorsChoice": false,
+    "exclusive": false,
+    "scoop": false
+  },
+  "realtime": true,
+  "originatingParty": "FT",
+  "_lastUpdatedDateTime": "2019-12-13T09:43:16.680Z",
+  "_lastUpdatedVersion": "7e31a715ef987f4138810700061579e58b572501",
+  "type": "article",
+  "accessLevel": "registered",
+  "topper": {},
+  "url": "http://ftalphaville.ft.com/marketslive/2017-05-04/",
+  "relativeUrl": "http://ftalphaville.ft.com/marketslive/2017-05-04/",
+  "_editorialComponents": [],
+  "openingHTML": "<p>Live markets commentary from FT.com</p>",
+  "annotations": [
+    {
+      "apiUrl": "http://api.ft.com/brands/89d15f70-640d-11e4-9803-0800200c9a66",
+      "directType": "http://www.ft.com/ontology/product/Brand",
+      "id": "89d15f70-640d-11e4-9803-0800200c9a66",
+      "predicate": "http://www.ft.com/ontology/classification/isClassifiedBy",
+      "prefLabel": "FT Alphaville",
+      "type": "BRAND",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/classification/Classification",
+        "http://www.ft.com/ontology/product/Brand"
+      ],
+      "preposition": "from",
+      "url": "https://www.ft.com/stream/89d15f70-640d-11e4-9803-0800200c9a66",
+      "relativeUrl": "/stream/89d15f70-640d-11e4-9803-0800200c9a66"
+    },
+    {
+      "apiUrl": "http://api.ft.com/things/6da31a37-691f-4908-896f-2829ebe2309e",
+      "directType": "http://www.ft.com/ontology/Genre",
+      "id": "6da31a37-691f-4908-896f-2829ebe2309e",
+      "predicate": "http://www.ft.com/ontology/classification/isClassifiedBy",
+      "prefLabel": "Opinion",
+      "type": "GENRE",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/classification/Classification",
+        "http://www.ft.com/ontology/Genre"
+      ],
+      "preposition": "",
+      "url": "https://www.ft.com/opinion",
+      "relativeUrl": "/opinion"
+    },
+    {
+      "apiUrl": "http://api.ft.com/things/c91b1fad-1097-468b-be82-9a8ff717d54c",
+      "directType": "http://www.ft.com/ontology/Topic",
+      "id": "c91b1fad-1097-468b-be82-9a8ff717d54c",
+      "predicate": "http://www.ft.com/ontology/classification/isPrimarilyClassifiedBy",
+      "prefLabel": "Markets",
+      "type": "TOPIC",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/Topic"
+      ],
+      "preposition": "on",
+      "url": "https://www.ft.com/markets",
+      "relativeUrl": "/markets"
+    }
+  ],
+  "genreConcept": {
+    "apiUrl": "http://api.ft.com/things/6da31a37-691f-4908-896f-2829ebe2309e",
+    "directType": "http://www.ft.com/ontology/Genre",
+    "id": "6da31a37-691f-4908-896f-2829ebe2309e",
+    "predicate": "http://www.ft.com/ontology/classification/isClassifiedBy",
+    "prefLabel": "Opinion",
+    "type": "GENRE",
+    "types": [
+      "http://www.ft.com/ontology/core/Thing",
+      "http://www.ft.com/ontology/concept/Concept",
+      "http://www.ft.com/ontology/classification/Classification",
+      "http://www.ft.com/ontology/Genre"
+    ],
+    "preposition": "",
+    "url": "https://www.ft.com/opinion",
+    "relativeUrl": "/opinion"
+  },
+  "brandConcept": {
+    "apiUrl": "http://api.ft.com/brands/89d15f70-640d-11e4-9803-0800200c9a66",
+    "directType": "http://www.ft.com/ontology/product/Brand",
+    "id": "89d15f70-640d-11e4-9803-0800200c9a66",
+    "predicate": "http://www.ft.com/ontology/classification/isClassifiedBy",
+    "prefLabel": "FT Alphaville",
+    "type": "BRAND",
+    "types": [
+      "http://www.ft.com/ontology/core/Thing",
+      "http://www.ft.com/ontology/concept/Concept",
+      "http://www.ft.com/ontology/classification/Classification",
+      "http://www.ft.com/ontology/product/Brand"
+    ],
+    "preposition": "from",
+    "url": "https://www.ft.com/stream/89d15f70-640d-11e4-9803-0800200c9a66",
+    "relativeUrl": "/stream/89d15f70-640d-11e4-9803-0800200c9a66"
+  },
+  "authorConcepts": [],
+  "design": {
+    "theme": "basic",
+    "layout": "default"
+  },
+  "displayConcept": {
+    "apiUrl": "http://api.ft.com/things/c91b1fad-1097-468b-be82-9a8ff717d54c",
+    "directType": "http://www.ft.com/ontology/Topic",
+    "id": "c91b1fad-1097-468b-be82-9a8ff717d54c",
+    "predicate": "http://www.ft.com/ontology/classification/isPrimarilyClassifiedBy",
+    "prefLabel": "Markets",
+    "type": "TOPIC",
+    "types": [
+      "http://www.ft.com/ontology/core/Thing",
+      "http://www.ft.com/ontology/concept/Concept",
+      "http://www.ft.com/ontology/Topic"
+    ],
+    "preposition": "on",
+    "url": "https://www.ft.com/markets",
+    "relativeUrl": "/markets",
+    "isDisplayTag": false
+  },
+  "teaser": {
+    "id": "3d96f5fe-762d-39bd-9ae6-9cf8612de701",
+    "url": "http://ftalphaville.ft.com/marketslive/2017-05-04/",
+    "relativeUrl": "http://ftalphaville.ft.com/marketslive/2017-05-04/",
+    "type": "article",
+    "indicators": {
+      "isColumn": false,
+      "isOpinion": true,
+      "isScoop": false,
+      "isExclusive": false,
+      "isEditorsChoice": false,
+      "accessLevel": "registered"
+    },
+    "metaPrefixText": "FT Alphaville",
+    "metaSuffixText": null,
+    "metaLink": {
+      "id": "c91b1fad-1097-468b-be82-9a8ff717d54c",
+      "predicate": "http://www.ft.com/ontology/classification/isPrimarilyClassifiedBy",
+      "prefLabel": "Markets",
+      "type": "TOPIC",
+      "url": "https://www.ft.com/markets",
+      "relativeUrl": "/markets"
+    },
+    "metaAltLink": null,
+    "title": "Markets Live: Thursday, 4th May, 2017",
+    "altStandfirst": null,
+    "publishedDate": "2017-05-04T10:02:29.000Z",
+    "firstPublishedDate": "2017-05-04T10:02:29.000Z",
+    "image": {},
+    "headshot": null,
+    "parentTheme": null
+  },
+  "contentStats": {
+    "wordCount": 1,
+    "paragraphs": 0,
+    "relatedBoxes": 0,
+    "pullQuotes": 0,
+    "pullQuotesWithImages": 0,
+    "bigNumbers": 0,
+    "images": 0,
+    "responsiveImages": 0,
+    "graphics": 0,
+    "audio": 0,
+    "videos": 0,
+    "internalVideos": 0,
+    "externalVideos": 0,
+    "subheadings": 0,
+    "curatedRecommended": 0,
+    "layouts": 0,
+    "layoutSlots": 0,
+    "infoBox": 0,
+    "tables": 0,
+    "timelines": 0,
+    "singleArticleRecommendations": 0,
+    "sentiment": 0,
+    "scoreGraphicVolume": 0,
+    "scoreGraphicDensity": 0,
+    "scorePictureVolume": 0,
+    "scorePictureDensity": 0
+  },
+  "isMarketsLive": true,
+  "av2WebUrl": "/marketslive/2017-05-04/",
+  "bodyHTML": "<div class=\"webchat-closed-content\"><time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2017-05-04T11:06:14.000Z\" title=\"Thu May 04 2017 11:06:14 GMT+0000 (UTC)\" aria-label=\"Thu May 04 2017 11:06:14 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t12:06 pm\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1493895989\" data-mid=\"1375888\" data-rawmessage=\"Yep working for me\" id=\"webchat-msg-1375888\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">12:06pm</span></span><div class=\"messagebody\"><p>Yep working for me</p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1493896028\" data-mid=\"1375890\" data-rawmessage=\"Apologies, but the issue has now fixed\" id=\"webchat-msg-1375890\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">12:07pm</span></span><div class=\"messagebody\"><p>Apologies, but the issue has now fixed</p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1493896037\" data-mid=\"1375891\" data-rawmessage=\"But fear it&apos;s too late\" id=\"webchat-msg-1375891\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">12:07pm</span></span><div class=\"messagebody\"><p>But fear it&apos;s too late</p>\n</div></div><time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2017-05-04T11:07:30.000Z\" title=\"Thu May 04 2017 11:07:30 GMT+0000 (UTC)\" aria-label=\"Thu May 04 2017 11:07:30 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t12:07 pm\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1493896065\" data-mid=\"1375892\" data-rawmessage=\"Bryce has swanned off to see someone in Mayfair, muttering about ITV as he left\" id=\"webchat-msg-1375892\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">12:07pm</span></span><div class=\"messagebody\"><p>Bryce has swanned off to see someone in Mayfair, muttering about ITV as he left</p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1493896102\" data-mid=\"1375893\" data-rawmessage=\"I have a 12.30 that I can&apos;t cancel\" id=\"webchat-msg-1375893\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">12:08pm</span></span><div class=\"messagebody\"><p>I have a 12.30 that I can&apos;t cancel</p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1493896166\" data-mid=\"1375894\" data-rawmessage=\"By way of apology, have a few slabs of Albert...\" id=\"webchat-msg-1375894\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">12:09pm</span></span><div class=\"messagebody\"><p>By way of apology, have a few slabs of Albert...</p>\n</div></div><time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2017-05-04T11:09:31.000Z\" title=\"Thu May 04 2017 11:09:31 GMT+0000 (UTC)\" aria-label=\"Thu May 04 2017 11:09:31 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t12:09 pm\n\t\t\t\t\t\t\t\t</time><div class=\"msg blockquote has-headshot\" data-timestamp=\"1493896186\" data-mid=\"1375895\" data-rawmessage=\"*Barbados&#x2019;s central bank governor is sacked for refusing to print money. Who&#x2019;s next?  *\" id=\"webchat-msg-1375895\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">12:09pm</span></span><div class=\"messagebody\"><blockquote><p><strong>Barbados&#x2019;s central bank governor is sacked for refusing to print money. Who&#x2019;s next?  </strong></p></blockquote>\n</div></div><div class=\"msg blockquote has-headshot\" data-timestamp=\"1493896201\" data-mid=\"1375896\" data-rawmessage=\"I&#x92;ve  just  returned  from  a  reinvigorated  ten-day  break  on  my  favourite  Barbados  beach.  Whenever  I  am  there,  I  always  like  to  take  a  quick  look  at  the  local  economic  news.  I  was  shocked to see that since my last visit, the Central Bank Governor, Delisle Worrell had been fired by the finance minister. It has been widely reported that Worrell was protesting at the Government&#x92;s insistence he finance the intractable and burdensome public-sector deficit by printing  money  &#x96;link.  Now  why  shouldn&#x92;t  Barbados  follow  the  lead  of  the  US  and  other  developed economies by printing money? The main reason has to be that Barbados has a fixed  exchange  rate  with  the  US.  Economics  101  tells  you  that  you  can&#x92;t  print  money  with  6% twin deficits and expect the fixed exchange rate to hold. But despite the warnings of the IMF  that  the  situation  is  unsustainable,  especially  as  the  US  raises  rates,  apparently  the  Barbados  Finance  Minister  has  found  a  totally  new  way  of  doing  economics  &#x96;link.  Fed  Governor Yellen should take note that elected politicians don&#x92;t take kindly to dissent.\" id=\"webchat-msg-1375896\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">12:10pm</span></span><div class=\"messagebody\"><blockquote><p>I&#x2019;ve  just  returned  from  a  reinvigorated  ten-day  break  on  my  favourite  Barbados  beach.  Whenever  I  am  there,  I  always  like  to  take  a  quick  look  at  the  local  economic  news.  I  was  shocked to see that since my last visit, the Central Bank Governor, Delisle Worrell had been fired by the finance minister. It has been widely reported that Worrell was protesting at the Government&#x2019;s insistence he finance the intractable and burdensome public-sector deficit by printing  money  &#x2013;link.  Now  why  shouldn&#x2019;t  Barbados  follow  the  lead  of  the  US  and  other  developed economies by printing money? The main reason has to be that Barbados has a fixed  exchange  rate  with  the  US.  Economics  101  tells  you  that  you  can&#x2019;t  print  money  with  6% twin deficits and expect the fixed exchange rate to hold. But despite the warnings of the IMF  that  the  situation  is  unsustainable,  especially  as  the  US  raises  rates,  apparently  the  Barbados  Finance  Minister  has  found  a  totally  new  way  of  doing  economics  &#x2013;link.  Fed  Governor Yellen should take note that elected politicians don&#x2019;t take kindly to dissent.</p></blockquote>\n</div></div><div class=\"msg blockquote has-headshot\" data-timestamp=\"1493896218\" data-mid=\"1375897\" data-rawmessage=\"Janet  Yellen  should  know  a  thing  or  two  about  the  stifling  of  dissent  from  her  tenure  at  the  Fed.  While  warming  my  weary  bones  on  the  beach  I  managed  to  venture  beyond  my  normal diet of chick-lit (Marian Keyes being my favourite). But for some serious Fed/Yellen bashing   I   recommend   Danielle   DiMartino   Booth&#x92;s, Fed   Up.   Nowhere   is   there   more   groupthink than in the Fed&#x92;s research staffs of elite PhD economists - &#x93;the MIT mafia&#x94; - who are  married  to  their  mathematical  models.  Danielle  exposes  at  first  hand  the  institutional  groupthink  and  total  disdain  and  ridicule  for  dissenting  views.  Danielle  reserves  her  most  strident  criticism  for  those  at  the  very  top  of  the  Fed  who  have  continued  along  the  same  ruinous  path  of  smug  self-satisfaction  they  also  trod  in  the  run-up  to  the  2007  crisis.  The  highly regarded journalist, Caroline Baum, reviews the book\" id=\"webchat-msg-1375897\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">12:10pm</span></span><div class=\"messagebody\"><blockquote><p>Janet  Yellen  should  know  a  thing  or  two  about  the  stifling  of  dissent  from  her  tenure  at  the  Fed.  While  warming  my  weary  bones  on  the  beach  I  managed  to  venture  beyond  my  normal diet of chick-lit (Marian Keyes being my favourite). But for some serious Fed/Yellen bashing   I   recommend   Danielle   DiMartino   Booth&#x2019;s, Fed   Up.   Nowhere   is   there   more   groupthink than in the Fed&#x2019;s research staffs of elite PhD economists - &#x201C;the MIT mafia&#x201D; - who are  married  to  their  mathematical  models.  Danielle  exposes  at  first  hand  the  institutional  groupthink  and  total  disdain  and  ridicule  for  dissenting  views.  Danielle  reserves  her  most  strident  criticism  for  those  at  the  very  top  of  the  Fed  who  have  continued  along  the  same  ruinous  path  of  smug  self-satisfaction  they  also  trod  in  the  run-up  to  the  2007  crisis.  The  highly regarded journalist, Caroline Baum, reviews the book</p></blockquote>\n</div></div><time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2017-05-04T11:10:15.000Z\" title=\"Thu May 04 2017 11:10:15 GMT+0000 (UTC)\" aria-label=\"Thu May 04 2017 11:10:15 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t12:10 pm\n\t\t\t\t\t\t\t\t</time><div class=\"msg blockquote has-headshot\" data-timestamp=\"1493896230\" data-mid=\"1375898\" data-rawmessage=\"The  stifling  of  dissent  and  subsequent  comfortable  groupthink  are  some  of  the  biggest  dangers  an  organisation  faces.  By  way  of  contrast  is  Jeremy  Grantham&#x92;s  GMO  based  in  Boston where my former colleague, James Montier works. Jeremy encourages dissent and there is currently a very healthy disagreement taking place on the GMO website\" id=\"webchat-msg-1375898\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">12:10pm</span></span><div class=\"messagebody\"><blockquote><p>The  stifling  of  dissent  and  subsequent  comfortable  groupthink  are  some  of  the  biggest  dangers  an  organisation  faces.  By  way  of  contrast  is  Jeremy  Grantham&#x2019;s  GMO  based  in  Boston where my former colleague, James Montier works. Jeremy encourages dissent and there is currently a very healthy disagreement taking place on the GMO website</p></blockquote>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1493896278\" data-mid=\"1375899\" data-rawmessage=\"https://ftalphaville-cdn.ft.com/wp-content/uploads/2017/05/04121051/Screen-Shot-2017-05-04-at-12.10.22.png\" id=\"webchat-msg-1375899\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">12:11pm</span></span><div class=\"messagebody\"><p><img class=\"picture\" src=\"https://www.ft.com/__origami/service/image/v2/images/raw/%2F%2Fwww.ft.com%2F__origami%2Fservice%2Fimage%2Fv2%2Fimages%2Fraw%2Fhttps%253A%252F%252Fftalphaville-cdn.ft.com%252Fwp-content%252Fuploads%252F2017%252F05%252F04121051%252FScreen-Shot-2017-05-04-at-12.10.22.png%3Fsource%3DAlphaville%26width%3D675%26fit%3Dscale-down?source=Alphaville\"></p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1493896345\" data-mid=\"1375900\" data-rawmessage=\"Missing a bit (cos Albert gets particularly angry when I share too much of his wonderful prose\" id=\"webchat-msg-1375900\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">12:12pm</span></span><div class=\"messagebody\"><p>Missing a bit (cos Albert gets particularly angry when I share too much of his wonderful prose</p>\n</div></div><time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2017-05-04T11:12:14.000Z\" title=\"Thu May 04 2017 11:12:14 GMT+0000 (UTC)\" aria-label=\"Thu May 04 2017 11:12:14 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t12:12 pm\n\t\t\t\t\t\t\t\t</time><div class=\"msg blockquote has-headshot\" data-timestamp=\"1493896349\" data-mid=\"1375901\" data-rawmessage=\"One  piece  of  work  I  always  recommend  to  people  in  the  business  is  James&#x92;s  seminal  2005  collection of behavioural articles, written when we were at Dresdner Kleinworts, entitled &#x91;The Seven  Sins  of  Fund  Management&#x92;  -  link.  In  it  he  has  a  special  chapter  dedicated  to  the  behavioural  pitfalls  of  collective  decision-making  and  groupthink.  Here  are  some  of  his  key conclusions, which after reading Danielle&#x92;s book, seem particularly relevant for the Fed!\" id=\"webchat-msg-1375901\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">12:12pm</span></span><div class=\"messagebody\"><blockquote><p>One  piece  of  work  I  always  recommend  to  people  in  the  business  is  James&#x2019;s  seminal  2005  collection of behavioural articles, written when we were at Dresdner Kleinworts, entitled &#x2018;The Seven  Sins  of  Fund  Management&#x2019;  -  link.  In  it  he  has  a  special  chapter  dedicated  to  the  behavioural  pitfalls  of  collective  decision-making  and  groupthink.  Here  are  some  of  his  key conclusions, which after reading Danielle&#x2019;s book, seem particularly relevant for the Fed!</p></blockquote>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1493896387\" data-mid=\"1375902\" data-rawmessage=\"Here&apos;s the historical Montier stuff\" id=\"webchat-msg-1375902\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">12:13pm</span></span><div class=\"messagebody\"><p>Here&apos;s the historical Montier stuff</p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1493896017\" data-mid=\"1375889\" data-rawmessage=\"If you are just joining, we&apos;ve had a tech bork for the past hour\" id=\"webchat-msg-1375889\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">12:06pm</span></span><div class=\"messagebody\"><p>If you are just joining, we&apos;ve had a tech bork for the past hour</p>\n</div></div><time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2017-05-04T11:13:21.000Z\" title=\"Thu May 04 2017 11:13:21 GMT+0000 (UTC)\" aria-label=\"Thu May 04 2017 11:13:21 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t12:13 pm\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1493896416\" data-mid=\"1375904\" data-rawmessage=\"This is at *terrific* read\" id=\"webchat-msg-1375904\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">12:13pm</span></span><div class=\"messagebody\"><p>This is at <strong>terrific</strong> read</p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1493896430\" data-mid=\"1375905\" data-rawmessage=\"http://www.trendfollowing.com/whitepaper/Seven_Sins_o-DrKW-100436-N.pdf\" id=\"webchat-msg-1375905\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">12:13pm</span></span><div class=\"messagebody\"><p><a href=\"http://www.trendfollowing.com/whitepaper/Seven_Sins_o-DrKW-100436-N.pdf\" target=\"_blank\">http://www.trendfo...-DrKW-100436-N.pdf</a></p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1493896545\" data-mid=\"1375906\" data-rawmessage=\"Scalper -- no raw I&apos;m afraid.  Not yet in any case.  Still working on it.\" id=\"webchat-msg-1375906\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">12:15pm</span></span><div class=\"messagebody\"><p>Scalper -- no raw I&apos;m afraid.  Not yet in any case.  Still working on it.</p>\n</div></div><time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2017-05-04T11:17:05.000Z\" title=\"Thu May 04 2017 11:17:05 GMT+0000 (UTC)\" aria-label=\"Thu May 04 2017 11:17:05 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t12:17 pm\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1493896640\" data-mid=\"1375908\" data-rawmessage=\"Here&apos;s something else to read:  https://www.bloomberg.com/news/articles/2017-05-03/one-of-world-s-top-performing-stock-market-has-a-facebook-issue?cmpid=BBD050417_MKT&amp;utm_medium=email&amp;utm_source=newsletter&amp;utm_term=170504&amp;utm_campaign=markets\" id=\"webchat-msg-1375908\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">12:17pm</span></span><div class=\"messagebody\"><p>Here&apos;s something else to read:  <a href=\"https://www.bloomberg.com/news/articles/2017-05-03/one-of-world-s-top-performing-stock-market-has-a-facebook-issue?cmpid=BBD050417_MKT&amp;utm_medium=email&amp;utm_source=newsletter&amp;utm_term=170504&amp;utm_campaign=markets\" target=\"_blank\">https://www.bloomb...m_campaign=markets</a></p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1493896657\" data-mid=\"1375909\" data-rawmessage=\"Karachi stock market being manipulated by social media\" id=\"webchat-msg-1375909\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">12:17pm</span></span><div class=\"messagebody\"><p>Karachi stock market being manipulated by social media</p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1493896730\" data-mid=\"1375910\" data-rawmessage=\"And the avocado crisis  https://www.ft.com/content/d99e786c-3011-11e7-9555-23ef563ecf9a?cmpid=BBD050417_MKT&amp;utm_medium=email&amp;utm_source=newsletter&amp;utm_term=170504&amp;utm_campaign=markets\" id=\"webchat-msg-1375910\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">12:18pm</span></span><div class=\"messagebody\"><p>And the avocado crisis  <a href=\"https://www.ft.com/content/d99e786c-3011-11e7-9555-23ef563ecf9a?cmpid=BBD050417_MKT&amp;utm_medium=email&amp;utm_source=newsletter&amp;utm_term=170504&amp;utm_campaign=markets\" target=\"_blank\">https://www.ft.com...m_campaign=markets</a></p>\n</div></div><time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2017-05-04T11:18:51.000Z\" title=\"Thu May 04 2017 11:18:51 GMT+0000 (UTC)\" aria-label=\"Thu May 04 2017 11:18:51 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t12:18 pm\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1493896746\" data-mid=\"1375912\" data-rawmessage=\"Blame the Chinese\" id=\"webchat-msg-1375912\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">12:19pm</span></span><div class=\"messagebody\"><p>Blame the Chinese</p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1493896959\" data-mid=\"1375913\" data-rawmessage=\"I&apos;m going to have to close this session now\" id=\"webchat-msg-1375913\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">12:22pm</span></span><div class=\"messagebody\"><p>I&apos;m going to have to close this session now</p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1493896967\" data-mid=\"1375914\" data-rawmessage=\"Sorry about the wash out.\" id=\"webchat-msg-1375914\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">12:22pm</span></span><div class=\"messagebody\"><p>Sorry about the wash out.</p>\n</div></div><time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2017-05-04T11:23:12.000Z\" title=\"Thu May 04 2017 11:23:12 GMT+0000 (UTC)\" aria-label=\"Thu May 04 2017 11:23:12 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t12:23 pm\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1493897007\" data-mid=\"1375915\" data-rawmessage=\"We&apos;ll get some decent stuff for tomorrow\" id=\"webchat-msg-1375915\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">12:23pm</span></span><div class=\"messagebody\"><p>We&apos;ll get some decent stuff for tomorrow</p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1493897019\" data-mid=\"1375916\" data-rawmessage=\"Promise\" id=\"webchat-msg-1375916\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">12:23pm</span></span><div class=\"messagebody\"><p>Promise</p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1493897026\" data-mid=\"1375917\" data-rawmessage=\"Have a good afternoon\" id=\"webchat-msg-1375917\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">12:23pm</span></span><div class=\"messagebody\"><p>Have a good afternoon</p>\n</div></div><time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2017-05-04T11:23:33.000Z\" title=\"Thu May 04 2017 11:23:33 GMT+0000 (UTC)\" aria-label=\"Thu May 04 2017 11:23:33 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t12:23 pm\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1493897028\" data-mid=\"1375918\" data-rawmessage=\"Bye\" id=\"webchat-msg-1375918\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">12:23pm</span></span><div class=\"messagebody\"><p>Bye</p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1493896401\" data-mid=\"1375903\" data-rawmessage=\"From about 12 years ago\" id=\"webchat-msg-1375903\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">12:13pm</span></span><div class=\"messagebody\"><p>From about 12 years ago</p>\n</div></div></div>",
+  "authors": [
+    {
+      "name": "Paul Murphy",
+      "headshotUrl": "https://www.ft.com/__origami/service/image/v2/images/raw/fthead:paul-murphy?source=alphaville",
+      "isAlphavilleEditor": true,
+      "url": "/author/Paul%20Murphy"
+    }
+  ],
+  "primaryTheme": [
+    {
+      "label": "Markets Live",
+      "url": "/marketslive"
+    }
+  ],
+  "originalTitle": "Markets Live: Thursday, 4th May, 2017",
+  "isLive": false,
+  "subheading": "Live markets commentary from FT.com",
+  "standfirst": "Live markets commentary from FT.com"
+}

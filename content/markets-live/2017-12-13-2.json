@@ -1,0 +1,356 @@
+{
+  "id": "96f8ebdd-792d-3376-99ee-710ea3ed57ec",
+  "webUrl": "http://ftalphaville.ft.com/marketslive/2017-12-13-2/",
+  "title": "Macro Live: Fed “drinking game” edition",
+  "alternativeTitles": {},
+  "provenance": [
+    "https://api.ft.com/internalcontent/96f8ebdd-792d-3376-99ee-710ea3ed57ec"
+  ],
+  "byline": "Alexandra Scaggs, Matthew C Klein",
+  "publishedDate": "2017-12-13T19:16:50.000Z",
+  "firstPublishedDate": "2017-12-13T19:16:50.000Z",
+  "publishReference": "tid_2lmg4gjgul_carousel_1558354976",
+  "curatedRelatedContent": [],
+  "containedIn": [],
+  "canBeDistributed": "yes",
+  "canBeSyndicated": "verify",
+  "comments": {
+    "enabled": true
+  },
+  "standout": {
+    "editorsChoice": false,
+    "exclusive": false,
+    "scoop": false
+  },
+  "realtime": true,
+  "originatingParty": "FT",
+  "_lastUpdatedDateTime": "2019-12-11T16:03:52.291Z",
+  "_lastUpdatedVersion": "7e31a715ef987f4138810700061579e58b572501",
+  "type": "article",
+  "accessLevel": "registered",
+  "topper": {},
+  "url": "http://ftalphaville.ft.com/marketslive/2017-12-13-2/",
+  "relativeUrl": "http://ftalphaville.ft.com/marketslive/2017-12-13-2/",
+  "_editorialComponents": [],
+  "openingHTML": "",
+  "annotations": [
+    {
+      "apiUrl": "http://api.ft.com/brands/89d15f70-640d-11e4-9803-0800200c9a66",
+      "directType": "http://www.ft.com/ontology/product/Brand",
+      "id": "89d15f70-640d-11e4-9803-0800200c9a66",
+      "predicate": "http://www.ft.com/ontology/classification/isClassifiedBy",
+      "prefLabel": "FT Alphaville",
+      "type": "BRAND",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/classification/Classification",
+        "http://www.ft.com/ontology/product/Brand"
+      ],
+      "preposition": "from",
+      "url": "https://www.ft.com/stream/89d15f70-640d-11e4-9803-0800200c9a66",
+      "relativeUrl": "/stream/89d15f70-640d-11e4-9803-0800200c9a66"
+    },
+    {
+      "apiUrl": "http://api.ft.com/things/c91b1fad-1097-468b-be82-9a8ff717d54c",
+      "directType": "http://www.ft.com/ontology/Topic",
+      "id": "c91b1fad-1097-468b-be82-9a8ff717d54c",
+      "predicate": "http://www.ft.com/ontology/classification/isPrimarilyClassifiedBy",
+      "prefLabel": "Markets",
+      "type": "TOPIC",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/Topic"
+      ],
+      "preposition": "on",
+      "url": "https://www.ft.com/markets",
+      "relativeUrl": "/markets"
+    },
+    {
+      "apiUrl": "http://api.ft.com/things/6da31a37-691f-4908-896f-2829ebe2309e",
+      "directType": "http://www.ft.com/ontology/Genre",
+      "id": "6da31a37-691f-4908-896f-2829ebe2309e",
+      "predicate": "http://www.ft.com/ontology/classification/isClassifiedBy",
+      "prefLabel": "Opinion",
+      "type": "GENRE",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/classification/Classification",
+        "http://www.ft.com/ontology/Genre"
+      ],
+      "preposition": "",
+      "url": "https://www.ft.com/opinion",
+      "relativeUrl": "/opinion"
+    },
+    {
+      "apiUrl": "http://api.ft.com/people/76b999ac-61e5-4fe1-9e6f-1926bd41be30",
+      "directType": "http://www.ft.com/ontology/person/Person",
+      "id": "76b999ac-61e5-4fe1-9e6f-1926bd41be30",
+      "predicate": "http://www.ft.com/ontology/annotation/hasAuthor",
+      "prefLabel": "Matthew C Klein",
+      "type": "PERSON",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/person/Person"
+      ],
+      "preposition": "from",
+      "attributes": [
+        {
+          "key": "headshot",
+          "value": "fthead-v1:matthew-c-klein"
+        }
+      ],
+      "url": "https://www.ft.com/stream/76b999ac-61e5-4fe1-9e6f-1926bd41be30",
+      "relativeUrl": "/stream/76b999ac-61e5-4fe1-9e6f-1926bd41be30"
+    },
+    {
+      "apiUrl": "http://api.ft.com/people/985a9520-99cd-4b55-8c8e-d8130b10c970",
+      "directType": "http://www.ft.com/ontology/person/Person",
+      "id": "985a9520-99cd-4b55-8c8e-d8130b10c970",
+      "predicate": "http://www.ft.com/ontology/annotation/hasAuthor",
+      "prefLabel": "Alexandra Scaggs",
+      "type": "PERSON",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/person/Person"
+      ],
+      "preposition": "from",
+      "attributes": [
+        {
+          "key": "headshot",
+          "value": "fthead-v1:alexandra-scaggs"
+        }
+      ],
+      "url": "https://www.ft.com/stream/985a9520-99cd-4b55-8c8e-d8130b10c970",
+      "relativeUrl": "/stream/985a9520-99cd-4b55-8c8e-d8130b10c970"
+    }
+  ],
+  "genreConcept": {
+    "apiUrl": "http://api.ft.com/things/6da31a37-691f-4908-896f-2829ebe2309e",
+    "directType": "http://www.ft.com/ontology/Genre",
+    "id": "6da31a37-691f-4908-896f-2829ebe2309e",
+    "predicate": "http://www.ft.com/ontology/classification/isClassifiedBy",
+    "prefLabel": "Opinion",
+    "type": "GENRE",
+    "types": [
+      "http://www.ft.com/ontology/core/Thing",
+      "http://www.ft.com/ontology/concept/Concept",
+      "http://www.ft.com/ontology/classification/Classification",
+      "http://www.ft.com/ontology/Genre"
+    ],
+    "preposition": "",
+    "url": "https://www.ft.com/opinion",
+    "relativeUrl": "/opinion"
+  },
+  "brandConcept": {
+    "apiUrl": "http://api.ft.com/brands/89d15f70-640d-11e4-9803-0800200c9a66",
+    "directType": "http://www.ft.com/ontology/product/Brand",
+    "id": "89d15f70-640d-11e4-9803-0800200c9a66",
+    "predicate": "http://www.ft.com/ontology/classification/isClassifiedBy",
+    "prefLabel": "FT Alphaville",
+    "type": "BRAND",
+    "types": [
+      "http://www.ft.com/ontology/core/Thing",
+      "http://www.ft.com/ontology/concept/Concept",
+      "http://www.ft.com/ontology/classification/Classification",
+      "http://www.ft.com/ontology/product/Brand"
+    ],
+    "preposition": "from",
+    "url": "https://www.ft.com/stream/89d15f70-640d-11e4-9803-0800200c9a66",
+    "relativeUrl": "/stream/89d15f70-640d-11e4-9803-0800200c9a66"
+  },
+  "authorConcepts": [
+    {
+      "apiUrl": "http://api.ft.com/people/76b999ac-61e5-4fe1-9e6f-1926bd41be30",
+      "directType": "http://www.ft.com/ontology/person/Person",
+      "id": "76b999ac-61e5-4fe1-9e6f-1926bd41be30",
+      "predicate": "http://www.ft.com/ontology/annotation/hasAuthor",
+      "prefLabel": "Matthew C Klein",
+      "type": "PERSON",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/person/Person"
+      ],
+      "preposition": "from",
+      "attributes": [
+        {
+          "key": "headshot",
+          "value": "fthead-v1:matthew-c-klein"
+        }
+      ],
+      "url": "https://www.ft.com/stream/76b999ac-61e5-4fe1-9e6f-1926bd41be30",
+      "relativeUrl": "/stream/76b999ac-61e5-4fe1-9e6f-1926bd41be30"
+    },
+    {
+      "apiUrl": "http://api.ft.com/people/985a9520-99cd-4b55-8c8e-d8130b10c970",
+      "directType": "http://www.ft.com/ontology/person/Person",
+      "id": "985a9520-99cd-4b55-8c8e-d8130b10c970",
+      "predicate": "http://www.ft.com/ontology/annotation/hasAuthor",
+      "prefLabel": "Alexandra Scaggs",
+      "type": "PERSON",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/person/Person"
+      ],
+      "preposition": "from",
+      "attributes": [
+        {
+          "key": "headshot",
+          "value": "fthead-v1:alexandra-scaggs"
+        }
+      ],
+      "url": "https://www.ft.com/stream/985a9520-99cd-4b55-8c8e-d8130b10c970",
+      "relativeUrl": "/stream/985a9520-99cd-4b55-8c8e-d8130b10c970"
+    }
+  ],
+  "design": {
+    "theme": "basic",
+    "layout": "default"
+  },
+  "displayConcept": {
+    "apiUrl": "http://api.ft.com/things/c91b1fad-1097-468b-be82-9a8ff717d54c",
+    "directType": "http://www.ft.com/ontology/Topic",
+    "id": "c91b1fad-1097-468b-be82-9a8ff717d54c",
+    "predicate": "http://www.ft.com/ontology/classification/isPrimarilyClassifiedBy",
+    "prefLabel": "Markets",
+    "type": "TOPIC",
+    "types": [
+      "http://www.ft.com/ontology/core/Thing",
+      "http://www.ft.com/ontology/concept/Concept",
+      "http://www.ft.com/ontology/Topic"
+    ],
+    "preposition": "on",
+    "url": "https://www.ft.com/markets",
+    "relativeUrl": "/markets",
+    "isDisplayTag": false
+  },
+  "teaser": {
+    "id": "96f8ebdd-792d-3376-99ee-710ea3ed57ec",
+    "url": "http://ftalphaville.ft.com/marketslive/2017-12-13-2/",
+    "relativeUrl": "http://ftalphaville.ft.com/marketslive/2017-12-13-2/",
+    "type": "article",
+    "indicators": {
+      "isColumn": false,
+      "isOpinion": true,
+      "isScoop": false,
+      "isExclusive": false,
+      "isEditorsChoice": false,
+      "accessLevel": "registered"
+    },
+    "metaPrefixText": "FT Alphaville",
+    "metaSuffixText": null,
+    "metaLink": {
+      "id": "c91b1fad-1097-468b-be82-9a8ff717d54c",
+      "predicate": "http://www.ft.com/ontology/classification/isPrimarilyClassifiedBy",
+      "prefLabel": "Markets",
+      "type": "TOPIC",
+      "url": "https://www.ft.com/markets",
+      "relativeUrl": "/markets"
+    },
+    "metaAltLink": null,
+    "title": "Macro Live: Fed “drinking game” edition",
+    "altStandfirst": null,
+    "publishedDate": "2017-12-13T19:16:50.000Z",
+    "firstPublishedDate": "2017-12-13T19:16:50.000Z",
+    "image": {},
+    "headshot": null,
+    "parentTheme": null
+  },
+  "contentStats": {
+    "wordCount": 1,
+    "paragraphs": 0,
+    "relatedBoxes": 0,
+    "pullQuotes": 0,
+    "pullQuotesWithImages": 0,
+    "bigNumbers": 0,
+    "images": 0,
+    "responsiveImages": 0,
+    "graphics": 0,
+    "audio": 0,
+    "videos": 0,
+    "internalVideos": 0,
+    "externalVideos": 0,
+    "subheadings": 0,
+    "curatedRecommended": 0,
+    "layouts": 0,
+    "layoutSlots": 0,
+    "infoBox": 0,
+    "tables": 0,
+    "timelines": 0,
+    "singleArticleRecommendations": 0,
+    "sentiment": 0,
+    "scoreGraphicVolume": 0,
+    "scoreGraphicDensity": 0,
+    "scorePictureVolume": 0,
+    "scorePictureDensity": 0
+  },
+  "isMarketsLive": true,
+  "av2WebUrl": "/marketslive/2017-12-13-2/",
+  "authors": [
+    {
+      "concept": {
+        "apiUrl": "http://api.ft.com/people/76b999ac-61e5-4fe1-9e6f-1926bd41be30",
+        "directType": "http://www.ft.com/ontology/person/Person",
+        "id": "76b999ac-61e5-4fe1-9e6f-1926bd41be30",
+        "predicate": "http://www.ft.com/ontology/annotation/hasAuthor",
+        "prefLabel": "Matthew C Klein",
+        "type": "PERSON",
+        "types": [
+          "http://www.ft.com/ontology/core/Thing",
+          "http://www.ft.com/ontology/concept/Concept",
+          "http://www.ft.com/ontology/person/Person"
+        ],
+        "preposition": "from",
+        "attributes": [
+          {
+            "key": "headshot",
+            "value": "fthead-v1:matthew-c-klein"
+          }
+        ],
+        "url": "https://www.ft.com/stream/76b999ac-61e5-4fe1-9e6f-1926bd41be30",
+        "relativeUrl": "/stream/76b999ac-61e5-4fe1-9e6f-1926bd41be30"
+      },
+      "name": "Matthew C Klein",
+      "url": "https://www.ft.com/stream/76b999ac-61e5-4fe1-9e6f-1926bd41be30"
+    },
+    {
+      "concept": {
+        "apiUrl": "http://api.ft.com/people/985a9520-99cd-4b55-8c8e-d8130b10c970",
+        "directType": "http://www.ft.com/ontology/person/Person",
+        "id": "985a9520-99cd-4b55-8c8e-d8130b10c970",
+        "predicate": "http://www.ft.com/ontology/annotation/hasAuthor",
+        "prefLabel": "Alexandra Scaggs",
+        "type": "PERSON",
+        "types": [
+          "http://www.ft.com/ontology/core/Thing",
+          "http://www.ft.com/ontology/concept/Concept",
+          "http://www.ft.com/ontology/person/Person"
+        ],
+        "preposition": "from",
+        "attributes": [
+          {
+            "key": "headshot",
+            "value": "fthead-v1:alexandra-scaggs"
+          }
+        ],
+        "url": "https://www.ft.com/stream/985a9520-99cd-4b55-8c8e-d8130b10c970",
+        "relativeUrl": "/stream/985a9520-99cd-4b55-8c8e-d8130b10c970"
+      },
+      "name": "Alexandra Scaggs",
+      "url": "https://www.ft.com/stream/985a9520-99cd-4b55-8c8e-d8130b10c970"
+    }
+  ],
+  "primaryTheme": [
+    {
+      "label": "Markets Live",
+      "url": "/marketslive"
+    }
+  ],
+  "originalTitle": "Macro Live: Fed “drinking game” edition"
+}

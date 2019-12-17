@@ -20,8 +20,6 @@
   ],
   "dependencies": {
     "alphaville-ui": "^4.0.0",
-    "alphaville-marketslive-chat": "^2.0.0",
-    "webchat": "^3.0.0",
     "o-autoinit": "^1.2.0",
     "o-comments-beta": "https://github.com/Financial-Times/o-comments.git#v7.1.4",
     "o-comments": "https://github.com/Financial-Times/o-comments.git#major-cascade-breaking-v5",

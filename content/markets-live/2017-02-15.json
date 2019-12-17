@@ -1,0 +1,225 @@
+{
+  "id": "66f2a2cf-987b-3bcf-b58c-6eb7f5ccab0e",
+  "webUrl": "http://ftalphaville.ft.com/marketslive/2017-02-15/",
+  "title": "Wednesday, 15th February, 2017",
+  "alternativeTitles": {},
+  "provenance": [
+    "https://api.ft.com/internalcontent/66f2a2cf-987b-3bcf-b58c-6eb7f5ccab0e"
+  ],
+  "byline": "Paul Murphy",
+  "publishedDate": "2017-02-15T11:00:25.000Z",
+  "firstPublishedDate": "2017-02-15T11:00:25.000Z",
+  "publishReference": "republish_-cc83d326-1623-497a-9953-aa9083647710_carousel_1558479434",
+  "curatedRelatedContent": [],
+  "containedIn": [],
+  "canBeDistributed": "yes",
+  "canBeSyndicated": "verify",
+  "comments": {
+    "enabled": true
+  },
+  "standout": {
+    "editorsChoice": false,
+    "exclusive": false,
+    "scoop": false
+  },
+  "realtime": true,
+  "originatingParty": "FT",
+  "_lastUpdatedDateTime": "2019-12-13T09:42:12.711Z",
+  "_lastUpdatedVersion": "7e31a715ef987f4138810700061579e58b572501",
+  "type": "article",
+  "accessLevel": "registered",
+  "topper": {},
+  "url": "http://ftalphaville.ft.com/marketslive/2017-02-15/",
+  "relativeUrl": "http://ftalphaville.ft.com/marketslive/2017-02-15/",
+  "_editorialComponents": [],
+  "openingHTML": "<p>Live markets commentary from FT.com</p>",
+  "annotations": [
+    {
+      "apiUrl": "http://api.ft.com/brands/89d15f70-640d-11e4-9803-0800200c9a66",
+      "directType": "http://www.ft.com/ontology/product/Brand",
+      "id": "89d15f70-640d-11e4-9803-0800200c9a66",
+      "predicate": "http://www.ft.com/ontology/classification/isClassifiedBy",
+      "prefLabel": "FT Alphaville",
+      "type": "BRAND",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/classification/Classification",
+        "http://www.ft.com/ontology/product/Brand"
+      ],
+      "preposition": "from",
+      "url": "https://www.ft.com/stream/89d15f70-640d-11e4-9803-0800200c9a66",
+      "relativeUrl": "/stream/89d15f70-640d-11e4-9803-0800200c9a66"
+    },
+    {
+      "apiUrl": "http://api.ft.com/things/c91b1fad-1097-468b-be82-9a8ff717d54c",
+      "directType": "http://www.ft.com/ontology/Topic",
+      "id": "c91b1fad-1097-468b-be82-9a8ff717d54c",
+      "predicate": "http://www.ft.com/ontology/classification/isPrimarilyClassifiedBy",
+      "prefLabel": "Markets",
+      "type": "TOPIC",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/Topic"
+      ],
+      "preposition": "on",
+      "url": "https://www.ft.com/markets",
+      "relativeUrl": "/markets"
+    },
+    {
+      "apiUrl": "http://api.ft.com/things/6da31a37-691f-4908-896f-2829ebe2309e",
+      "directType": "http://www.ft.com/ontology/Genre",
+      "id": "6da31a37-691f-4908-896f-2829ebe2309e",
+      "predicate": "http://www.ft.com/ontology/classification/isClassifiedBy",
+      "prefLabel": "Opinion",
+      "type": "GENRE",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/classification/Classification",
+        "http://www.ft.com/ontology/Genre"
+      ],
+      "preposition": "",
+      "url": "https://www.ft.com/opinion",
+      "relativeUrl": "/opinion"
+    }
+  ],
+  "genreConcept": {
+    "apiUrl": "http://api.ft.com/things/6da31a37-691f-4908-896f-2829ebe2309e",
+    "directType": "http://www.ft.com/ontology/Genre",
+    "id": "6da31a37-691f-4908-896f-2829ebe2309e",
+    "predicate": "http://www.ft.com/ontology/classification/isClassifiedBy",
+    "prefLabel": "Opinion",
+    "type": "GENRE",
+    "types": [
+      "http://www.ft.com/ontology/core/Thing",
+      "http://www.ft.com/ontology/concept/Concept",
+      "http://www.ft.com/ontology/classification/Classification",
+      "http://www.ft.com/ontology/Genre"
+    ],
+    "preposition": "",
+    "url": "https://www.ft.com/opinion",
+    "relativeUrl": "/opinion"
+  },
+  "brandConcept": {
+    "apiUrl": "http://api.ft.com/brands/89d15f70-640d-11e4-9803-0800200c9a66",
+    "directType": "http://www.ft.com/ontology/product/Brand",
+    "id": "89d15f70-640d-11e4-9803-0800200c9a66",
+    "predicate": "http://www.ft.com/ontology/classification/isClassifiedBy",
+    "prefLabel": "FT Alphaville",
+    "type": "BRAND",
+    "types": [
+      "http://www.ft.com/ontology/core/Thing",
+      "http://www.ft.com/ontology/concept/Concept",
+      "http://www.ft.com/ontology/classification/Classification",
+      "http://www.ft.com/ontology/product/Brand"
+    ],
+    "preposition": "from",
+    "url": "https://www.ft.com/stream/89d15f70-640d-11e4-9803-0800200c9a66",
+    "relativeUrl": "/stream/89d15f70-640d-11e4-9803-0800200c9a66"
+  },
+  "authorConcepts": [],
+  "design": {
+    "theme": "basic",
+    "layout": "default"
+  },
+  "displayConcept": {
+    "apiUrl": "http://api.ft.com/things/c91b1fad-1097-468b-be82-9a8ff717d54c",
+    "directType": "http://www.ft.com/ontology/Topic",
+    "id": "c91b1fad-1097-468b-be82-9a8ff717d54c",
+    "predicate": "http://www.ft.com/ontology/classification/isPrimarilyClassifiedBy",
+    "prefLabel": "Markets",
+    "type": "TOPIC",
+    "types": [
+      "http://www.ft.com/ontology/core/Thing",
+      "http://www.ft.com/ontology/concept/Concept",
+      "http://www.ft.com/ontology/Topic"
+    ],
+    "preposition": "on",
+    "url": "https://www.ft.com/markets",
+    "relativeUrl": "/markets",
+    "isDisplayTag": false
+  },
+  "teaser": {
+    "id": "66f2a2cf-987b-3bcf-b58c-6eb7f5ccab0e",
+    "url": "http://ftalphaville.ft.com/marketslive/2017-02-15/",
+    "relativeUrl": "http://ftalphaville.ft.com/marketslive/2017-02-15/",
+    "type": "article",
+    "indicators": {
+      "isColumn": false,
+      "isOpinion": true,
+      "isScoop": false,
+      "isExclusive": false,
+      "isEditorsChoice": false,
+      "accessLevel": "registered"
+    },
+    "metaPrefixText": "FT Alphaville",
+    "metaSuffixText": null,
+    "metaLink": {
+      "id": "c91b1fad-1097-468b-be82-9a8ff717d54c",
+      "predicate": "http://www.ft.com/ontology/classification/isPrimarilyClassifiedBy",
+      "prefLabel": "Markets",
+      "type": "TOPIC",
+      "url": "https://www.ft.com/markets",
+      "relativeUrl": "/markets"
+    },
+    "metaAltLink": null,
+    "title": "Markets Live: Wednesday, 15th February, 2017",
+    "altStandfirst": null,
+    "publishedDate": "2017-02-15T11:00:25.000Z",
+    "firstPublishedDate": "2017-02-15T11:00:25.000Z",
+    "image": {},
+    "headshot": null,
+    "parentTheme": null
+  },
+  "contentStats": {
+    "wordCount": 1,
+    "paragraphs": 0,
+    "relatedBoxes": 0,
+    "pullQuotes": 0,
+    "pullQuotesWithImages": 0,
+    "bigNumbers": 0,
+    "images": 0,
+    "responsiveImages": 0,
+    "graphics": 0,
+    "audio": 0,
+    "videos": 0,
+    "internalVideos": 0,
+    "externalVideos": 0,
+    "subheadings": 0,
+    "curatedRecommended": 0,
+    "layouts": 0,
+    "layoutSlots": 0,
+    "infoBox": 0,
+    "tables": 0,
+    "timelines": 0,
+    "singleArticleRecommendations": 0,
+    "sentiment": 0,
+    "scoreGraphicVolume": 0,
+    "scoreGraphicDensity": 0,
+    "scorePictureVolume": 0,
+    "scorePictureDensity": 0
+  },
+  "isMarketsLive": true,
+  "av2WebUrl": "/marketslive/2017-02-15/",
+  "bodyHTML": "<div class=\"webchat-closed-content\"><time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2017-02-15T11:42:39.000Z\" title=\"Wed Feb 15 2017 11:42:39 GMT+0000 (UTC)\" aria-label=\"Wed Feb 15 2017 11:42:39 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:42 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1487158974\" data-mid=\"1364970\" data-rawmessage=\"Hi\" id=\"webchat-msg-1364970\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">11:42am</span></span><div class=\"messagebody\"><p>Hi</p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1487159032\" data-mid=\"1364972\" data-rawmessage=\"We had about 15 people working on a fix yesterday.  Think we got it for regular AV posts -- but not for ML, clearly\" id=\"webchat-msg-1364972\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">11:43am</span></span><div class=\"messagebody\"><p>We had about 15 people working on a fix yesterday.  Think we got it for regular AV posts -- but not for ML, clearly</p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1487159097\" data-mid=\"1364973\" data-rawmessage=\"The problem(s) is/are around forcing AV content into what&apos;s known as Next FT here\" id=\"webchat-msg-1364973\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">11:44am</span></span><div class=\"messagebody\"><p>The problem(s) is/are around forcing AV content into what&apos;s known as Next FT here</p>\n</div></div><time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2017-02-15T11:45:55.000Z\" title=\"Wed Feb 15 2017 11:45:55 GMT+0000 (UTC)\" aria-label=\"Wed Feb 15 2017 11:45:55 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:45 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1487159170\" data-mid=\"1364974\" data-rawmessage=\"Trouble is -- you readers are just too tolerant\" id=\"webchat-msg-1364974\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">11:46am</span></span><div class=\"messagebody\"><p>Trouble is -- you readers are just too tolerant</p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1487159199\" data-mid=\"1364975\" data-rawmessage=\"You might complain on here and/or just think we&apos;re rubbish\" id=\"webchat-msg-1364975\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">11:46am</span></span><div class=\"messagebody\"><p>You might complain on here and/or just think we&apos;re rubbish</p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1487159244\" data-mid=\"1364976\" data-rawmessage=\"But those complaints don&apos;t reach the right ears\" id=\"webchat-msg-1364976\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">11:47am</span></span><div class=\"messagebody\"><p>But those complaints don&apos;t reach the right ears</p>\n</div></div><time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2017-02-15T11:47:13.000Z\" title=\"Wed Feb 15 2017 11:47:13 GMT+0000 (UTC)\" aria-label=\"Wed Feb 15 2017 11:47:13 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:47 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1487159248\" data-mid=\"1364977\" data-rawmessage=\"If you get my drift\" id=\"webchat-msg-1364977\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">11:47am</span></span><div class=\"messagebody\"><p>If you get my drift</p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1487159276\" data-mid=\"1364978\" data-rawmessage=\"Pharma {censored}\" id=\"webchat-msg-1364978\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">11:47am</span></span><div class=\"messagebody\"><p>Pharma <span class=\"webchat-emoticon webchat-emoticon--censored\" data-code=\"censored\">Censored</span></p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1487159333\" data-mid=\"1364979\" data-rawmessage=\"It&apos;s not a hack.  It&apos;s self-inflicted\" id=\"webchat-msg-1364979\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">11:48am</span></span><div class=\"messagebody\"><p>It&apos;s not a hack.  It&apos;s self-inflicted</p>\n</div></div><time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2017-02-15T11:48:42.000Z\" title=\"Wed Feb 15 2017 11:48:42 GMT+0000 (UTC)\" aria-label=\"Wed Feb 15 2017 11:48:42 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:48 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1487159337\" data-mid=\"1364980\" data-rawmessage=\"have some Donald\" id=\"webchat-msg-1364980\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">11:48am</span></span><div class=\"messagebody\"><p>have some Donald</p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1487159339\" data-mid=\"1364981\" data-rawmessage=\"https://twitter.com/realDonaldTrump/status/831830548565852160\" id=\"webchat-msg-1364981\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">11:48am</span></span><div class=\"messagebody\"><p class=\"embeddedtweet\"><a href=\"https://twitter.com/realDonaldTrump/status/831830548565852160\">https://twitter.com/realDonaldTrump/status/831830548565852160</a></p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1487159444\" data-mid=\"1364982\" data-rawmessage=\"Bryce has wandered off to do something else, btw\" id=\"webchat-msg-1364982\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">11:50am</span></span><div class=\"messagebody\"><p>Bryce has wandered off to do something else, btw</p>\n</div></div><time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2017-02-15T11:50:50.000Z\" title=\"Wed Feb 15 2017 11:50:50 GMT+0000 (UTC)\" aria-label=\"Wed Feb 15 2017 11:50:50 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:50 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1487159465\" data-mid=\"1364983\" data-rawmessage=\"What can I tell you?\" id=\"webchat-msg-1364983\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">11:51am</span></span><div class=\"messagebody\"><p>What can I tell you?</p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1487159470\" data-mid=\"1364984\" data-rawmessage=\"GBK down, stocks up\" id=\"webchat-msg-1364984\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">11:51am</span></span><div class=\"messagebody\"><p>GBK down, stocks up</p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1487159478\" data-mid=\"1364985\" data-rawmessage=\"Oh, have a read of this\" id=\"webchat-msg-1364985\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">11:51am</span></span><div class=\"messagebody\"><p>Oh, have a read of this</p>\n</div></div><time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2017-02-15T11:51:13.000Z\" title=\"Wed Feb 15 2017 11:51:13 GMT+0000 (UTC)\" aria-label=\"Wed Feb 15 2017 11:51:13 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:51 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1487159488\" data-mid=\"1364986\" data-rawmessage=\"http://www.yalelawjournal.org/article/amazons-antitrust-paradox\" id=\"webchat-msg-1364986\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">11:51am</span></span><div class=\"messagebody\"><p><a href=\"http://www.yalelawjournal.org/article/amazons-antitrust-paradox\" target=\"_blank\">http://www.yalelaw...-antitrust-paradox</a></p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1487159496\" data-mid=\"1364987\" data-rawmessage=\"V interesting analysis i thought\" id=\"webchat-msg-1364987\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">11:51am</span></span><div class=\"messagebody\"><p>V interesting analysis i thought</p>\n</div></div><div class=\"msg blockquote has-headshot\" data-timestamp=\"1487159507\" data-mid=\"1364988\" data-rawmessage=\"ABSTRACT. Amazon is the titan of twenty-first century commerce. In addition to being a retailer, it is now a marketing platform, a delivery and logistics network, a payment service, a credit lender, an auction house, a major book publisher, a producer of television and films, a fashion designer, a hardware manufacturer, and a leading host of cloud server space. Although Amazon has clocked staggering growth, it generates meager profits, choosing to price below-cost and expand widely instead. Through this strategy, the company has positioned itself at the center of e-commerce and now serves as essential infrastructure for a host of other businesses that depend upon it. Elements of the firm&#x2019;s structure and conduct pose anticompetitive concerns&#x2014;yet it has escaped antitrust scrutiny.\" id=\"webchat-msg-1364988\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">11:51am</span></span><div class=\"messagebody\"><blockquote><p>ABSTRACT. Amazon is the titan of twenty-first century commerce. In addition to being a retailer, it is now a marketing platform, a delivery and logistics network, a payment service, a credit lender, an auction house, a major book publisher, a producer of television and films, a fashion designer, a hardware manufacturer, and a leading host of cloud server space. Although Amazon has clocked staggering growth, it generates meager profits, choosing to price below-cost and expand widely instead. Through this strategy, the company has positioned itself at the center of e-commerce and now serves as essential infrastructure for a host of other businesses that depend upon it. Elements of the firm&#x2019;s structure and conduct pose anticompetitive concerns&#x2014;yet it has escaped antitrust scrutiny.</p></blockquote>\n</div></div><time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2017-02-15T11:51:49.000Z\" title=\"Wed Feb 15 2017 11:51:49 GMT+0000 (UTC)\" aria-label=\"Wed Feb 15 2017 11:51:49 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:51 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg blockquote has-headshot\" data-timestamp=\"1487159524\" data-mid=\"1364989\" data-rawmessage=\"This Note argues that the current framework in antitrust&#x2014;specifically its pegging competition to &#x201C;consumer welfare,&#x201D; defined as short-term price effects&#x2014;is unequipped to capture the architecture of market power in the modern economy. We cannot cognize the potential harms to competition posed by Amazon&#x2019;s dominance if we measure competition primarily through price and output. Specifically, current doctrine underappreciates the risk of predatory pricing and how integration across distinct business lines may prove anticompetitive. These concerns are heightened in the context of online platforms for two reasons. First, the economics of platform markets create incentives for a company to pursue growth over profits, a strategy that investors have rewarded. Under these conditions, predatory pricing becomes highly rational&#x2014;even as existing doctrine treats it as irrational and therefore implausible. Second, because online platforms serve as critical intermediaries, integrating across business lines positions these platforms to control the essential infrastructure on which their rivals depend. This dual role also enables a platform to exploit information collected on companies using its services to undermine them as competitors.\" id=\"webchat-msg-1364989\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">11:52am</span></span><div class=\"messagebody\"><blockquote><p>This Note argues that the current framework in antitrust&#x2014;specifically its pegging competition to &#x201C;consumer welfare,&#x201D; defined as short-term price effects&#x2014;is unequipped to capture the architecture of market power in the modern economy. We cannot cognize the potential harms to competition posed by Amazon&#x2019;s dominance if we measure competition primarily through price and output. Specifically, current doctrine underappreciates the risk of predatory pricing and how integration across distinct business lines may prove anticompetitive. These concerns are heightened in the context of online platforms for two reasons. First, the economics of platform markets create incentives for a company to pursue growth over profits, a strategy that investors have rewarded. Under these conditions, predatory pricing becomes highly rational&#x2014;even as existing doctrine treats it as irrational and therefore implausible. Second, because online platforms serve as critical intermediaries, integrating across business lines positions these platforms to control the essential infrastructure on which their rivals depend. This dual role also enables a platform to exploit information collected on companies using its services to undermine them as competitors.</p></blockquote>\n</div></div><div class=\"msg blockquote has-headshot\" data-timestamp=\"1487159540\" data-mid=\"1364990\" data-rawmessage=\"This Note maps out facets of Amazon&#x2019;s dominance. Doing so enables us to make sense of its business strategy, illuminates anticompetitive aspects of Amazon&#x2019;s structure and conduct, and underscores deficiencies in current doctrine. The Note closes by considering two potential regimes for addressing Amazon&#x2019;s power: restoring traditional antitrust and competition policy principles or applying common carrier obligations and duties.\" id=\"webchat-msg-1364990\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">11:52am</span></span><div class=\"messagebody\"><blockquote><p>This Note maps out facets of Amazon&#x2019;s dominance. Doing so enables us to make sense of its business strategy, illuminates anticompetitive aspects of Amazon&#x2019;s structure and conduct, and underscores deficiencies in current doctrine. The Note closes by considering two potential regimes for addressing Amazon&#x2019;s power: restoring traditional antitrust and competition policy principles or applying common carrier obligations and duties.</p></blockquote>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1487158987\" data-mid=\"1364971\" data-rawmessage=\"Sorry about this\" id=\"webchat-msg-1364971\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">11:43am</span></span><div class=\"messagebody\"><p>Sorry about this</p>\n</div></div><time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2017-02-15T11:55:19.000Z\" title=\"Wed Feb 15 2017 11:55:19 GMT+0000 (UTC)\" aria-label=\"Wed Feb 15 2017 11:55:19 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:55 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1487159734\" data-mid=\"1364992\" data-rawmessage=\"Very good from Betaville...\" id=\"webchat-msg-1364992\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">11:55am</span></span><div class=\"messagebody\"><p>Very good from Betaville...</p>\n</div></div><div class=\"msg blockquote has-headshot\" data-timestamp=\"1487159739\" data-mid=\"1364993\" data-rawmessage=\"The chaps and chapettes at FT Alphaville appear to be running behind schedule this week so I thought I step in and fill the void.\n\nI guess one event the market will be scrutinising will be Liberty Global&apos;s full-year results, which I&apos;m told by people familiar with the matter will be unveiled this evening in the US...\n\n- See more at: https://www.betaville.co.uk/#sthash.79fc9Rgh.dpuf\" id=\"webchat-msg-1364993\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">11:55am</span></span><div class=\"messagebody\"><blockquote><p>The chaps and chapettes at FT Alphaville appear to be running behind schedule this week so I thought I step in and fill the void.</p>\n<p>I guess one event the market will be scrutinising will be Liberty Global&apos;s full-year results, which I&apos;m told by people familiar with the matter will be unveiled this evening in the US...</p>\n<p>- See more at: <a href=\"https://www.betaville.co.uk/#sthash.79fc9Rgh.dpuf\" target=\"_blank\">https://www.betavi...hash.79fc9Rgh.dpuf</a></p></blockquote>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1487159747\" data-mid=\"1364994\" data-rawmessage=\"Maybe we should swap names\" id=\"webchat-msg-1364994\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">11:55am</span></span><div class=\"messagebody\"><p>Maybe we should swap names</p>\n</div></div><time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2017-02-15T11:57:03.000Z\" title=\"Wed Feb 15 2017 11:57:03 GMT+0000 (UTC)\" aria-label=\"Wed Feb 15 2017 11:57:03 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:57 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1487159838\" data-mid=\"1364995\" data-rawmessage=\"No fresh comment on ITV.  Have Liberty looked closely?  Course they have.  Will they bid?  Dunno.\" id=\"webchat-msg-1364995\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">11:57am</span></span><div class=\"messagebody\"><p>No fresh comment on ITV.  Have Liberty looked closely?  Course they have.  Will they bid?  Dunno.</p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1487159932\" data-mid=\"1364996\" data-rawmessage=\"Boycott -- we could.\" id=\"webchat-msg-1364996\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">11:58am</span></span><div class=\"messagebody\"><p>Boycott -- we could.</p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1487159948\" data-mid=\"1364997\" data-rawmessage=\"We use Slack for AV editorial comms.  It&apos;s great\" id=\"webchat-msg-1364997\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">11:59am</span></span><div class=\"messagebody\"><p>We use Slack for AV editorial comms.  It&apos;s great</p>\n</div></div><time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2017-02-15T11:59:06.000Z\" title=\"Wed Feb 15 2017 11:59:06 GMT+0000 (UTC)\" aria-label=\"Wed Feb 15 2017 11:59:06 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:59 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1487159961\" data-mid=\"1364998\" data-rawmessage=\"Is there a cap to channel members?\" id=\"webchat-msg-1364998\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">11:59am</span></span><div class=\"messagebody\"><p>Is there a cap to channel members?</p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1487159984\" data-mid=\"1364999\" data-rawmessage=\"We&apos;ve also talked about Markets Actually Live\" id=\"webchat-msg-1364999\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">11:59am</span></span><div class=\"messagebody\"><p>We&apos;ve also talked about Markets Actually Live</p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1487159995\" data-mid=\"1365000\" data-rawmessage=\"Holding sessions in Bow Wine Vaults or somewhere\" id=\"webchat-msg-1365000\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">11:59am</span></span><div class=\"messagebody\"><p>Holding sessions in Bow Wine Vaults or somewhere</p>\n</div></div><time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2017-02-15T12:01:39.000Z\" title=\"Wed Feb 15 2017 12:01:39 GMT+0000 (UTC)\" aria-label=\"Wed Feb 15 2017 12:01:39 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t12:01 pm\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1487160114\" data-mid=\"1365001\" data-rawmessage=\"Just reading Joe W...\" id=\"webchat-msg-1365001\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">12:01pm</span></span><div class=\"messagebody\"><p>Just reading Joe W...</p>\n</div></div><div class=\"msg blockquote has-headshot\" data-timestamp=\"1487160124\" data-mid=\"1365002\" data-rawmessage=\"Shares of Twitter plunged last week, disappointing investors who had hoped that President Trump&apos;s active presence on the platform might give it new vitality. Why can&apos;t Twitter thrive as the preeminent place for consuming and talking about real-time news? The Canadian theorist Marshall McLuhan posited four laws of media, one of which was that all media eventually flips or reverses itself. A look at modern media shows this is clearly true. Twitter started as a great place to have intelligent conversations. Now it&apos;s filled with abuse and shouting. Facebook aspires to be a place to connect with your friends and get the news. Now it&apos;s where you get fake news and come to loathe your friends. E-mail promised to offer a more efficient alternative to physical mail. Now e-mail is a chore and people brag about &apos;inbox zero&apos; like it&apos;s an accomplishment. Meanwhile, mobile phones ended up leading to the death of phone calls. This is a handy concept to keep in mind, and a fun game to play as you try to anticipate the unexpected consequences of future technological innovations.\" id=\"webchat-msg-1365002\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">12:02pm</span></span><div class=\"messagebody\"><blockquote><p>Shares of Twitter plunged last week, disappointing investors who had hoped that President Trump&apos;s active presence on the platform might give it new vitality. Why can&apos;t Twitter thrive as the preeminent place for consuming and talking about real-time news? The Canadian theorist Marshall McLuhan posited four laws of media, one of which was that all media eventually flips or reverses itself. A look at modern media shows this is clearly true. Twitter started as a great place to have intelligent conversations. Now it&apos;s filled with abuse and shouting. Facebook aspires to be a place to connect with your friends and get the news. Now it&apos;s where you get fake news and come to loathe your friends. E-mail promised to offer a more efficient alternative to physical mail. Now e-mail is a chore and people brag about &apos;inbox zero&apos; like it&apos;s an accomplishment. Meanwhile, mobile phones ended up leading to the death of phone calls. This is a handy concept to keep in mind, and a fun game to play as you try to anticipate the unexpected consequences of future technological innovations.</p></blockquote>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1487160144\" data-mid=\"1365003\" data-rawmessage=\"&quot;all media eventually flips or reverses itself&quot;\" id=\"webchat-msg-1365003\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">12:02pm</span></span><div class=\"messagebody\"><p>&quot;all media eventually flips or reverses itself&quot;</p>\n</div></div><time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2017-02-15T12:02:16.000Z\" title=\"Wed Feb 15 2017 12:02:16 GMT+0000 (UTC)\" aria-label=\"Wed Feb 15 2017 12:02:16 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t12:02 pm\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1487160151\" data-mid=\"1365004\" data-rawmessage=\"Yep, we&apos;ve flipped\" id=\"webchat-msg-1365004\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">12:02pm</span></span><div class=\"messagebody\"><p>Yep, we&apos;ve flipped</p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1487160171\" data-mid=\"1365005\" data-rawmessage=\"I&apos;m going to close this session now.\" id=\"webchat-msg-1365005\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">12:02pm</span></span><div class=\"messagebody\"><p>I&apos;m going to close this session now.</p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1487160192\" data-mid=\"1365006\" data-rawmessage=\"Need to regroup with the techies, find out what the prob is. *Test it*\" id=\"webchat-msg-1365006\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">12:03pm</span></span><div class=\"messagebody\"><p>Need to regroup with the techies, find out what the prob is. <strong>Test it</strong></p>\n</div></div><time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2017-02-15T12:03:17.000Z\" title=\"Wed Feb 15 2017 12:03:17 GMT+0000 (UTC)\" aria-label=\"Wed Feb 15 2017 12:03:17 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t12:03 pm\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1487160212\" data-mid=\"1365007\" data-rawmessage=\"And promise tomorrow to put up an early note saying Go/No Go with ML.\" id=\"webchat-msg-1365007\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">12:03pm</span></span><div class=\"messagebody\"><p>And promise tomorrow to put up an early note saying Go/No Go with ML.</p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1487160222\" data-mid=\"1365008\" data-rawmessage=\"Rather than having constantly hitting refresh\" id=\"webchat-msg-1365008\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">12:03pm</span></span><div class=\"messagebody\"><p>Rather than having constantly hitting refresh</p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1487160233\" data-mid=\"1365009\" data-rawmessage=\"So *sorry* about the last three days\" id=\"webchat-msg-1365009\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">12:03pm</span></span><div class=\"messagebody\"><p>So <strong>sorry</strong> about the last three days</p>\n</div></div><time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2017-02-15T12:04:37.000Z\" title=\"Wed Feb 15 2017 12:04:37 GMT+0000 (UTC)\" aria-label=\"Wed Feb 15 2017 12:04:37 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t12:04 pm\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1487160292\" data-mid=\"1365010\" data-rawmessage=\"Bye\" id=\"webchat-msg-1365010\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">12:04pm</span></span><div class=\"messagebody\"><p>Bye</p>\n</div></div><div class=\"msg normal has-headshot\" data-timestamp=\"1487159609\" data-mid=\"1364991\" data-rawmessage=\"Trouble is -- the US authorities are not going to go through a proper overhaul of competition policy with that berserk guy in the White House\" id=\"webchat-msg-1364991\">\n\t<span class=\"messageheader\"><span class=\"participant color-1\">PM</span><span class=\"timestamp\">11:53am</span></span><div class=\"messagebody\"><p>Trouble is -- the US authorities are not going to go through a proper overhaul of competition policy with that berserk guy in the White House</p>\n</div></div></div>",
+  "authors": [
+    {
+      "name": "Paul Murphy",
+      "headshotUrl": "https://www.ft.com/__origami/service/image/v2/images/raw/fthead:paul-murphy?source=alphaville",
+      "isAlphavilleEditor": true,
+      "url": "/author/Paul%20Murphy"
+    }
+  ],
+  "primaryTheme": [
+    {
+      "label": "Markets Live",
+      "url": "/marketslive"
+    }
+  ],
+  "originalTitle": "Markets Live: Wednesday, 15th February, 2017",
+  "isLive": false,
+  "subheading": "Live markets commentary from FT.com",
+  "standfirst": "Live markets commentary from FT.com"
+}

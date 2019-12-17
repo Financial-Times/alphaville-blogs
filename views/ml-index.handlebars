@@ -1,22 +1,5 @@
 {{#contentFor "head"}}
 	<link rel="stylesheet" href="{{assetsBasePath}}/build/ml-index.css" />
-
-	<script>
-		document.addEventListener('o.DOMContentLoaded', function () {
-			document.addEventListener('mlIndexBundle.loaded', function () {
-				mlIndexBundle.liveSessionRedirecter.init();
-			});
-		})
-
-		ctmLoadScript({
-			src: "{{assetsBasePath}}/build/ml-index.js",
-			async: true
-		}, function () {
-			document.dispatchEvent(new CustomEvent('mlIndexBundle.loaded', {
-				bubbles: true
-			}));
-		});
-	</script>
 {{/contentFor}}
 
 

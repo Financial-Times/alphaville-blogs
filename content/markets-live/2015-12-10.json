@@ -1,0 +1,296 @@
+{
+  "id": "cbd615b6-1125-36fe-8681-f61f2000ffde",
+  "webUrl": "http://ftalphaville.ft.com/marketslive/2015-12-10/",
+  "title": "Thursday, 10th December, 2015",
+  "alternativeTitles": {},
+  "provenance": [
+    "https://api.ft.com/internalcontent/cbd615b6-1125-36fe-8681-f61f2000ffde"
+  ],
+  "byline": "Bryce Elder",
+  "publishedDate": "2015-12-10T11:01:39.000Z",
+  "firstPublishedDate": "2015-12-10T11:01:39.000Z",
+  "publishReference": "republish_-deed90bd-6745-4006-8497-e8a5437c62e3_carousel_1558481090",
+  "curatedRelatedContent": [],
+  "containedIn": [],
+  "canBeDistributed": "yes",
+  "canBeSyndicated": "verify",
+  "comments": {
+    "enabled": true
+  },
+  "standout": {
+    "editorsChoice": false,
+    "exclusive": false,
+    "scoop": false
+  },
+  "realtime": true,
+  "originatingParty": "FT",
+  "_lastUpdatedDateTime": "2019-12-13T09:37:10.957Z",
+  "_lastUpdatedVersion": "7e31a715ef987f4138810700061579e58b572501",
+  "type": "article",
+  "accessLevel": "subscribed",
+  "topper": {},
+  "url": "http://ftalphaville.ft.com/marketslive/2015-12-10/",
+  "relativeUrl": "http://ftalphaville.ft.com/marketslive/2015-12-10/",
+  "_editorialComponents": [],
+  "openingHTML": "<p>Live markets commentary from FT.com</p>",
+  "annotations": [
+    {
+      "apiUrl": "http://api.ft.com/things/c91b1fad-1097-468b-be82-9a8ff717d54c",
+      "directType": "http://www.ft.com/ontology/Topic",
+      "id": "c91b1fad-1097-468b-be82-9a8ff717d54c",
+      "predicate": "http://www.ft.com/ontology/classification/isPrimarilyClassifiedBy",
+      "prefLabel": "Markets",
+      "type": "TOPIC",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/Topic"
+      ],
+      "preposition": "on",
+      "url": "https://www.ft.com/markets",
+      "relativeUrl": "/markets"
+    },
+    {
+      "apiUrl": "http://api.ft.com/brands/89d15f70-640d-11e4-9803-0800200c9a66",
+      "directType": "http://www.ft.com/ontology/product/Brand",
+      "id": "89d15f70-640d-11e4-9803-0800200c9a66",
+      "predicate": "http://www.ft.com/ontology/classification/isClassifiedBy",
+      "prefLabel": "FT Alphaville",
+      "type": "BRAND",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/classification/Classification",
+        "http://www.ft.com/ontology/product/Brand"
+      ],
+      "preposition": "from",
+      "url": "https://www.ft.com/stream/89d15f70-640d-11e4-9803-0800200c9a66",
+      "relativeUrl": "/stream/89d15f70-640d-11e4-9803-0800200c9a66"
+    },
+    {
+      "apiUrl": "http://api.ft.com/things/6da31a37-691f-4908-896f-2829ebe2309e",
+      "directType": "http://www.ft.com/ontology/Genre",
+      "id": "6da31a37-691f-4908-896f-2829ebe2309e",
+      "predicate": "http://www.ft.com/ontology/classification/isClassifiedBy",
+      "prefLabel": "Opinion",
+      "type": "GENRE",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/classification/Classification",
+        "http://www.ft.com/ontology/Genre"
+      ],
+      "preposition": "",
+      "url": "https://www.ft.com/opinion",
+      "relativeUrl": "/opinion"
+    },
+    {
+      "apiUrl": "http://api.ft.com/things/b7ea3c33-ea8c-432e-bb7e-e3bbc8fdc2bb",
+      "directType": "http://www.ft.com/ontology/Topic",
+      "id": "b7ea3c33-ea8c-432e-bb7e-e3bbc8fdc2bb",
+      "predicate": "http://www.ft.com/ontology/classification/isClassifiedBy",
+      "prefLabel": "Equities",
+      "type": "TOPIC",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/Topic"
+      ],
+      "preposition": "on",
+      "url": "https://www.ft.com/equities",
+      "relativeUrl": "/equities"
+    },
+    {
+      "apiUrl": "http://api.ft.com/people/602c702b-31fe-4116-a203-747c7c737eb7",
+      "directType": "http://www.ft.com/ontology/person/Person",
+      "id": "602c702b-31fe-4116-a203-747c7c737eb7",
+      "predicate": "http://www.ft.com/ontology/annotation/hasAuthor",
+      "prefLabel": "Bryce Elder",
+      "type": "PERSON",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/person/Person"
+      ],
+      "preposition": "from",
+      "url": "https://www.ft.com/markets/bryce-elder",
+      "relativeUrl": "/markets/bryce-elder"
+    }
+  ],
+  "genreConcept": {
+    "apiUrl": "http://api.ft.com/things/6da31a37-691f-4908-896f-2829ebe2309e",
+    "directType": "http://www.ft.com/ontology/Genre",
+    "id": "6da31a37-691f-4908-896f-2829ebe2309e",
+    "predicate": "http://www.ft.com/ontology/classification/isClassifiedBy",
+    "prefLabel": "Opinion",
+    "type": "GENRE",
+    "types": [
+      "http://www.ft.com/ontology/core/Thing",
+      "http://www.ft.com/ontology/concept/Concept",
+      "http://www.ft.com/ontology/classification/Classification",
+      "http://www.ft.com/ontology/Genre"
+    ],
+    "preposition": "",
+    "url": "https://www.ft.com/opinion",
+    "relativeUrl": "/opinion"
+  },
+  "brandConcept": {
+    "apiUrl": "http://api.ft.com/brands/89d15f70-640d-11e4-9803-0800200c9a66",
+    "directType": "http://www.ft.com/ontology/product/Brand",
+    "id": "89d15f70-640d-11e4-9803-0800200c9a66",
+    "predicate": "http://www.ft.com/ontology/classification/isClassifiedBy",
+    "prefLabel": "FT Alphaville",
+    "type": "BRAND",
+    "types": [
+      "http://www.ft.com/ontology/core/Thing",
+      "http://www.ft.com/ontology/concept/Concept",
+      "http://www.ft.com/ontology/classification/Classification",
+      "http://www.ft.com/ontology/product/Brand"
+    ],
+    "preposition": "from",
+    "url": "https://www.ft.com/stream/89d15f70-640d-11e4-9803-0800200c9a66",
+    "relativeUrl": "/stream/89d15f70-640d-11e4-9803-0800200c9a66"
+  },
+  "authorConcepts": [
+    {
+      "apiUrl": "http://api.ft.com/people/602c702b-31fe-4116-a203-747c7c737eb7",
+      "directType": "http://www.ft.com/ontology/person/Person",
+      "id": "602c702b-31fe-4116-a203-747c7c737eb7",
+      "predicate": "http://www.ft.com/ontology/annotation/hasAuthor",
+      "prefLabel": "Bryce Elder",
+      "type": "PERSON",
+      "types": [
+        "http://www.ft.com/ontology/core/Thing",
+        "http://www.ft.com/ontology/concept/Concept",
+        "http://www.ft.com/ontology/person/Person"
+      ],
+      "preposition": "from",
+      "url": "https://www.ft.com/markets/bryce-elder",
+      "relativeUrl": "/markets/bryce-elder"
+    }
+  ],
+  "design": {
+    "theme": "basic",
+    "layout": "default"
+  },
+  "displayConcept": {
+    "apiUrl": "http://api.ft.com/things/c91b1fad-1097-468b-be82-9a8ff717d54c",
+    "directType": "http://www.ft.com/ontology/Topic",
+    "id": "c91b1fad-1097-468b-be82-9a8ff717d54c",
+    "predicate": "http://www.ft.com/ontology/classification/isPrimarilyClassifiedBy",
+    "prefLabel": "Markets",
+    "type": "TOPIC",
+    "types": [
+      "http://www.ft.com/ontology/core/Thing",
+      "http://www.ft.com/ontology/concept/Concept",
+      "http://www.ft.com/ontology/Topic"
+    ],
+    "preposition": "on",
+    "url": "https://www.ft.com/markets",
+    "relativeUrl": "/markets",
+    "isDisplayTag": false
+  },
+  "teaser": {
+    "id": "cbd615b6-1125-36fe-8681-f61f2000ffde",
+    "url": "http://ftalphaville.ft.com/marketslive/2015-12-10/",
+    "relativeUrl": "http://ftalphaville.ft.com/marketslive/2015-12-10/",
+    "type": "article",
+    "indicators": {
+      "isColumn": true,
+      "isOpinion": true,
+      "isScoop": false,
+      "isExclusive": false,
+      "isEditorsChoice": false,
+      "accessLevel": "subscribed"
+    },
+    "metaPrefixText": "FT Alphaville",
+    "metaSuffixText": null,
+    "metaLink": {
+      "id": "602c702b-31fe-4116-a203-747c7c737eb7",
+      "predicate": "http://www.ft.com/ontology/annotation/hasAuthor",
+      "prefLabel": "Bryce Elder",
+      "type": "PERSON",
+      "url": "https://www.ft.com/markets/bryce-elder",
+      "relativeUrl": "/markets/bryce-elder"
+    },
+    "metaAltLink": {
+      "id": "c91b1fad-1097-468b-be82-9a8ff717d54c",
+      "predicate": "http://www.ft.com/ontology/classification/isPrimarilyClassifiedBy",
+      "prefLabel": "Markets",
+      "type": "TOPIC",
+      "url": "https://www.ft.com/markets",
+      "relativeUrl": "/markets"
+    },
+    "title": "Markets Live: Thursday, 10th December, 2015",
+    "altStandfirst": null,
+    "publishedDate": "2015-12-10T11:01:39.000Z",
+    "firstPublishedDate": "2015-12-10T11:01:39.000Z",
+    "image": {},
+    "parentTheme": null
+  },
+  "contentStats": {
+    "wordCount": 1,
+    "paragraphs": 0,
+    "relatedBoxes": 0,
+    "pullQuotes": 0,
+    "pullQuotesWithImages": 0,
+    "bigNumbers": 0,
+    "images": 0,
+    "responsiveImages": 0,
+    "graphics": 0,
+    "audio": 0,
+    "videos": 0,
+    "internalVideos": 0,
+    "externalVideos": 0,
+    "subheadings": 0,
+    "curatedRecommended": 0,
+    "layouts": 0,
+    "layoutSlots": 0,
+    "infoBox": 0,
+    "tables": 0,
+    "timelines": 0,
+    "singleArticleRecommendations": 0,
+    "sentiment": 0,
+    "scoreGraphicVolume": 0,
+    "scoreGraphicDensity": 0,
+    "scorePictureVolume": 0,
+    "scorePictureDensity": 0
+  },
+  "isMarketsLive": true,
+  "av2WebUrl": "/marketslive/2015-12-10/",
+  "bodyHTML": "<div class=\"webchat-closed-content\"><time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2015-12-10T11:02:24.000Z\" title=\"Thu Dec 10 2015 11:02:24 GMT+0000 (UTC)\" aria-label=\"Thu Dec 10 2015 11:02:24 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:02 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1449745359\" data-mid=\"1304098\" data-rawmessage=\"Good morning. This is Markets Live.\" id=\"webchat-msg-1304098\"><span class=\"messageheader par color-1\" title=\"11:02\">BE</span><div class=\"messagebody\"><p>Good morning. This is Markets Live.</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1449745376\" data-mid=\"1304100\" data-rawmessage=\"And hello to Ghostface Killah.\" id=\"webchat-msg-1304100\"><span class=\"messageheader par color-1\" title=\"11:02\">BE</span><div class=\"messagebody\"><p>And hello to Ghostface Killah.</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1449745384\" data-mid=\"1304101\" data-rawmessage=\"http://i.imgur.com/IExF6Q5.jpg\" id=\"webchat-msg-1304101\"><span class=\"messageheader par color-1\" title=\"11:03\">BE</span><div class=\"messagebody\"><p><img class=\"picture\" src=\"https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fi.imgur.com%2FIExF6Q5.jpg?source=Alphaville\"></p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2015-12-10T11:03:18.000Z\" title=\"Thu Dec 10 2015 11:03:18 GMT+0000 (UTC)\" aria-label=\"Thu Dec 10 2015 11:03:18 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:03 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1449745413\" data-mid=\"1304102\" data-rawmessage=\"You know, there are days I wonder why I ever got into business journalism ...\" id=\"webchat-msg-1304102\"><span class=\"messageheader par color-1\" title=\"11:03\">BE</span><div class=\"messagebody\"><p>You know, there are days I wonder why I ever got into business journalism ...</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1449745436\" data-mid=\"1304103\" data-rawmessage=\"And then there are days when a comic-book villain agrees to buy a Wu-Tang album for $2m\" id=\"webchat-msg-1304103\"><span class=\"messageheader par color-1\" title=\"11:03\">BE</span><div class=\"messagebody\"><p>And then there are days when a comic-book villain agrees to buy a Wu-Tang album for $2m</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1449745463\" data-mid=\"1304104\" data-rawmessage=\"Do read the Bloomberg story, if you haven&apos;t already. Though of course you have already.\" id=\"webchat-msg-1304104\"><span class=\"messageheader par color-1\" title=\"11:04\">BE</span><div class=\"messagebody\"><p>Do read the Bloomberg story, if you haven&apos;t already. Though of course you have already.</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2015-12-10T11:04:19.000Z\" title=\"Thu Dec 10 2015 11:04:19 GMT+0000 (UTC)\" aria-label=\"Thu Dec 10 2015 11:04:19 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:04 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1449745474\" data-mid=\"1304105\" data-rawmessage=\"http://www.bloomberg.com/features/2015-martin-shkreli-wu-tang-clan-album/\" id=\"webchat-msg-1304105\"><span class=\"messageheader par color-1\" title=\"11:04\">BE</span><div class=\"messagebody\"><p><a href=\"http://www.bloomberg.com/features/2015-martin-shkreli-wu-tang-clan-album/\" target=\"_blank\">http://www.bloombe...u-tang-clan-album/</a></p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1449745502\" data-mid=\"1304106\" data-rawmessage=\"It&apos;s mostly brilliant but occasionally teeth-itchingly awful.\" id=\"webchat-msg-1304106\"><span class=\"messageheader par color-1\" title=\"11:05\">BE</span><div class=\"messagebody\"><p>It&apos;s mostly brilliant but occasionally teeth-itchingly awful.</p>\n</div></div>\n\n<div class=\"msg blockquote has-headshot\" data-timestamp=\"1449745510\" data-mid=\"1304107\" data-rawmessage=\"Shkreli was taken by the Wu-Tang song C.R.E.A.M., which stands for &#x201C;Cash Rules Everything Around Me.&#x201D; It includes the often-repeated phrase &#x201C;Dolla dolla bill, y&#x2019;all!&#x201D; Shkreli turned out to be good at making dollars himself.\" id=\"webchat-msg-1304107\"><span class=\"messageheader par color-1\" title=\"11:05\">BE</span><div class=\"messagebody\"><blockquote><p>Shkreli was taken by the Wu-Tang song C.R.E.A.M., which stands for &#x201C;Cash Rules Everything Around Me.&#x201D; It includes the often-repeated phrase &#x201C;Dolla dolla bill, y&#x2019;all!&#x201D; Shkreli turned out to be good at making dollars himself.</p></blockquote>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2015-12-10T11:05:56.000Z\" title=\"Thu Dec 10 2015 11:05:56 GMT+0000 (UTC)\" aria-label=\"Thu Dec 10 2015 11:05:56 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:05 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1449745571\" data-mid=\"1304108\" data-rawmessage=\"Oh, and we&apos;re assuming the &quot;heist or caper&quot; sidebar that appeared on Twitter yesterday is a delightful fake.\" id=\"webchat-msg-1304108\"><span class=\"messageheader par color-1\" title=\"11:06\">BE</span><div class=\"messagebody\"><p>Oh, and we&apos;re assuming the &quot;heist or caper&quot; sidebar that appeared on Twitter yesterday is a delightful fake.</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1449745574\" data-mid=\"1304109\" data-rawmessage=\"As in ...\" id=\"webchat-msg-1304109\"><span class=\"messageheader par color-1\" title=\"11:06\">BE</span><div class=\"messagebody\"><p>As in ...</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1449745587\" data-mid=\"1304110\" data-rawmessage=\"http://pbs.twimg.com/media/CVzDWkKUYAATxy-.jpg\" id=\"webchat-msg-1304110\"><span class=\"messageheader par color-1\" title=\"11:06\">BE</span><div class=\"messagebody\"><p><img class=\"picture\" src=\"https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fpbs.twimg.com%2Fmedia%2FCVzDWkKUYAATxy-.jpg?source=Alphaville\"></p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2015-12-10T11:06:27.000Z\" title=\"Thu Dec 10 2015 11:06:27 GMT+0000 (UTC)\" aria-label=\"Thu Dec 10 2015 11:06:27 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:06 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1449745602\" data-mid=\"1304111\" data-rawmessage=\"But given the incredibility of the rest of the story, no angle is too implausible.\" id=\"webchat-msg-1304111\"><span class=\"messageheader par color-1\" title=\"11:06\">BE</span><div class=\"messagebody\"><p>But given the incredibility of the rest of the story, no angle is too implausible.</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1449745617\" data-mid=\"1304112\" data-rawmessage=\"Less so: Bitcoin dude.\" id=\"webchat-msg-1304112\"><span class=\"messageheader par color-1\" title=\"11:06\">BE</span><div class=\"messagebody\"><p>Less so: Bitcoin dude.</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1449745624\" data-mid=\"1304113\" data-rawmessage=\"Motherboard does the work there.\" id=\"webchat-msg-1304113\"><span class=\"messageheader par color-1\" title=\"11:07\">BE</span><div class=\"messagebody\"><p>Motherboard does the work there.</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2015-12-10T11:06:59.000Z\" title=\"Thu Dec 10 2015 11:06:59 GMT+0000 (UTC)\" aria-label=\"Thu Dec 10 2015 11:06:59 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:06 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1449745634\" data-mid=\"1304114\" data-rawmessage=\"http://motherboard.vice.com/read/satoshis-pgp-keys-are-probably-backdated-and-point-to-a-hoax\" id=\"webchat-msg-1304114\"><span class=\"messageheader par color-1\" title=\"11:07\">BE</span><div class=\"messagebody\"><p><a href=\"http://motherboard.vice.com/read/satoshis-pgp-keys-are-probably-backdated-and-point-to-a-hoax\" target=\"_blank\">http://motherboard...nd-point-to-a-hoax</a></p>\n</div></div>\n\n<div class=\"msg separator has-headshot\" data-timestamp=\"1449745639\" data-mid=\"1304115\" data-rawmessage=\"11:07AM\" id=\"webchat-msg-1304115\"><div class=\"messagebody\"><time class=\"o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2015-12-10T11:07:19.000Z\" title=\"Thu Dec 10 2015 11:07:19 GMT+0000 (UTC)\" aria-label=\"Thu Dec 10 2015 11:07:19 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\tundefined\n\t\t\t\t\t\t\t\t</time></div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1449745679\" data-mid=\"1304116\" data-rawmessage=\"Okay, having started the show by advising you to read other stuff, I guess we need to deliver some serious added-value content here.\" id=\"webchat-msg-1304116\"><span class=\"messageheader par color-1\" title=\"11:07\">BE</span><div class=\"messagebody\"><p>Okay, having started the show by advising you to read other stuff, I guess we need to deliver some serious added-value content here.</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2015-12-10T11:08:20.000Z\" title=\"Thu Dec 10 2015 11:08:20 GMT+0000 (UTC)\" aria-label=\"Thu Dec 10 2015 11:08:20 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:08 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1449745715\" data-mid=\"1304117\" data-rawmessage=\"FTSE&apos;s off the bottom. Down 10 or 11 points at 6132\" id=\"webchat-msg-1304117\"><span class=\"messageheader par color-1\" title=\"11:08\">BE</span><div class=\"messagebody\"><p>FTSE&apos;s off the bottom. Down 10 or 11 points at 6132</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1449745729\" data-mid=\"1304118\" data-rawmessage=\"Clearly, there&apos;s been a short squeeze in Glencore.\" id=\"webchat-msg-1304118\"><span class=\"messageheader par color-1\" title=\"11:08\">BE</span><div class=\"messagebody\"><p>Clearly, there&apos;s been a short squeeze in Glencore.</p>\n</div></div>\n\n<div class=\"msg price has-headshot\" data-timestamp=\"1449745732\" data-mid=\"1304119\" data-rawmessage=\"&lt;strong&gt;Glencore PLC (GLEN:LSE):&lt;/strong&gt; Last: 92.41, up 9.33 (+11.24%), High: 95.00, Low: 86.00, Volume: 68.54m\" id=\"webchat-msg-1304119\"><div class=\"messagebody\"><strong>Glencore PLC (GLEN:LSE):</strong> Last: 92.41, up 9.33 (+11.24%), High: 95.00, Low: 86.00, Volume: 68.54m</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2015-12-10T11:02:32.000Z\" title=\"Thu Dec 10 2015 11:02:32 GMT+0000 (UTC)\" aria-label=\"Thu Dec 10 2015 11:02:32 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:02 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1449745367\" data-mid=\"1304099\" data-rawmessage=\"Hello, welcome, hi.\" id=\"webchat-msg-1304099\"><span class=\"messageheader par color-1\" title=\"11:02\">BE</span><div class=\"messagebody\"><p>Hello, welcome, hi.</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1449745785\" data-mid=\"1304121\" data-rawmessage=\"We&apos;ve said previously that Glencore has had a reasonable crisis\" id=\"webchat-msg-1304121\"><span class=\"messageheader par color-1\" title=\"11:09\">BE</span><div class=\"messagebody\"><p>We&apos;ve said previously that Glencore has had a reasonable crisis</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1449745808\" data-mid=\"1304122\" data-rawmessage=\"At least in the context of its dreadful path towards crisis\" id=\"webchat-msg-1304122\"><span class=\"messageheader par color-1\" title=\"11:10\">BE</span><div class=\"messagebody\"><p>At least in the context of its dreadful path towards crisis</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2015-12-10T11:10:45.000Z\" title=\"Thu Dec 10 2015 11:10:45 GMT+0000 (UTC)\" aria-label=\"Thu Dec 10 2015 11:10:45 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:10 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1449745860\" data-mid=\"1304123\" data-rawmessage=\"Glencore presents its recovery plan very well. Ivan says the right things. It&apos;s never a bad idea to be long into Glencore news and short after it.\" id=\"webchat-msg-1304123\"><span class=\"messageheader par color-1\" title=\"11:11\">BE</span><div class=\"messagebody\"><p>Glencore presents its recovery plan very well. Ivan says the right things. It&apos;s never a bad idea to be long into Glencore news and short after it.</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1449745909\" data-mid=\"1304124\" data-rawmessage=\"So what we get today is a bit more meat on the debt reduction targets.\" id=\"webchat-msg-1304124\"><span class=\"messageheader par color-1\" title=\"11:11\">BE</span><div class=\"messagebody\"><p>So what we get today is a bit more meat on the debt reduction targets.</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1449745933\" data-mid=\"1304125\" data-rawmessage=\"Who can summarise? Cazenove can.\" id=\"webchat-msg-1304125\"><span class=\"messageheader par color-1\" title=\"11:12\">BE</span><div class=\"messagebody\"><p>Who can summarise? Cazenove can.</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2015-12-10T11:12:23.000Z\" title=\"Thu Dec 10 2015 11:12:23 GMT+0000 (UTC)\" aria-label=\"Thu Dec 10 2015 11:12:23 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:12 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg blockquote has-headshot\" data-timestamp=\"1449745958\" data-mid=\"1304126\" data-rawmessage=\"Our key takeaway is guided $7.7bn of EBITDA in 2016 at current commodity\nprices is significantly above JPMe $5.7bn. Debt reduction target has been\nincreased to $13bn ($10.2bn prev) due to $1.5bn additional capex cuts across\n2015-16E, plus a $1-2bn increase in targeted disposals. GLEN&#x2019;s new $18-\n19bn net debt target by YE&#x2019;16 (from &#x201C;low $20s bn&quot;) compares to JPMe\n~$25bn on spot. Guidance implies 2.5x ND/EBITDA at YE&apos;16, which we\nexpect will fall further with a minority sale of Agriculture (~1.8x if $5bn\nachieved for 49%). Overall, the company remains highly geared to commodity\nprices; we expect the market to react positively to today&#x2019;s announcement\" id=\"webchat-msg-1304126\"><span class=\"messageheader par color-1\" title=\"11:12\">BE</span><div class=\"messagebody\"><blockquote><p>Our key takeaway is guided $7.7bn of EBITDA in 2016 at current commodity<br>\nprices is significantly above JPMe $5.7bn. Debt reduction target has been<br>\nincreased to $13bn ($10.2bn prev) due to $1.5bn additional capex cuts across<br>\n2015-16E, plus a $1-2bn increase in targeted disposals. GLEN&#x2019;s new $18-<br>\n19bn net debt target by YE&#x2019;16 (from &#x201C;low $20s bn&quot;) compares to JPMe<br>\n~$25bn on spot. Guidance implies 2.5x ND/EBITDA at YE&apos;16, which we<br>\nexpect will fall further with a minority sale of Agriculture (~1.8x if $5bn<br>\nachieved for 49%). Overall, the company remains highly geared to commodity<br>\nprices; we expect the market to react positively to today&#x2019;s announcement</p></blockquote>\n</div></div>\n\n<div class=\"msg blockquote has-headshot\" data-timestamp=\"1449745975\" data-mid=\"1304127\" data-rawmessage=\"Guided financials are a material improvement on JPMe: At current\ncommodity prices GLEN estimates 2016 EBITDA of $7.7bn (JPMe\n$5.7bn), 2016 FCF pre-working capital of $2.3bn (JPMe $0.1bn). $0.4bn of\nopex savings announced in Sept&#x2019;15 for H2&#x2019;15 to H1&#x2019;16 have already been\nachieved and further savings are being realised. Our key takeaway is we\nexpect management&#x2019;s guided 2.5x ND/EBITDA at YE&#x2019;16 can be materially\nreduced following a minority disposal of its Agriculture unit in 2016, where\nwe have previously estimated a $10bn valuation for 100%\" id=\"webchat-msg-1304127\"><span class=\"messageheader par color-1\" title=\"11:12\">BE</span><div class=\"messagebody\"><blockquote><p>Guided financials are a material improvement on JPMe: At current<br>\ncommodity prices GLEN estimates 2016 EBITDA of $7.7bn (JPMe<br>\n$5.7bn), 2016 FCF pre-working capital of $2.3bn (JPMe $0.1bn). $0.4bn of<br>\nopex savings announced in Sept&#x2019;15 for H2&#x2019;15 to H1&#x2019;16 have already been<br>\nachieved and further savings are being realised. Our key takeaway is we<br>\nexpect management&#x2019;s guided 2.5x ND/EBITDA at YE&#x2019;16 can be materially<br>\nreduced following a minority disposal of its Agriculture unit in 2016, where<br>\nwe have previously estimated a $10bn valuation for 100%</p></blockquote>\n</div></div>\n\n<div class=\"msg blockquote has-headshot\" data-timestamp=\"1449746002\" data-mid=\"1304128\" data-rawmessage=\"$18-19bn YE&#x2019;16 net debt target: Net debt is expected at $25.0bn by YE&#x2019;15\n(JPMe $24.4bn) before reducing to $18-19bn by YE&#x2019;16 (JPMe $23.0bn).\nUpdated YE&#x2019;16 target implies a greater than $2bn reduction from previous guidance of\n&#x201C;low $20bn&#x201D;, with savings coming from: asset disposals ($2-3bn, previously\n~$2.0bn), working capital and loan release ($1.5bn, in-line with previous\nguidance), FCF ($2.3bn, previous guidance $500-800m) which includes\nlower capex.\" id=\"webchat-msg-1304128\"><span class=\"messageheader par color-1\" title=\"11:13\">BE</span><div class=\"messagebody\"><blockquote><p>$18-19bn YE&#x2019;16 net debt target: Net debt is expected at $25.0bn by YE&#x2019;15<br>\n(JPMe $24.4bn) before reducing to $18-19bn by YE&#x2019;16 (JPMe $23.0bn).<br>\nUpdated YE&#x2019;16 target implies a greater than $2bn reduction from previous guidance of<br>\n&#x201C;low $20bn&#x201D;, with savings coming from: asset disposals ($2-3bn, previously<br>\n~$2.0bn), working capital and loan release ($1.5bn, in-line with previous<br>\nguidance), FCF ($2.3bn, previous guidance $500-800m) which includes<br>\nlower capex.</p></blockquote>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2015-12-10T11:13:31.000Z\" title=\"Thu Dec 10 2015 11:13:31 GMT+0000 (UTC)\" aria-label=\"Thu Dec 10 2015 11:13:31 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:13 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg blockquote has-headshot\" data-timestamp=\"1449746026\" data-mid=\"1304129\" data-rawmessage=\"Disposals update: GLEN raises its dipsosals target to $3-4bn from $1-2bn\npreviously, with $1.1bn of this target already locked in. GLEN continues to\ntarget a sale of a minority stake in its Agriculture unit, with indicative bids\nexpected by &#x201C;mid-December&#x201D; and a targeted signing / announcement in\nH1&apos;16. We have previously estimated a $10bn valuation for 100% of\nAgriculture, therefore a successful disposal is likely to materially reduce\nGLEN&#x2019;s leverage and perceived credit risk.\" id=\"webchat-msg-1304129\"><span class=\"messageheader par color-1\" title=\"11:13\">BE</span><div class=\"messagebody\"><blockquote><p>Disposals update: GLEN raises its dipsosals target to $3-4bn from $1-2bn<br>\npreviously, with $1.1bn of this target already locked in. GLEN continues to<br>\ntarget a sale of a minority stake in its Agriculture unit, with indicative bids<br>\nexpected by &#x201C;mid-December&#x201D; and a targeted signing / announcement in<br>\nH1&apos;16. We have previously estimated a $10bn valuation for 100% of<br>\nAgriculture, therefore a successful disposal is likely to materially reduce<br>\nGLEN&#x2019;s leverage and perceived credit risk.</p></blockquote>\n</div></div>\n\n<div class=\"msg blockquote has-headshot\" data-timestamp=\"1449746043\" data-mid=\"1304130\" data-rawmessage=\"Cumulative $1.5bn capex reduction over two years: Capex guidance is\nlowered to $5.7bn 2015E ($6.0bn previous), $3.8bn 2016E ($5.0bn\nprevious). The net impact is a $1.5bn reduction in capex in 2015-16 vs.\nprevious guidance. We had already factored aggressive capex cuts over the\nnext two years; JPM&#x2019;s current capex forecasts are $5.1bn 2015E and $4.1bn\n2016E. Sustainable group capex is $2.8bn at current production levels\ncompared to JPMe $3.7-4.0bn, which should flatter longer term FCF.\" id=\"webchat-msg-1304130\"><span class=\"messageheader par color-1\" title=\"11:14\">BE</span><div class=\"messagebody\"><blockquote><p>Cumulative $1.5bn capex reduction over two years: Capex guidance is<br>\nlowered to $5.7bn 2015E ($6.0bn previous), $3.8bn 2016E ($5.0bn<br>\nprevious). The net impact is a $1.5bn reduction in capex in 2015-16 vs.<br>\nprevious guidance. We had already factored aggressive capex cuts over the<br>\nnext two years; JPM&#x2019;s current capex forecasts are $5.1bn 2015E and $4.1bn<br>\n2016E. Sustainable group capex is $2.8bn at current production levels<br>\ncompared to JPMe $3.7-4.0bn, which should flatter longer term FCF.</p></blockquote>\n</div></div>\n\n<div class=\"msg blockquote has-headshot\" data-timestamp=\"1449746070\" data-mid=\"1304131\" data-rawmessage=\"$2.4-2.7bn 2016 Marketing guidance above JPMe $2.2bn: Marketing\nEBIT guidance for 2015 is reiterated at ~$2.5bn (JPMe $2.5bn) with\n&#x201C;continued strength in oil and stronger H2 contributions from Agriculture\nand Metals&#x201D;. While 2016E guidance has been cut to $2.4-2.7bn (no previous\nguidance), guidance compares favourably to JPMe $2.2bn on spot\ncommodity prices.\" id=\"webchat-msg-1304131\"><span class=\"messageheader par color-1\" title=\"11:14\">BE</span><div class=\"messagebody\"><blockquote><p>$2.4-2.7bn 2016 Marketing guidance above JPMe $2.2bn: Marketing<br>\nEBIT guidance for 2015 is reiterated at ~$2.5bn (JPMe $2.5bn) with<br>\n&#x201C;continued strength in oil and stronger H2 contributions from Agriculture<br>\nand Metals&#x201D;. While 2016E guidance has been cut to $2.4-2.7bn (no previous<br>\nguidance), guidance compares favourably to JPMe $2.2bn on spot<br>\ncommodity prices.</p></blockquote>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2015-12-10T11:14:32.000Z\" title=\"Thu Dec 10 2015 11:14:32 GMT+0000 (UTC)\" aria-label=\"Thu Dec 10 2015 11:14:32 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:14 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg blockquote has-headshot\" data-timestamp=\"1449746087\" data-mid=\"1304132\" data-rawmessage=\"$1.5bn deeper capex cuts across 2015-16: Reductions in 2016 capex\nreflect slower spend / deferral of expansion capex at African copper,\nZhairem, and certain coal projects, and lower sustaining capital / mine plan\nchanges in copper (Mopani/Katanga/Alumbrera), lead/zinc (George\nFisher/McArthur River/Lady Loretta/Iscaycruz/Kazzinc), and coal, coupled\nwith better supplier pricing and FX.\" id=\"webchat-msg-1304132\"><span class=\"messageheader par color-1\" title=\"11:14\">BE</span><div class=\"messagebody\"><blockquote><p>$1.5bn deeper capex cuts across 2015-16: Reductions in 2016 capex<br>\nreflect slower spend <em> deferral of expansion capex at African copper,<br>\nZhairem, and certain coal projects, and lower sustaining capital </em> mine plan<br>\nchanges in copper (Mopani/Katanga/Alumbrera), lead/zinc (George<br>\nFisher/McArthur River/Lady Loretta/Iscaycruz/Kazzinc), and coal, coupled<br>\nwith better supplier pricing and FX.</p></blockquote>\n</div></div>\n\n<div class=\"msg blockquote has-headshot\" data-timestamp=\"1449746104\" data-mid=\"1304133\" data-rawmessage=\"2016 production guidance broadly positive vs. JPMe: Copper (above\nJPMe) &#x2013; (mid-point) of 1.39Mt lower yoy due to cuts at Mopani and\nKatanga although +6% vs. current JPMe 1.32Mt. Oil (above) &#x2013; 9.6Mbbl,\nlower yoy due to reduced spend in Chad, although +6% vs. JPMe 9.1Mbbl.\nCoal (below) &#x2013;130Mt, lower yoy due to changes at Optimum &amp; Australian\ncoal, and new guidance is ~1% vs. JPMe 132Mt. Zinc (below) &#x2013; 1,095kt\nreflecting the 500-550kt reduction in output that was previously flagged, -\n3% vs. JPMe 1,125kt. Post-2016 production volumes dependent on prices\nand GLEN and will implement further cuts and deferrals if prices fall\nfurther.\" id=\"webchat-msg-1304133\"><span class=\"messageheader par color-1\" title=\"11:15\">BE</span><div class=\"messagebody\"><blockquote><p>2016 production guidance broadly positive vs. JPMe: Copper (above<br>\nJPMe) &#x2013; (mid-point) of 1.39Mt lower yoy due to cuts at Mopani and<br>\nKatanga although +6% vs. current JPMe 1.32Mt. Oil (above) &#x2013; 9.6Mbbl,<br>\nlower yoy due to reduced spend in Chad, although +6% vs. JPMe 9.1Mbbl.<br>\nCoal (below) &#x2013;130Mt, lower yoy due to changes at Optimum &amp; Australian<br>\ncoal, and new guidance is ~1% vs. JPMe 132Mt. Zinc (below) &#x2013; 1,095kt<br>\nreflecting the 500-550kt reduction in output that was previously flagged, -<br>\n3% vs. JPMe 1,125kt. Post-2016 production volumes dependent on prices<br>\nand GLEN and will implement further cuts and deferrals if prices fall<br>\nfurther.</p></blockquote>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1449746195\" data-mid=\"1304134\" data-rawmessage=\"And in terms of the conference call that followed .... well, it&apos;s pretty clear that the strategy will continue to be to drip incrementally positive information into the market.\" id=\"webchat-msg-1304134\"><span class=\"messageheader par color-1\" title=\"11:16\">BE</span><div class=\"messagebody\"><p>And in terms of the conference call that followed .... well, it&apos;s pretty clear that the strategy will continue to be to drip incrementally positive information into the market.</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2015-12-10T11:17:18.000Z\" title=\"Thu Dec 10 2015 11:17:18 GMT+0000 (UTC)\" aria-label=\"Thu Dec 10 2015 11:17:18 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:17 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1449746253\" data-mid=\"1304135\" data-rawmessage=\"It&apos;s a strategy that&apos;s worked so far, at least around when news is announced.\" id=\"webchat-msg-1304135\"><span class=\"messageheader par color-1\" title=\"11:17\">BE</span><div class=\"messagebody\"><p>It&apos;s a strategy that&apos;s worked so far, at least around when news is announced.</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1449750316\" data-mid=\"1304137\" data-rawmessage=\"Hello!\" id=\"webchat-msg-1304137\"><span class=\"messageheader par color-1\" title=\"12:25\">BE</span><div class=\"messagebody\"><p>Hello!</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1449750359\" data-mid=\"1304138\" data-rawmessage=\"About an hour ago, FT Alphaville had one of those catastrophic tech meltdowns we all know and love so much.\" id=\"webchat-msg-1304138\"><span class=\"messageheader par color-1\" title=\"12:25\">BE</span><div class=\"messagebody\"><p>About an hour ago, FT Alphaville had one of those catastrophic tech meltdowns we all know and love so much.</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2015-12-10T12:26:23.000Z\" title=\"Thu Dec 10 2015 12:26:23 GMT+0000 (UTC)\" aria-label=\"Thu Dec 10 2015 12:26:23 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t12:26 pm\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1449750398\" data-mid=\"1304139\" data-rawmessage=\"That&apos;s why the session above stops abruptly.\" id=\"webchat-msg-1304139\"><span class=\"messageheader par color-1\" title=\"12:26\">BE</span><div class=\"messagebody\"><p>That&apos;s why the session above stops abruptly.</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1449750473\" data-mid=\"1304140\" data-rawmessage=\"Please be assured there will be a full inquest, which will help pass the time until our next catastrophic tech meltdown, likely tomorrow.\" id=\"webchat-msg-1304140\"><span class=\"messageheader par color-1\" title=\"12:27\">BE</span><div class=\"messagebody\"><p>Please be assured there will be a full inquest, which will help pass the time until our next catastrophic tech meltdown, likely tomorrow.</p>\n</div></div>\n\n<div class=\"msg normal has-headshot\" data-timestamp=\"1449750543\" data-mid=\"1304141\" data-rawmessage=\"Whatever. We&apos;ll be here from 11am. Perhaps you&apos;ll  be able to see us. Give it a go.\" id=\"webchat-msg-1304141\"><span class=\"messageheader par color-1\" title=\"12:29\">BE</span><div class=\"messagebody\"><p>Whatever. We&apos;ll be here from 11am. Perhaps you&apos;ll  be able to see us. Give it a go.</p>\n</div></div>\n\n<time class=\"marketslive-timestamp o-date\" data-o-component=\"o-date\" data-o-date-format=\"h:mm a\" datetime=\"2015-12-10T11:08:52.000Z\" title=\"Thu Dec 10 2015 11:08:52 GMT+0000 (UTC)\" aria-label=\"Thu Dec 10 2015 11:08:52 GMT+0000 (UTC)\">\n\t\t\t\t\t\t\t\t\t\t11:08 am\n\t\t\t\t\t\t\t\t</time><div class=\"msg normal has-headshot\" data-timestamp=\"1449745747\" data-mid=\"1304120\" data-rawmessage=\"Ivan having said basically nothing.\" id=\"webchat-msg-1304120\"><span class=\"messageheader par color-1\" title=\"11:09\">BE</span><div class=\"messagebody\"><p>Ivan having said basically nothing.</p>\n</div></div>\n\n</div>",
+  "authors": [
+    {
+      "concept": {
+        "apiUrl": "http://api.ft.com/people/602c702b-31fe-4116-a203-747c7c737eb7",
+        "directType": "http://www.ft.com/ontology/person/Person",
+        "id": "602c702b-31fe-4116-a203-747c7c737eb7",
+        "predicate": "http://www.ft.com/ontology/annotation/hasAuthor",
+        "prefLabel": "Bryce Elder",
+        "type": "PERSON",
+        "types": [
+          "http://www.ft.com/ontology/core/Thing",
+          "http://www.ft.com/ontology/concept/Concept",
+          "http://www.ft.com/ontology/person/Person"
+        ],
+        "preposition": "from",
+        "url": "https://www.ft.com/markets/bryce-elder",
+        "relativeUrl": "/markets/bryce-elder"
+      },
+      "name": "Bryce Elder",
+      "headshotUrl": "https://www.ft.com/__origami/service/image/v2/images/raw/fthead:bryce-elder?source=alphaville",
+      "isAlphavilleEditor": true,
+      "url": "/author/Bryce%20Elder"
+    }
+  ],
+  "primaryTheme": [
+    {
+      "label": "Markets Live",
+      "url": "/marketslive"
+    }
+  ],
+  "originalTitle": "Markets Live: Thursday, 10th December, 2015",
+  "isLive": false,
+  "subheading": "Live markets commentary from FT.com",
+  "standfirst": "Live markets commentary from FT.com"
+}

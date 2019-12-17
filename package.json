@@ -14,11 +14,9 @@
     "alphaville-marketslive-wordpress-api": "Financial-Times/alphaville-marketslive-wordpress-api#0.4.0",
     "alphaville-team-members": "Financial-Times/alphaville-team-members#1.0.0",
     "bluebird": "^3.4.1",
-    "bower": "^1.7.7",
     "cheerio": "^0.20.0",
     "debug": "^4.1.0",
     "express-ftwebservice": "Financial-Times/express-web-service#v2.2.0",
-    "gulp": "^4.0.0",
     "memory-cache": "^0.1.6",
     "moment-timezone": "^0.5.5",
     "mongoose": "^4.6.0",
@@ -28,9 +26,11 @@
     "throng": "^4.0.0"
   },
   "engines": {
-    "node": "^8"
+    "node": "^8.16.2"
   },
   "devDependencies": {
-    "alphaville-build-tools": "Financial-Times/alphaville-build-tools#3.0.0"
+    "alphaville-build-tools": "Financial-Times/alphaville-build-tools#3.0.0",
+    "bower": "^1.7.7",
+    "gulp": "^4.0.0"
   }
 }
