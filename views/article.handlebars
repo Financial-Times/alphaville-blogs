@@ -25,11 +25,6 @@
 	<link rel="stylesheet" href="{{assetsBasePath}}/build/article.css" />
 
 	<link rel="canonical" href="{{article.webUrl}}" />
-	{{#if useCoralTalk}}
-		<script>
-			window.commentsUseCoralTalk = true;
-		</script>
-	{{/if}}
 	<script>
 		(function () {
 			ctmLoadScript({
@@ -129,20 +124,10 @@
                                 data-o-comments-article-url="https://www.ft.com/content/{{article.id}}">
                             </div>
                         {{else}}
-                            {{#if commentsMigrationMessage}}
-                                <div class="comments__maintenance-mode-message">
-                                    <p>Commenting on this article is temporarily unavailable while we migrate to our new comments system.</p>
-                                    <p>Note that this only affects articles published before 28th October 2019.</p>
-                                </div>
-                            {{else}}
-                                <a name="comments"></a>
-                                <div id="comments"
-                                    data-o-component="o-comments"
-                                    data-o-comments-config-title="{{article.originalTitle}}"
-                                    data-o-comments-config-url="{{@root.appUrl}}{{article.av2WebUrl}}"
-                                    data-o-comments-config-articleId="{{article.id}}">
-                                </div>
-                            {{/if}}
+							<div class="comments__maintenance-mode-message">
+								<p>Commenting on this article is temporarily unavailable while we migrate to our new comments system.</p>
+								<p>Note that this only affects articles published before 28th October 2019.</p>
+							</div>
                         {{/if}}
                     {{/if}}
                 {{/article.comments.enabled}}

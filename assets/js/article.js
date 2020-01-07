@@ -1,19 +1,15 @@
 require('./common');
 // Temporary addition until comments are replaced
 
-if (window.commentsUseCoralTalk) {
-	require('o-comments-beta');
+require('o-comments');
 
-	document.addEventListener('oComments.loginPrompt', () => {
-		const currentPath = new URL(location.href).pathname;
-		const commentsJumpAnchor = '#comments';
+document.addEventListener('oComments.loginPrompt', () => {
+	const currentPath = new URL(location.href).pathname;
+	const commentsJumpAnchor = '#comments';
 
-		location.href = `https://accounts.ft.com/login?location=${encodeURIComponent(currentPath)}${encodeURIComponent(commentsJumpAnchor)}`;
-	});
+	location.href = `https://accounts.ft.com/login?location=${encodeURIComponent(currentPath)}${encodeURIComponent(commentsJumpAnchor)}`;
+});
 
-} else {
-	require('o-comments');
-}
 require('o-video');
 require('o-expander');
 
