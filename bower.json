@@ -21,7 +21,7 @@
   "dependencies": {
     "alphaville-ui": "^4.0.0",
     "o-autoinit": "^1.2.0",
-    "o-comments": "^7.1.4",
+    "o-comments": "^7.3.0",
     "o-tabs": "^5.0.0",
     "o-video": "^6.0.0",
     "o-expander": "^5.0.0",
