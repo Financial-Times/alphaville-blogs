@@ -5,7 +5,7 @@
 
 			{{> grid-cards/elements/heading}}
 
-			{{#if isPodcast}} 
+			{{#if isPodcast}}
 				{{#if withImage}}
 					<a href="{{av2WebUrl}}" data-trackable="image">
 						<img class="alphaville-card__image" src="{{image mainImage.url 80 'low'}}" alt="{{mainImage.title}}">
@@ -16,8 +16,7 @@
 			{{/if}}
 
 			<div class="alphaville-card__footer">
-				{{!-- Comment count will be reintroduced once migration is complete --}}
-				{{!-- {{> comment-counter}} --}}
+                {{> comment-counter}}
 				{{> timestamp}}
 			</div>
 		</div>
