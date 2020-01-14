@@ -10,7 +10,7 @@
 					{{/isLive}}
 				</a>
 			</div>
-			
+
 			<h3 class="alphaville-card__heading">
 				<a href="{{av2WebUrl}}" data-trackable="heading">{{title}}</a>
 			</h3>
@@ -18,8 +18,7 @@
 			{{> grid-cards/elements/standfirst}}
 
 			<div class="alphaville-card__footer">
-				{{!-- Comment count will be reintroduced once migration is complete --}}
-				{{!-- {{> comment-counter}} --}}
+                {{> comment-counter}}
 				{{> timestamp}}
 				{{#byline}}
 					{{> byline}}
