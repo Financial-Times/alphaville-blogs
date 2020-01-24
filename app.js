@@ -8,9 +8,6 @@ const path = require('path');
 const healthcheck = require('./lib/health/healthchecks');
 const cacheHeaders = require('./lib/utils/cacheHeaders');
 
-const WpApi = require('alphaville-marketslive-wordpress-api');
-WpApi.setBaseUrl(process.env.WP_URL);
-
 const env = process.env.ENVIRONMENT === 'prod' ? 'prod' : 'test';
 
 const app = alphavilleExpress({

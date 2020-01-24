@@ -11,7 +11,6 @@
     "alphaville-auth-middleware": "Financial-Times/alphaville-auth-middleware#1.5.1",
     "alphaville-express": "Financial-Times/alphaville-express#1.1.1",
     "alphaville-header-config": "Financial-Times/alphaville-header-config#1.2.0",
-    "alphaville-marketslive-wordpress-api": "Financial-Times/alphaville-marketslive-wordpress-api#0.4.0",
     "alphaville-team-members": "Financial-Times/alphaville-team-members#1.0.0",
     "bluebird": "^3.4.1",
     "cheerio": "^0.20.0",
