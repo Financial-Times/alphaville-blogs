@@ -59,7 +59,7 @@ The fastest way to do this is to run the following assuming your are logged in i
 ```
 heroku config -s  >> .env --app av2-blogs-test
 ```
-Define the local database URL 
+Define the local database URL
 
 ```
 DATABASE_URL="mongodb://localhost:27017/av2-blogs-test"
@@ -94,7 +94,6 @@ In order you to be able to access articles without getting the barrier, you will
 
 ### Using alpavhille services together
 
-If you'd like to use other alphaville services locally with the blogs app (alphaville-es-interface-service, alphaville-marketslive-service), then you'll need to change their relevant environment variable, and change the URL and the relevant key to point to the local app you've set up:
+If you'd like to use other alphaville services locally with the blogs app (alphaville-es-interface-service), then you'll need to change their relevant environment variable, and change the URL and the relevant key to point to the local app you've set up:
 
 - `AV_ES_SERVICE_KEY` and `AV_ES_SERVICE_URL` for *alphaville-es-interface-service*
-- `ML_API_URL` for *alphaville-marketslive-service*
