@@ -13,7 +13,6 @@ router.use('/search', require('./routes/search'));
 router.use('/about', require('./routes/about'));
 router.use('/meet-the-team', require('./routes/meet'));
 router.use('/author', require('./routes/author'));
-router.use('/most-popular-livefyre', require('./routes/mostPopular'));
 router.use('/most-popular', function(req, res) {
 	res.redirect('/');
 });
