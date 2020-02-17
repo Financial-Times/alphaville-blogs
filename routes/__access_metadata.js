@@ -62,6 +62,13 @@ setInterval(fetchFreeArticles, 60 * 1000);
 
 
 router.get('/__access_metadata', (req, res) => {
+	res.set({
+		'surrogate-control': `max-age=600`,
+		'stale-while-revalidate': 600,
+		'stale-if-error': 43200,
+		'cache-control': 'max-age=0, no-cache, must-revalidate'
+	});
+
 	res.json({
 		access_metadata: [].concat(wpAccessMetadata).concat(av2AccessMetadata)
 	});
