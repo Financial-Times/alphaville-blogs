@@ -19,7 +19,7 @@
 		"tests"
 	],
 	"dependencies": {
-		"alphaville-ui": "git://github.com/Financial-Times/alphaville-ui#ADSDEV-449_use_n-permutive_instead_of_o-permutive",
+		"alphaville-ui": "^5.0.0",
 		"o-autoinit": "^1.2.0",
 		"o-comments": "^7.3.0",
 		"o-tabs": "^5.0.0",
