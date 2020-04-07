@@ -19,7 +19,7 @@
     "memory-cache": "^0.1.6",
     "moment-timezone": "^0.5.5",
     "mongoose": "^4.6.0",
-    "n-permutive": "^2.3.0",
+    "n-permutive": "^2.3.2",
     "node-fetch": "^1.5.2",
     "pg-promise": "^8.5.3",
     "pusher-client": "^1.1.0",
