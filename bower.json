@@ -1,37 +1,37 @@
 {
-  "name": "alphaville-blogs",
-  "description": "",
-  "main": "",
-  "authors": [
-    "Dragos Digulescu <dragos.digulescu@ft.com>",
-    "Roland Vachter <roland.vachter@ft.com>"
-  ],
-  "homepage": "https://github.com/Financial-Times/alphaville-blogs",
-  "moduleType": [
-    "globals"
-  ],
-  "private": true,
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "alphaville-ui": "^4.0.0",
-    "o-autoinit": "^1.2.0",
-    "o-comments": "^7.3.0",
-    "o-tabs": "^5.0.0",
-    "o-video": "^6.0.0",
-    "o-expander": "^5.0.0",
-    "o-forms": "^8.0.0",
-    "o-colors": "^5.0.0",
-    "o-buttons": "^6.0.2",
-    "ftdomdelegate": "^4.0.0",
-    "o-editorial-typography": "^1.0.0",
-    "o-ads": "^14.0.0",
-    "o-normalise": "^2.0.0",
-    "o-date": "^4.0.0"
-  }
+	"name": "alphaville-blogs",
+	"description": "",
+	"main": "",
+	"authors": [
+		"Dragos Digulescu <dragos.digulescu@ft.com>",
+		"Roland Vachter <roland.vachter@ft.com>"
+	],
+	"homepage": "https://github.com/Financial-Times/alphaville-blogs",
+	"moduleType": [
+		"globals"
+	],
+	"private": true,
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
+	"dependencies": {
+		"alphaville-ui": "^5.0.0",
+		"o-autoinit": "^1.2.0",
+		"o-comments": "^7.3.0",
+		"o-tabs": "^5.0.0",
+		"o-video": "^6.0.0",
+		"o-expander": "^5.0.0",
+		"o-forms": "^8.0.0",
+		"o-colors": "^5.0.0",
+		"o-buttons": "^6.0.2",
+		"ftdomdelegate": "^4.0.0",
+		"o-editorial-typography": "^1.0.0",
+		"o-ads": "^14.0.0",
+		"o-normalise": "^2.0.0",
+		"o-date": "^4.0.0"
+	}
 }
