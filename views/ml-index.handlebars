@@ -1,5 +1,13 @@
 {{#contentFor "head"}}
 	<link rel="stylesheet" href="{{assetsBasePath}}/build/ml-index.css" />
+	<script>
+		(function () {
+			ctmLoadScript({
+				src: "{{assetsBasePath}}/build/ml-Index.js",
+				async: true
+			});
+		}());
+	</script>
 {{/contentFor}}
 
 

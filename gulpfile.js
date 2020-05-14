@@ -34,7 +34,9 @@ alphavilleBuildTools(gulp, {
 		{
 			id: 'ml-index',
 			standalone: 'mlIndexBundle',
+			js: './assets/js/marketLive.js',
 			sass: './assets/scss/ml-index.scss',
+			'build-js': 'ml-Index.js',
 			'build-css': 'ml-index.css'
 		},
 		{
