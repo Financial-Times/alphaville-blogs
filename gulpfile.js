@@ -34,7 +34,9 @@ alphavilleBuildTools(gulp, {
 		{
 			id: 'ml-index',
 			standalone: 'mlIndexBundle',
+			js: './assets/js/mlIndex.js',
 			sass: './assets/scss/ml-index.scss',
+			'build-js': 'mlIndex.js',
 			'build-css': 'ml-index.css'
 		},
 		{
