@@ -20,7 +20,7 @@
     "moment-timezone": "^0.5.5",
     "mongoose": "^4.6.0",
     "n-permutive": "^2.4.1",
-    "node-fetch": "^1.5.2",
+    "node-fetch": "^2.6.1",
     "pg-promise": "^8.5.3",
     "pusher-client": "^1.1.0",
     "throng": "^4.0.0"
