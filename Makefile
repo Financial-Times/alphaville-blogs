@@ -1,7 +1,5 @@
 -include .env
 
-DATABASE_URL=$(MONGODB_URI); \
-
 .env:
 	heroku config -s  >> .env --app av2-blogs-test
 
