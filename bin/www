@@ -9,9 +9,6 @@
 const app = require('../app');
 const debug = require('debug')('alphaville-blogs:server');
 const http = require('http');
-const db = require('../lib/services/db');
-const { sortArticles } = require('../lib/utils/marketsLiveArticles');
-require('../lib/dbModels');
 const throng = require('throng');
 
 const concurrency = process.env.WEB_CONCURRENCY || 1;
@@ -55,20 +52,11 @@ function start() {
 	 * Listen on provided port, on all network interfaces.
 	 */
 
-	db.connect(async () => {
-		/**
-		 * Sort archived Marketslive articles before the app starts because, if you don't do this,
-		 * they will render on the page very slowly.
-		 */
-		await sortArticles();
-
-		server.listen(port, function () {
-			console.log('listening on port: ', port);
-		});
-		server.on('error', onError);
-		server.on('listening', onListening);
+	server.listen(port, function () {
+		console.log('listening on port: ', port);
 	});
-
+	server.on('error', onError);
+	server.on('listening', onListening);
 
 	/**
 	 * Normalize a port into a number, string, or false.
