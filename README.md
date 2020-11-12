@@ -1,31 +1,11 @@
 # alphaville-blogs
 
-Renders the pages of alphaville blogs: Homepage, article page.
+Renders the pages of alphaville blogs: ~Homepage,~ article page.
 
+**NOTE** This app is in the process of being decommissioned (or at least significantly scaled down). It is now only used to render the alphaville article page, other routes are not in use.
 ## Prerequisite
 In order to run the service locally, you will either need to connect to the TEST mongodb on heroku MLab, or set up the database locally.
 If you have to make changes that affects the database as well, you should follow the below steps to set up the database locally.
-
-### Install MongoDB (optional)
-First install mongodb as described here: https://docs.mongodb.com/manual/installation/.
-
-You should import the data from the TEST database.
-MongoDB URI has the following structure:
-
-```
-mongodb://{user}:{password}@{primaryHost}:{port},{secondaryHost}:{port}/{databaseName}?replicaSet=rs-{replicaSetName}
-```
-
-In order to import the database, run the following commands:
-
-```
-mongodump -h {primaryHost}:{port} -d {databaseName} -u {user} -p {password} -o {fileLocation}
-```
-
-```
-mongorestore -h localhost:27017 -d session-user-data -u {localUsername} -p {localPassword} --file {localFile}
-```
-If you are in trouble, check out the official documentation https://docs.mongodb.com/manual/reference/program/mongorestore/.
 
 ### Install Origami build tools and its dependencies
 
@@ -57,12 +37,7 @@ You'll need to create environment variable
 The fastest way to do this is to run the following assuming your are logged in into heroku
 
 ```
-heroku config -s  >> .env --app av2-blogs-test
-```
-Define the local database URL
-
-```
-DATABASE_URL="mongodb://localhost:27017/av2-blogs-test"
+heroku config -s  >> .env --app av2-blogs-prod
 ```
 
 Now run the initial npm install on the app
