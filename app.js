@@ -6,6 +6,7 @@ const _ = require('lodash');
 const ftwebservice = require('express-ftwebservice');
 const path = require('path');
 const cacheHeaders = require('./lib/utils/cacheHeaders');
+const healthcheck = require('./lib/health/healthchecks');
 
 const env = process.env.ENVIRONMENT === 'prod' ? 'prod' : 'test';
 
@@ -29,6 +30,25 @@ ftwebservice(app, {
 	},
 	goodToGoTest: function() {
 		return true;
+	},
+	healthCheck: function() {
+		return healthcheck.getChecks().then(checks => {
+			return checks;
+		}).catch((err) => {
+			console.log(err);
+			return [
+				{
+					name: "Healthcheck",
+					ok: false,
+					severity: 2,
+					businessImpact: "Some areas of the application might be unavailable due to this issue.",
+					technicalSummary: "Healthcheck is not available.",
+					panicGuide: "Check the logs of the application, try to restart it from heroku.",
+					checkOutput: "Healthcheck generation failed.",
+					lastUpdated: new Date().toISOString()
+				}
+			];
+		});
 	}
 });
 
