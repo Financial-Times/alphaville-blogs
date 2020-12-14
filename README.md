@@ -1,8 +1,10 @@
+# NO LONGER IN USE.
+**All Alphaville articles are now rendered as article content on FT.com**
+
 # alphaville-blogs
 
 Renders the pages of alphaville blogs: ~Homepage,~ article page.
 
-**NOTE** This app is in the process of being decommissioned (or at least significantly scaled down). It is now only used to render the alphaville article page, other routes are not in use.
 ## Prerequisite
 In order to run the service locally, you will either need to connect to the TEST mongodb on heroku MLab, or set up the database locally.
 If you have to make changes that affects the database as well, you should follow the below steps to set up the database locally.
